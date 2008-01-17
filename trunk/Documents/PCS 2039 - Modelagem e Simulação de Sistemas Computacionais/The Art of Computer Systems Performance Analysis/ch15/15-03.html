@@ -1,0 +1,219 @@
+<HTML>
+<HEAD>
+<META name=vsisbn content="0471503363">
+<META name=vstitle content="Art of Computer Systems Performance Analysis Techniques For Experimental Design Measurements Simulation And Modeling">
+<META name=vsauthor content="Raj Jain">
+<META name=vsimprint content="Wiley Computer Publishing">
+<META name=vspublisher content="John Wiley & Sons, Inc.">
+<META name=vspubdate content="05/01/91">
+<META name=vscategory content="Web and Software Development: Software Engineering: Simulation and Modeling">
+
+
+
+
+
+
+
+<TITLE>The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling:Other Regression Models</TITLE>
+
+<!-- HEADER -->
+
+<STYLE type="text/css"> 
+ <!--
+ A:hover  {
+ 	color : Red;
+ }
+ -->
+</STYLE>
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+<!--ISBN=0471503363//-->
+<!--TITLE=The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling//-->
+<!--AUTHOR=Raj Jain//-->
+<!--PUBLISHER=Wiley Computer Publishing//-->
+<!--CHAPTER=15//-->
+<!--PAGES=251-253//-->
+<!--UNASSIGNED1//-->
+<!--UNASSIGNED2//-->
+
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="15-02.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="15-04.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+<P><BR></P>
+<P>The <I>F</I>-test can be used to check if the SSR is significantly higher than the SSE by computing the ratio (SSR/<I>v</I><SUB><SMALL><I>R</I></SMALL></SUB>)/(SSE/<I>v</I><SUB><SMALL><I>e</I></SMALL></SUB>), where <I>v</I><SUB><SMALL><I>R</I></SMALL></SUB> and <I>v</I><SUB><SMALL><I>e</I></SMALL></SUB> are degrees of freedom for the SSR and SSE, respectively. The quantity SSR/<I>v</I><SUB><SMALL><I>R</I></SMALL></SUB> is called the <B>mean square</B> of the regression (MSR). In general, any sum of squares divided by its degrees of freedom gives the corresponding mean square. Thus</P>
+<P><P ALIGN="CENTER"><IMG SRC="images/15-13d.jpg"></P>
+</IMGD></P>
+<P>and</P>
+<P><P ALIGN="CENTER"><IMG SRC="images/15-14d.jpg"></P>
+</IMGD></P>
+<P>The ratio MSR/MSE has an <I>F</I>[<I>k, n</I> &#150; <I>k</I> &#150; 1] distribution, that is, an <I>F</I> distribution with <I>k</I> numerator degrees of freedom and <I>n</I> &#150; <I>k</I> &#150; 1 denominator degrees of freedom (see Section 29.7 for <I>F</I> distribution). If the computed ratio is greater than the value read from the <I>F</I>-table, the predictor variables are assumed to explain a significant fraction of the response variation. A convenient tabular arrangement to conduct the <I>F</I>-test is shown in Table 15.3. The table is arranged so that the computation can be done column by column from the left. As shown under the table, the standard deviation of errors can be estimated by taking a square root of MSE, which is an estimate of the error variance.</P>
+<P>It must be pointed out that the <I>F</I>-test is also equivalent to testing the null hypothesis that <I>y</I> does not depend upon any <I>x</I><SUB><SMALL><I>j</I></SMALL></SUB>, that is against an alternate hypothesis that <I>y</I> depends upon at least one <I>x</I><SUB><SMALL><I>j</I></SMALL></SUB>, and therefore, at least one <I>b</I><SUB><SMALL><I>j</I></SMALL></SUB> &#8800; 0. If the computed ratio is less than the value read from the table, the null hypothesis cannot be rejected at the stated significance level.</P>
+<P ALIGN="CENTER"><I>b</I><SUB><SMALL>1</SMALL></SUB> = <I>b</I><SUB><SMALL>2</SMALL></SUB> = ... = <I>b</I><SUB><SMALL><I>k</I></SMALL></SUB> = 0</P>
+<TABLE WIDTH="100%"><TR>
+<TH VALIGN="TOP" CAPTION ALIGN="LEFT" COLSPAN="7">TABLE 15.3 ANOVA Table for Multiple Linear Regression
+<TR>
+<TD COLSPAN="7"><HR>
+<TR>
+<TH VALIGN="TOP" ALIGN="LEFT" WIDTH="10%">Com-<BR>ponent
+<TH VALIGN="TOP" ALIGN="CENTER" WIDTH="25%">Sum of<BR>Squares
+<TH VALIGN="TOP" ALIGN="CENTER" WIDTH="15%">Percentage<BR>of Variation
+<TH VALIGN="TOP" ALIGN="CENTER" WIDTH="10%">Degrees of<BR>Freedom
+<TH VALIGN="TOP" ALIGN="CENTER" WIDTH="15%">Mean<BR>Square
+<TH VALIGN="TOP" ALIGN="CENTER" WIDTH="10%"><I>F</I>-<BR>Computed
+<TH VALIGN="TOP" ALIGN="CENTER" WIDTH="15%"><I>F</I>-<BR>Table
+<TR>
+<TD COLSPAN="7"><HR>
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT"><I>y</I>
+<TD VALIGN="TOP" ALIGN="LEFT"><IMG SRC="images/15-19i.jpg"></IMGI>
+<TD VALIGN="TOP" ALIGN="LEFT">
+<TD VALIGN="TOP" ALIGN="LEFT"><I>n</I>
+<TD VALIGN="TOP" ALIGN="LEFT">
+<TD VALIGN="TOP" ALIGN="LEFT">
+<TD VALIGN="TOP" ALIGN="LEFT">
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT"><IMG SRC="images/15-20i.jpg"></IMGI>
+<TD VALIGN="TOP" ALIGN="LEFT">SS0 = <IMG SRC="images/15-21i.jpg"></IMGI>
+<TD VALIGN="TOP" ALIGN="LEFT">
+<TD VALIGN="TOP" ALIGN="LEFT">1
+<TD VALIGN="TOP" ALIGN="LEFT">
+<TD VALIGN="TOP" ALIGN="LEFT">
+<TD VALIGN="TOP" ALIGN="LEFT">
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT"><I>y</I> &#150; <IMG SRC="images/15-22i.jpg"></IMGI>
+<TD VALIGN="TOP" ALIGN="LEFT">SST = SSY &#150; SS0
+<TD VALIGN="TOP" ALIGN="LEFT">100
+<TD VALIGN="TOP" ALIGN="LEFT"><I>n</I> &#150; 1
+<TD VALIGN="TOP" ALIGN="LEFT">
+<TD VALIGN="TOP" ALIGN="LEFT">
+<TD VALIGN="TOP" ALIGN="LEFT">
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT">Regression
+<TD VALIGN="TOP" ALIGN="LEFT">SSR = SST &#150; SSE
+<TD VALIGN="TOP" ALIGN="LEFT"><IMG SRC="images/15-23i.jpg"></IMGI>
+<TD VALIGN="TOP" ALIGN="LEFT"><I>k</I>
+<TD VALIGN="TOP" ALIGN="LEFT"><IMG SRC="images/15-24i.jpg"></IMGI>
+<TD VALIGN="TOP" ALIGN="LEFT"><IMG SRC="images/15-25i.jpg"></IMGI>
+<TD VALIGN="TOP" ALIGN="LEFT"><I>F</I><SUB><SMALL>[1&#150;&#945;;<I>k,n</I>,&#150;<I>k</I>&#150;1]</SMALL></SUB>
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT">Errors
+<TD VALIGN="TOP" ALIGN="LEFT">SSE = <B>y</B><SUP><SMALL>T</SMALL></SUP><B>y</B> &#150; <B>b</B><SUP><SMALL>T</SMALL></SUP><B>X</B><SUP><SMALL>T</SMALL></SUP><B>y</B>
+<TD VALIGN="TOP" ALIGN="LEFT"><IMG SRC="images/15-26i.jpg"></IMGI>
+<TD VALIGN="TOP" ALIGN="LEFT"><I>n</I> &#150; <I>k</I> &#150; 1
+<TD VALIGN="TOP" ALIGN="LEFT"><IMG SRC="images/15-27i.jpg"></IMGI>
+<TD VALIGN="TOP" ALIGN="LEFT">
+<TD VALIGN="TOP" ALIGN="LEFT">
+<TR>
+<TD COLSPAN="7"><HR>
+<TR>
+<TD COLSPAN="7" VALIGN="TOP" ALIGN="CENTER"><IMG SRC="images/15-28i.jpg"></IMGI>
+<TR>
+</TABLE>
+<P>In simple regression models, there is only one predictor variable, and hence the <I>F</I>-test reduces to that of testing <I>b</I><SUB><SMALL>1</SMALL></SUB> = 0. Thus, if the confidence interval of <I>b</I><SUB><SMALL>1</SMALL></SUB> does not include zero, the parameter is nonzero, the regression explains a significant part of the response variation, and the <I>F</I>-test is not required.</P>
+<DL>
+<DD><B>Example 15.2</B> For the disk-memory-CPU data of Example 15.1, the analysis of variance is shown in Table 15.4. From the table we see that the computed <I>F</I>-ratio is more than that obtained from the table, and so the regression does explain a significant part of the variation.
+</DL>
+<TABLE WIDTH="100%">
+<TR>
+<TH VALIGN="TOP" CAPTION ALIGN="LEFT" COLSPAN="7">TABLE 15.4 ANOVA Table for the I/O&#146;s, Memory, and CPU Time Example
+<TR>
+<TD COLSPAN="7"><HR>
+<TR>
+<TH VALIGN="TOP" ALIGN="LEFT" WIDTH="15%">Component
+<TH VALIGN="TOP" ALIGN="CENTER" WIDTH="15%">Sum of<BR>Squares
+<TH VALIGN="TOP" ALIGN="CENTER" WIDTH="15%">Percentage of<BR>Variation
+<TH VALIGN="TOP" ALIGN="CENTER" WIDTH="15%">Degrees of<BR>Freedom
+<TH VALIGN="TOP" ALIGN="CENTER" WIDTH="15%">Mean<BR>Square
+<TH VALIGN="TOP" ALIGN="CENTER" WIDTH="15%">F-<BR>Computed
+<TH VALIGN="TOP" ALIGN="CENTER" WIDTH="10%">F-<BR>Table
+<TR>
+<TD COLSPAN="7"><HR>
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT">Y
+<TD VALIGN="TOP" ALIGN="CENTER">828
+<TD VALIGN="TOP" ALIGN="CENTER">
+<TD VALIGN="TOP" ALIGN="CENTER">
+<TD VALIGN="TOP" ALIGN="CENTER">
+<TD VALIGN="TOP" ALIGN="CENTER">
+<TD VALIGN="TOP" ALIGN="CENTER">
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT"><IMG SRC="images/15-29i.jpg"></IMGI>
+<TD VALIGN="TOP" ALIGN="CENTER">622
+<TD VALIGN="TOP" ALIGN="CENTER">
+<TD VALIGN="TOP" ALIGN="CENTER">
+<TD VALIGN="TOP" ALIGN="CENTER">
+<TD VALIGN="TOP" ALIGN="CENTER">
+<TD VALIGN="TOP" ALIGN="CENTER">
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT">y &#150; <IMG SRC="images/15-30i.jpg"></IMGI>
+<TD VALIGN="TOP" ALIGN="CENTER">206
+<TD VALIGN="TOP" ALIGN="CENTER">100.0
+<TD VALIGN="TOP" ALIGN="CENTER">6
+<TD VALIGN="TOP" ALIGN="CENTER">
+<TD VALIGN="TOP" ALIGN="CENTER">
+<TD VALIGN="TOP" ALIGN="CENTER">
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT">Regression
+<TD VALIGN="TOP" ALIGN="CENTER">200
+<TD VALIGN="TOP" ALIGN="CENTER">97.4
+<TD VALIGN="TOP" ALIGN="CENTER">2
+<TD VALIGN="TOP" ALIGN="CENTER">100.20
+<TD VALIGN="TOP" ALIGN="CENTER">75.40
+<TD VALIGN="TOP" ALIGN="CENTER">4.32
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT">Errors
+<TD VALIGN="TOP" ALIGN="CENTER">5.32
+<TD VALIGN="TOP" ALIGN="CENTER">2.6
+<TD VALIGN="TOP" ALIGN="CENTER">4
+<TD VALIGN="TOP" ALIGN="CENTER">1.33
+<TD VALIGN="TOP" ALIGN="CENTER">
+<TD VALIGN="TOP" ALIGN="CENTER">
+<TR>
+<TD COLSPAN="7"><HR>
+<TR>
+<TD COLSPAN="7" VALIGN="TOP" ALIGN="CENTER"><IMG SRC="images/15-31i.jpg"></IMGI>
+</TABLE>
+<P>Notice that in example 15.2, the regression passed the <I>F</I>-test, indicating that the hypothesis of all parameters being zero cannot be accepted. However, none of the regression parameters are significantly different from zero. This apparent contradiction is due to the problem of multicollinearity, which is discussed next.</P>
+<H4 ALIGN="LEFT"><A NAME="Heading4"></A><FONT COLOR="#000077">15.1.2 Problem of Multicollinearity</FONT></H4>
+<P>Two lines are said to be collinear if they have the same slope and same intercept. These two lines can be represented in just one dimension instead of the two dimensions required for lines that are not collinear. Two collinear lines are not independent. Similarly, when two predictor variables are linearly dependent, they are called collinear. The linear dependence between variables is measured by their correlation. Thus, if the correlation between two predictor variables is nonzero, they are collinear and the problem of linear dependence among many predictor variables is called the problem of multicollinearity. In particular, this problem may result in contradictory results from various significance tests.
+</P>
+<P>To see if the problem of multicollinearity exists, we need to find the correlation between various <I>x</I><SUB><SMALL><I>i</I></SMALL></SUB> pairs. In cases where the correlation is relatively high, we might eliminate one of the <I>x</I><SUB><SMALL><I>i</I></SMALL></SUB>&#146;s from the regression and redo the computations with the remaining <I>x</I>-variables. If the significance of the regression as a whole improves, we can conclude that the correlation between the <I>x</I>&#146;s is causing the problem.</P>
+<DL>
+<DD><B>Example 15.3</B> We did get contradictory significance conclusions in Example 15.2. Th see if this is due to correlation between the number of disk 110&#146;s and the memory size, we compute the correlation coefficient between the two.
+<DD><P ALIGN="CENTER"><IMG SRC="images/15-15d.jpg"></P>
+</IMGD>
+<DD>Correlation(<I>x</I><SUB><SMALL>1</SMALL></SUB>, <I>X</I><SUB><SMALL>2</SMALL></SUB>) = R<I>x</I><SUB><SMALL>1</SMALL></SUB><I>x</I><SUB><SMALL>2</SMALL></SUB>
+<DD><P ALIGN="CENTER"><IMG SRC="images/15-16d.jpg"></P>
+</IMGD>
+</DL>
+<P><BR></P>
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="15-02.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="15-04.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<hr width="90%" size="1" noshade>
+<div align="center">
+<font face="Verdana,sans-serif" size="1">Copyright &copy; <a href="/reference/wiley00001.html">John Wiley &amp; Sons, Inc.</a></font>
+</div>
+<!-- all of the reference materials (books) have the footer and subfoot reveresed -->
+<!-- reference_subfoot = footer -->
+<!-- reference_footer = subfoot -->
+
+</BODY>
+</HTML>
+
+<!-- END FOOTER -->
+

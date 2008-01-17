@@ -1,0 +1,202 @@
+<HTML>
+<HEAD>
+<META name=vsisbn content="0471503363">
+<META name=vstitle content="Art of Computer Systems Performance Analysis Techniques For Experimental Design Measurements Simulation And Modeling">
+<META name=vsauthor content="Raj Jain">
+<META name=vsimprint content="Wiley Computer Publishing">
+<META name=vspublisher content="John Wiley & Sons, Inc.">
+<META name=vspubdate content="05/01/91">
+<META name=vscategory content="Web and Software Development: Software Engineering: Simulation and Modeling">
+
+
+
+
+
+
+
+<TITLE>The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling:Other Regression Models</TITLE>
+
+<!-- HEADER -->
+
+<STYLE type="text/css"> 
+ <!--
+ A:hover  {
+ 	color : Red;
+ }
+ -->
+</STYLE>
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+<!--ISBN=0471503363//-->
+<!--TITLE=The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling//-->
+<!--AUTHOR=Raj Jain//-->
+<!--PUBLISHER=Wiley Computer Publishing//-->
+<!--CHAPTER=15//-->
+<!--PAGES=269-272//-->
+<!--UNASSIGNED1//-->
+<!--UNASSIGNED2//-->
+
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="15-08.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="../ch16/16-01.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+<P><BR></P>
+<P>The list of mistakes presented in this section leads to the checklist presented in Box 15.2. The list is organized as a series of questions that should all be answered in the affirmative.
+</P>
+
+<TABLE BORDER="2" BORDERCOLOR="#0000" ALIGN="CENTER">
+<TR><TD>
+<P><B>Box 15.2 Checklist For Regression Analyses</B></P>
+<DL>
+<DD><B>1.</B>&nbsp;&nbsp;Have you plotted and visually verified that the relationship is linear?
+<DD><B>2.</B>&nbsp;&nbsp;Are all predictors in appropriate units so that regression coefficients are comparable?
+<DD><B>3.</B>&nbsp;&nbsp;Has the coefficient of determination been specified?
+<DD><B>4.</B>&nbsp;&nbsp;Is the coefficient of determination high enough?
+<DD><B>5.</B>&nbsp;&nbsp;Have the confidence intervals for regression parameters been specified?
+<DD><B>6.</B>&nbsp;&nbsp;Are all regression parameters statistically significant?
+<DD><B>7.</B>&nbsp;&nbsp;If there are several predictors, has an <I>F</I>-test been performed?
+<DD><B>8.</B>&nbsp;&nbsp;Does the <I>F</I>-test show that regression parameters are statistically significant?
+<DD><B>9.</B>&nbsp;&nbsp;Has the correlation among predictor variables been computed?
+<DD><B>10.</B>&nbsp;&nbsp;Is the correlation negligible?
+<DD><B>11.</B>&nbsp;&nbsp;Is the regression being used for predictions close to the measured range?
+<DD><B>12.</B>&nbsp;&nbsp;Is the confidence interval for predictions specified?
+<DD><B>13.</B>&nbsp;&nbsp;Are all predictor variables required?
+<DD><B>14.</B>&nbsp;&nbsp;Has the normality assumption been verified using a quantile-quantile plot of errors?
+<DD><B>15.</B>&nbsp;&nbsp;Have all the outliers in the quantile-quantile plot of errors been explained?
+<DD><B>16.</B>&nbsp;&nbsp;If the quantile-quantile plot of errors is different from a straight line, have the transformations been investigated?
+<DD><B>17.</B>&nbsp;&nbsp;Has the homoscedasticity assumption been verified using an error versus predicted mean plot?
+</DL>
+</TABLE>
+
+<H3><A NAME="Heading10"></A><FONT COLOR="#000077">EXERCISES</FONT></H3>
+<DL>
+<DD><B>15.1</B>&nbsp;&nbsp;The results of a multiple regression based on nine observations are shown in Table 15.11. Based on these results answer the following questions:
+<DL>
+<DD><B>a.</B>&nbsp;&nbsp;What percentage of variance is explained by the regression?
+</DL>
+</DL>
+<CENTER>
+<TABLE WIDTH="60%">
+<TR>
+<TH VALIGN="TOP" CAPTION ALIGN="LEFT" COLSPAN="3">TABLE 15.11 Results of a Multiple Regression Analysis
+<TR>
+<TD COLSPAN="3"><HR>
+<TR>
+<TH VALIGN="TOP" ALIGN="CENTER" WIDTH="20%"><I>j</I>
+<TH VALIGN="TOP" ALIGN="CENTER" WIDTH="20%"><I>b</I><SUB><SMALL><I>j</I></SMALL></SUB>
+<TD VALIGN="TOP" ALIGN="CENTER" WIDTH="20%">s<SUB><SMALL>b<SUB>j</SMALL></SUB></SUB>
+<TR>
+<TD COLSPAN="3"><HR>
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER">1
+<TD VALIGN="TOP" ALIGN="CENTER">1.3
+<TD VALIGN="TOP" ALIGN="CENTER">3.6
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER">2
+<TD VALIGN="TOP" ALIGN="CENTER">2.7
+<TD VALIGN="TOP" ALIGN="CENTER">1.8
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER">3
+<TD VALIGN="TOP" ALIGN="CENTER">0.5
+<TD VALIGN="TOP" ALIGN="CENTER">0.6
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER">4
+<TD VALIGN="TOP" ALIGN="CENTER">5.0
+<TD VALIGN="TOP" ALIGN="CENTER">8.3
+<TR>
+<TD COLSPAN="3" ALIGN="LEFT">Intercept = 75.3<BR>Coefficient of multiple correlation = 0.95<BR>Standard deviation of errors = 12.0<BR><I>F</I>-value = 14.1
+<TR>
+<TD COLSPAN="3"><HR>
+</TABLE>
+</CENTER>
+<DL>
+<DL>
+<DD><B>b.</B>&nbsp;&nbsp;Is the regression significant at the 90% confidence level?
+<DD><B>c.</B>&nbsp;&nbsp;Which variable has the highest coefficient?
+<DD><B>d.</B>&nbsp;&nbsp;Which variable is most significant?
+<DD><B>e.</B>&nbsp;&nbsp;Which parameters are not significant at 90%?
+<DD><B>f.</B>&nbsp;&nbsp;What is the problem with this regression?
+<DD><B>g.</B>&nbsp;&nbsp;What would you try next?
+</DL>
+<DD><B>15.2</B>&nbsp;&nbsp;The time to encrypt or decrypt a <I>k</I>-bit record was measured on a uniprocessor as well as on a multiprocessor. The times in milliseconds are shown in Table 15.12. Using a log transformation and the method for categorical predictors, fit a regression model and interpret the results.
+</DL>
+<CENTER>
+<TABLE WIDTH="60%">
+<TR>
+<TH VALIGN="TOP" CAPTION ALIGN="LEFT" COLSPAN="5">TABLE 15.12 Time to Encrypt a <I>k</I>-bit Record
+<TR>
+<TD COLSPAN="5"><HR>
+<TR>
+<TH VALIGN="TOP" ALIGN="CENTER" WIDTH="15%"><I>k</I>
+<TD WIDTH="5%" VALIGN="TOP" ALIGN="RIGHT">
+<TH VALIGN="TOP" ALIGN="CENTER" WIDTH="15%">Uniprocessor
+<TD WIDTH="5%" VALIGN="TOP" ALIGN="RIGHT">
+<TH VALIGN="TOP" ALIGN="CENTER" WIDTH="15%">Multiprocessor
+<TR>
+<TD COLSPAN="5"><HR>
+<TR>
+<TD VALIGN="TOP" ALIGN="RIGHT">128
+<TD WIDTH="5%" VALIGN="TOP" ALIGN="RIGHT">
+<TD VALIGN="TOP" ALIGN="RIGHT">93
+<TD WIDTH="5%" VALIGN="TOP" ALIGN="RIGHT">
+<TD VALIGN="TOP" ALIGN="RIGHT">67
+<TR>
+<TD VALIGN="TOP" ALIGN="RIGHT">256
+<TD WIDTH="5%" VALIGN="TOP" ALIGN="RIGHT">
+<TD VALIGN="TOP" ALIGN="RIGHT">478
+<TD WIDTH="5%" VALIGN="TOP" ALIGN="RIGHT">
+<TD VALIGN="TOP" ALIGN="RIGHT">355
+<TR>
+<TD VALIGN="TOP" ALIGN="RIGHT">512
+<TD WIDTH="5%" VALIGN="TOP" ALIGN="RIGHT">
+<TD VALIGN="TOP" ALIGN="RIGHT">3,408
+<TD WIDTH="5%" VALIGN="TOP" ALIGN="RIGHT">
+<TD VALIGN="TOP" ALIGN="RIGHT">2,351
+<TR>
+<TD VALIGN="TOP" ALIGN="RIGHT">1024
+<TD WIDTH="5%" VALIGN="TOP" ALIGN="RIGHT">
+<TD VALIGN="TOP" ALIGN="RIGHT">25,410
+<TD WIDTH="5%" VALIGN="TOP" ALIGN="RIGHT">
+<TD VALIGN="TOP" ALIGN="RIGHT">17,022
+<TR>
+<TD COLSPAN="5"><HR>
+</TABLE>
+</CENTER>
+<H2 ALIGN="CENTER"><FONT COLOR="#000077"><I>FURTHER READING FOR PART III</I></FONT></H2>
+<P>There are a number of good books on statistics and probability theory. For example, see Levin (1981), Trivedi (1982), King and Julstrom (1982), and Papoulis (1965).
+</P>
+<P>Those readers who want a basic nonmathematical treatment of statistics may want to read Haack (1981) or Runyon (1977).</P>
+<P>Discussion on misuse of statistics can be found in Hooke (1983), Huff (1954), and Reichmann (1961).</P>
+<P>For arguments in favor of geometric means, see Fleming and Wallace (1986). Smith (1988) refutes those arguments. Chambers et al. (1983) discuss quantile-quantile plots.</P>
+<P>Natrella (1966) presents a variety of statistical tests and examples of their applications.</P>
+<P>The formula for the general transformation technique using integration, first derived by Bartlett in 1947, is discussed in Das and Giri (1986).</P>
+<P>The data for Case Study 12.1 is from Gross et al. (1988).</P><P><BR></P>
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="15-08.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="../ch16/16-01.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<hr width="90%" size="1" noshade>
+<div align="center">
+<font face="Verdana,sans-serif" size="1">Copyright &copy; <a href="/reference/wiley00001.html">John Wiley &amp; Sons, Inc.</a></font>
+</div>
+<!-- all of the reference materials (books) have the footer and subfoot reveresed -->
+<!-- reference_subfoot = footer -->
+<!-- reference_footer = subfoot -->
+
+</BODY>
+</HTML>
+
+<!-- END FOOTER -->
+
