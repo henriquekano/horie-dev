@@ -1,0 +1,102 @@
+<HTML>
+<HEAD>
+<META name=vsisbn content="0471503363">
+<META name=vstitle content="Art of Computer Systems Performance Analysis Techniques For Experimental Design Measurements Simulation And Modeling">
+<META name=vsauthor content="Raj Jain">
+<META name=vsimprint content="Wiley Computer Publishing">
+<META name=vspublisher content="John Wiley & Sons, Inc.">
+<META name=vspubdate content="05/01/91">
+<META name=vscategory content="Web and Software Development: Software Engineering: Simulation and Modeling">
+
+
+
+
+
+
+
+<TITLE>The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling:Monitors</TITLE>
+
+<!-- HEADER -->
+
+<STYLE type="text/css"> 
+ <!--
+ A:hover  {
+ 	color : Red;
+ }
+ -->
+</STYLE>
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+<!--ISBN=0471503363//-->
+<!--TITLE=The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling//-->
+<!--AUTHOR=Raj Jain//-->
+<!--PUBLISHER=Wiley Computer Publishing//-->
+<!--CHAPTER=07//-->
+<!--PAGES=101-105//-->
+<!--UNASSIGNED1//-->
+<!--UNASSIGNED2//-->
+
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="07-03.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="07-05.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+<P><BR></P>
+<H3><A NAME="Heading9"></A><FONT COLOR="#000077">7.7 DISTRIBUTED-SYSTEM MONITORS</FONT></H3>
+<P>Most of the computer systems today are distributed and consist of many hardware and software components that work together separately and concurrently. Monitoring a distributed system is more difficult than monitoring a centralized system. In particular, the monitor itself must be distributed and should consist of several components that work separately and concurrently. In this section, the design issues and terminology related to such monitors are discussed. The discussion is based on an actual case study to design a network monitor. Although many of the examples in this section are from networks, the discussion is general and applies to all distributed systems, such as multicomputer systems and distributed database systems. Most of the discussion also aplies to nondistributed systems.
+</P>
+<P>The easiest way to understand various components of a distributed-system monitor is to divide various functions in the monitor into a number of layers. Figure 7.1 shows such a layered view. Each layer makes use of the services provided by the lower layers and extends the available facilities to the upper layer. The layers are first briefly introduced. Later, each layer is discussed in detail. Proceeding from the bottom of Figure 7.1, the layers are as follows:</P>
+<P><A NAME="Fig1"></A><A HREF="javascript:displayWindow('images/07-01.jpg',178,420 )"><IMG SRC="images/07-01t.jpg"></A>
+<BR><A HREF="javascript:displayWindow('images/07-01.jpg',178,420)"><FONT COLOR="#000077"><B>FIGURE 7.1</B></FONT></A>&nbsp;&nbsp;Layered view of a distributed-system monitor.</P>
+<DL>
+<DD><B>1.</B>&nbsp;&nbsp;<I>Observation</I>: This layer gathers raw data on individual components of the system. Generally, each component may have an observer designed specifically for it. Thus, there may be several observers located on different subsystems.
+<DD><B>2.</B>&nbsp;&nbsp;<I>Collection</I>: This layer collects data from various observers. It is possible to have more than one collector on large systems.
+<DD><B>3.</B>&nbsp;&nbsp;<I>Analysis</I>: This layer analyzes the data gathered at various collectors. It may consist of various statistical routines to summarize the data characteristics. Simple analysis such as counting of events is done most efficiently in the observer and is not considered part of the analyzer.
+<DD><B>4.</B>&nbsp;&nbsp;<I>Presentation</I>: This component of the monitor deals with human user interface. It produces, for example, reports, displays, and alarms.
+<DD><B>5.</B>&nbsp;&nbsp;<I>Interpretation</I>: This refers to the intelligent entity (usually a human being or an expert system) that can make meaningful interpretations of the data. This generally requires multiple rules and trend analyses. Simple threshold-based alarms may be considered part of the presenter rather than of the interpreter, which usually requires the application of more sophisticated rules.
+<DD><B>6.</B>&nbsp;&nbsp;<I>Console</I>: This component provides an interface to control the system parameters and states. Strictly speaking, console is not a part of the monitor. However, the monitoring and control functions are often used together, and it is desirable to allow system control as well as system observation facilities to be used together.
+<DD><B>7.</B>&nbsp;&nbsp;<I>Management</I>: The entity that makes the <I>decision</I> to set or change system parameters or configurations based on interpretation of monitored performance is called the <B>manager</B>. The manager implements its decision using a console. A software manager component exists only in monitors with automated monitoring and control facilities.
+</DL>
+<P>A monitor may consist of multiple (zero or more) components from each of the layers. Thus, as shown in Figure 7.2, it may consist of zero or more observers, collectors, analyzers, presenters, interpreters, consoles, and managers.
+</P>
+<P>There is a <I>many-to-many</I> relationship between successive layers. For example, a single observer may send data to multiple collectors, and a single collector may gather data from multiple observers. Similar many-to-many relationships exist between collectors and analyzers, analyzers and presenters, presenters and interpreters, and so forth.</P>
+<P>Most distributed-system monitors are hybrid and make use of software, hardware, and firmware as well as human beings. The observers may be implemented using software, hardware, or firmware. Collectors, analyzers, and presenters are usually implemented in software. The console may be a software package that can be called from any user workstation, or it can be a hardware component with special switches, knobs, and displays. The interpreters and managers are usually human beings, but as the system understanding improves, it should be possible to automate these functions.</P>
+<P><A NAME="Fig2"></A><A HREF="javascript:displayWindow('images/07-02.jpg',390,420 )"><IMG SRC="images/07-02t.jpg"></A>
+<BR><A HREF="javascript:displayWindow('images/07-02.jpg',390,420)"><FONT COLOR="#000077"><B>FIGURE 7.2</B></FONT></A>&nbsp;&nbsp;Components of a distributed-system monitor.</P>
+<P>The layers will now be described in more detail.
+</P>
+<H4 ALIGN="LEFT"><A NAME="Heading10"></A><FONT COLOR="#000077">7.7.1 Observation</FONT></H4>
+<P>The bottom layer of the monitor, called <B>observation</B>, is concerned with raw-data gathering. Three commonly used data observation mechanisms are implicit spying, explicit instrumenting, and probing.</P>
+<P><B>Implicit spying</B> is the first and least intrusive monitoring technique. It requires promiscuously observing the activity on the system bus or network link. This technique is often used to monitor local-area networks in which all stations can hear all conversations, and one station is designated to be the observer. The advantage is that there is almost no impact on the performance of the system being monitored.</P>
+<P>Implicit-spying observers are often accompanied by one or more <I>filters</I> that allow the monitor to decide which activities to record. Not all data observed in a system may be of interest at all times. The filters help decide whether to keep a record of an observed event or to ignore it. The filters generally consist of conditional expressions set by the monitor user. The conditions may be, for example, Boolean, arithmetic, or set membership.</P>
+<P><B>Explicit instrumenting</B> requires incorporating trace points, probe points, hooks, or counters in the system. This approach causes some overhead on the system and is used to augment the data obtained from implicit observing. Each component in the system that needs to be monitored may have to be instrumented differently. However, it helps to have a standard data-naming and reporting format so that other monitor components making use of this data can get it and use it in a device-independent manner.</P>
+<P><B>Probing</B> requires making &#147;feeler&#148; requests on the system to sense its current performance. For example, in a computer network, a specially marked packet sent to a given destination and looped back by the destination may provide information about queueing at the source, at intermediate bridges, the destination station, and back. This information is useful in determining the current load level on a path. It may also be used for diagnostic and reliability analysis.</P>
+<P>Although there is considerable overlap in the domain of activities that can be observed using the three mechanisms, they are not totally redundant. There are activities that can be observed only by one of the three mechanisms. For example, requests to nonexistent devices may be observed only by implicit spying on the system bus. Explicit instrumentation is required to observe events internal to a component. Probing provides cumulative information about a number of components, which may be used by the feeler request. Therefore, in most systems, one would use a combination of the three data-observing mechanisms discussed above and pass the data to collectors, which are discussed next.</P><P><BR></P>
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="07-03.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="07-05.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<hr width="90%" size="1" noshade>
+<div align="center">
+<font face="Verdana,sans-serif" size="1">Copyright &copy; <a href="/reference/wiley00001.html">John Wiley &amp; Sons, Inc.</a></font>
+</div>
+<!-- all of the reference materials (books) have the footer and subfoot reveresed -->
+<!-- reference_subfoot = footer -->
+<!-- reference_footer = subfoot -->
+
+</BODY>
+</HTML>
+
+<!-- END FOOTER -->
+

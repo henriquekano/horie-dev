@@ -1,0 +1,146 @@
+<HTML>
+<HEAD>
+<META name=vsisbn content="0471503363">
+<META name=vstitle content="Art of Computer Systems Performance Analysis Techniques For Experimental Design Measurements Simulation And Modeling">
+<META name=vsauthor content="Raj Jain">
+<META name=vsimprint content="Wiley Computer Publishing">
+<META name=vspublisher content="John Wiley & Sons, Inc.">
+<META name=vspubdate content="05/01/91">
+<META name=vscategory content="Web and Software Development: Software Engineering: Simulation and Modeling">
+
+
+
+
+
+
+
+<TITLE>The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling:Program Execution Monitors and Accounting Logs</TITLE>
+
+<!-- HEADER -->
+
+<STYLE type="text/css"> 
+ <!--
+ A:hover  {
+ 	color : Red;
+ }
+ -->
+</STYLE>
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+<!--ISBN=0471503363//-->
+<!--TITLE=The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling//-->
+<!--AUTHOR=Raj Jain//-->
+<!--PUBLISHER=Wiley Computer Publishing//-->
+<!--CHAPTER=08//-->
+<!--PAGES=120-122//-->
+<!--UNASSIGNED1//-->
+<!--UNASSIGNED2//-->
+
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="08-04.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="../ch09/09-01.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+<P><BR></P>
+<DL>
+<DD><B>&#149;</B>&nbsp;&nbsp;<I>Which programs should the programmers be trained to use more efficiently? Or which programs provide the highest opportunity for better human interface?</I> The programs with a high percentage of total elapsed time provide the best opportunity for training as well as better human interface. For example, the data indicated that one-third of the active time in universities was being spent editing. The universities may be able to improve productivity by training their users in efficient use of the editors.
+<DD><B>&#149;</B>&nbsp;&nbsp;<I>Which programs are good candidates for code optimization? Or which programs should be included in a workload to be used in analyzing a new CPU&#146;s performance?</I> The programs with a high percentage of total CPU time will have the highest impact on CPU usage. For developers, these programs offer the opportunity for code optimization. For analysts, these programs provide the programs to be included in their workloads for CPU analysis. In the observed data, the programs with a high percentage of total CPU time were mostly compilers and editors.
+<DD><B>&#149;</B>&nbsp;&nbsp;<I>Which programs offer the highest opportunities for code restructuring to minimize the page faults?</I> The programs with a high percentage of total page faults, a high percentage of total page-read operations, or a high percentage of total pages read provide opportunities for the highest impact on page-read operations. These programs do not necessarily have poor paging behavior. However, even a small improvement in their paging behavior will have a significant impact on the system.
+<DD><B>&#149;</B>&nbsp;&nbsp;<I>Which programs have a poor locality of reference?</I> The programs with high &#147;page faults per CPU second&#148; have a poor locality of reference. These programs might benefit from code restructuring. However, given a set of limited resources, greater benefits at the system level would be obtained by restructuring programs with a high percentage of total page faults.
+<DD><B>&#149;</B>&nbsp;&nbsp;<I>How many jobs can run simultaneously without undue performance degradation?</I> The CPU rate (CPU time per second) as observed on a system with desired performance can be used to calculate the number of simultaneous users provided the program is compute bound. For non-compute-bound programs, the device with the highest utilization determines the number of supportable users.
+<DD><B>&#149;</B>&nbsp;&nbsp;<I>Which programs are I/O bound?</I> The programs with high &#147;disk I/O&#146;s per CPU second&#148; generally impose more load on the disk than on the CPU. These programs are I/O bound, and their performance depends critically on the performance of the disk. Such programs are good candidates for I/O optimization.
+</DL>
+<P>The following case study illustrates the type of information that can be obtained from accounting logs.
+</P>
+<DL>
+<DD><B>Case Study 8.1</B> This case study illustrates the application of accounting logs. The data was collected at six different universities for a period of 6 months. There was a variety of types of installations: instructional, research, and administrative. Several installations had substantial use in more than one category. Two interesting observations from the data were as follows:
+</DL>
+<DL>
+<DD><B>1.</B>&nbsp;&nbsp;<I>There are more disk reads than writes. Similarly, there are more terminal writes than reads</I>. The ratios of reads to writes were as follows:
+<CENTER>
+<TABLE WIDTH="70%">
+<TR>
+<TR>
+<TD CAPTION ALIGN="LEFT" COLSPAN="3">For Disk I/O<HR>
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT">Number of writes
+<TD VALIGN="TOP" ALIGN="LEFT">to number of reads
+<TD VALIGN="TOP" ALIGN="LEFT">1:3
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT">Size of writes
+<TD VALIGN="TOP" ALIGN="LEFT">to size of reads
+<TD VALIGN="TOP" ALIGN="LEFT">1:2.5
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT">Total write bytes
+<TD VALIGN="TOP" ALIGN="LEFT">to total read bytes
+<TD VALIGN="TOP" ALIGN="LEFT">1:7.5
+<TR>
+<TR>
+<TD CAPTION ALIGN="LEFT" COLSPAN="3">For Terminal I/O<HR>
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT">Number of writes
+<TD VALIGN="TOP" ALIGN="LEFT">to number of reads
+<TD VALIGN="TOP" ALIGN="LEFT">2:1
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT">Size of writes
+<TD VALIGN="TOP" ALIGN="LEFT">to size of reads
+<TD VALIGN="TOP" ALIGN="LEFT">4:1
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT">Total write bytes
+<TD VALIGN="TOP" ALIGN="LEFT">to total read bytes
+<TD VALIGN="TOP" ALIGN="LEFT">8:1
+<TR>
+</TABLE>
+</CENTER>
+<BR>Although the ratios may be different for other environments, the following inequalities should generally hold:
+</DL>
+<P ALIGN="CENTER">Number of disk writes &lt Number of disk reads
+</P>
+<P ALIGN="CENTER">Size of disk writes &lt Size of disk reads</P>
+<P ALIGN="CENTER">Number of terminal reads &lt Number of terminal writes</P>
+<P ALIGN="CENTER">Size of terminal reads &lt Size of terminal writes</P>
+<DL>
+<DD><B></B>&nbsp;&nbsp;
+<BR>The argument is as follows. Disk reads are performed automatically by the computer. Disk writes, on the other hand, require either the creation of new information or modification of the old information. Human intervention is generally required. Humans read more and write less (be it a book or a memo or a data file). The creation of new information is therefore slow and always in smaller quantities than use of the old information. This reasoning, which is called the <B>law of slow creation</B>, explains why disk reads would be generally more frequent than disk writes and why disk reads would be larger in size than disk writes.
+<BR>In the case of terminal reads and writes, a similar argument follows, although in reverse direction. Terminal writes are done automatically by the computer. Terminal reads, on the other hand, require human intervention. Thus, by the law of slow creation, terminal reads would be slower and smaller in size than terminal writes.
+<DD><B>2.</B>&nbsp;&nbsp;<I>About one-third of user time was spent on editors</I>. This clearly shows the importance of editing. At all installations, a substantial portion of the users&#146; time and system resources were devoted to editing. At installations making use of full-screen editors, the resource usage was considerably greater than at those using line-oriented editors. Since there appears to be a strong trend toward more extensive use of full-screen editors, it seems safe to assume that editing will continue to be a major workload ingredient and will probably even increase in importance. The educational institutions should therefore give good training to the students in using the editors. This will have significant impact on user productivity.
+</DL>
+<H3><A NAME="Heading8"></A><FONT COLOR="#000077">EXERCISE</FONT></H3>
+<DL>
+<DD><B>8.1</B>&nbsp;&nbsp;Using accounting log data, how would you answer the following questions:
+<DL>
+<DD><B>a.</B>&nbsp;&nbsp;Which programs should be used to analyze a new terminal concentrator?
+<DD><B>b.</B>&nbsp;&nbsp;How many program X users can be supported with a given disk device?
+<DD><B>c.</B>&nbsp;&nbsp;Is a benchmark representative?
+<DD><B>d.</B>&nbsp;&nbsp;Which programs should be chosen for I/O optimization?
+</DL>
+</DL>
+<P><BR></P>
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="08-04.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="../ch09/09-01.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<hr width="90%" size="1" noshade>
+<div align="center">
+<font face="Verdana,sans-serif" size="1">Copyright &copy; <a href="/reference/wiley00001.html">John Wiley &amp; Sons, Inc.</a></font>
+</div>
+<!-- all of the reference materials (books) have the footer and subfoot reveresed -->
+<!-- reference_subfoot = footer -->
+<!-- reference_footer = subfoot -->
+
+</BODY>
+</HTML>
+
+<!-- END FOOTER -->
+

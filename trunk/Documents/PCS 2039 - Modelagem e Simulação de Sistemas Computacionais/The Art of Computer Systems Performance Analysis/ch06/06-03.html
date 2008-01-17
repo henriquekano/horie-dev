@@ -1,0 +1,108 @@
+<HTML>
+<HEAD>
+<META name=vsisbn content="0471503363">
+<META name=vstitle content="Art of Computer Systems Performance Analysis Techniques For Experimental Design Measurements Simulation And Modeling">
+<META name=vsauthor content="Raj Jain">
+<META name=vsimprint content="Wiley Computer Publishing">
+<META name=vspublisher content="John Wiley & Sons, Inc.">
+<META name=vspubdate content="05/01/91">
+<META name=vscategory content="Web and Software Development: Software Engineering: Simulation and Modeling">
+
+
+
+
+
+
+
+<TITLE>The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling:Workload Characterization Techniques</TITLE>
+
+<!-- HEADER -->
+
+<STYLE type="text/css"> 
+ <!--
+ A:hover  {
+ 	color : Red;
+ }
+ -->
+</STYLE>
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+<!--ISBN=0471503363//-->
+<!--TITLE=The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling//-->
+<!--AUTHOR=Raj Jain//-->
+<!--PUBLISHER=Wiley Computer Publishing//-->
+<!--CHAPTER=06//-->
+<!--PAGES=076-077//-->
+<!--UNASSIGNED1//-->
+<!--UNASSIGNED2//-->
+
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="06-02.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="06-04.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+<P><BR></P>
+</P>
+<H3><A NAME="Heading6"></A><FONT COLOR="#000077">6.5 MULTIPARAMETER HISTOGRAMS</FONT></H3>
+<P>If there is a significant correlation between different workload parameters, the workload should be characterized using multiparameter histograms. An <I>n</I>-dimensional matrix (or histogram) is used to describe the distribution of <I>n</I> workload parameters.</P>
+<P>Figure 6.2 shows an example of a simplistic plot of a two-parameter joint histogram. The number of frames sent and received by stations on a local-area network are plotted. Each dot in the figure represents a station. The number of dots in a square represents the number of stations that sent and received the frames in the range corresponding to the cell. Generally, the stations sending a large number of frames are also the ones that receive a large number of frames. Thus, there is a significant correlation between the two parameters.</P>
+<P>It is difficult to plot joint histograms for more than two parameters. Also, as discussed before, even single-parameter histrograms are too detailed in some cases. Multiparameter histograms are even more detailed; they are therefore rarely used.</P>
+<H3><A NAME="Heading7"></A><FONT COLOR="#000077">6.6 PRINCIPAL-COMPONENT ANALYSIS</FONT></H3>
+<P>One technique commonly used to classify workload components is by the weighted sum of their parameter values. Using <I>a</I><SUB><SMALL><I>j</I></SMALL></SUB> as weight for the <I>j</I>th parameter <I>x</I><SUB><SMALL><I>j</I></SMALL></SUB>, the weighted sum <I>y</I> is</P>
+<P><P ALIGN="CENTER"><IMG SRC="images/06-03d.jpg"></P>
+</IMGD></P>
+<P>This sum can then be used to classify the components into a number of classes such as low demand or medium demand. Although this technique is commonly used in performance analysis software, in most cases, the person running the software is asked to choose the weight. Without any concrete guidelines, the person may assign weights such that workload components with very different characteristics may be grouped together, and the mean characteristics of the group may not correspond to any member.</P>
+<P>One method of determining the weights in such situations is to use the principal-component analysis, which allows finding the weights <I>w</I><SUB><SMALL><I>i</I></SMALL></SUB>&#146;s such that <I>y</I><SUB><SMALL><I>j</I></SMALL></SUB>&#146;s provide the maximum discrimination among the components. The quantity <I>y</I><SUB><SMALL><I>j</I></SMALL></SUB> is called the <B>principal factor</B>.<SUP><SMALL><B>1</B></SMALL></SUP> Statistically, given a set of <I>n</I> parameters {<I>x</I><SUB><SMALL>1</SMALL></SUB>,<I>x</I><SUB><SMALL>2</SMALL></SUB>,...,<I>x</I><SUB><SMALL><I>n</I></SMALL></SUB>}, the principal-component analysis produces a set of <B>factors</B> {<I>y</I><SUB><SMALL>1</SMALL></SUB>,<I>y</I><SUB><SMALL>2</SMALL></SUB>,...,<I>y</I><SUB><SMALL><I>n</I></SMALL></SUB>} such that the following holds:</P>
+
+<BLOCKQUOTE>
+<HR>
+<SUP><SMALL><B>1</B></SMALL></SUP><FONT SIZE="-1">The correct term is principal component. However, to avoid confusion with workload components, the term <I>principal factor</I>, which has a slightly different meaning in factor analysis, is used here.
+</FONT>
+<HR>
+</BLOCKQUOTE>
+
+<DL>
+<DD><B>1.</B>&nbsp;&nbsp;The <I>y</I>&#146;s are linear combinations of <I>x</I>&#146;s:
+<BR><P ALIGN="CENTER"><IMG SRC="images/06-04d.jpg"></P>
+</IMGD>
+<BR>Here <I>a</I><SUB><SMALL><I>ij</I></SMALL></SUB> is called the <B>loading</B> of variable <I>x</I><SUB><SMALL><I>j</I></SMALL></SUB> on factor <I>y</I><SUB><SMALL><I>i</I></SMALL></SUB>.
+<DD><B>2.</B>&nbsp;&nbsp;The <I>y</I>&#146;s form an orthogonal set, that is, their inner product is zero:
+<BR><P ALIGN="CENTER"><IMG SRC="images/06-05d.jpg"></P>
+</IMGD>
+<BR>This is equivalent to stating that the <I>y</I><SUB><SMALL><I>i</I></SMALL></SUB>&#146;s are uncorrelated to each other.
+<DD><B>3.</B>&nbsp;&nbsp;The <I>y</I>&#146;s form an ordered set such that <I>y</I><SUB><SMALL>1</SMALL></SUB> explains the highest percentage of the variance in resource demands, <I>y</I><SUB><SMALL>2</SMALL></SUB> explains a lower percentage, <I>y</I><SUB><SMALL>3</SMALL></SUB> explains a still lower percentage, and so forth. Thus, depending upon the level of detail required, only the first few factors can be used to classify the workload components.
+</DL>
+<P>Example 6.1 lists the key steps in finding principal factors and also illustrates them. The reader interested in further details of this technique should consult a book on factor analysis, for example, Harman (1976).
+</P>
+<DL>
+<DD><B>Example 6.1</B> The number of packets sent and received, denoted by <I>x</I><SUB><SMALL><I>s</I></SMALL></SUB> and <I>x</I><SUB><SMALL><I>r</I></SMALL></SUB>, respectively, by various stations on a local-area network were measured. The observed numbers are shown in the second and third columns of Table 6.4. A scatter plot of the data is shown in Figure 6.2. As seen from this figure, there is considerable correlation between the two variables. The steps in determining the principal factors are as follows:
+</DL>
+<P><BR></P>
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="06-02.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="06-04.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<hr width="90%" size="1" noshade>
+<div align="center">
+<font face="Verdana,sans-serif" size="1">Copyright &copy; <a href="/reference/wiley00001.html">John Wiley &amp; Sons, Inc.</a></font>
+</div>
+<!-- all of the reference materials (books) have the footer and subfoot reveresed -->
+<!-- reference_subfoot = footer -->
+<!-- reference_footer = subfoot -->
+
+</BODY>
+</HTML>
+
+<!-- END FOOTER -->
+

@@ -1,0 +1,111 @@
+<HTML>
+<HEAD>
+<META name=vsisbn content="0471503363">
+<META name=vstitle content="Art of Computer Systems Performance Analysis Techniques For Experimental Design Measurements Simulation And Modeling">
+<META name=vsauthor content="Raj Jain">
+<META name=vsimprint content="Wiley Computer Publishing">
+<META name=vspublisher content="John Wiley & Sons, Inc.">
+<META name=vspubdate content="05/01/91">
+<META name=vscategory content="Web and Software Development: Software Engineering: Simulation and Modeling">
+
+
+
+
+
+
+
+<TITLE>The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling:Capacity Planning and Benchmarking</TITLE>
+
+<!-- HEADER -->
+
+<STYLE type="text/css"> 
+ <!--
+ A:hover  {
+ 	color : Red;
+ }
+ -->
+</STYLE>
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+<!--ISBN=0471503363//-->
+<!--TITLE=The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling//-->
+<!--AUTHOR=Raj Jain//-->
+<!--PUBLISHER=Wiley Computer Publishing//-->
+<!--CHAPTER=09//-->
+<!--PAGES=123-127//-->
+<!--UNASSIGNED1//-->
+<!--UNASSIGNED2//-->
+
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="../ch08/08-05.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="09-02.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+<P><BR></P>
+<H2><A NAME="Heading1"></A><FONT COLOR="#000077">CHAPTER 9<BR>CAPACITY PLANNING AND BENCHMARKING
+</FONT></H2>
+<P ALIGN="RIGHT"><I>Do not plan a bridge capacity by counting the number<BR>of people who swim across the river today.</I><BR>&#151;Heard at a presentation</P>
+<P>One of the important problems for managers of data processing installations is <B>capacity planning,</B> which requires ensuring that adequate computer resources will be available to meet the future workload demands in a cost-effective manner while meeting the performance objectives. The term <B>capacity management</B> is used to denote the problem of ensuring that the currently available computing resources are used to provide the highest performance. Thus, capacity management is concerned with the present while capacity planning is concerned with the future.</P>
+<P>The alternatives for capacity planning usually consist of procuring more computing resources, while the alternatives for capacity management consist of adjusting usage patterns, rearranging configuration, and changing system parameters to maximize the performance. The process of adjusting system parameters to optimize the performance is also called <B>performance tuning.</B></P>
+<P>To compare the performance of two competing systems in an objective manner, benchmarks are run on these systems using automatic load drivers. The mistakes and games of benchmarking as well as the issues related to load drivers are discussed in this chapter.</P>
+<P><A NAME="Fig1"></A><A HREF="javascript:displayWindow('images/09-01.jpg',500,342 )"><IMG SRC="images/09-01t.jpg"></A>
+<BR><A HREF="javascript:displayWindow('images/09-01.jpg',500,342)"><FONT COLOR="#000077"><B>FIGURE 9.1</B></FONT></A>&nbsp;&nbsp;Steps in capacity planning process.</P>
+<H3><A NAME="Heading2"></A><FONT COLOR="#000077">9.1 STEPS IN CAPACITY PLANNING AND MANAGEMENT</FONT></H3>
+<P>Figure 9.1 shows the steps in the capacity planning process. For planning as well as management, the steps are basically same:
+</P>
+<DL>
+<DD><B>1.</B>&nbsp;&nbsp;Instrument the system.
+<DD><B>2.</B>&nbsp;&nbsp;Monitor system usage.
+<DD><B>3.</B>&nbsp;&nbsp;Characterize workload.
+<DD><B>4.</B>&nbsp;&nbsp;Predict performance under different alternatives.
+<DD><B>5.</B>&nbsp;&nbsp;Select the lowest cost, highest performance alternative.
+</DL>
+<P>The first step is to ensure that there are appropriate counters and hooks in the system to record current usage. In most cases, the counters already built in the operating systems, application software, and I/O devices are used. Use of accounting log data is probably the most popular method. The second step consists of monitoring the usage and characterizing the workload. This requires gathering data for a period of time and analyzing and summarizing it in a form so that it can be used as input to a system model for performance prediction.
+</P>
+<P>For capacity management, the current configuration and workload are input into a tuning model that advises changes in a system parameter setting. This model is either a detailed simulation of the system or contains a set of rules developed specifically for the system. For example, one of the rules may be to advise balanced placement of files if a highly skewed usage of disk devices is seen.</P>
+<P>For capacity planning, first the workload is forecasted based on long-term monitoring of the system. Then different configuration alternatives and future workloads are input to a model that predicts performance. This later step of equipment selection is also called <B>sizing.</B> The models for sizing are generally less detailed than tuning models. Often, analytic modeling techniques such as queueing models are used for sizing since the list of alternatives includes a wide variety of new hardware and software components for which detailed models may not yet exist. Thus, while the tuning models are detailed and system specific, the planning models are coarse and system independent or at least less system specific. In many sites, simple rules of thumb, such as demand increasing by a factor <I>x</I> every <I>y</I> years, are used for long-term planning. In many installations, the future workload is so unknown that more sophisticated prediction techniques may not be of great help.</P>
+<H3><A NAME="Heading3"></A><FONT COLOR="#000077">9.2 PROBLEMS IN CAPACITY PLANNING</FONT></H3>
+<P>Most of the capacity planning literature deals with selecting performance metrics, monitoring techniques, workload characterization, forecasting, and modeling techniques. Since each of these issues is discussed in different parts of this book, the discussion here is limited to the list of problems faced by capacity planners. These problems are discussed next.
+</P>
+<DL>
+<DD><B>1.</B>&nbsp;&nbsp;<I>There is no standard terminology.</I> Every vendor of capacity planning tools has a different definition of capacity management, capacity planning, sizing, tuning, and so on. Often one buys a capacity planning tool only to find out later that it does only tuning or sizing and has no workload measurement or characterization facilities. Some vendors use the term <I>capacity management</I> to include both capacity planning and tuning. Others use it to denote tuning only.
+<DD><B>2.</B>&nbsp;&nbsp;<I>There is no standard definition of capacity.</I> There are several possibilities. One definition of capacity, in terms of the maximum throughput, was presented in Section 3.3. Throughput is measured in requests per unit time, for example, jobs per second, Transactions Per Second (TPS), Instructions Per Second (MIPS), or bits per second (for network links). Another possibility is to define capacity as the maximum number of users that the system can support while meeting a specified performance objective. In this definition, <I>users</I> is only an example of what has been termed <I>workload unit.</I> Other workload units are sessions, tasks, activities, programs, jobs, accounts, projects, and so on, and the capacity is expressed in these units. Workload units are also called workload components.
+<DD><B>3.</B>&nbsp;&nbsp;<I>There are a number of different capacities for the same system.</I> In Section 3.3, three capacities&#151;nominal capacity, usable capacity, and knee capacity&#151;were described. Other capacity terms that have been used in the literature are practical capacity (usable capacity) and theoretical capacity (nominal capacity).
+<DD><B>4.</B>&nbsp;&nbsp;<I>There is no standard workload unit.</I> The problem with measuring capacity in workload units, such as users or sessions, is that it requires a detailed characterization of the workload unit that varies from one environment to the next. It is because of this difficulty that the workload-independent capacity measures, such as MIPS, are still popular. System managers forecast and plan for their future in terms of their MIPS requirements.
+<DD><B>5.</B>&nbsp;&nbsp;<I>Forecasting future applications is difficult.</I> Most of the forecasting is based on the assumption that the future trend will be similar to the past. This assumption is violated if a new technology suddenly emerges. For example, many old predictions based on mainframe usage are no longer valid due to the introduction and popularity of low-cost work-stations. A number of new applications have also become possible due to the high-performance computing capacity available at the desk.
+<DD><B>6.</B>&nbsp;&nbsp;<I>There is no uniformity among systems from different vendors.</I> The same workload takes different amounts of resources on different systems. This requires developing a vendor-independent benchmark and running it on different systems. Also, separate models (simulation or analytical) have to be developed for each system. It is possible to inadvertently introduce bias at any of these stages.
+<DD><B>7.</B>&nbsp;&nbsp;<I>Model inputs cannot always be measured.</I> Simulation or analytical models are used to predict the performance under different alternatives. Sometimes the inputs required for the model are not accurately measurable. For example, &#147;think time&#148; is commonly used in analytical models. In a real environment, the time between successive commands from the user may include thinking as well as other interruptions such as coffee breaks. It is almost impossible to correctly measure think time.
+<BR>Determining model inputs becomes even more difficult if the monitoring tool, workload analysis tool, and modeling tools are from different vendors. The output of one step may not be in a format usable by the next step.
+<DD><B>8.</B>&nbsp;&nbsp;<I>Validating model projections is difficult.</I> There are two types of model validations. The first type, <B>baseline validation,</B> requires using the current workload and configuration in the model and verifying that the model output matches the observed system performance. The second validation, called <B>projection validation,</B> requires changing the workload and configuration and verifying that the model output matches the changed real system&#146;s performance. While it is easy to change inputs to a model, it is difficult to control the workload and configurations on a real system. For this reason, projection validations are rarely performed. Without projection validations, the use of the model for capacity planning is suspect.
+<DD><B>9.</B>&nbsp;&nbsp;<I>Distributed environments are too complex to model.</I> Initial computer systems consisted of only a few components. Each component was expensive enough to justify the cost of accurately modeling its behavior. Also, the number of users on the system was large. Thus, even though each user&#146;s behavior is highly variable, the aggregate performance of all users did not vary that much and could be modeled accurately. In distributed environments of today, the system consists of a large number of semi-autonomous clients, servers, network links, and I/O devices. Workstation usage is very different from others, and the interactions are also rather complex. Also, the cost of individual components is not high enough to justify accurate modeling.
+<DD><B>10.</B>&nbsp;&nbsp;<I>Performance is only a small part of the capacity planning problem.</I> The key issue in capacity planning is that of cost, which includes the cost of the equipment, software, installation, maintenance, personnel, floor space, power, and climate control (cooling, humidity control). Performance modeling helps only in sizing the equipment. However, as the cost of computer hardware is declining, these other costs are becoming dominant and have become a major consideration in capacity planning.
+</DL>
+<P><BR></P>
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="../ch08/08-05.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="09-02.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<hr width="90%" size="1" noshade>
+<div align="center">
+<font face="Verdana,sans-serif" size="1">Copyright &copy; <a href="/reference/wiley00001.html">John Wiley &amp; Sons, Inc.</a></font>
+</div>
+<!-- all of the reference materials (books) have the footer and subfoot reveresed -->
+<!-- reference_subfoot = footer -->
+<!-- reference_footer = subfoot -->
+
+</BODY>
+</HTML>
+
+<!-- END FOOTER -->
+

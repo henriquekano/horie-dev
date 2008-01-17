@@ -1,0 +1,257 @@
+<HTML>
+<HEAD>
+<META name=vsisbn content="0471503363">
+<META name=vstitle content="Art of Computer Systems Performance Analysis Techniques For Experimental Design Measurements Simulation And Modeling">
+<META name=vsauthor content="Raj Jain">
+<META name=vsimprint content="Wiley Computer Publishing">
+<META name=vspublisher content="John Wiley & Sons, Inc.">
+<META name=vspubdate content="05/01/91">
+<META name=vscategory content="Web and Software Development: Software Engineering: Simulation and Modeling">
+
+
+
+
+
+
+
+<TITLE>The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling:Workload Characterization Techniques</TITLE>
+
+<!-- HEADER -->
+
+<STYLE type="text/css"> 
+ <!--
+ A:hover  {
+ 	color : Red;
+ }
+ -->
+</STYLE>
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+<!--ISBN=0471503363//-->
+<!--TITLE=The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling//-->
+<!--AUTHOR=Raj Jain//-->
+<!--PUBLISHER=Wiley Computer Publishing//-->
+<!--CHAPTER=06//-->
+<!--PAGES=074-076//-->
+<!--UNASSIGNED1//-->
+<!--UNASSIGNED2//-->
+
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="06-01.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="06-03.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+<P><BR></P>
+<DL>
+<DD><B>Case Study 6.1</B> The resource demands of various programs executed on six university sites were measured for 6 months. The average demand by each program is shown in Table 6.1. Notice that the C.O.V. of the measured values are rather high, indicating that combining all programs into one class is not a good idea. Programs should be divided into several classes. Table 6.2 shows the average demand for all editors in the same data. The C.O.V. are now much lower.
+</DL>
+<TABLE WIDTH="100%">
+<TH CAPTION ALIGN="LEFT" VALIGN="TOP" COLSPAN="3">TABLE 6.1 Workload Characterization Using Average Values
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT" COLSPAN="3"><HR>
+<TR>
+<TD WIDTH="40%" VALIGN="BOTTOM" ALIGN="LEFT">Data
+<TD VALIGN="BOTTOM" WIDTH="25%" ALIGN="LEFT">Average
+<TD WIDTH="35%" ALIGN="LEFT" VALIGN="BOTTOM">Coefficient of Variation
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT" COLSPAN="3"><HR>
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT">CPU time (VAX-11/780)
+<TD VALIGN="TOP" ALIGN="LEFT">2.19 seconds
+<TD VALIGN="TOP" ALIGN="LEFT">40.23
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT">Number of direct writes
+<TD VALIGN="TOP" ALIGN="LEFT"> 8.20
+<TD VALIGN="TOP" ALIGN="LEFT">53.59
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT">Direct-write bytes
+<TD VALIGN="TOP" ALIGN="LEFT">10.21 kbytes
+<TD VALIGN="TOP" ALIGN="LEFT">82.41
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT">Number of direct reads
+<TD VALIGN="TOP" ALIGN="LEFT">22.64
+<TD VALIGN="TOP" ALIGN="LEFT">25.65
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT">Direct-read bytes
+<TD VALIGN="TOP" ALIGN="LEFT">49.70 kbytes
+<TD VALIGN="TOP" ALIGN="LEFT">21.01
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT" COLSPAN="3"><HR>
+</TABLE>
+<P>
+</P>
+<TABLE WIDTH="100%"><TH CAPTION ALIGN="LEFT" COLSPAN="3">TABLE 6.2 Characteristics of an Average Editing Session
+<TR>
+<TD COLSPAN="3"><HR>
+<TR>
+<TD CAPTION VALIGN="BOTTOM" ALIGN="LEFT" WIDTH="40%">Data
+<TD CAPTION VALIGN="BOTTOM" ALIGN="LEFT" WIDTH="25%">Average
+<TD CAPTION VALIGN="BOTTOM" ALIGN="LEFT" WIDTH="35%">Coefficient of Variation
+<TR>
+<TD COLSPAN="3"><HR>
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT">CPU time (VAX-11/780)
+<TD VALIGN="TOP" ALIGN="LEFT">2.57 seconds
+<TD VALIGN="TOP" ALIGN="LEFT">3.54
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT">Number of direct writes
+<TD VALIGN="TOP" ALIGN="LEFT">19.74
+<TD VALIGN="TOP" ALIGN="LEFT">4.33
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT">Direct-write bytes
+<TD VALIGN="TOP" ALIGN="LEFT">13.46 kbytes
+<TD VALIGN="TOP" ALIGN="LEFT">3.87
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT">Number of direct reads
+<TD VALIGN="TOP" ALIGN="LEFT">37.77
+<TD VALIGN="TOP" ALIGN="LEFT">3.73
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT">Direct-read bytes
+<TD VALIGN="TOP" ALIGN="LEFT">36.93 kbytes
+<TD VALIGN="TOP" ALIGN="LEFT">3.16
+<TR>
+<TD COLSPAN="3"><HR>
+</TABLE>
+<H3><A NAME="Heading5"></A><FONT COLOR="#000077">6.4 SINGLE-PARAMETER HISTOGRAMS</FONT></H3>
+<P>A histogram shows the relative frequencies of various values of a parameter. For continuous-value parameters, this requires dividing the complete parameter range into several smaller subranges called <I>buckets</I> (or <I>cells</I>) and counting the observations that fall in each cell. An example is shown in Figure 6.1 for CPU time and disk I/O. Tbe results can also be presented in tabular form, as shown in Table 6.3. This data can then be used in a measurement or simulation model to generate a test workload. In analytical modeling, histograms can be used to fit a probability distribution and to verify that the distribution used in the model is similar to that observed in the histogram. The quantile-quantile plots discussed in Section 12.10 and several statistical tests described in Chapter 27 may be useful in determining and verifying the distribution.</P>
+<P>Given <I>n</I> buckets per histogram, <I>m</I> parameters per component, and <I>k</I> components, this method requires presenting <I>nmk</I> numerical values. This may be too much detail to be useful. Thus, this should be used only if the variance is high and the averages cannot be used.</P>
+<P>The key problem with using individual-parameter histograms is that they ignore the correlation among different parameters. For example, short jobs (jobs with small elapsed time) may create a lower number of disk I/O and may take a smaller amount of CPU time than long jobs. A test workload based on the single-parameter histograms may generate a job with short CPU time and a large number of disk I/Os&#151;a situation generally not possible in a real workload. This problem is avoided by using multiparameter histograms, which are described next.</P>
+<P><A NAME="Fig1"></A><A HREF="javascript:displayWindow('images/06-01.jpg',500,147 )"><IMG SRC="images/06-01t.jpg"></A>
+<BR><A HREF="javascript:displayWindow('images/06-01.jpg',500,147)"><FONT COLOR="#000077"><B>FIGURE 6.1</B></FONT></A>&nbsp;&nbsp;Single-parameter histograms of CPU time and disk I/O.</P>
+<TABLE>
+<TH CAPTION VALIGN="TOP" ALIGN="LEFT" COLSPAN="10">TABLE 6.3 Tabular Representation of a Single-Parameter Histogram
+<TR>
+<TD COLSPAN="10"><HR>
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT">
+<TD VALIGN="BOTTOM" ALIGN="LEFT" COLSPAN="4">CPU Time (milliseconds)
+<TD VALIGN="TOP" ALIGN="LEFT">
+<TD VALIGN="TOP" ALIGN="LEFT">
+<TD VALIGN="TOP" ALIGN="LEFT" COLSPAN="3">Number of Disk I/O
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT">
+<TD COLSPAN="9"><HR>
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT">Program
+<TD VALIGN="TOP" ALIGN="LEFT">0-5
+<TD VALIGN="TOP" ALIGN="LEFT">6-10
+<TD VALIGN="TOP" ALIGN="LEFT">11-15
+<TD VALIGN="TOP" ALIGN="LEFT">15&#43;
+<TD VALIGN="TOP" ALIGN="LEFT">
+<TD VALIGN="TOP" ALIGN="LEFT">0-20
+<TD VALIGN="TOP" ALIGN="LEFT">21-40
+<TD VALIGN="TOP" ALIGN="LEFT">41-60
+<TD VALIGN="TOP" ALIGN="LEFT">60&#43;
+<TD VALIGN="TOP" ALIGN="LEFT">
+<TR>
+<TD COLSPAN="10"><HR>
+<TR>
+<TD>DOVERSEND
+<TD VALIGN="TOP" ALIGN="LEFT">...
+<TD VALIGN="TOP" ALIGN="LEFT">...
+<TD VALIGN="TOP" ALIGN="LEFT">...
+<TD VALIGN="TOP" ALIGN="LEFT">...
+<TD VALIGN="TOP" ALIGN="LEFT">
+<TD VALIGN="TOP" ALIGN="LEFT">...
+<TD VALIGN="TOP" ALIGN="LEFT">...
+<TD VALIGN="TOP" ALIGN="LEFT">...
+<TD VALIGN="TOP" ALIGN="LEFT">...
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT">EMACS
+<TD VALIGN="TOP" ALIGN="LEFT">...
+<TD VALIGN="TOP" ALIGN="LEFT">...
+<TD VALIGN="TOP" ALIGN="LEFT">...
+<TD VALIGN="TOP" ALIGN="LEFT">...
+<TD VALIGN="TOP" ALIGN="LEFT">
+<TD VALIGN="TOP" ALIGN="LEFT">...
+<TD VALIGN="TOP" ALIGN="LEFT">...
+<TD VALIGN="TOP" ALIGN="LEFT">...
+<TD VALIGN="TOP" ALIGN="LEFT">...
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT">MAIL
+<TD VALIGN="TOP" ALIGN="LEFT">...
+<TD VALIGN="TOP" ALIGN="LEFT">...
+<TD VALIGN="TOP" ALIGN="LEFT">...
+<TD VALIGN="TOP" ALIGN="LEFT">...
+<TD VALIGN="TOP" ALIGN="LEFT">
+<TD VALIGN="TOP" ALIGN="LEFT">...
+<TD VALIGN="TOP" ALIGN="LEFT">...
+<TD VALIGN="TOP" ALIGN="LEFT">...
+<TD VALIGN="TOP" ALIGN="LEFT">...
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT">SCRIBE
+<TD VALIGN="TOP" ALIGN="LEFT">...
+<TD VALIGN="TOP" ALIGN="LEFT">...
+<TD VALIGN="TOP" ALIGN="LEFT">...
+<TD VALIGN="TOP" ALIGN="LEFT">...
+<TD VALIGN="TOP" ALIGN="LEFT">
+<TD VALIGN="TOP" ALIGN="LEFT">...
+<TD VALIGN="TOP" ALIGN="LEFT">...
+<TD VALIGN="TOP" ALIGN="LEFT">...
+<TD VALIGN="TOP" ALIGN="LEFT">...
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT">PRESSIFY
+<TD VALIGN="TOP" ALIGN="LEFT">...
+<TD VALIGN="TOP" ALIGN="LEFT">...
+<TD VALIGN="TOP" ALIGN="LEFT">...
+<TD VALIGN="TOP" ALIGN="LEFT">...
+<TD VALIGN="TOP" ALIGN="LEFT">
+<TD VALIGN="TOP" ALIGN="LEFT">...
+<TD VALIGN="TOP" ALIGN="LEFT">...
+<TD VALIGN="TOP" ALIGN="LEFT">...
+<TD VALIGN="TOP" ALIGN="LEFT">...
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT">DIRECTORY
+<TD VALIGN="TOP" ALIGN="LEFT">...
+<TD VALIGN="TOP" ALIGN="LEFT">...
+<TD VALIGN="TOP" ALIGN="LEFT">...
+<TD VALIGN="TOP" ALIGN="LEFT">...
+<TD VALIGN="TOP" ALIGN="LEFT">
+<TD VALIGN="TOP" ALIGN="LEFT">...
+<TD VALIGN="TOP" ALIGN="LEFT">...
+<TD VALIGN="TOP" ALIGN="LEFT">...
+<TD VALIGN="TOP" ALIGN="LEFT">...
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT">TELNET
+<TD VALIGN="TOP" ALIGN="LEFT">...
+<TD VALIGN="TOP" ALIGN="LEFT">...
+<TD VALIGN="TOP" ALIGN="LEFT">...
+<TD VALIGN="TOP" ALIGN="LEFT">...
+<TD VALIGN="TOP" ALIGN="LEFT">
+<TD VALIGN="TOP" ALIGN="LEFT">...
+<TD VALIGN="TOP" ALIGN="LEFT">...
+<TD VALIGN="TOP" ALIGN="LEFT">...
+<TD VALIGN="TOP" ALIGN="LEFT">...
+<TR>
+<TD COLSPAN="10"><HR>
+</TABLE>
+<P><A NAME="Fig2"></A><A HREF="javascript:displayWindow('images/06-02.jpg',500,401 )"><IMG SRC="images/06-02t.jpg"></A>
+<BR><A HREF="javascript:displayWindow('images/06-02.jpg',500,401)"><FONT COLOR="#000077"><B>FIGURE 6.2</B></FONT></A>&nbsp;&nbsp;Two-parameter histogram.<P><BR></P>
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="06-01.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="06-03.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<hr width="90%" size="1" noshade>
+<div align="center">
+<font face="Verdana,sans-serif" size="1">Copyright &copy; <a href="/reference/wiley00001.html">John Wiley &amp; Sons, Inc.</a></font>
+</div>
+<!-- all of the reference materials (books) have the footer and subfoot reveresed -->
+<!-- reference_subfoot = footer -->
+<!-- reference_footer = subfoot -->
+
+</BODY>
+</HTML>
+
+<!-- END FOOTER -->
+

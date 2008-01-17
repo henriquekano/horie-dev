@@ -1,0 +1,125 @@
+<HTML>
+<HEAD>
+<META name=vsisbn content="0471503363">
+<META name=vstitle content="Art of Computer Systems Performance Analysis Techniques For Experimental Design Measurements Simulation And Modeling">
+<META name=vsauthor content="Raj Jain">
+<META name=vsimprint content="Wiley Computer Publishing">
+<META name=vspublisher content="John Wiley & Sons, Inc.">
+<META name=vspubdate content="05/01/91">
+<META name=vscategory content="Web and Software Development: Software Engineering: Simulation and Modeling">
+
+
+
+
+
+
+
+<TITLE>The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling:Program Execution Monitors and Accounting Logs</TITLE>
+
+<!-- HEADER -->
+
+<STYLE type="text/css"> 
+ <!--
+ A:hover  {
+ 	color : Red;
+ }
+ -->
+</STYLE>
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+<!--ISBN=0471503363//-->
+<!--TITLE=The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling//-->
+<!--AUTHOR=Raj Jain//-->
+<!--PUBLISHER=Wiley Computer Publishing//-->
+<!--CHAPTER=08//-->
+<!--PAGES=114-116//-->
+<!--UNASSIGNED1//-->
+<!--UNASSIGNED2//-->
+
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="08-01.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="08-03.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+<P><BR></P>
+<H3><A NAME="Heading4"></A><FONT COLOR="#000077">8.2 TECHNIQUES FOR IMPROVING PROGRAM PERFORMANCE</FONT></H3>
+<P>The three common techniques of program optimization are code optimization, I/O optimization, and paging optimization. The code optimization consists of finding the dynamic frequency of execution of various program modules and optimizing the code of most frequently used modules. The I/O optimization usually consists of combining several I/O requests into larger records, changing the file access method, and caching or prefetching data. Paging optimization consists of observing the page reference pattern and reorganizing program segments so that the paging activity is minimized. Box 8.1 lists a number of techniques for writing high-performance programs and for improving the performance of existing programs.
+</P>
+<H3><A NAME="Heading5"></A><FONT COLOR="#000077">8.3 ACCOUNTING LOGS</FONT></H3>
+<P>Accounting logs, although not primarily developed for monitoring, are classified as software monitors because they provide useful information about system usage and performance, and they can often be used as substitutes for monitors. Before starting to develop a monitor, one should look at the logging facilities built into the system. Often, a new monitor is not necessary.
+</P>
+<P>The main advantage of accounting logs is that they are built in. No extra effort is required to develop them. Most of the data is already collected during normal operation. The overhead is generally small, so data collection can be performed for long periods of time. Further, the data reflects real-system usage.</P>
+<P>The main disadvantage of accounting logs is that the log analysis programs are not usually supplied. Since the analysis needs are different in each case, most systems convert the log into a generally readable format or produce an overall summary. Additional analysis programs have to be written by the analysts themselves. A general-purpose statistical analysis package may be useful for detailed analysis.</P>
+<P>The data in the logs may not be at the desired level of granularity. For example, a distribution of I/O sizes is generally not available from the logs. Only the total number of blocks read or written may be available. Further, often the only resource usages that are recorded are those charged to the user. For example, if terminal I/O&#146;s are not charged, a record of them may not be kept in the logs.</P>
+<P>The accuracy of logs is also low. The resource usage not chargeable to any particular user is distributed either evenly among or randomly to users. For example, CPU time spent in servicing interrupts may be charged to the user active at the time of the interrupt, even though the interrupt may be for another user not currently active.</P>
+
+<TABLE BORDER="2" BORDERCOLOR="#0000" ALIGN="CENTER">
+<TR><TD>
+<P><B>Box 8.1 Techniques for Improving Program Performance</B></P>
+<DL>
+<DD><B>1.</B>&nbsp;&nbsp;Optimize the common case. The most frequently used path should also be the most efficient. A procedure should handle all cases correctly and common cases efficiently.
+<DD><B>2.</B>&nbsp;&nbsp;Arrange a series of IF statements so that the most likely value is tested first.
+<DD><B>3.</B>&nbsp;&nbsp;Arrange a series of AND conditions so that the condition most likely to fail is tested first.
+<DD><B>4.</B>&nbsp;&nbsp;Arrange entries in a table so that the most frequently sought values are the first to be compared.
+<DD><B>5.</B>&nbsp;&nbsp;Structure the main line of the program so that it contains the most frequent path of the program. Errors and exceptions should be handled separately.
+<DD><B>6.</B>&nbsp;&nbsp;Question the necessity of each instruction in the main (time-critical or most frequent) path of the code.
+<DD><B>7.</B>&nbsp;&nbsp;Trade memory space for processor time wherever possible. If a function is computed more than once, compute it once and store the result. Some functions with parameters can be replaced by a table of precomputed values.
+<DD><B>8.</B>&nbsp;&nbsp;Use hints. Keeping a fast but possibly inaccurate hint along with a slow but robust algorithm may save time in most cases.
+<DD><B>9.</B>&nbsp;&nbsp;Cache the data that is accessed often. However, one must ensure that there is sufficient locality before using caches.
+<DD><B>10.</B>&nbsp;&nbsp;Unroll short loops. Save the cost of modifying and testing loop indexes.
+<DD><B>11.</B>&nbsp;&nbsp;Replace searches by direct indexing, wherever possible. In some cases, this may require more space than minimum.
+<DD><B>12.</B>&nbsp;&nbsp;Use the same size for data fields that need to be compared or added together.
+<DD><B>13.</B>&nbsp;&nbsp;Use the full word widths of the computer to evaluate expressions. For example, use 32 bits on a 32-bit computer even if you need only 31.
+<DD><B>14.</B>&nbsp;&nbsp;Align data fields on word boundaries, wherever possible.
+<DD><B>15.</B>&nbsp;&nbsp;Evaluate items only when needed, particularly if it is likely that it will not be needed.
+<DD><B>16.</B>&nbsp;&nbsp;Initialize data areas during run time only when used. Wherever possible, the values should be initialized at the compile time.
+<DD><B>17.</B>&nbsp;&nbsp;Use algebraic identities to simplify conditional expressions.
+<DD><B>18.</B>&nbsp;&nbsp;Replace threshold tests on monotone (continuously nondecreasing or continuously nonincreasing) functions by tests on their parameters, thereby avoiding the evaluation of the function.
+<DD><B>19.</B>&nbsp;&nbsp;Evaluate variables not changing in a loop before entering the loop.
+<DD><B>20.</B>&nbsp;&nbsp;Combine two nearby loops if they use the same set of conditions.
+<DD><B>21.</B>&nbsp;&nbsp;Use shifts in place of multiplication and division by powers of 2.
+<DD><B>22.</B>&nbsp;&nbsp;Keep the code simple. Simpler programs are more efficient.
+<DD><B>23.</B>&nbsp;&nbsp;Block I/O requests together to reduce the number of I/O operations.
+<DD><B>24.</B>&nbsp;&nbsp;Preload small disk files into tables in memory.
+<DD><B>25.</B>&nbsp;&nbsp;Use multiple buffers for files to allow prefetching.
+<DD><B>26.</B>&nbsp;&nbsp;Link the most frequently used procedures together to maximize the locality of reference.
+<DD><B>27.</B>&nbsp;&nbsp;Reference data in the order stored. Arrays stored by columns should be referenced by columns.
+<DD><B>28.</B>&nbsp;&nbsp;Store data elements that are used concurrently together.
+<DD><B>29.</B>&nbsp;&nbsp;Store subroutines in sequence so that calling and called subroutines will be loaded together.
+<DD><B>30.</B>&nbsp;&nbsp;Align I/O buffers to page boundaries.
+<DD><B>31.</B>&nbsp;&nbsp;Open files that are used together in sequence so that buffers will be located together.
+<DD><B>32.</B>&nbsp;&nbsp;Pass simple subroutine arguments by value rather than by reference, wherever possible.
+<DD><B>33.</B>&nbsp;&nbsp;Pass large arrays and other data structures to subroutines by reference rather than value.
+<DD><B>34.</B>&nbsp;&nbsp;Separate read-only code areas from read-write data areas to minimize the number of page-writes.
+</DL>
+</TABLE>
+
+<P><BR></P>
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="08-01.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="08-03.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<hr width="90%" size="1" noshade>
+<div align="center">
+<font face="Verdana,sans-serif" size="1">Copyright &copy; <a href="/reference/wiley00001.html">John Wiley &amp; Sons, Inc.</a></font>
+</div>
+<!-- all of the reference materials (books) have the footer and subfoot reveresed -->
+<!-- reference_subfoot = footer -->
+<!-- reference_footer = subfoot -->
+
+</BODY>
+</HTML>
+
+<!-- END FOOTER -->
+

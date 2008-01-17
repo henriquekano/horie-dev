@@ -1,0 +1,99 @@
+<HTML>
+<HEAD>
+<META name=vsisbn content="0471503363">
+<META name=vstitle content="Art of Computer Systems Performance Analysis Techniques For Experimental Design Measurements Simulation And Modeling">
+<META name=vsauthor content="Raj Jain">
+<META name=vsimprint content="Wiley Computer Publishing">
+<META name=vspublisher content="John Wiley & Sons, Inc.">
+<META name=vspubdate content="05/01/91">
+<META name=vscategory content="Web and Software Development: Software Engineering: Simulation and Modeling">
+
+
+
+
+
+
+
+<TITLE>The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling:Capacity Planning and Benchmarking</TITLE>
+
+<!-- HEADER -->
+
+<STYLE type="text/css"> 
+ <!--
+ A:hover  {
+ 	color : Red;
+ }
+ -->
+</STYLE>
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+<!--ISBN=0471503363//-->
+<!--TITLE=The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling//-->
+<!--AUTHOR=Raj Jain//-->
+<!--PUBLISHER=Wiley Computer Publishing//-->
+<!--CHAPTER=09//-->
+<!--PAGES=136-138//-->
+<!--UNASSIGNED1//-->
+<!--UNASSIGNED2//-->
+
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="09-04.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="../ch10/10-01.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+<P><BR></P>
+<H3><A NAME="Heading9"></A><FONT COLOR="#000077">9.8 LIMITATIONS OF CURRENT RTES</FONT></H3>
+<P>As the terminal communication is changing, the user&#146;s behavior in a real environment is changing, and RTEs need to be updated continuously to keep track of these changes. Many of these changes are difficult to emulate, and this limits the use of RTEs. Some of these limitations are as follows.
+</P>
+<DL>
+<DD><B>1.</B>&nbsp;&nbsp;<I>The conditions for sending successive requests may not be realistic.</I> The issue is that of deciding when to send the next <I>n</I> lines of user input to the SUT. It should be representative of a real environment. In the real world, a user types in the next command based on several considerations. For example, the next request may be typed as follows:
+<DL>
+<DD><B>(a)</B>&nbsp;&nbsp;After a think time interval, which represents the time required to think about what should be done next.
+<DD><B>(b)</B>&nbsp;&nbsp;After a specified number of lines from the computer have been received. This represents waiting for all of the responses from the previous request.
+<DD><B>(c)</B>&nbsp;&nbsp;After a special character (for example, &#147;?&#148;) has been sent by the SUT.
+<DD><B>(d)</B>&nbsp;&nbsp;After the SUT gives a specified prompt (for example, &#147;A&gt&#148;).
+<DD><B>(d)</B>&nbsp;&nbsp;After the SUT gives one of a set of specified prompts.
+</DL>
+<BR>Current RTEs do not allow all of these conditions to be emulated.
+<DD><B>2.</B>&nbsp;&nbsp;<I>It may not be possible to vary the input in successive repetitions.</I> In a real environment, successive requests are generally different. For example, in a sequence of reservation queries, the name of the reservation customer may need to be different in each query. If the same name is used in successive queries, the first query would require fetching the data from a remote site; all remaining queries for the same name may be satisfied from the local cache. Some RTEs, therefore, provide facilities for fetching input randomly from a table of inputs.
+<DD><B>3.</B>&nbsp;&nbsp;<I>The think time model may not be realistic.</I> The conclusions of RTE experiments are generally dependent upon the think time value used. Unfortunately, in most experiments the think time is not a measured value but a value simply taken &#147;out of a hat.&#148; Few studies have been conducted that verify that the concept of think time is realistic. Do users really think before they link a program after compiling it? In most cases, users type &#147;LINK&#148; long before the computer comes back with the compilation errors. Should RTEs emulate these negative think times of type-ahead? It is also possible for think time to overlap with the previous command&#146;s execution. All of these alternatives are not modeled by current RTEs.
+<DD><B>4.</B>&nbsp;&nbsp;<I>Modern user interfaces are not emulated.</I> Progress in human interfacing techniques has also left RTEs behind the times. Today, many terminals are buffered and gather several characters before sending them to the user. Mouse input may be used along with or in place of the keyboard input. Function keys may be used to send predefined strings to the SUT. Graphics, such as a pie chart or a drawing with multiple colors and shades, may constitute the output instead of ASCII characters. Current RTEs do not allow such interfaces to be emulated or measured.
+<DD><B>5.</B>&nbsp;&nbsp;<I>Users are the shared resource.</I> With multiple screens on terminals, a user may be simultaneously thinking about several commands. Some windows may be waiting for the user input. Instead of the users waiting for the system response, the system may be waiting for the user&#146;s response. It is quite likely that the user is the bottleneck and also the most expensive resource. Such sharing of a user among many tasks is not currently emulated by RTEs.
+<DD><B>6.</B>&nbsp;&nbsp;<I>Modern communication technology is not emulated.</I> The RTEs attempt to include the communication overhead in the measurements. However, recent advances in communications technology have left RTEs behind. Terminals are no longer connected to the system directly. They are connected to a terminal concentrator on a local-area network. Another concentrator on the network is connected to the host system. Most RTEs do not yet allow emulation of this environment.
+<DD><B>7.</B>&nbsp;&nbsp;<I>Interfaces and definitions are different across RTEs.</I> Each RTE available on the market has its own script language. The scripts developed for one RTE cannot be run directly on another RTE. Even the definitions of the metrics used are different. Thus, for example, the response time measured on one RTE may not always be compared with that using another RTE.
+<DD><B>8.</B>&nbsp;&nbsp;<I>Workstation emulation is not provided.</I> Most RTEs emulate dumb synchronous or asynchronous terminals. All data processing is assumed to be done by the SUT. Delays inside the terminal are small and fixed. The introduction of workstations has changed the environment radically. Today, the workstations do most of the data processing; only tasks requiring large computations may be sent to the central host. A number of work-stations may share a central pool of servers for file storage, computing, printing, and so on. In some cases, there is no clear server-client distinction. A workstation may be a server for some functions but may also act as a client and use other servers. Load-balancing schemes have been proposed that allow any idle workstation to be used for computation from any other workstation. Current RTEs cannot be used for load driving in such environments.
+</DL>
+<H3><A NAME="Heading10"></A><FONT COLOR="#000077">EXERCISES</FONT></H3>
+<DL>
+<DD><B>9.1</B>&nbsp;&nbsp;Review a few articles or reports presenting results of performance measurements. Check if any of the mistakes listed in this chapter were made in the study.
+<DD><B>9.2</B>&nbsp;&nbsp;Select an area or application of computer systems, for example, image processing, mail, networking, and medical diagnosis. List the characteristics of workloads that a load driver for that area should implement. Discuss how you would specify the required characteristics to the load driver and whether there are any difficulties in implementing it in a representative manner.
+</DL>
+<P><BR></P>
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="09-04.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="../ch10/10-01.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<hr width="90%" size="1" noshade>
+<div align="center">
+<font face="Verdana,sans-serif" size="1">Copyright &copy; <a href="/reference/wiley00001.html">John Wiley &amp; Sons, Inc.</a></font>
+</div>
+<!-- all of the reference materials (books) have the footer and subfoot reveresed -->
+<!-- reference_subfoot = footer -->
+<!-- reference_footer = subfoot -->
+
+</BODY>
+</HTML>
+
+<!-- END FOOTER -->
+

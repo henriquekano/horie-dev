@@ -1,0 +1,95 @@
+<HTML>
+<HEAD>
+<META name=vsisbn content="0471503363">
+<META name=vstitle content="Art of Computer Systems Performance Analysis Techniques For Experimental Design Measurements Simulation And Modeling">
+<META name=vsauthor content="Raj Jain">
+<META name=vsimprint content="Wiley Computer Publishing">
+<META name=vspublisher content="John Wiley & Sons, Inc.">
+<META name=vspubdate content="05/01/91">
+<META name=vscategory content="Web and Software Development: Software Engineering: Simulation and Modeling">
+
+
+
+
+
+
+
+<TITLE>The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling:Monitors</TITLE>
+
+<!-- HEADER -->
+
+<STYLE type="text/css"> 
+ <!--
+ A:hover  {
+ 	color : Red;
+ }
+ -->
+</STYLE>
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+<!--ISBN=0471503363//-->
+<!--TITLE=The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling//-->
+<!--AUTHOR=Raj Jain//-->
+<!--PUBLISHER=Wiley Computer Publishing//-->
+<!--CHAPTER=07//-->
+<!--PAGES=105-107//-->
+<!--UNASSIGNED1//-->
+<!--UNASSIGNED2//-->
+
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="07-04.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="07-06.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+<P><BR></P>
+<H4 ALIGN="LEFT"><A NAME="Heading11"></A><FONT COLOR="#000077">7.7.2 Collection</FONT></H4>
+<P>The data-gathering component of the monitor is called a collector. For example, in a computer system, separate data observers may be used for the processor, I/O, and networking devices. In a computer network, each computer may have its own observer. The collector provides a repository for the data collected at several observers.
+</P>
+<P>In a distributed system, it is possible to have several users monitoring the system simultaneously. Each monitor may have its own collector. But all collectors share the same set of observers. Observing generally causes higher overhead as compared to collecting, so it is not desirable to have multiple observers per component. This is also the reason for separating the observation from the collection layer.</P>
+<P>The problem of communication between <I>m</I> collectors and <I>n</I> observers is similar to the popular client-server problem. There are two well-known solutions to this problem. These are called <B>advertising</B> and <B>soliciting</B>, respectively. Advertising consists of observers sending the data on a system bus or a shared medium in such a form that all collectors can receive it. In tightly coupled systems, it is also possible to put it in a shared memory segment that can be accessed by all collectors and observers. Soliciting requires that each collector send queries to each observer and get the data individually. The queries may be sent periodically or only on occurrence of certain events.</P>
+<P>Depending upon the level of hierarchy in the system being monitored, the collectors may operate at one or more layers. For example, in monitoring a large network, it is possible to divide the network into several subnetworks, each of which consists of several stations. The network collectors may obtain data from subnetwork collectors, which in turn may obtain data from observers on each station.</P>
+<P>When collecting data from several observers, clock synchronization often becomes an important issue. Time stamps from different observers cannot be compared unless the observers&#146; clocks are close to each other within some tolerance. The tolerance or maximum allowed clock skew is often related to the round-trip delay. In systems distributed over a large geographic area, the delay and hence the clock skews can be large. The monitored data should be used for performance analysis only if the data is aggregated over an interval that is much larger than the maximum skew. For example, if the maximum skew is a few milliseconds, per-second and per-minute summaries can be used.</P>
+<P>In addition to gathering data from various observers, the collectors may store past data. Therefore, the various buffering and sampling issues discussed in Section 7.3.1 under software monitor design issues apply to collector design as well.</P>
+<H4 ALIGN="LEFT"><A NAME="Heading12"></A><FONT COLOR="#000077">7.7.3 Analysis</FONT></H4>
+<P>The analyzer does somewhat more sophisticated analysis as compared to simple operations in the observer. The key criteria for determining which functions should be placed in the analysis layer are frequency, data required, complexity of the function, and the number of instances.
+</P>
+<P>The frequency of events and the timeliness of an analysis dictate whether the analysis should be put in the observer or the analyzer. Operations such as time stamping and counting have to be done quickly in a short amount of time, particularly if the input rate (frequency of events) is high. Analyses that require too much time, for example, computation of means, variances, and standard deviation, should be done infrequently and, hence, in the analyzer.</P>
+<P>The amount of data required for an analysis also dictates whether it should be in the observer or the analyzer. For example, to determine the link with the highest error rate, the errors at each and every link in a network should be observed. Errors observed at one station are not sufficient. This function, therefore, cannot be put in the observer. It has to be in the analyzer.</P>
+<P>Complexity of the function limits the frequency with which it can be done. If a function is too complex, it may be better to simply record the events in the observer and analyze them later in the analyzer, if necessary.</P>
+<P>The next criterion is the number of observers and analyzers. Many observer functions are always active, for example, counting of service requests received and number of errors detected. The analysis, on the other hand, is done infrequently. In most cases, the counters are hardly ever looked at. Also, there are more observers in a network than there are analyzers. Thus, the goal should be to simplify the observers as much as possible and to push complexity into the analyzer, which is invoked infrequently.</P>
+<H4 ALIGN="LEFT"><A NAME="Heading13"></A><FONT COLOR="#000077">7.7.4 Presentation</FONT></H4>
+<P>The presentation layer deals with user interface. It is designed to allow the user to communicate its requests to the monitor and to make it easy for the user to understand the responses provided by the monitor. This layer is very closely tied to the applications for which the monitor is used. For example, it may be used for performance monitoring, configuration monitoring, or fault location. Individual applications are discussed later. First, issues that apply to more than one application are described. In particular, the issues of presentation frequency, hierarchical presentation, and alarm mode are discussed.
+</P>
+<P>The first presentation issue in the design of a monitor is that of presentation frequency. The monitor user should be able to get a capsule summary of any specified interval in the past. In particular, the users should be able to get hourly, daily, weekly, and monthly summaries. These summaries should be organized such that a daily summary could be obtained from the hourly summaries, a weekly summary could be obtained from daily summaries, and so on. Thus, it would not be necessary to keep the detailed information on file. The summary kept in the monitor will, in general, be slightly more detailed than the one presented to the user.</P>
+<P>The presentation should be structured in a manner similar to the structure of the system being monitored. For example, a network consists of many subnetworks, routers, and bridges. A subnetwork may consist of several segments with several stations on each segment. A user should be able to get a summary at any level of hierarchy. The user should be able to get a report for the whole network, for any subnetwork, for any router, for any segment, for any station, and so on. Again, it would be desirable to keep summaries in such a form that summaries for higher levels in the hierarchy can be obtained from those in the lower levels.</P>
+<P>The alarm mode of presentation eases the task of system managers by notifying them only if a prespecified condition(s) occurs. Examples of such conditions are oversaturation of resources, error rates above a specified threshold, loss of key components, and security threats, for example, unidentified new nodes joining the network.</P>
+<P>A general notification facility may activate a user-specified process if a performance or error threshold is exceeded or if a particular configuration change is detected. The user process can then ring a bell, send a message to a terminal, send a mail message, or automatically dial a telephone call.</P>
+<P>The presentation layer would generally run on a user workstation. It may utilize interfaces, such as windows or menus, provided by the operating system. It is important to ensure that the presentation interface is portable and is independent of the operating system. A user should be able to use similar monitoring requests from any workstation.</P><P><BR></P>
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="07-04.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="07-06.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<hr width="90%" size="1" noshade>
+<div align="center">
+<font face="Verdana,sans-serif" size="1">Copyright &copy; <a href="/reference/wiley00001.html">John Wiley &amp; Sons, Inc.</a></font>
+</div>
+<!-- all of the reference materials (books) have the footer and subfoot reveresed -->
+<!-- reference_subfoot = footer -->
+<!-- reference_footer = subfoot -->
+
+</BODY>
+</HTML>
+
+<!-- END FOOTER -->
+
