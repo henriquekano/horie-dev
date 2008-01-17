@@ -1,0 +1,260 @@
+<HTML>
+<HEAD>
+<META name=vsisbn content="0471503363">
+<META name=vstitle content="Art of Computer Systems Performance Analysis Techniques For Experimental Design Measurements Simulation And Modeling">
+<META name=vsauthor content="Raj Jain">
+<META name=vsimprint content="Wiley Computer Publishing">
+<META name=vspublisher content="John Wiley & Sons, Inc.">
+<META name=vspubdate content="05/01/91">
+<META name=vscategory content="Web and Software Development: Software Engineering: Simulation and Modeling">
+
+
+
+
+
+
+
+<TITLE>The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling:Ratio Games</TITLE>
+
+<!-- HEADER -->
+
+<STYLE type="text/css"> 
+ <!--
+ A:hover  {
+ 	color : Red;
+ }
+ -->
+</STYLE>
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+<!--ISBN=0471503363//-->
+<!--TITLE=The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling//-->
+<!--AUTHOR=Raj Jain//-->
+<!--PUBLISHER=Wiley Computer Publishing//-->
+<!--CHAPTER=11//-->
+<!--PAGES=168-170//-->
+<!--UNASSIGNED1//-->
+<!--UNASSIGNED2//-->
+
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="11-02.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="11-04.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+<P><BR></P>
+<CENTER>
+<TABLE WIDTH="45%">
+<TR>
+<TH CAPTION ALIGN="LEFT" COLSPAN="3">TABLE 11.4 Performance or Two Network Architectures
+<TR>
+<TD COLSPAN="3"><HR>
+<TR>
+<TH WIDTH="15%" ALIGN="CENTER">Network
+<TH WIDTH="15%" ALIGN="CENTER">Throughput
+<TH WIDTH="15%" ALIGN="CENTER">Response
+<TR>
+<TD COLSPAN="3"><HR>
+<TR>
+<TD ALIGN="CENTER" VALIGN="TOP">A
+<TD ALIGN="CENTER" VALIGN="TOP">10
+<TD ALIGN="CENTER" VALIGN="TOP">2
+<TR>
+<TD ALIGN="CENTER" VALIGN="TOP">B
+<TD ALIGN="CENTER" VALIGN="TOP">4
+<TD ALIGN="CENTER" VALIGN="TOP">1
+<TR>
+<TD COLSPAN="3"><HR>
+<TR>
+</TABLE>
+</CENTER>
+<P>
+</P>
+<CENTER>
+<TABLE WIDTH="60%"><TH CAPTION ALIGN="LEFT" COLSPAN="4">TABLE 11.5 Using a Ratio Metric
+<TR>
+<TD COLSPAN="4"><HR>
+<TR>
+<TH WIDTH="15%" ALIGN="CENTER">System
+<TH WIDTH="15%" ALIGN="CENTER">Throughput
+<TH WIDTH="15%" ALIGN="CENTER">Response
+<TH WIDTH="15%" ALIGN="CENTER">Power
+<TR>
+<TD COLSPAN="4"><HR>
+<TR>
+<TD ALIGN="CENTER" VALIGN="TOP">A
+<TD ALIGN="CENTER" VALIGN="TOP">10
+<TD ALIGN="CENTER" VALIGN="TOP">2
+<TD ALIGN="CENTER" VALIGN="TOP">5
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER">B
+<TD VALIGN="TOP" ALIGN="CENTER">4
+<TD VALIGN="TOP" ALIGN="CENTER">1
+<TD VALIGN="TOP" ALIGN="CENTER">4
+<TR>
+<TD COLSPAN="4"><HR>
+<TR>
+</TABLE>
+</CENTER>
+<DL>
+<DD><B>Example 11.1</B> Throughput and response time were measured on two network architectures. The results are tabulated in Table 11.4. Notice that network A has higher throughput (an HB metric) but also has a higher response time (an LB metric).
+<BR>The designers of network A suggest that the right metric to compare the networks is by power, which is defined as the ratio of throughput and response time. The transformed results are shown in Table 11.5. From this table, one would conclude that network A is better than network B.
+</DL>
+<H3><A NAME="Heading4"></A><FONT COLOR="#000077">11.3 USING RELATIVE PERFORMANCE ENHANCEMENT</FONT></H3>
+<P>Sometimes the performance metric is already specified. In this case, it is possible to show that relative increase in the performance is better using one type of enhancement than another provided the two are tried on different machines.
+</P>
+<DL>
+<DD><B>Example 11.2</B> Two floating-point accelerators A and B are to be compared. MFLOPS measured on two machines with and without the accelerators are tabulated in Table 11.6.
+<BR>The right way to compare the two accelerators would be to try them out on a single machine. But since B seems to be a popular accelerator and A does not yet work on the same machine as B, the designers of A can exploit the technique of using incomparable bases, as shown in Table 11.7. <I>Conclusion</I>: A gives a higher improvement than B.
+</DL>
+<CENTER>
+<TABLE WIDTH="45%">
+<TR>
+<TH CAPTION ALIGN="LEFT" COLSPAN="3">TABLE 11.6 MFLOPS of Two Processors with and without Accelerators
+<TR>
+<TD COLSPAN="3"><HR>
+<TR>
+<TH ALIGN="LEFT" WIDTH="15%">Alternative
+<TH WIDTH="15%" ALIGN="CENTER">Without
+<TH WIDTH="15%" ALIGN="CENTER">With
+<TR>
+<TD COLSPAN="3"><HR>
+<TR>
+<TD ALIGN="CENTER" VALIGN="TOP">A on X
+<TD ALIGN="CENTER" VALIGN="TOP">2
+<TD ALIGN="CENTER" VALIGN="TOP">4
+<TR>
+<TD ALIGN="CENTER" VALIGN="TOP">B on Y
+<TD ALIGN="CENTER" VALIGN="TOP">3
+<TD ALIGN="CENTER" VALIGN="TOP">5
+<TR>
+<TD COLSPAN="3"><HR>
+<TR>
+</TABLE>
+</CENTER>
+<P>
+</P>
+<CENTER>
+<TABLE WIDTH="60%"><TR>
+<TH CAPTION ALIGN="LEFT" COLSPAN="4">TABLE 11.7 Improvement Due to an Accelerator
+<TR>
+<TD COLSPAN="4"><HR>
+<TR>
+<TH WIDTH="15%" ALIGN="CENTER">Alternative
+<TH WIDTH="15%" ALIGN="CENTER">Without
+<TH WIDTH="15%" ALIGN="CENTER">With
+<TH WIDTH="15%" ALIGN="CENTER">Ratio
+<TR>
+<TD COLSPAN="4"><HR>
+<TR>
+<TD ALIGN="CENTER" VALIGN="TOP">A on X
+<TD ALIGN="CENTER" VALIGN="TOP">2
+<TD ALIGN="CENTER" VALIGN="TOP">4
+<TD ALIGN="CENTER" VALIGN="TOP">2.00
+<TR>
+<TD ALIGN="CENTER" VALIGN="TOP">B on Y
+<TD ALIGN="CENTER" VALIGN="TOP">3
+<TD ALIGN="CENTER" VALIGN="TOP">5
+<TD ALIGN="CENTER" VALIGN="TOP">1.66
+<TR>
+<TD COLSPAN="4"><HR>
+<TR>
+</TABLE>
+</CENTER>
+<H3><A NAME="Heading5"></A><FONT COLOR="#000077">11.4 RATIO GAMES WITH PERCENTAGES</FONT></H3>
+<P>Percentages are basically ratios. They allow playing ratio games in ways that do not look like ratios.
+</P>
+<DL>
+<DD><B>Example 11.3</B> Two experiments were repeatedly conducted on two systems. Each experiment either passed or failed (system either met the specified performance goal or did not). The results are tabulated in the first two rows of Table 11.8.
+<BR>One alternative to compare the two systems is to take each experiment individually, as shown in Figure 11.1a. The conclusion from this figure is that System B is better than System A in <I>both</I> experiments. Another alternative is to add the results of the two experiments as shown in the last row of Table 11.8 and plotted in Figure 11.1b. The conclusion in this case is that System A is better than system B.
+<BR>Actually both alternatives have the problem of incomparable bases. In alternative 1, the base is the total number of times the experiment is repeated on a system, which is different for the two systems. In alternative 2, the base is the sum of repetitions of the two experiments together, which is also different for the two systems.
+</DL>
+<TABLE WIDTH="85%">
+<TH CAPTION ALIGN="LEFT" COLSPAN="9">TABLE 11.8 Two Tests on Two Systems<HR>
+<TR>
+<TH COLSPAN="4" ALIGN="CENTER">System A<HR>
+<TD VALIGN="TOP" ALIGN="LEFT" WIDTH="5%">
+<TH COLSPAN="4" ALIGN="CENTER">System B<HR>
+<TR>
+<TH ALIGN="CENTER" WIDTH="10%">Test
+<TH ALIGN="CENTER" WIDTH="10%">Total
+<TH ALIGN="CENTER" WIDTH="10%">Pass
+<TH ALIGN="CENTER" WIDTH="10%">%Pass
+<TD VALIGN="TOP" ALIGN="CENTER" WIDTH="5%">
+<TH ALIGN="CENTER" WIDTH="10%">Test
+<TH ALIGN="CENTER" WIDTH="10%">Total
+<TH ALIGN="CENTER" WIDTH="10%">Pass
+<TH ALIGN="CENTER" WIDTH="10%">%Pass
+<TR>
+<TD COLSPAN="4"><HR>
+<TD VALIGN="TOP" ALIGN="CENTER" WIDTH="5%">
+<TD COLSPAN="4"><HR>
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER"2>1
+<TD VALIGN="TOP" ALIGN="CENTER">300
+<TD VALIGN="TOP" ALIGN="CENTER">60
+<TD VALIGN="TOP" ALIGN="CENTER">20
+<TD VALIGN="TOP" ALIGN="CENTER" WIDTH="5%">
+<TD VALIGN="TOP" ALIGN="CENTER">1
+<TD VALIGN="TOP" ALIGN="CENTER">32
+<TD VALIGN="TOP" ALIGN="CENTER">8
+<TD VALIGN="TOP" ALIGN="CENTER">25
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER">2
+<TD VALIGN="TOP" ALIGN="CENTER">50
+<TD VALIGN="TOP" ALIGN="CENTER">2
+<TD VALIGN="TOP" ALIGN="CENTER">4
+<TD VALIGN="TOP" ALIGN="CENTER" WIDTH="5%">
+<TD VALIGN="TOP" ALIGN="CENTER">2
+<TD VALIGN="TOP" ALIGN="CENTER">500
+<TD VALIGN="TOP" ALIGN="CENTER">40
+<TD VALIGN="TOP" ALIGN="CENTER">8
+<TR>
+<TD COLSPAN="4"><HR>
+<TD VALIGN="TOP" ALIGN="CENTER" WIDTH="5%">
+<TD COLSPAN="4"><HR>
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER" WIDTH="5%">
+<TD VALIGN="TOP" ALIGN="CENTER">350
+<TD VALIGN="TOP" ALIGN="CENTER">62
+<TD VALIGN="TOP" ALIGN="CENTER">20.6
+<TD VALIGN="TOP" ALIGN="CENTER" WIDTH="5%">
+<TD VALIGN="TOP" ALIGN="CENTER">
+<TD VALIGN="TOP" ALIGN="CENTER">532
+<TD VALIGN="TOP" ALIGN="CENTER">48
+<TD VALIGN="TOP" ALIGN="CENTER">9
+<TR>
+<TD COLSPAN="9"><HR>
+<TR>
+</TABLE>
+<P><A NAME="Fig1"></A><A HREF="javascript:displayWindow('images/11-01.jpg',500,175 )"><IMG SRC="images/11-01t.jpg"></A>
+<BR><A HREF="javascript:displayWindow('images/11-01.jpg',500,175)"><FONT COLOR="#000077"><B>FIGURE 11.1</B></FONT></A>&nbsp;&nbsp;Ratio games with percentages.</P>
+<P>Percentages are misused in several other ways. For example, they can be used to have a psychological impact on the reader. Large numbers attract immediate attention. A 1000% improvement in performance sounds more impressive than an 11-time improvement. This is particularly useful when the performance before the improvement as well as the absolute increase in the performance are not impressive. Instead of saying that the network throughput improved from 1 packet per second to 11 packets per second (which are both unimpressive), it is better to say that the performance was improved by 1000%.
+</P><P><BR></P>
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="11-02.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="11-04.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<hr width="90%" size="1" noshade>
+<div align="center">
+<font face="Verdana,sans-serif" size="1">Copyright &copy; <a href="/reference/wiley00001.html">John Wiley &amp; Sons, Inc.</a></font>
+</div>
+<!-- all of the reference materials (books) have the footer and subfoot reveresed -->
+<!-- reference_subfoot = footer -->
+<!-- reference_footer = subfoot -->
+
+</BODY>
+</HTML>
+
+<!-- END FOOTER -->
+
