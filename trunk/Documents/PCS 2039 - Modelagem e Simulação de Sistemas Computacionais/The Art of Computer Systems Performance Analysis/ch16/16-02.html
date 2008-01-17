@@ -1,0 +1,163 @@
+<HTML>
+<HEAD>
+<META name=vsisbn content="0471503363">
+<META name=vstitle content="Art of Computer Systems Performance Analysis Techniques For Experimental Design Measurements Simulation And Modeling">
+<META name=vsauthor content="Raj Jain">
+<META name=vsimprint content="Wiley Computer Publishing">
+<META name=vspublisher content="John Wiley & Sons, Inc.">
+<META name=vspubdate content="05/01/91">
+<META name=vscategory content="Web and Software Development: Software Engineering: Simulation and Modeling">
+
+
+
+
+
+
+
+<TITLE>The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling:Introduction to Experimental Design</TITLE>
+
+<!-- HEADER -->
+
+<STYLE type="text/css"> 
+ <!--
+ A:hover  {
+ 	color : Red;
+ }
+ -->
+</STYLE>
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+<!--ISBN=0471503363//-->
+<!--TITLE=The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling//-->
+<!--AUTHOR=Raj Jain//-->
+<!--PUBLISHER=Wiley Computer Publishing//-->
+<!--CHAPTER=16//-->
+<!--PAGES=277-280//-->
+<!--UNASSIGNED1//-->
+<!--UNASSIGNED2//-->
+
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="16-01.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="16-03.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+<P><BR></P>
+<CENTER>
+<TABLE WIDTH="70%">
+<TH VALIGN="TOP" ALIGN="LEFT" COLSPAN="3">TABLE 16.1 Noninteracting Factors
+<TR>
+<TD COLSPAN="3"><HR>
+<TR>
+<TH VALIGN="TOP" WIDTH="30%" ALIGN="LEFT">
+<TH VALIGN="TOP" WIDTH="20%" ALIGN="LEFT"><I>A</I><SUB><SMALL>1</SMALL></SUB>
+<TH VALIGN="TOP" WIDTH="20%" ALIGN="LEFT"><I>A</I><SUB><SMALL>2</SMALL></SUB>
+<TR>
+<TD COLSPAN="3"><HR>
+<TR>
+<TD ALIGN="CENTER" VALIGN="TOP"><I>B</I><SUB><SMALL>1</SMALL></SUB>
+<TD VALIGN="TOP" ALIGN="LEFT">3
+<TD VALIGN="TOP" ALIGN="LEFT">5
+<TR>
+<TD ALIGN="CENTER" VALIGN="TOP"><I>B</I><SUB><SMALL>2</SMALL></SUB>
+<TD VALIGN="TOP" ALIGN="LEFT">6
+<TD VALIGN="TOP" ALIGN="LEFT">8
+<TR>
+<TD COLSPAN="3"><HR>
+</TABLE>
+</CENTER>
+<CENTER>
+<TABLE WIDTH="70%">
+<TH VALIGN="TOP" ALIGN="LEFT" COLSPAN="3">TABLE 16.2 Interacting Factors
+<TR>
+<TD COLSPAN="3"><HR>
+<TR>
+<TH VALIGN="TOP" WIDTH="30%" ALIGN="LEFT">
+<TH VALIGN="TOP" WIDTH="20%" ALIGN="LEFT"><I>A</I><SUB><SMALL>1</SMALL></SUB>
+<TH VALIGN="TOP" WIDTH="20%" ALIGN="LEFT"><I>A</I><SUB><SMALL>2</SMALL></SUB>
+<TR>
+<TD COLSPAN="3"><HR>
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER"><I>B</I><SUB><SMALL>1</SMALL></SUB>
+<TD VALIGN="TOP" ALIGN="LEFT">3
+<TD VALIGN="TOP" ALIGN="LEFT">5
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER"><I>B</I><SUB><SMALL>2</SMALL></SUB>
+<TD VALIGN="TOP" ALIGN="LEFT">6
+<TD VALIGN="TOP" ALIGN="LEFT">9
+<TR>
+<TD COLSPAN="3"><HR>
+<TR>
+</TABLE>
+</CENTER>
+<P><A NAME="Fig1"></A><A HREF="javascript:displayWindow('images/16-01.jpg',500,339 )"><IMG SRC="images/16-01t.jpg"></A>
+<BR><A HREF="javascript:displayWindow('images/16-01.jpg',500,339)"><FONT COLOR="#000077"><B>FIGURE 16.1</B></FONT></A>&nbsp;&nbsp;Graphical presentation of interacting and noninteracting factors.</P>
+<H3><A NAME="Heading3"></A><FONT COLOR="#000077">16.2 COMMON MISTAKES IN EXPERIMENTATION</FONT></H3>
+<P>Novice analysts who are not aware of the experimental design and analysis techniques often get misleading conclusions due to the following mistakes:
+</P>
+<DL>
+<DD><B>1.</B>&nbsp;&nbsp;<I>The variation due to experimental error is ignored.</I> Every measured value is a random value. Each time it is repeated, the measured value would be slightly different even if all the controllable factors are kept at the same value. In making decisions based on measurements, it is important to isolate the effect of errors. The variation due to a factor must be compared with that due to errors before making a decision about its effect. Inexperienced analysts who are not aware of this assign all variation to the factors and completely ignore the errors.
+<DD><B>2.</B>&nbsp;&nbsp;<I>Important parameters are not controlled.</I> Earlier, in Section 2.2, it was pointed out that the list of parameters should include all workload, environment, and system parameters that affect the performance. Only some of these parameters are selected as factors and are varied. For example, when comparing two workstations, the user of the workstation has a significant effect on the measured performance. However, if the effect of users is not correctly accounted for, the results may not be meaningful.
+<DD><B>3.</B>&nbsp;&nbsp;<I>Effects of different factors are not isolated.</I> An analyst may vary several factors simultaneously and then may not be able to allocate the change in performance to any particular factor. To avoid this, some analysts use very simple experimental designs that lead to the problem discussed next.
+<DD><B>4.</B>&nbsp;&nbsp;<I>Simple one-factor-at-a-time designs are used.</I> Such a design is wasteful of the resources. It requires too many experiments to get the same information. With proper experimental design, it is possible to get narrower confidence intervals for the effects with the same number of experiments.
+<DD><B>5.</B>&nbsp;&nbsp;<I>Interactions are ignored.</I> Often the effect of one factor depends on the level of other factors. For example, the effect of adding 1 kbyte of cache, may depend on the size of the program. Such interactions cannot be estimated with one-factor-at-a-time designs.
+<DD><B>6.</B>&nbsp;&nbsp;<I>Too many experiments are conducted.</I> The number of experiments is a function of the number of factors and their levels. It is better to break up the project into several steps each using a small design rather than use one enormous design with too many factors and levels. In the first step, the number of factors and levels should be small. Such a design will help debug the experimental process and also help find out the factors that are not significant and need not be included in further designs. The first design will also tell whether the assumptions of the analysis are satisfied and whether any transformations of data are required. More factors and levels can then be added in the second and subsequent steps.
+</DL>
+<P>The experimental design and analysis techniques presented in this part help avoid these problems.
+</P>
+<H3><A NAME="Heading4"></A><FONT COLOR="#000077">16.3 TYPES OF EXPERIMENTAL DESIGNS</FONT></H3>
+<P>There are numerous varieties of experimental designs. The three most frequently used designs are simple designs, full factorial designs, and fractional factorial designs. Explanations of these designs and their advantanges and disadvantages follow.
+</P>
+<H4 ALIGN="LEFT"><A NAME="Heading5"></A><FONT COLOR="#000077">16-3.1 Simple Designs</FONT></H4>
+<P>In a simple design, we start with a typical configuration and vary one factor at a time to see how that factor affects performance.
+</P>
+<P>For example, in the workstation design study discussed earlier in Section 16.1, a typical configuration might consist of a Z80 CPU with two disk drives running a managerial task by a college graduate. The performance of this configuration is measured first. Next, we vary the first factor&#151;the CPU&#151;and then performance is compared with other CPUs in the same configuration and workload. This will help us decide which CPU is the best. We then change the number of disk drives to one, three, and four, comparing performance so as to find the optimal number.</P>
+<P>Given <I>k</I> factors, with the <I>i</I>th factor having <I>n</I><SUB><SMALL><I>i</I></SMALL></SUB> levels, a simple design requires only <I>n</I> experiments, where</P>
+<P ALIGN="CENTER"><IMG SRC="images/16-01d.jpg"></P>
+<P>However, this design does not make the best use of the effort spent. It is not statistically efficient. Also, if the factors have interaction, this design may lead to wrong conclusions. For example, if the effect of the CPU depends upon the size of the memory, the optimal combination cannot be determined until all possibilities are tried. This design, therefore, is not recommended.
+</P>
+<H4 ALIGN="LEFT"><A NAME="Heading6"></A><FONT COLOR="#000077">16.3.2 Full Factorial Design</FONT></H4>
+<P>A full factorial design utilizes every possible combination at all levels of all factors. A performance study with <I>k</I> factors, with the <I>i</I>th factor having <I>n</I><SUB><SMALL><I>i</I></SMALL></SUB> levels, requires <I>n</I> experiments, where</P>
+<P ALIGN="CENTER"><IMG SRC="images/16-02d.jpg"></P>
+<P>In the workstation design study, the number of experiments would be
+</P>
+<DL>
+<DD><I>n</I> = (3 CPUs)(3 memory levels)(4 disk drives)
+<DD>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#215; (3 workloads)(3 educational levels)
+<DD>&nbsp;&nbsp;&nbsp;= 324 experiments
+</DL>
+<P>The advantage of a full factorial design is that every possible combination of configuration and workload is examined. We can find the effect of every factor including the secondary factors and their interactions. The main problem is the cost of the study. It would take too much time and money to conduct these marry experiments, especially when taking into account the possibility that each of these experiments may have to be repeated several times. There are three ways to reduce the number of experiments:
+</P>
+<DL>
+<DD><B>&#149;</B>&nbsp;&nbsp;Reduce the number of levels for each factor.
+<DD><B>&#149;</B>&nbsp;&nbsp;Reduce the number of factors.
+<DD><B>&#149;</B>&nbsp;&nbsp;Use fractional factorial designs.
+</DL>
+<P>The first alternative is specially recommended. In some cases, one can try just two levels of each factor and determine the relative importance of each factor. A full factorial design in which each of the <I>k</I> factors is used at two levels requires 2<SUP><SMALL><I>k</I></SMALL></SUP> experiments. This is a very popular design and is called 2<SUP><SMALL><I>k</I></SMALL></SUP> <B>design</B>. After the list of factors has been reduced substantially, one can try more levels per factor. The third alternative of fractional factorial design is described in the next section.</P><P><BR></P>
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="16-01.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="16-03.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<hr width="90%" size="1" noshade>
+<div align="center">
+<font face="Verdana,sans-serif" size="1">Copyright &copy; <a href="/reference/wiley00001.html">John Wiley &amp; Sons, Inc.</a></font>
+</div>
+<!-- all of the reference materials (books) have the footer and subfoot reveresed -->
+<!-- reference_subfoot = footer -->
+<!-- reference_footer = subfoot -->
+
+</BODY>
+</HTML>
+
+<!-- END FOOTER -->
+
