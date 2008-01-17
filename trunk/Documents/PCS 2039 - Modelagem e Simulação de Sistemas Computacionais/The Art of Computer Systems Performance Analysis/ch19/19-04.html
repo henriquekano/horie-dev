@@ -1,0 +1,123 @@
+<HTML>
+<HEAD>
+<META name=vsisbn content="0471503363">
+<META name=vstitle content="Art of Computer Systems Performance Analysis Techniques For Experimental Design Measurements Simulation And Modeling">
+<META name=vsauthor content="Raj Jain">
+<META name=vsimprint content="Wiley Computer Publishing">
+<META name=vspublisher content="John Wiley & Sons, Inc.">
+<META name=vspubdate content="05/01/91">
+<META name=vscategory content="Web and Software Development: Software Engineering: Simulation and Modeling">
+
+
+
+
+
+
+
+<TITLE>The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling:2k-p Fractional Factorial Designs</TITLE>
+
+<!-- HEADER -->
+
+<STYLE type="text/css"> 
+ <!--
+ A:hover  {
+ 	color : Red;
+ }
+ -->
+</STYLE>
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+<!--ISBN=0471503363//-->
+<!--TITLE=The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling//-->
+<!--AUTHOR=Raj Jain//-->
+<!--PUBLISHER=Wiley Computer Publishing//-->
+<!--CHAPTER=19//-->
+<!--PAGES=320-322//-->
+<!--UNASSIGNED1//-->
+<!--UNASSIGNED2//-->
+
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="19-03.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="19-05.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+<P><BR></P>
+<P>In the second design, the mean is confounded with the third-order interaction, and the main effects (<I>A</I>, <I>B</I>, <I>C</I>, and <I>D</I>) are confounded with the second-order interactions. It is generally assumed that the higher order interactions are smaller than the lower order interactions. If this assumption is true, then the first design will give better estimates of main effects than the second design.</P>
+<H3><A NAME="Heading4"></A><FONT COLOR="#000077">19.3 ALGEBRA OF CONFOUNDING</FONT></H3>
+<P>The fractional factorial design of Table 19.4 can be called the <I>I</I> = <I>ABCD</I> design and that shown in Table 19.5 is the <I>I</I> = <I>ABC</I> design. This is because given just one confounding, it is possible to list all other confoundings by multiplying the two sides of the confounding by different terms and using two simple rules:</P>
+<DL>
+<DD><B>1.</B>&nbsp;&nbsp;The mean <I>I</I> is treated as unity. For example, <I>I</I> multiplied by <I>A</I> is <I>A</I>.
+<DD><B>2.</B>&nbsp;&nbsp;Any term with a power of 2 is erased. For example, <I>AB</I><SUP><SMALL>2</SMALL></SUP><I>C</I> is the same as <I>AC</I>.
+</DL>
+<P>Let us illustrate this with the first design, which has
+</P>
+<P ALIGN="CENTER"><I>I = ABCD</I></P>
+<P>Multiplying both sides by <I>A</I>, we get</P>
+<P ALIGN="CENTER"><I>A = A</I><SUP><SMALL>2</SMALL></SUP><I>BCD</I> = <I>BCD</I></P>
+<P>Multiplying both sides by <I>B</I>, <I>C</I>, <I>D</I>, and <I>AB</I>, we get</P>
+<P ALIGN="CENTER"><I>B</I> = <I>AB</I><SUP><SMALL>2</SMALL></SUP><I>CD</I> = <I>ACD</I></P>
+<P ALIGN="CENTER"><I>C</I> = <I>ABC</I><SUP><SMALL>2</SMALL></SUP><I>D</I> = <I>ABD</I></P>
+<P ALIGN="CENTER"><I>D</I> = <I>ABCD</I><SUP><SMALL>2</SMALL></SUP> = <I>ABC</I></P>
+<P ALIGN="CENTER"><I>AB</I> = <I>A</I><SUP><SMALL>2</SMALL></SUP><I>B</I><SUP><SMALL>2</SMALL></SUP><I>CD</I> = <I>CD</I></P>
+<P>and so on.</P>
+<P>The polynomial <I>I</I> = <I>ABCD</I> used to generate all confoundings for this design is called the <B>generator polynomial</B> for this design. Similarly, the generator polynomial for the second design is <I>I = ABC.</I></P>
+<P>In a 2<SUP><SMALL><I>k</I>&#150;1</SMALL></SUP> design, 2<SUP><SMALL>1</SMALL></SUP> effects are confounded together. In a 2<SUP><SMALL><I>k&#150;p</I></SMALL></SUP> design, 2<SUP><SMALL><I>p</I></SMALL></SUP> effects are confounded together. The generator polynomial has 2<I><SUP><SMALL>p</SMALL></SUP></I> terms. For example, the 2<SUP><SMALL>7&#150;4</SMALL></SUP> design presented earlier in Table 19.1 was obtained from a 2<SUP><SMALL>3</SMALL></SUP> design by replacing columns <I>AB, AC, BC</I>, and <I>ABC</I> by <I>D, E, F</I>, and <I>G</I>, respectively. Thus, this design has the following confoundings:</P>
+<P ALIGN="CENTER"><I>D = AB, E = AC, F = BC, G = ABC</I></P>
+<P>Multiplying each of the four equations by their left-hand sides, we get</P>
+<P ALIGN="CENTER"><I>I = ABD, I = ACE, I = BCF, I = ABCG</I></P>
+<P>Or equivalently,</P>
+<P ALIGN="CENTER"><I>I = ABD = ACE = BCF = ABCG</I></P>
+<P>The product of any subset of the preceding terms is also equal to <I>I</I>. Thus the complete generator polynomial is</P>
+<P ALIGN="CENTER"><I>I = ABD = ACE = BCF = ABCG = BCDE = ACDF</I></P>
+<P ALIGN="CENTER"><I>= CDG = ABEF = BEG = AFG = DEF = ADEG</I></P>
+<P ALIGN="CENTER"><I>= BDFG = ABDG = CEFG = ABCDEFG</I></P>
+<P>Other confoundings for the design can be obtained by multiplying this equation by <I>A,B</I>,.... For example,</P>
+<P ALIGN="CENTER"><I>A = BD = CE = ABCF = BCG = ABCDE = CDF</I></P>
+<P ALIGN="CENTER">= <I>ACDG = BEF = ABEG = FG = ADEF = DEG</I></P>
+<P ALIGN="CENTER">= <I>ABDFG = BDG = ACEFG = BCDEFG</I></P>
+<H3><A NAME="Heading5"></A><FONT COLOR="#000077">19.4 DESIGN RESOLUTION</FONT></H3>
+<P>The resolution of a design is measured by the order of effects that are confounded. The order of an effect is the number of factors included in it. For example, <I>ABCD</I> is of order 4, while <I>I</I> is of order 0. If an <I>i</I>th-order effect is confounded with a <I>j</I>th-order term, the confounding is said to be of order <I>i</I> &#43; <I>j</I>. The minimum of orders of all confoundings of a design is called its resolution. In other words, a design is said to be of resolution <I>r</I> if no <I>j</I> factor effect is confounded with any effects containing fewer than <I>r</I> &#150; <I>j</I> factors.</P>
+<P>By tradition, the resolution is denoted by the capital Roman letters. For example, a 2<SUP><SMALL>5&#150;1</SMALL></SUP> design with resolution of 3 is denoted as R<SUB><SMALL>III</SMALL></SUB> design, resolution III design, or 2<SUP><SMALL>5&#150;1</SMALL></SUP><SUB><SMALL>III</SMALL></SUB> design. In such a design, the mean response <I>I</I> is confounded with third- or higher-order effects. The main effects are confounded with second- or higher-order effects.</P>
+<P>To determine the resolution of a 2<SUP><SMALL><I>k&#150;p</I></SMALL></SUP> design, we only need to find the minimum of orders of the effects confounded with the mean response.</P>
+<DL>
+<DD><B>Example 19.5</B> Consider the 2<SUP><SMALL>4&#150;1</SMALL></SUP> design of Table 19.4 presented earlier. The generator polynomial for this design was <I>I</I> = <I>ABCD</I>. Its confoundings as determined earlier in Section 19.3 are
+<P ALIGN="CENTER"><I>A = BCD, B = ACD, C = ABD, AB = CD</I>
+<P ALIGN="CENTER"><I>AC = BD, BC = AD, ABC = D, I = ABCD</I>
+<P>Notice that the first-order effects (<I>j</I> = 1) are confounded with the third-order effects. Second-order effects (<I>j</I> = 2) are confounded only with second-order effects. The mean response <I>I</I> (<I>j</I> = 0) is confounded with fourth-order effects. In each case, the sum of the order of confounded effects is greater than or equal to 4. Thus, this is a <I>R</I><SUB><SMALL>IV</SMALL></SUB> design.
+<P>We could have determined the order simply by looking at the generator polynomial <I>I</I> = <I>ABCD</I>. There is only one effect, namely, <I>ABCD</I>, that is confounded with the mean response. Its order is 4, and so the design resolution is IV.
+<P><B>Example 19.6</B> Consider the 2<SUP><SMALL>4&#150;1</SMALL></SUP> design of Table 19.5. The generator polynomial is <I>I</I> = <I>ABD</I>. The order of ABD is 3, and so this is an R<SUB><SMALL>III</SMALL></SUB>, design.
+<P><B>Example 19.7</B> In Section 19.3, the 2<SUP><SMALL>7&#150;4</SMALL></SUP> design of Table 19.1 was shown to have the following confoundings:
+<P ALIGN="CENTER"><I>I = ABD = ACE = BCF = ABCG = BCDE = ACDF</I>
+<P ALIGN="CENTER">= <I>CDG = ABEF = BEG = AFG = DEF = ADEG</I>
+<P ALIGN="CENTER">= <I>BDFG = ABDG = CEFG = ABCDEFG</I>
+<P>This is a resolution III design.
+</DL>
+<P>A design of higher resolution is considered a better design. This is because of the assumption that higher order interactions are smaller than lower order effects. This need not always be true. If this is true, then it is better to have higher order interactions confounded with main effects. For example, given a choice between the two designs <I>I</I> = <I>ABCD</I> (an <I>R</I><SUB><SMALL>IV</SMALL></SUB> design) and <I>I</I> = <I>ABD</I> (an <I>R</I><SUB><SMALL>III</SMALL></SUB> design) without any prior information about the relative magnitude of the interactions, it is preferable to use the <I>R</I><SUB><SMALL>IV</SMALL></SUB> design. On the other hand, if it is known that the <I>ABD</I> interaction is negligible, the <I>I</I> = <I>ABD</I> design may be preferred even though it has a lower resolution.</P><P><BR></P>
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="19-03.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="19-05.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<hr width="90%" size="1" noshade>
+<div align="center">
+<font face="Verdana,sans-serif" size="1">Copyright &copy; <a href="/reference/wiley00001.html">John Wiley &amp; Sons, Inc.</a></font>
+</div>
+<!-- all of the reference materials (books) have the footer and subfoot reveresed -->
+<!-- reference_subfoot = footer -->
+<!-- reference_footer = subfoot -->
+
+</BODY>
+</HTML>
+
+<!-- END FOOTER -->
+

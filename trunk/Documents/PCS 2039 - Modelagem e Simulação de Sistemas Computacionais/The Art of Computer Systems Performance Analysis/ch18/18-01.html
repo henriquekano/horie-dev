@@ -1,0 +1,259 @@
+<HTML>
+<HEAD>
+<META name=vsisbn content="0471503363">
+<META name=vstitle content="Art of Computer Systems Performance Analysis Techniques For Experimental Design Measurements Simulation And Modeling">
+<META name=vsauthor content="Raj Jain">
+<META name=vsimprint content="Wiley Computer Publishing">
+<META name=vspublisher content="John Wiley & Sons, Inc.">
+<META name=vspubdate content="05/01/91">
+<META name=vscategory content="Web and Software Development: Software Engineering: Simulation and Modeling">
+
+
+
+
+
+
+
+<TITLE>The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling:2kr Factorial Designs with Replications</TITLE>
+
+<!-- HEADER -->
+
+<STYLE type="text/css"> 
+ <!--
+ A:hover  {
+ 	color : Red;
+ }
+ -->
+</STYLE>
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+<!--ISBN=0471503363//-->
+<!--TITLE=The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling//-->
+<!--AUTHOR=Raj Jain//-->
+<!--PUBLISHER=Wiley Computer Publishing//-->
+<!--CHAPTER=18//-->
+<!--PAGES=293-295//-->
+<!--UNASSIGNED1//-->
+<!--UNASSIGNED2//-->
+
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="../ch17/17-05.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="18-02.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+<P><BR></P>
+<H2><A NAME="Heading1"></A><FONT COLOR="#000077">CHAPTER 18<BR>2<SUP><SMALL><I>kr</I></SMALL></SUP> FACTORIAL DESIGNS WITH REPLICATIONS
+</FONT></H2>
+<BLOCKQUOTE>
+<P ALIGN="RIGHT"><I>No experiment is ever a complete failure. It can always serve as a negative example.</I></P>
+<P ALIGN="RIGHT">&#151;Arthur Bloch</P>
+</BLOCKQUOTE><P>One problem with 2<SUP><I><SMALL>k</SMALL></I></SUP> factorial designs is that it is not possible to estimate experimental errors since no experiment is repeated. Experimental errors can be quantified by repeating the measurements under the same factor-level combinations. If each of the 2<SUP><I><SMALL>k</SMALL></I></SUP> experiments in the 2<SUP><I><SMALL>k</SMALL></I></SUP> design is repeated <I>r</I> times, we will have 2<SUP><I><SMALL>k</SMALL></I></SUP><I>r</I> observations. Such a design is called 2<SUP><I><SMALL>k</SMALL></I></SUP><I>r</I> design. Once again, it is helpful to start with a two-factor model, develop all the concepts, and then generalize them to a <I>k</I>-factor model.</P>
+<H3><A NAME="Heading2"></A><FONT COLOR="#000077">18.1 22<SUP><SMALL><I>r</I></SMALL></SUP> FACTORIAL DESIGNS
+</FONT></H3>
+<P>A 2<SUP><SMALL>2</SMALL></SUP><I>r</I> factorial design is used when there are two factors each at two levels and the analyst wants to isolate experimental errors. Each of the four experiments is repeated <I>r</I> times. Such a design allows us to add an error term to the model, which now becomes</P>
+<TABLE WIDTH="100%"><TR>
+<TD WIDTH="20%">
+<TD WIDTH="70%" ALIGN="LEFT" VALIGN="TOP"><I>y</I> = <I>q</I><SUB><SMALL>0</SMALL></SUB> &#43; <I>q<SUB><SMALL>A</SMALL></SUB>x<SUB><SMALL>A</SMALL></SUB></I> &#43; <I>q<SUB><SMALL>B</SMALL></SUB>x<SUB><SMALL>B</SMALL></SUB></I> &#43; <I>q<SUB><SMALL>AB</SMALL></SUB>x<SUB><SMALL>A</SMALL></SUB>x<SUB><SMALL>B</SMALL></SUB></I> &#43; <I>e</I>
+<TD WIDTH="10%" ALIGN="LEFT" VALIGN="TOP">(18.1)
+</TABLE>
+<P>Here, <I>e</I> is the experimental error and the <I>q&#146;</I>s are the effects as before.</P>
+<H3><A NAME="Heading3"></A><FONT COLOR="#000077">18.2 COMPUTATION OF EFFECTS</FONT></H3>
+<P>The easiest way to analyze a 2<SUP><SMALL>2</SMALL></SUP><I>r</I> design is to use the sign table as before except that in the <I>y</I> column we put the sample means of <I>r</I> measurements at the given factor levels. The remaining analysis to compute the effects is the same as before. This is illustrated by the following example.</P>
+<DL>
+<DD><B>Example 18.1</B> The memory-cache experiments were repeated three times each. This resulted in the 12 observations shown in column <I>y</I> in Table 18.1. The analysis is also shown in the table. We sum the individual observations and divide by 3 (the number of replications) to get the sample means <IMG SRC="images/18-01i.jpg"></IMGI>. The first four columns in the table are sign columns as before. The entries in each of the four columns are multiplied by those in column <IMG SRC="images/18-02i.jpg"></IMGI> and the sum is entered under the column. The sums under each column are divided by 4 to give the following effects:
+</DL>
+<P ALIGN="CENTER"><I>q</I><SUB><SMALL>0</SMALL></SUB> = 41, <I>q</I><SUB><SMALL>A</SMALL></SUB> = 21.5, <I>q</I><SUB><SMALL>B</SMALL></SUB> = 9.5, <I>q</I><SUB><SMALL>AB</SMALL></SUB> = 5</P>
+<CENTER>
+<TABLE WIDTH="80%"><TH CAPTION ALIGN="LEFT" COLSPAN="6" VALIGN="TOP">TABLE 18.1 Analysis of a 2<SUP><SMALL>2</SMALL></SUP>3 Design
+<TR>
+<TD COLSPAN="6"><HR>
+<TR>
+<TH WIDTH="10%" ALIGN="RIGHT"><I>I</I>
+<TH WIDTH="15%" ALIGN="RIGHT"><I>A</I>
+<TH WIDTH="15%" ALIGN="RIGHT"><I>B</I>
+<TH WIDTH="15%" ALIGN="RIGHT"><I>AB</I>
+<TH WIDTH="25%" ALIGN="CENTER"><I>y</I>
+<TH WIDTH="20%" ALIGN="RIGHT">Mean <IMG SRC="images/18-03i.jpg"></IMGI>
+<TR>
+<TD COLSPAN="6"><HR>
+<TR>
+<TD WIDTH="15%" ALIGN="RIGHT">1
+<TD WIDTH="15%" ALIGN="RIGHT">&#150;1
+<TD WIDTH="15%" ALIGN="RIGHT">&#150;1
+<TD WIDTH="15%" ALIGN="RIGHT">1
+<TD WIDTH="20%" ALIGN="CENTER">(15, 18, 12)
+<TD WIDTH="20%" ALIGN="RIGHT">15
+<TR>
+<TD ALIGN="RIGHT">1
+<TD ALIGN="RIGHT">1
+<TD ALIGN="RIGHT">&#150;1
+<TD ALIGN="RIGHT">&#150;1
+<TD ALIGN="CENTER">(45, 48, 51)
+<TD ALIGN="RIGHT">48
+<TR>
+<TD ALIGN="RIGHT">1
+<TD ALIGN="RIGHT">&#150;1
+<TD ALIGN="RIGHT">1
+<TD ALIGN="RIGHT">&#150;1
+<TD ALIGN="CENTER">(25, 28, 19)
+<TD ALIGN="RIGHT">24
+<TR>
+<TD ALIGN="RIGHT">1
+<TD ALIGN="RIGHT">1
+<TD ALIGN="RIGHT">1
+<TD ALIGN="RIGHT">1
+<TD ALIGN="CENTER">(75, 75, 81)
+<TD ALIGN="RIGHT">77
+<TR>
+<TD ALIGN="RIGHT">164
+<TD ALIGN="RIGHT">86
+<TD ALIGN="RIGHT">38
+<TD ALIGN="RIGHT">20
+<TD ALIGN="CENTER">
+<TD ALIGN="RIGHT">Total
+<TR>
+<TD ALIGN="RIGHT">41
+<TD ALIGN="RIGHT">21.5
+<TD ALIGN="RIGHT">9.5
+<TD ALIGN="RIGHT">5
+<TD ALIGN="CENTER">
+<TD ALIGN="RIGHT">Total/4
+<TR>
+<TD COLSPAN="6"><HR>
+<TR>
+</TABLE>
+</CENTER>
+<H3><A NAME="Heading4"></A><FONT COLOR="#000077">18.3 ESTIMATION OF EXPERIMENTAL ERRORS</FONT></H3>
+<P>Once the effects have been computed in a 2<SUP><SMALL>2</SMALL></SUP><I>r</I> design, the model can be used to estimate the response for any given factor values (<I>x</I>-values) as follows:</P>
+<P ALIGN="CENTER"><IMG SRC="images/18-04i.jpg"></IMGI> = <I>q</I><SUB><SMALL>0</SMALL></SUB> &#43; <I>q<SUB><SMALL>A</SMALL></SUB>x<SUB><SMALL>Ai</SMALL></SUB></I> &#43; <I>q<SUB><SMALL>B</SMALL></SUB>x<SUB><SMALL>Bi</SMALL></SUB></I> &#43; <I>q<SUB><SMALL>AB</SMALL></SUB>x<SUB><SMALL>Ai</SMALL></SUB>x<SUB><SMALL>Bi</SMALL></SUB></I></P>
+<P>Here <IMG SRC="images/18-05i.jpg"></IMGI> is the estimated response when the factors <I>A</I> and <I>B</I> are at levels <I>x<SUB><SMALL>Ai</SMALL></SUB></I> and <I>x<SUB><SMALL>Bi</SMALL></SUB></I>, respectively.</P>
+<P>The difference between the estimate and the measured value <I>y<SUB><SMALL>ij</SMALL></SUB></I> in the <I>j</I>th replication of the <I>i</I>th experiment represents the experimental errors:</P>
+<P ALIGN="CENTER"><I>e<SUB><SMALL>ij</SMALL></SUB></I> = <I>y<SUB><SMALL>ij</SMALL></SUB></I> &#150; <IMG SRC="images/18-06i.jpg"></IMGI> = <I>y<SUB><SMALL>ij</SMALL></SUB></I> &#150; <I>q</I><SUB><SMALL>0</SMALL></SUB> &#150; <I>q<SUB><SMALL>A</SMALL></SUB>x<SUB><SMALL>Bi</SMALL></SUB></I> &#150; <I>q<SUB><SMALL>AB</SMALL></SUB>x<SUB><SMALL>Ai</SMALL></SUB>x<SUB><SMALL>Bi</SMALL></SUB></I></P>
+<P>We can compute the error in each of the 2<SUP><SMALL>2</SMALL></SUP><I>r</I> observations. The sum of the errors must be zero. The sum of the squared errors (SSE) can be used to estimate the variance of the errors and also to compute the confidence intervals for the effects:</P>
+<TABLE WIDTH="100%"><TH CAPTION ALIGN="LEFT" COLSPAN="12" VALIGN="TOP">TABLE 18.2 Computation of Errors in Example 18.2<HR>
+<TR>
+<TD>
+<TH ALIGN="CENTER" VALIGN="TOP" COLSPAN="4">Effect
+<TH WIDTH="20%" ALIGN="CENTER" VALIGN="TOP" COLSPAN="1">Estimated
+<TH ALIGN="CENTER" VALIGN="TOP" COLSPAN="3">Measured
+<TD>
+<TD>
+<TD>
+<TR>
+<TD>
+<TD COLSPAN="4"><HR>
+<TH ALIGN="CENTER">Response,
+<TH COLSPAN="3" ALIGN="CENTER">Responses
+<TH ALIGN="CENTER" VALIGN="BOTTOM" COLSPAN="3">Errors
+<TR>
+<TD WIDTH="5%">
+<TH ALIGN="CENTER"><I>I</I>
+<TH ALIGN="CENTER"><I>A</I>
+<TH ALIGN="CENTER"><I>B</I>
+<TH ALIGN="CENTER"><I>AB</I>
+<TD>
+<TD COLSPAN="3"><HR>
+<TD COLSPAN="3"><HR>
+<TR>
+<TH WIDTH="8%" ALIGN="CENTER"><I>i</I>
+<TH WIDTH="8%" ALIGN="CENTER">41
+<TH WIDTH="8%" ALIGN="CENTER">21.5
+<TH WIDTH="8%" ALIGN="CENTER">9.5
+<TH WIDTH="8%" ALIGN="CENTER">5
+<TH WIDTH="12%" ALIGN="CENTER"><IMG SRC="images/18-07i.jpg"></IMGI>
+<TH WIDTH="8%" ALIGN="CENTER"><I>y<SUB><SMALL>i1</SMALL></SUB></I>
+<TH WIDTH="8%" ALIGN="CENTER"><I>y<SUB><SMALL>i2</SMALL></SUB></I>
+<TH WIDTH="8%" ALIGN="CENTER"><I>y<SUB><SMALL>i3</SMALL></SUB></I>
+<TH WIDTH="8%" ALIGN="CENTER"><I>e<SUB><SMALL>i1</SMALL></SUB></I>
+<TH WIDTH="8%" ALIGN="CENTER"><I>e<SUB><SMALL>i2</SMALL></SUB></I>
+<TH WIDTH="8%" ALIGN="CENTER"><I>e<SUB><SMALL>i3</SMALL></SUB></I>
+<TH WIDTH="8%" ALIGN="CENTER">
+<TR>
+<TD COLSPAN="12"><HR>
+<TR>
+<TD WIDTH="8%" ALIGN="CENTER">1
+<TD WIDTH="8%" ALIGN="CENTER">1
+<TD WIDTH="8%" ALIGN="CENTER">&#150;1
+<TD WIDTH="8%" ALIGN="CENTER">&#150;1
+<TD WIDTH="8%" ALIGN="CENTER">1
+<TD WIDTH="12%" ALIGN="CENTER">15
+<TD WIDTH="8%" ALIGN="CENTER">15
+<TD WIDTH="8%" ALIGN="CENTER">18
+<TD WIDTH="8%" ALIGN="CENTER">12
+<TD WIDTH="8%" ALIGN="CENTER">0
+<TD WIDTH="8%" ALIGN="CENTER">3
+<TD WIDTH="8%" ALIGN="CENTER">&#150;3
+<TR>
+<TD ALIGN="CENTER">2
+<TD ALIGN="CENTER">1
+<TD ALIGN="CENTER">1
+<TD ALIGN="CENTER">&#150;1
+<TD ALIGN="CENTER">&#150;1
+<TD ALIGN="CENTER">48
+<TD ALIGN="CENTER">45
+<TD ALIGN="CENTER">48
+<TD ALIGN="CENTER">51
+<TD ALIGN="CENTER">&#150;3
+<TD ALIGN="CENTER">0
+<TD ALIGN="CENTER">3
+<TR>
+<TD ALIGN="CENTER">3
+<TD ALIGN="CENTER">1
+<TD ALIGN="CENTER">&#150;1
+<TD ALIGN="CENTER">1
+<TD ALIGN="CENTER">&#150;1
+<TD ALIGN="CENTER">24
+<TD ALIGN="CENTER">25
+<TD ALIGN="CENTER">28
+<TD ALIGN="CENTER">19
+<TD ALIGN="CENTER">1
+<TD ALIGN="CENTER">4
+<TD ALIGN="CENTER">&#150;5
+<TR>
+<TD ALIGN="CENTER">4
+<TD ALIGN="CENTER">1
+<TD ALIGN="CENTER">1
+<TD ALIGN="CENTER">1
+<TD ALIGN="CENTER">1
+<TD ALIGN="CENTER">77
+<TD ALIGN="CENTER">75
+<TD ALIGN="CENTER">75
+<TD ALIGN="CENTER">81
+<TD ALIGN="CENTER">&#150;2
+<TD ALIGN="CENTER">&#150;2
+<TD ALIGN="CENTER">4
+<TR>
+<TD COLSPAN="12"><HR>
+<TR>
+</TABLE>
+<P ALIGN="CENTER"><IMG SRC="images/18-01d.jpg"></P>
+</IMGD>
+<P><BR></P>
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="../ch17/17-05.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="18-02.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<hr width="90%" size="1" noshade>
+<div align="center">
+<font face="Verdana,sans-serif" size="1">Copyright &copy; <a href="/reference/wiley00001.html">John Wiley &amp; Sons, Inc.</a></font>
+</div>
+<!-- all of the reference materials (books) have the footer and subfoot reveresed -->
+<!-- reference_subfoot = footer -->
+<!-- reference_footer = subfoot -->
+
+</BODY>
+</HTML>
+
+<!-- END FOOTER -->
+

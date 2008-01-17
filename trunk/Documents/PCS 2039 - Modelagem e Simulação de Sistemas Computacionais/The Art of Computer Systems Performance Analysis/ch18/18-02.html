@@ -1,0 +1,155 @@
+<HTML>
+<HEAD>
+<META name=vsisbn content="0471503363">
+<META name=vstitle content="Art of Computer Systems Performance Analysis Techniques For Experimental Design Measurements Simulation And Modeling">
+<META name=vsauthor content="Raj Jain">
+<META name=vsimprint content="Wiley Computer Publishing">
+<META name=vspublisher content="John Wiley & Sons, Inc.">
+<META name=vspubdate content="05/01/91">
+<META name=vscategory content="Web and Software Development: Software Engineering: Simulation and Modeling">
+
+
+
+
+
+
+
+<TITLE>The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling:2kr Factorial Designs with Replications</TITLE>
+
+<!-- HEADER -->
+
+<STYLE type="text/css"> 
+ <!--
+ A:hover  {
+ 	color : Red;
+ }
+ -->
+</STYLE>
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+<!--ISBN=0471503363//-->
+<!--TITLE=The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling//-->
+<!--AUTHOR=Raj Jain//-->
+<!--PUBLISHER=Wiley Computer Publishing//-->
+<!--CHAPTER=18//-->
+<!--PAGES=295-298//-->
+<!--UNASSIGNED1//-->
+<!--UNASSIGNED2//-->
+
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="18-01.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="18-03.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+<P><BR></P>
+<BLOCKQUOTE>
+<P><B>Example 18.2</B> Consider the data of the memory-cache study of Example 18.1. The estimated response and the errors for each of the 12 observations are shown in Table 18.2. The estimated responses for each experiment are computed by adding the products of effects and the sign table entries for the experiment. For example, the estimated response for the first experiment is</P>
+<P ALIGN="CENTER"><IMG SRC="images/18-08i.jpg"></IMGI> = <I>q</I><SUB><SMALL>0</SMALL></SUB> &#150; <I>q<SUB><SMALL>A</SMALL></SUB></I> &#150; <I>q<SUB><SMALL>B</SMALL></SUB></I> &#43; <I>q<SUB><SMALL>AB</SMALL></SUB></I> = 41 &#150; 21.5 &#150; 9.5 &#43; 5 = 15</P>
+<P>The experimental errors are computed by subtracting the estimated from the measured values. For example, for the first replication of the first experiment,</P>
+<P ALIGN="CENTER"><I>e</I><SUB><SMALL>11</SMALL></SUB> = <I>y</I><SUB><SMALL>11</SMALL></SUB> &#150; <IMG SRC="images/18-09i.jpg"></IMGI> = 15 &#150; 15 = 0</P>
+<P>Notice that the sum of the errors in each experiment is zero and hence the total sum of all errors is zero also. Thus</P>
+<P ALIGN="CENTER">SSE = 0<SUP><SMALL>2</SMALL></SUP> &#43; 3<SUP><SMALL>2</SMALL></SUP> &#43; (&#150;3)<SUP><SMALL>2</SMALL></SUP> &#43; (&#150;3)<SUP><SMALL>2</SMALL></SUP> &#43; 0<SUP><SMALL>2</SMALL></SUP> &#43; 3<SUP><SMALL>2</SMALL></SUP> &#43; 1<SUP><SMALL>2</SMALL></SUP></P>
+<P ALIGN="CENTER">&#43; 4<SUP><SMALL>2</SMALL></SUP> &#43; (&#150;5)<SUP><SMALL>2</SMALL></SUP> &#43; (&#150;2)<SUP><SMALL>2</SMALL></SUP> &#43; (&#150;2)<SUP><SMALL>2</SMALL></SUP> &#43; 4<SUP><SMALL>2</SMALL></SUP></P>
+<P ALIGN="CENTER">= 102</P>
+</BLOCKQUOTE><H3><A NAME="Heading5"></A><FONT COLOR="#000077">18.4 ALLOCATION OF VARIATION</FONT></H3>
+<P>As in the 2<SUP><SMALL>2</SMALL></SUP> design, the percentage of variation explained by each factor is helpful in deciding whether a factor has a significant impact on the response. However, unlike the 2<SUP><SMALL>2</SMALL></SUP> design, now the variation due to experimental errors can also be isolated since we have multiple observations for each factor-level combination.</P>
+<P>The total variation or Total Sum of Squares (SST) is given by</P>
+<P ALIGN="CENTER"><IMG SRC="images/18-02d.jpg"></P>
+</IMGD>
+<P>Here, <IMG SRC="images/18-10i.jpg"></IMGI> denotes the mean of responses from all replications of all experiments. The dots in the subscript indicate the dimension along which the averaging is done. Thus, <IMG SRC="images/18-11i.jpg"></IMGI> denotes the means of responses in all replications of the <I>i</I>th experiment and <IMG SRC="images/18-12i.jpg"></IMGI> denotes the mean of responses in the <I>j</I>th replication of all experiments.</P>
+<P>The SST can be divided into four parts as follows:</P>
+<P ALIGN="CENTER"><IMG SRC="images/18-03d.jpg"></P>
+</IMGD>
+<P ALIGN="CENTER">SST = SSA &#43; SSB &#43; SSAB &#43; SSE
+</P>
+<P>where each SS (sum of square) corresponds to the expression above it. Thus, SSA, SSB, and SSAB are the variations explained by factors <I>A, B</I>, and interaction <I>AB</I>, respectively. The SSE is the unexplained variation attributed to the experimental errors.</P>
+<P>A derivation of the division of the SST into four parts is as follows.</P>
+<BLOCKQUOTE><P><B>Derivation 18.1</B> The model for 2<SUP><SMALL>2</SMALL></SUP><I>r</I> design is</P>
+<P ALIGN="CENTER"><I>y<SUB><SMALL>ij</SMALL></SUB></I> = <I>q</I><SUB><SMALL>0</SMALL></SUB> &#43; <I>q<SUB><SMALL>A</SMALL></SUB>x<SUB><SMALL>Ai</SMALL></SUB></I> &#43; <I>q<SUB><SMALL>B</SMALL></SUB>x<SUB><SMALL>Bi</SMALL></SUB></I> &#43; <I>q<SUB><SMALL>AB</SMALL></SUB>x<SUB><SMALL>Ai</SMALL></SUB>x<SUB><SMALL>Bi</SMALL></SUB></I> &#43; <I>e<SUB><SMALL>ij</SMALL></SUB></I></P>
+<P>Adding the terms of this equation across all 2<SUP><SMALL>2</SMALL></SUP><I>r</I> observations, we get</P>
+<P ALIGN="CENTER"><IMG SRC="images/18-04d.jpg"></P>
+</IMGD>
+<P>Since the <I>x</I>&#146;s and their products as well as all errors add to zero, we have</P>
+<P ALIGN="CENTER"><IMG SRC="images/18-05d.jpg"></P>
+</IMGD>
+<P>The mean response is given by
+</P>
+<P ALIGN="CENTER"><IMG SRC="images/18-06d.jpg"></P>
+</IMGD>
+<P>The total variation is
+</P>
+<P ALIGN="CENTER"><IMG SRC="images/18-07d.jpg"></P>
+</IMGD>
+<P>Here, SS0 represents the sum of squares of the mean. Squaring both sides of Equation (18.1) and ignoring the cross-product terms (since they add to zero), we have
+</P>
+<P ALIGN="CENTER"><IMG SRC="images/18-08d.jpg"></P>
+</IMGD>
+<P>The terms of this equation correspond to various sums of squares, and we have
+</P>
+<P ALIGN="CENTER">SSY = SS0 &#43; SSA &#43; SSB &#43; SSAB &#43; SSE</P>
+<P>or</P>
+<P ALIGN="CENTER">SST = SSY &#150; SS0 = SSA &#43; SSB &#43; SSAB &#43; SSE</P>
+<P>Incidently, Equation (18.2) provides an easy way to compute SSE:</P>
+<P ALIGN="CENTER">SSE = SSY &#150; 2<SUP><SMALL>2</SMALL></SUP><I>r</I>(<I>q</I><SUB><SMALL>0</SMALL></SUB><SUP><SMALL>2</SMALL></SUP> &#43; <I>q</I><SUB><SMALL><I>A</I></SMALL></SUB><SUP><SMALL>2</SMALL></SUP> &#43; <I>q</I><SUB><SMALL><I>b</I></SMALL></SUB><SUP><SMALL>2</SMALL></SUP> &#43; <I>q</I><SUB><SMALL><I>AB</I></SMALL></SUB><SUP><SMALL>2</SMALL></SUP>)</P>
+</BLOCKQUOTE><P>The following example illustrates the allocation of variation and computation of SSE.
+</P>
+<BLOCKQUOTE><P><B>Example 18.3</B> For memory-cache study of Example 18.1:</P>
+<DL>
+<DD>SSY = 15<SUP><SMALL>2</SMALL></SUP> &#43; 18<SUP><SMALL>2</SMALL></SUP> &#43; 12<SUP><SMALL>2</SMALL></SUP> &#43; 45<SUP><SMALL>2</SMALL></SUP> &#43; . . . &#43; 75<SUP><SMALL>2</SMALL></SUP> &#43; 75<SUP><SMALL>2</SMALL></SUP> &#43; 81<SUP><SMALL>2</SMALL></SUP> = 27,204
+<DD>SS0 = 2<SUP><SMALL>2</SMALL></SUP><I>rq</I><SUB><SMALL>0</SMALL></SUB><SUP><SMALL>2</SMALL></SUP> = 12 &#215; 41<SUP><SMALL>2</SMALL></SUP> = 20,172
+<DD>SSA = 2<SUP><SMALL>2</SMALL></SUP><I>rq<SUB><SMALL>A</SMALL></SUB></I><SUP><SMALL>2</SMALL></SUP> = 12 &#215; (21.5)<SUP><SMALL>2</SMALL></SUP> = 5547
+<DD>SSB = 2<SUP><SMALL>2</SMALL></SUP><I>rq<SUB><SMALL>B</SMALL></SUB></I><SUP><SMALL>2</SMALL></SUP> = 12 &#215; (9.5)<SUP><SMALL>2</SMALL></SUP> = 1083
+<DD>SSAB = 2<SUP><SMALL>2</SMALL></SUP><I>rq<SUB><SMALL>AB</SMALL></SUB></I><SUP><SMALL>2</SMALL></SUP> = 12 &#215; 5<SUP><SMALL>2</SMALL></SUP> = 300
+<DD>SSE = 27,204 &#150; 2<SUP><SMALL>2</SMALL></SUP> &#215; 3(41<SUP><SMALL>2</SMALL></SUP> &#43; 21.5<SUP><SMALL>2</SMALL></SUP> &#43; 9.5<SUP><SMALL>2</SMALL></SUP> &#43; 5<SUP><SMALL>2</SMALL></SUP>) = 102
+<DD>SST = SSY &#150; SS0 = 27,204 &#150; 20,172 = 7032
+</DL>
+</LIST2>
+<P>Notice that the SSE computed here is the same as that obtained earlier in Example 18.2. Also, note that the sum of squares add up as follows:
+</P>
+<DL>
+<DD>SSA &#43; SSB &#43; SSAB &#43; SSE = 5547 &#43; 1083 &#43; 300 &#43; 102 = 7032 = SST
+</DL>
+<P>Thus, the total variation of 7032 can be divided into four parts. Factor <I>A</I> explains 5547/7032, or 78.88%, of the variation. Similarly, factor <I>B</I> explains 15.40%, and interaction <I>AB</I> explains 4.27% of the variation. The remaining 1.45% is unexplained and is attributed to errors.</P>
+</BLOCKQUOTE><H3><A NAME="Heading6"></A><FONT COLOR="#000077">18.5 CONFIDENCE INTERVALS FOR EFFECTS</FONT></H3>
+<P>The effects computed from a sample are random variables and would be different if another set of experiments is conducted. The confidence intervals for the effects can be computed if the variance of the sample estimates are known.
+</P>
+<P>If we assume that errors are normally distributed with zero mean and variance &#963;<SUB><SMALL><I>e</I></SMALL></SUB><SUP><SMALL>2</SMALL></SUP>, then it follows from the model that the <I>y</I><SUB><SMALL>i</SMALL></SUB>&#146;s are also normally distributed with the same variance &#963;<SUB><SMALL><I>e</I></SMALL></SUB><SUP><SMALL>2</SMALL></SUP>. Now consider an effect, for example, <I>q</I><SUB><SMALL>0</SMALL></SUB>:</P>
+<P ALIGN="CENTER"><IMG SRC="images/18-09d.jpg"></P>
+</IMGD>
+<P>Since <I>q</I><SUB><SMALL>0</SMALL></SUB> is a linear combination of normally distributed variables, it is also normally distributed and its variance is &#963;<SUB><SMALL><I>e</I></SMALL></SUB><SUP><SMALL>2</SMALL></SUP>/(2<SUP><SMALL>2</SMALL></SUP><I>r</I>).</P>
+<P>The variance of errors can be estimated from the SSE as follows:</P>
+<P ALIGN="CENTER"><IMG SRC="images/18-10d.jpg"></P>
+</IMGD>
+<P>The quantity on the right side of this equation is called the <B>Mean Square of Errors (MSE)</B>. The denominator is 2<SUP><SMALL>2</SMALL></SUP>(<I>r</I> &#150; 1), which is the number of independent terms in the SSE. This is because the <I>r</I> error terms corresponding to the <I>r</I> replications of an experiment should add up to zero. Thus, only <I>r</I> &#150; 1 of these terms can be independently chosen. Thus, the SSE has 2<SUP><SMALL>2</SMALL></SUP>(<I>r</I> &#150; 1) degrees of freedom.</P>
+<P>The estimated variance of <I>q</I><SUB><SMALL>0</SMALL></SUB> is <I>s</I><SUB><SMALL><I>q</I>0</SMALL></SUB><SUP><SMALL>2</SMALL></SUP> = <I>s</I><SUB><SMALL><I>e</I></SMALL></SUB><SUP><SMALL>2</SMALL></SUP>/(2<SUP><SMALL>2</SMALL></SUP><I>r</I>). The variance of other effects, <I>q<SUB><SMALL>A</SMALL></SUB></I>, <I>q<SUB><SMALL>B</SMALL></SUB></I>, and <I>q<SUB><SMALL>AB</SMALL></SUB></I>, can also be similarly shown to be <I>S</I><SUB><SMALL><I>e</I></SMALL></SUB><SUP><SMALL>2</SMALL></SUP>/(2<SUP><SMALL>2</SMALL></SUP><I>r</I>). In other words,</P>
+<P ALIGN="CENTER"><IMG SRC="images/18-11d.jpg"></P>
+</IMGD>
+<P><BR></P>
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="18-01.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="18-03.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<hr width="90%" size="1" noshade>
+<div align="center">
+<font face="Verdana,sans-serif" size="1">Copyright &copy; <a href="/reference/wiley00001.html">John Wiley &amp; Sons, Inc.</a></font>
+</div>
+<!-- all of the reference materials (books) have the footer and subfoot reveresed -->
+<!-- reference_subfoot = footer -->
+<!-- reference_footer = subfoot -->
+
+</BODY>
+</HTML>
+
+<!-- END FOOTER -->
+

@@ -1,0 +1,169 @@
+<HTML>
+<HEAD>
+<META name=vsisbn content="0471503363">
+<META name=vstitle content="Art of Computer Systems Performance Analysis Techniques For Experimental Design Measurements Simulation And Modeling">
+<META name=vsauthor content="Raj Jain">
+<META name=vsimprint content="Wiley Computer Publishing">
+<META name=vspublisher content="John Wiley & Sons, Inc.">
+<META name=vspubdate content="05/01/91">
+<META name=vscategory content="Web and Software Development: Software Engineering: Simulation and Modeling">
+
+
+
+
+
+
+
+<TITLE>The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling:2kr Factorial Designs with Replications</TITLE>
+
+<!-- HEADER -->
+
+<STYLE type="text/css"> 
+ <!--
+ A:hover  {
+ 	color : Red;
+ }
+ -->
+</STYLE>
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+<!--ISBN=0471503363//-->
+<!--TITLE=The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling//-->
+<!--AUTHOR=Raj Jain//-->
+<!--PUBLISHER=Wiley Computer Publishing//-->
+<!--CHAPTER=18//-->
+<!--PAGES=298-302//-->
+<!--UNASSIGNED1//-->
+<!--UNASSIGNED2//-->
+
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="18-02.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="18-04.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+<P><BR></P>
+<P>The confidence intervals for the effects are
+</P>
+<P ALIGN="CENTER"><IMG SRC="images/18-12d.jpg"></P>
+</IMGD>
+<P>The <I>t</I>&#150;value is read at 2<SUP><SMALL>2</SMALL></SUP>(<I>r</I> &#150; 1) degrees of freedom (which is the degrees of freedom associated with the experimental errors). Any effect whose confidence interval does not include a zero is significant. Some books on experimental design use an <I>F</I>-test (see Section 20.5) to determine the significance of effects. However, the <I>F</I>-test conclusions for a 2<I><SUP><SMALL>k</SMALL></SUP>r</I> design are always identical to those obtained using confidence intervals.</P>
+<BLOCKQUOTE><P><B>Example 18.4</B> Continuing the memory-cache study from Example 18.3, the standard deviation of errors is</P>
+<P ALIGN="CENTER"><IMG SRC="images/18-13d.jpg"></P>
+</IMGD>
+<P>and the standard deviation of effects is
+</P>
+<P ALIGN="CENTER"><IMG SRC="images/18-14d.jpg"></P>
+</IMGD>
+<P>The <I>t</I>-value at eight degrees of freedom and 90% confidence is 1.86.</P>
+<P>The confidence intervals for the parameters are <IMG SRC="images/18-13i.jpg"></IMGI> (1.86)(1.03) = <IMG SRC="images/18-14i.jpg"></IMGI> 1.92, that is, (39.08, 42.91), (19.58, 23.41), (7.58, 11.41), (3.08, 6.91) for <I>q<SUB><SMALL>0</SMALL></SUB></I>, <I>q<SUB><SMALL>A</SMALL></SUB></I>, <I>q<SUB><SMALL>B</SMALL></SUB></I>, <I>q<SUB><SMALL>AB</SMALL></SUB></I>, respectively. Since none of the intervals include a zero, all effects are significantly different from zero at this confidence level.</P>
+<P>It is also possible to compute variance and confidence intervals for any contrast of effects. A contrast is any linear combination whose coefficients add up to zero. The variance of <IMG SRC="images/18-15i.jpg"></IMGI>, where <IMG SRC="images/18-16i.jpg"></IMGI> = 0, is</P>
+<P ALIGN="CENTER"><IMG SRC="images/18-15d.jpg"></P>
+</IMGD>
+</BLOCKQUOTE>
+<P>The 100(1 &#150; &#945;)% confidence interval for <IMG SRC="images/18-17i.jpg"></IMGI> can be computed using the <I>t</I><SUB><SMALL>[1 &#150; &#945;/2;2<SUP><SMALL>2</SMALL></SUP><I>r</I>]</SMALL></SUB> value from Table A.4 in the Appendix. This procedure for computing confidence intervals for linear combinations of effects can be used to compute confidence intervals for estimated response at any given factor levels.</P>
+<BLOCKQUOTE><P><B>Example 18.5</B> In the memory-cache study, the confidence interval for <I>u</I> = <I>q<SUB><SMALL>A</SMALL></SUB></I> &#43; <I>q<SUB><SMALL>B</SMALL></SUB></I> &#150; 2<I>q<SUB><SMALL>AB</SMALL></SUB></I> is computed as follows.</P>
+<P>Notice that <I>u</I> is a contrast with coefficients of 0, 1, 1, and &#150;2. The mean of <I>u</I> is</P>
+<P ALIGN="CENTER"><IMG SRC="images/18-18i.jpg"></IMGI> = 21.5 &#43; 9.5 &#150; 2 &#215; 5 = 11</P>
+<P>The variance of <I>u</I> is: <P ALIGN="CENTER"><IMG SRC="images/18-16d.jpg"></P>
+</IMGD></P>
+<P>The standard deviation of <I>u</I> is</P>
+<P ALIGN="CENTER"><IMG SRC="images/18-17d.jpg"></P>
+<P>Since <I>t</I><SUB><SMALL><SMALL>[0.95;8]</SMALL></SMALL></SUB> from Table A.4 in the Appendix is 1.86, the confidence interval for <I>u</I> is</P>
+<P ALIGN="CENTER"><IMG SRC="images/18-18d.jpg"></P>
+</IMGD>
+</BLOCKQUOTE>
+<H3><A NAME="Heading7"></A><FONT COLOR="#000077">18.6 CONFIDENCE INTERVALS FOR PREDICTED RESPONSES</FONT></H3>
+<P>It is also possible to compute confidence intervals for response <I>y</I> at a given combination of factors.</P>
+<P>The mean response <IMG SRC="images/18-19i.jpg"></IMGI> can be easily computed for any given factor combination:</P>
+<P ALIGN="CENTER"><IMG SRC="images/18-20i.jpg"></IMGI> = <I>q</I><SUB><SMALL>0</SMALL></SUB> &#43; <I>q<SUB><SMALL>A</SMALL></SUB>x<SUB><SMALL>A</SMALL></SUB></I> &#43; <I>q<SUB><SMALL>B</SMALL></SUB>x<SUB><SMALL>B</SMALL></SUB></I> &#43; <I>q<SUB><SMALL>AB</SMALL></SUB>x<SUB><SMALL>A</SMALL></SUB>x<SUB><SMALL>B</SMALL></SUB></I></P>
+<P>Suppose we want to predict the mean of responses obtained from <I>m</I> repetitions of the experiment at the given factor combinations. The expression for the mean estimate is the same as above regardless of <I>m</I>. However, as <I>m</I> increases, the sample mean is expected to be closer to the predicted mean. In other words, the standard deviation of the estimate is a decreasing function of <I>m</I>. It can be shown to be</P>
+<P ALIGN="CENTER"><IMG SRC="images/18-19d.jpg"></P>
+</IMGD>
+<P>Here, <I>n<SUB><SMALL>eff</SMALL></SUB></I> is the effective number of degrees of freedom (DFs), which is given by</P>
+<P ALIGN="CENTER"><IMG SRC="images/18-20d.jpg"></P>
+</IMGD>
+<P>In a 2<SUP><SMALL>2</SMALL></SUP><I>r</I> design, the total number of runs is 2<SUP><SMALL>2</SMALL></SUP><I>r</I>. The parameters <I>q<SUB><SMALL>0</SMALL></SUB></I>, <I>q<SUB><SMALL>A</SMALL></SUB></I>, <I>q<SUB><SMALL>B</SMALL></SUB></I>, and <I>q<SUB><SMALL>AB</SMALL></SUB></I> are used in estimating <IMG SRC="images/18-21i.jpg">. Each of these parameters has one degree of freedom. Therefore,</P>
+<P ALIGN="CENTER"><IMG SRC="images/18-21d.jpg"></P>
+</IMGD>
+<P>A 100(1 &#150; &#945;)% confidence interval for the mean response is given by
+</P>
+<P ALIGN="CENTER"><IMG SRC="images/18-22d.jpg"></P>
+</IMGD>
+<P>The <I>t</I>-value is read at the degrees of freedom associated with the error.</P>
+<P>Two special cases are of particular interest. First, if we want to predict the response for a single run (<I>m</I> = 1) of a confirmation experiment in the future, the standard error expression would be</P>
+<P ALIGN="CENTER"><IMG SRC="images/18-23d.jpg"></P>
+</IMGD>
+<P>Second, if we want to predict the population mean (<I>m</I> = &#8734;), the standard error expression would be</P>
+<P ALIGN="CENTER"><IMG SRC="images/18-24d.jpg"></P>
+</IMGD>
+<BLOCKQUOTE>
+<P><B>Example 18.6</B> For the memory-cache study, let us compute the confidence intervals for mean response with <I>x<SUB><SMALL>A</SMALL></SUB></I> = &#150;1 and <I>x</I><SUB><SMALL>B</SMALL></SUB> = &#150;1. Four different confidence intervals can be computed:</P>
+<DL>
+<DD><B>1.</B>&nbsp;&nbsp;<I>Predicted Mean Response for a Future Confirmation Experiment</I>: The estimated mean response <IMG SRC="images/18-22i.jpg"></IMGI> is
+<P ALIGN="CENTER"><IMG SRC="images/18-25d.jpg"></P>
+</IMGD>
+<BR>The standard deviation of the predicted observation is computed as follows:
+<P ALIGN="CENTER"><IMG SRC="images/18-26d.jpg"></P>
+</IMGD>
+<BR>Using <I>t</I><SUB><SMALL>[0.95;8]</SMALL></SUB> = 1.86, the 90% confidence interval is
+<P ALIGN="CENTER"><IMG SRC="images/18-27d.jpg"></P>
+</IMGD>
+<DD><B>2.</B>&nbsp;&nbsp;<I>Predicted Mean Response for Five Confirmation Experiments in Future</I>: In this case, the standard deviation of the predicted mean is
+<P ALIGN="CENTER"><IMG SRC="images/18-28d.jpg"></P>
+</IMGD>
+<BR>The 90% confidence interval is
+<P ALIGN="CENTER"><IMG SRC="images/18-29d.jpg"></P>
+</IMGD>
+<DD><B>3.</B>&nbsp;&nbsp;<I>Predicted Mean Response for a Large Number of Experiments in Future</I>: In this case, the standard deviation of the predicted mean is
+<P ALIGN="CENTER"><IMG SRC="images/18-30d.jpg"></P>
+</IMGD>
+<BR>The 90% confidence interval is
+<P ALIGN="CENTER"><IMG SRC="images/18-31d.jpg"></P>
+</IMGD>
+<DD><B>4.</B>&nbsp;&nbsp;<I>Current Mean Response</I>: This is not a case of predicting the results of future experiments. Here we simply want to get a confidence interval for <IMG SRC="images/18-23i.jpg"></IMGI>. This is a contrast of the effects. Using the formula for contrasts, we compute the standard deviation of <IMG SRC="images/18-24i.jpg"></IMGI> as follows:
+<P ALIGN="CENTER"><IMG SRC="images/18-32d.jpg"></P>
+</IMGD>
+<BR>The 90% confidence interval for the current mean response is
+<P><P ALIGN="CENTER"><IMG SRC="images/18-33d.jpg"></P>
+</DL>
+<P>Notice that the confidence intervals become narrower as we scan down the preceding list. The predictions always have a wider confidence or higher variance because the effect of errors in future experiments has to be added. As the number of future experiments increases, the confidence interval becomes narrower. Current mean response has an even narrower confidence interval. </BLOCKQUOTE></P>
+<H3><A NAME="Heading8"></A><FONT COLOR="#000077">18.7 VISUAL TESTS FOR VERIFYING THE ASSUMPTIONS</FONT></H3>
+<P>In deriving the expressions for effects, we made essentially the same assumptions as in regression analysis, namely:
+</P>
+<DL>
+<DD><B>1.</B>&nbsp;&nbsp;The model errors are statistically independent.
+<DD><B>2.</B>&nbsp;&nbsp;The model errors are additive.
+<DD><B>3.</B>&nbsp;&nbsp;The errors are normally distributed.
+<DD><B>4.</B>&nbsp;&nbsp;The errors have a constant standard deviation &#963;<SUB><SMALL><I>e</I></SMALL></SUB>.
+<DD><B>5.</B>&nbsp;&nbsp;The effects of factors are additive.
+</DL>
+<P>These assumptions lead to the observations being independent and normally distributed with constant variance.
+</P><P><BR></P>
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="18-02.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="18-04.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<hr width="90%" size="1" noshade>
+<div align="center">
+<font face="Verdana,sans-serif" size="1">Copyright &copy; <a href="/reference/wiley00001.html">John Wiley &amp; Sons, Inc.</a></font>
+</div>
+<!-- all of the reference materials (books) have the footer and subfoot reveresed -->
+<!-- reference_subfoot = footer -->
+<!-- reference_footer = subfoot -->
+
+</BODY>
+</HTML>
+
+<!-- END FOOTER -->
+

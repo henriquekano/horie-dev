@@ -1,0 +1,152 @@
+<HTML>
+<HEAD>
+<META name=vsisbn content="0471503363">
+<META name=vstitle content="Art of Computer Systems Performance Analysis Techniques For Experimental Design Measurements Simulation And Modeling">
+<META name=vsauthor content="Raj Jain">
+<META name=vsimprint content="Wiley Computer Publishing">
+<META name=vspublisher content="John Wiley & Sons, Inc.">
+<META name=vspubdate content="05/01/91">
+<META name=vscategory content="Web and Software Development: Software Engineering: Simulation and Modeling">
+
+
+
+
+
+
+
+<TITLE>The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling:2k Factorial Designs</TITLE>
+
+<!-- HEADER -->
+
+<STYLE type="text/css"> 
+ <!--
+ A:hover  {
+ 	color : Red;
+ }
+ -->
+</STYLE>
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+<!--ISBN=0471503363//-->
+<!--TITLE=The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling//-->
+<!--AUTHOR=Raj Jain//-->
+<!--PUBLISHER=Wiley Computer Publishing//-->
+<!--CHAPTER=17//-->
+<!--PAGES=290-291//-->
+<!--UNASSIGNED1//-->
+<!--UNASSIGNED2//-->
+
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="17-03.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="17-05.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+<P><BR></P>
+<P>The results are interpreted as follows:
+</P>
+<DL>
+<DD><B>&#149;</B>&nbsp;&nbsp;The average throughput is 0.5725. The throughput is mostly affected by the reference pattern, which makes a difference of <IMG SRC="images/17-02i.jpg"></IMGI>0.1257 and thus explains 77% of its variation. The network type contributes 0.0595 to the throughput. Omega networks give that much higher than the average, and crossbar networks give that much lower than the average. Thus, the net difference between the two types of networks is 0.119. The choice of the network is affected by the address pattern since there is a slight interaction. Depending upon the address pattern and network combination, the throughput can go up or down by 0.0346.
+<DD><B>&#149;</B>&nbsp;&nbsp;The 90% transit time is also affected mostly by the address pattern. Since <I>q</I><SUB><I><SMALL>A</SMALL></I></SUB> is negative, the transit time is higher for <I>A</I> = &#150;1 or the crossbar networks. This applies to both address patterns since there is no interaction between the address pattern and the network type.
+<DD><B>&#149;</B>&nbsp;&nbsp;The response time also depends mostly on the address pattern. The interaction between the pattern and network type is low.
+</DL>
+<P>Thus, we notice that all three metrics are affected more by the address patterns than by the network type This is because the address patterns chosen are very different.
+</P>
+<H3><A NAME="Heading6"></A><FONT COLOR="#000077">17.5 GENERAL 2<SUP><SMALL><I>k</I></SMALL></SUP> FACTORIAL DESIGNS
+</FONT></H3>
+<P>A 2<SUP><I><SMALL>k</SMALL></I></SUP> experimental design is used to determine the effect of <I>k</I> factors, each of which have two alternatives or levels. We have already discussed the special case of two factors (<I>k</I> = 2) in the last two sections. Now we generalize the analysis to more than two factors.</P>
+<P>The analysis techniques developed so far for 2<SUP><SMALL>2</SMALL></SUP> designs can be easily extended to a 2<SUP><I><SMALL>k</SMALL></I></SUP> design. Given <I>k</I> factors at two levels each, a total of 2<SUP><I><SMALL>k</SMALL></I></SUP> experiments are required. The analysis produces 2<SUP><I><SMALL>k</SMALL></I></SUP> effects. These include <I>k</I> main effects, <IMG SRC="images/17-03i.jpg"></IMGI> two-factor interactions, <IMG SRC="images/17-04i.jpg"></IMGI> three-factor interactions, and so on. The sign table method of analyzing the results and allocating the variation is also valid. We illustrate this with an example.</P>
+<BLOCKQUOTE><P><B>Example 17.3</B> In designing a LISP machine, the three factors that need to be studied are: cache size, memory size, and whether one or two processors will be used. The three factors and their level assignments are shown in Table 17.7.</P>
+<P>The 2<SUP><SMALL>3</SMALL></SUP> design and the measured performance in MIPS is shown in Table 17.8.</P>
+<P>To analyze this, we prepare a sign table as shown in Table 17.9. As shown in the last row of this table, the effects of memory, cache, and processors are <I>q</I><SUB><I><SMALL>A</SMALL></I></SUB> = 10, <I>q</I><SUB><I><SMALL>B</SMALL></I></SUB> = 5, and <I>q</I><SUB><I><SMALL>C</SMALL></I></SUB> = 20, respectively. The three two-factor interactions are <I>q</I><SUB><I><SMALL>AB</SMALL></I></SUB> = 5, <I>q</I><SUB><I><SMALL>AC</SMALL></I></SUB> = 2, and <I>q</I><SUB><I><SMALL>BC</SMALL></I></SUB> = 3. The three-factor interaction <I>q</I><SUB><I><SMALL>ABC</SMALL></I></SUB> is 1. The portion of the variation explained by the various factors and interactions are proportional to the square of the effects. The SST can</P>
+</BLOCKQUOTE><CENTER>
+<TABLE WIDTH="60%">
+<TH ALIGN="LEFT" COLSPAN="3">TABLE 17.7 Factors and Levels in Example 17.3
+<TR>
+<TD COLSPAN="3"><HR>
+<TR>
+<TH ALIGN="LEFT" VALIGN="TOP" WIDTH="30%">Factor
+<TH ALIGN="LEFT" VALIGN="TOP" WIDTH="15%">Level &#150;1
+<TH ALIGN="LEFT" VALIGN="TOP" WIDTH="15%">Level 1
+<TR>
+<TD COLSPAN="3"><HR>
+<TR>
+<TD ALIGN="LEFT" VALIGN="TOP">Memory size, <I>A</I>
+<TD ALIGN="LEFT" VALIGN="TOP">4 Mbytes
+<TD ALIGN="LEFT" VALIGN="TOP">16 Mbytes
+<TR>
+<TD ALIGN="LEFT" VALIGN="TOP">Cache size, <I>B</I>
+<TD ALIGN="LEFT" VALIGN="TOP">1 kbyte
+<TD ALIGN="LEFT" VALIGN="TOP">2 kbytes
+<TR>
+<TD ALIGN="LEFT" VALIGN="TOP">Number of processors, <I>C</I>
+<TD ALIGN="LEFT" VALIGN="TOP">1
+<TD ALIGN="LEFT" VALIGN="TOP">2
+<TR>
+<TD COLSPAN="3"><HR>
+<TR>
+</TABLE>
+</CENTER>
+<P>
+</P>
+<CENTER>
+<TABLE WIDTH="80%"><TH ALIGN="LEFT" COLSPAN="3">TABLE 17.8 Results of a 2<SUP><SMALL>3</SMALL></SUP> Experiment
+<TR>
+<TD COLSPAN="5"><HR>
+<TR>
+<TH>
+<TH ALIGN="CENTER" COLSPAN="2">4 Mbytes<HR>
+<TH ALIGN="CENTER" COLSPAN="2">16 Mbytes<HR>
+<TR>
+<TH WIDTH="20%" ALIGN="CENTER" VALIGN="TOP">Cache Size (kbytes)
+<TH WIDTH="15%" ALIGN="CENTER" VALIGN="TOP">One Processor
+<TH WIDTH="15%" ALIGN="CENTER" VALIGN="TOP">Two Processor
+<TH WIDTH="15%" ALIGN="CENTER" VALIGN="TOP">One Processor
+<TH WIDTH="15%" ALIGN="CENTER" VALIGN="TOP">Two Processor
+<TR>
+<TD COLSPAN="5"><HR>
+<TR>
+<TD ALIGN="CENTER" VALIGN="TOP">1
+<TD ALIGN="CENTER" VALIGN="TOP">14
+<TD ALIGN="CENTER" VALIGN="TOP">46
+<TD ALIGN="CENTER" VALIGN="TOP">22
+<TD ALIGN="CENTER" VALIGN="TOP">58
+<TR>
+<TD ALIGN="CENTER" VALIGN="TOP">2
+<TD ALIGN="CENTER" VALIGN="TOP">10
+<TD ALIGN="CENTER" VALIGN="TOP">50
+<TD ALIGN="CENTER" VALIGN="TOP">34
+<TD ALIGN="CENTER" VALIGN="TOP">86
+<TR>
+<TD COLSPAN="5"><HR>
+<TR>
+</TABLE>
+</CENTER>
+<P><BR></P>
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="17-03.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="17-05.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<hr width="90%" size="1" noshade>
+<div align="center">
+<font face="Verdana,sans-serif" size="1">Copyright &copy; <a href="/reference/wiley00001.html">John Wiley &amp; Sons, Inc.</a></font>
+</div>
+<!-- all of the reference materials (books) have the footer and subfoot reveresed -->
+<!-- reference_subfoot = footer -->
+<!-- reference_footer = subfoot -->
+
+</BODY>
+</HTML>
+
+<!-- END FOOTER -->
+

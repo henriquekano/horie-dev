@@ -1,0 +1,171 @@
+<HTML>
+<HEAD>
+<META name=vsisbn content="0471503363">
+<META name=vstitle content="Art of Computer Systems Performance Analysis Techniques For Experimental Design Measurements Simulation And Modeling">
+<META name=vsauthor content="Raj Jain">
+<META name=vsimprint content="Wiley Computer Publishing">
+<META name=vspublisher content="John Wiley & Sons, Inc.">
+<META name=vspubdate content="05/01/91">
+<META name=vscategory content="Web and Software Development: Software Engineering: Simulation and Modeling">
+
+
+
+
+
+
+
+<TITLE>The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling:2kr Factorial Designs with Replications</TITLE>
+
+<!-- HEADER -->
+
+<STYLE type="text/css"> 
+ <!--
+ A:hover  {
+ 	color : Red;
+ }
+ -->
+</STYLE>
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+<!--ISBN=0471503363//-->
+<!--TITLE=The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling//-->
+<!--AUTHOR=Raj Jain//-->
+<!--PUBLISHER=Wiley Computer Publishing//-->
+<!--CHAPTER=18//-->
+<!--PAGES=302-305//-->
+<!--UNASSIGNED1//-->
+<!--UNASSIGNED2//-->
+
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="18-03.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="18-05.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+<P><BR></P>
+<P>Thus, the techniques for verifying the assumptions are also the same as those discussed earlier for regression in Section 14.7. The assumptions, which can be visually tested, and the corresponding tests are as follows:
+</P>
+<DL>
+<DD><B>1.</B>&nbsp;&nbsp;<I>Independent Errors</I>: The model assumes that the errors are independently and identically distributed (<B>IID</B>). To verify this, after estimating the parameters, compute residuals and prepare a scatter plot of residuals versus the predicted response <IMG SRC="images/18-25i.jpg"></IMGI>. Any visible trends in the scatter plot would indicate a dependence of errors on the factor levels. If the residuals are one or more orders of magnitude smaller than the predicted response, the trend, if any, can be ignored.
+<BR>One may also want to plot the residuals as a function of the experiment number where the experiments are numbered in the order they are conducted. Any trend up or down, as shown earlier in Figure 14.8, would indicate the presence of other factors or side effects (incorrect initializations) that varied from one experiment to the next and affected the response. The cause of such trends should be identified. If additional factors or covariates are found to affect the response, they should be included in the analysis.
+<DD><B>2.</B>&nbsp;&nbsp;<I>Normally Distributed Errors</I>: Prepare normal quantile-quantile plot of errors. If the plot is approximately linear, the assumption is satisfied.
+<DD><B>3.</B>&nbsp;&nbsp;<I>Constant Standard Deviation of Errors</I>: Prepare a scatter plot of <I>y</I> for various levels of the factor. The location along the horizontal axis can be chosen arbitrarily for each level. If the spread at one level seems significantly different than that at other levels, the assumption of constant variance is not valid. In this case, a transformation of the data, as discussed in Section 15.4, may help solve the problem.
+</DL>
+<P>The following example illustrates the application of these tests.
+</P>
+<BLOCKQUOTE><P><B>Example 18.7</B> Consider the memory-cache study of Example 18.1. A plot of the residuals versus predicted responses is shown in Figure 18.1. The residuals are an order of magnitude smaller than the responses, and there does not appear to be any definite trend in the mean or spread of the residuals.</P>
+<P><A NAME="Fig1"></A><A HREF="javascript:displayWindow('images/18-01.jpg',500,409 )"><IMG SRC="images/18-01t.jpg"></A>
+<BR><A HREF="javascript:displayWindow('images/18-01.jpg',500,409)"><FONT COLOR="#000077"><B>FIGURE 18.1</B></FONT></A>&nbsp;&nbsp;Plot of residuals versus predicted response for the memory-cache study.</P>
+<P><A NAME="Fig2"></A><A HREF="javascript:displayWindow('images/18-02.jpg',500,409 )"><IMG SRC="images/18-02t.jpg"></A>
+<BR><A HREF="javascript:displayWindow('images/18-02.jpg',500,409)"><FONT COLOR="#000077"><B>FIGURE 18.2</B></FONT></A>&nbsp;&nbsp;Normal quantile-quantile plot for residuals of the memory-cache study.</P>
+<P>A normal quantile-quantile plot of the residuals is presented in Figure 18.2. Again, the residuals appear to be approximately normally distributed. Thus, the model appears to be valid for this case.
+</P>
+</BLOCKQUOTE><H3><A NAME="Heading9"></A><FONT COLOR="#000077">18.8 MULTIPLICATIVE MODELS FOR 2<SUP><SMALL>2</SMALL></SUP><I>r</I> EXPERIMENTS
+</FONT></H3>
+<P>In the analysis of 2<SUP><SMALL>2</SMALL></SUP><I>r</I> experiments, the following additive model was assumed:</P>
+<P ALIGN="CENTER"><I>y<SUB><SMALL>ij</SMALL></SUB></I> = <I>q<SUB><SMALL>0</SMALL></SUB></I> &#43; <I>q<SUB><SMALL>A</SMALL></SUB>x<SUB><SMALL>A</SMALL></SUB></I> &#43; <I>q<SUB><SMALL>B</SMALL></SUB>x<SUB><SMALL>B</SMALL></SUB></I> &#43; <I>q<SUB><SMALL>AB</SMALL></SUB>x<SUB><SMALL>A</SMALL></SUB>x<SUB><SMALL>B</SMALL></SUB></I> &#43; <I>e<SUB><SMALL>ij</SMALL></SUB></I></P>
+<P>This model assumes that the effect of the factors, their interactions, and the errors are additive. Before using the model, the analyst must validate this assumption by carefully considering whether the effects are in fact additive. In many cases, this assumption is not valid. The most common example is that of performance of processors on different workloads. In this case, there are two factors: processors and workloads. If there are only two processors and two workloads, we can use a 2<SUP><SMALL>2</SMALL></SUP><I>r</I> design. Suppose the measured response <I>y<SUB><SMALL>ij</SMALL></SUB></I> represents the time required to execute a workload of <I>w<SUB><SMALL>j</SMALL></SUB></I> instructions on a processor capable of executing <I>v<SUB><SMALL>i</SMALL></SUB></I> instructions per second. Then, if there are no errors or interactions, we know that the time would be</P>
+<P ALIGN="CENTER"><I>y<SUB><SMALL>ij</SMALL></SUB></I> = <I>v<SUB><SMALL>i</SMALL></SUB>w<SUB><SMALL>j</SMALL></SUB></I></P>
+<P>The effects of the two factors are not additive; they are multiplicative. In this case, if we take a logarithm of both sides, we get an additive model:</P>
+<P ALIGN="CENTER">log(<I>y<SUB><SMALL>ij</SMALL></SUB></I>) = log(<I>v<SUB><SMALL>i</SMALL></SUB></I>) &#43; log(<I>w<SUB><SMALL>j</SMALL></SUB></I>)</P>
+<P>Therefore, this is the correct model to use. In other words, we need to transform the measured responses to their logarithm and then use an additive model of the form</P>
+<P ALIGN="CENTER"><IMG SRC="images/18-34d.jpg"></P>
+</IMGD>
+<P>Here, <IMG SRC="images/18-26i.jpg"></IMGI> = log(<I>y<SUB><SMALL>ij</SMALL></SUB></I>) represents the transformed response. After the analysis, we can take an antilog of the additive effects <I>q<SUB><SMALL>A</SMALL></SUB></I>, <I>q<SUB><SMALL>B</SMALL></SUB></I>, and <I>q<SUB><SMALL>AB</SMALL></SUB></I> to produce multiplicative effects <I>u<SUB><SMALL>A</SMALL></SUB></I> = 10<I><SUP><SMALL>qA</SMALL></SUP></I>, <I>u<SUB><SMALL>B</SMALL></SUB></I> = 10<I><SUP><SMALL>qB</SMALL></SUP></I>, and <I>u<SUB><SMALL>AB</SMALL></SUB></I> = 10<I><SUP><SMALL>q</SMALL><SMALL>AB</SMALL></SUP></I>.</P>
+<P>The <I>u<SUB><SMALL>A</SMALL></SUB></I> so obtained would represent the ratio of the MIPS rating of the two processors. Similarly, <I>u<SUB><SMALL>B</SMALL></SUB></I> represents the ratio of the size of the two workloads. The antilog of additive mean <I>q<SUB><SMALL>0</SMALL></SUB></I> produces the geometric mean of the responses:</P>
+<P ALIGN="CENTER"><IMG SRC="images/18-35d.jpg"></P>
+</IMGD>
+<P>The following example illustrates the application of multiplicative models.
+</P>
+<DL>
+<DD><B>Example 18.8</B> Consider the case of two processors <I>A<SUB><SMALL>1</SMALL></SUB></I> and <I>A<SUB><SMALL>2</SMALL></SUB></I> which were tested on two benchmarks <I>B<SUB><SMALL>1</SMALL></SUB></I> and <I>B<SUB><SMALL>2</SMALL></SUB></I>. Each experiment was repeated three times. The measured execution times in seconds are listed in Table 18.3. A straightforward analysis using the additive model is also shown in the table. We see that there is a large interaction between the processors and the benchmarks, which will lead us to conclude that the selection of processors would depend upon the benchmark. This is a misleading conclusion since this is really not true, as we show later.
+</DL>
+<CENTER>
+<TABLE WIDTH="90%">
+<TH CAPTION ALIGN="LEFT" COLSPAN="6" VALIGN="TOP">TABLE 18.3 Analysis Using the Additive Model
+<TR>
+<TD COLSPAN="6"><HR>
+<TR>
+<TH WIDTH="10%" ALIGN="RIGHT"><I>I</I>
+<TH WIDTH="15%" ALIGN="RIGHT"><I>A</I>
+<TH WIDTH="15%" ALIGN="RIGHT"><I>B</I>
+<TH WIDTH="15%" ALIGN="RIGHT"><I>AB</I>
+<TH WIDTH="30%" ALIGN="CENTER"><I>y</I>
+<TH ALIGN="RIGHT" VALIGN="TOP">Mean<IMG SRC="images/18-27i.jpg"></IMGI>
+<TR>
+<TD COLSPAN="6"><HR>
+<TR>
+<TD WIDTH="15%" ALIGN="RIGHT">1
+<TD WIDTH="15%" ALIGN="RIGHT">&#150;1
+<TD WIDTH="15%" ALIGN="RIGHT">&#150;1
+<TD WIDTH="15%" ALIGN="RIGHT">1
+<TD WIDTH="25%" ALIGN="RIGHT">(85.10, 79.50, 147.90)
+<TD WIDTH="15%" VALIGN="RIGHT">104.170
+<TR>
+<TD ALIGN="RIGHT">1
+<TD ALIGN="RIGHT">1
+<TD ALIGN="RIGHT">&#150;1
+<TD ALIGN="RIGHT">&#150;1
+<TD ALIGN="RIGHT">(0.891, 1.047, 1.072)
+<TD ALIGN="RIGHT">1.003
+<TR>
+<TD ALIGN="RIGHT">1
+<TD ALIGN="RIGHT">&#150;1
+<TD ALIGN="RIGHT">1
+<TD ALIGN="RIGHT">&#150;1
+<TD ALIGN="RIGHT">(0.955, 0.933, 1.122)
+<TD ALIGN="RIGHT">1.003
+<TR>
+<TD ALIGN="RIGHT">1
+<TD ALIGN="RIGHT">1
+<TD ALIGN="RIGHT">1
+<TD ALIGN="RIGHT">1
+<TD ALIGN="RIGHT">(0.0148, 0.0126, 0.0118)
+<TD ALIGN="RIGHT">0.013
+<TR>
+<TD ALIGN="RIGHT">106.19
+<TD ALIGN="RIGHT">&#150;104.15
+<TD ALIGN="RIGHT">&#150;104.15
+<TD ALIGN="RIGHT">102.17
+<TD ALIGN="RIGHT">Total
+<TD ALIGN="RIGHT">
+<TR>
+<TD ALIGN="RIGHT">26.55
+<TD ALIGN="RIGHT">&#150;26.04
+<TD ALIGN="RIGHT">&#150;26.04
+<TD ALIGN="RIGHT">25.54
+<TD ALIGN="RIGHT">Total/4
+<TD ALIGN="RIGHT">
+<TR>
+<TD COLSPAN="6"><HR>
+<TR>
+</TABLE>
+</CENTER>
+<P><BR></P>
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="18-03.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="18-05.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<hr width="90%" size="1" noshade>
+<div align="center">
+<font face="Verdana,sans-serif" size="1">Copyright &copy; <a href="/reference/wiley00001.html">John Wiley &amp; Sons, Inc.</a></font>
+</div>
+<!-- all of the reference materials (books) have the footer and subfoot reveresed -->
+<!-- reference_subfoot = footer -->
+<!-- reference_footer = subfoot -->
+
+</BODY>
+</HTML>
+
+<!-- END FOOTER -->
+

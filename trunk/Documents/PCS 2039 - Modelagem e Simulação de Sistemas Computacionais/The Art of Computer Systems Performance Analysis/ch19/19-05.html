@@ -1,0 +1,266 @@
+<HTML>
+<HEAD>
+<META name=vsisbn content="0471503363">
+<META name=vstitle content="Art of Computer Systems Performance Analysis Techniques For Experimental Design Measurements Simulation And Modeling">
+<META name=vsauthor content="Raj Jain">
+<META name=vsimprint content="Wiley Computer Publishing">
+<META name=vspublisher content="John Wiley & Sons, Inc.">
+<META name=vspubdate content="05/01/91">
+<META name=vscategory content="Web and Software Development: Software Engineering: Simulation and Modeling">
+
+
+
+
+
+
+
+<TITLE>The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling:2k-p Fractional Factorial Designs</TITLE>
+
+<!-- HEADER -->
+
+<STYLE type="text/css"> 
+ <!--
+ A:hover  {
+ 	color : Red;
+ }
+ -->
+</STYLE>
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+<!--ISBN=0471503363//-->
+<!--TITLE=The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling//-->
+<!--AUTHOR=Raj Jain//-->
+<!--PUBLISHER=Wiley Computer Publishing//-->
+<!--CHAPTER=19//-->
+<!--PAGES=322-324//-->
+<!--UNASSIGNED1//-->
+<!--UNASSIGNED2//-->
+
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="19-04.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="19-06.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+<P><BR></P>
+<DL>
+<DD><B>Case Study 19.1</B> The CPU time taken by two text-formatting programs, called LaTeX and troff, was measured using synthetic files of various sizes and complexity levels. Six factors, each with two levels were chosen for the study. The first two factors were the text-formatting programs and size of the files. The remaining four factors were number of equations, floats, tables, and footnotes in the file. The assignment of factors and their levels is shown in Table 19.6. A 2<SUP><SMALL>6&#150;1</SMALL></SUP> fractional factorial design with the generator polynomial <I>I = BCDEF</I> was used. The largest effects and interactions, computed by the sign table method, are shown in Table 19.7. The following conclusions can be reached from these results:
+</DL>
+<DL>
+<DD><B>1.</B>&nbsp;&nbsp;Over 90% of the variation is explained by the three factors Bytes, Program, and Equations and a second-order interaction.
+</DL>
+<CENTER>
+<TABLE WIDTH="50%">
+<TR>
+<TH CAPTION ALIGN="LEFT" COLSPAN="4">TABLE 19.6 Factors and Levels for Text Formatting Programs
+<TR>
+<TD COLSPAN="4"><HR>
+<TR>
+<TH ALIGN="CENTER" WIDTH="12%">Symbol
+<TH ALIGN="LEFT" WIDTH="12%">Factor
+<TH ALIGN="RIGHT" WIDTH="12%">Level &#150;1
+<TH ALIGN="RIGHT" WIDTH="12%">Level &#43;1
+<TR>
+<TD COLSPAN="4"><HR>
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER"><I>A</I>
+<TD VALIGN="TOP" ALIGN="LEFT">Program
+<TD VALIGN="TOP" ALIGN="RIGHT">LaTeX
+<TD VALIGN="TOP" ALIGN="RIGHT">troff
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER"><I>B</I>
+<TD VALIGN="TOP" ALIGN="LEFT">Bytes
+<TD VALIGN="TOP" ALIGN="RIGHT">2100
+<TD VALIGN="TOP" ALIGN="RIGHT">25,000
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER"><I>C</I>
+<TD VALIGN="TOP" ALIGN="LEFT">Equations
+<TD VALIGN="TOP" ALIGN="RIGHT">0
+<TD VALIGN="TOP" ALIGN="RIGHT">10
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER"><I>D</I>
+<TD VALIGN="TOP" ALIGN="LEFT">Floats
+<TD VALIGN="TOP" ALIGN="RIGHT">0
+<TD VALIGN="TOP" ALIGN="RIGHT">10
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER"><I>E</I>
+<TD VALIGN="TOP" ALIGN="LEFT">Tables
+<TD VALIGN="TOP" ALIGN="RIGHT">0
+<TD VALIGN="TOP" ALIGN="RIGHT">10
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER"><I>F</I>
+<TD VALIGN="TOP" ALIGN="LEFT">Footnotes
+<TD VALIGN="TOP" ALIGN="RIGHT">0
+<TD VALIGN="TOP" ALIGN="RIGHT">10
+<TR>
+<TD COLSPAN="4"><HR>
+<TR>
+</TABLE>
+</CENTER>
+<P>
+</P>
+<TABLE ALIGN="CENTER" WIDTH="65%"><TR>
+<TH CAPTION ALIGN="LEFT" COLSPAN="4">TABLE 19.7 Effects for the Text Formatting Programs
+<TR>
+<TD COLSPAN="4"><HR>
+<TR>
+<TH VALIGN="BOTTOM" ALIGN="CENTER" WIDTH="15%">Symbol
+<TH VALIGN="BOTTOM" ALIGN="CENTER" WIDTH="20%">Factor
+<TH VALIGN="BOTTOM" ALIGN="RIGHT" WIDTH="10%">Effect
+<TH VALIGN="BOTTOM" ALIGN="CENTER" WIDTH="20%">Percentage of<BR>Variation
+<TR>
+<TD COLSPAN="4"><HR>
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER"><I>B</I>
+<TD VALIGN="TOP" ALIGN="LEFT">Bytes
+<TD VALIGN="TOP" ALIGN="RIGHT">12.0
+<TD VALIGN="TOP" ALIGN="CENTER">39.4
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER"><I>A</I>
+<TD VALIGN="TOP" ALIGN="LEFT">Program
+<TD VALIGN="TOP" ALIGN="RIGHT">9.4
+<TD VALIGN="TOP" ALIGN="CENTER">24.4
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER"><I>C</I>
+<TD VALIGN="TOP" ALIGN="LEFT">Equations
+<TD VALIGN="TOP" ALIGN="RIGHT">7.5
+<TD VALIGN="TOP" ALIGN="CENTER">15.6
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER"><I>AC</I>
+<TD VALIGN="TOP" ALIGN="LEFT">Program &#215; Equations
+<TD VALIGN="TOP" ALIGN="RIGHT">7.2
+<TD VALIGN="TOP" ALIGN="CENTER">14.4
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER"><I>E</I>
+<TD VALIGN="TOP" ALIGN="LEFT">Tables
+<TD VALIGN="TOP" ALIGN="RIGHT">3.5
+<TD VALIGN="TOP" ALIGN="CENTER">3.4
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER"><I>F</I>
+<TD VALIGN="TOP" ALIGN="LEFT">Footnotes
+<TD VALIGN="TOP" ALIGN="RIGHT">1.6
+<TD VALIGN="TOP" ALIGN="CENTER">0.7
+<TR>
+<TD COLSPAN="4"><HR>
+<TR>
+</TABLE>
+<DL>
+<DD><B>2.</B>&nbsp;&nbsp;The text file sizes (in bytes) in these experiments were significantly different, making the effect more than that of the text-formatting programs being compared.
+<DD><B>3.</B>&nbsp;&nbsp;The high percentage of variation explained by the &#147;program &#215; Equation&#148; interaction indicates that the choice of the text-formatting program depends upon the number of equations in the text. If we consider only the programs and equations in isolation, the relative amount of CPU time for various combinations is shown in Table 19.8. This shows that troff takes too much CPU time if there are equations in the text.
+<DD><B>4.</B>&nbsp;&nbsp;The &#147;Program &#215; Bytes&#148; interaction is low. This indicates that changing the file size affects both programs in a similar manner.
+</DL>
+<CENTER>
+<TABLE WIDTH="50%">
+<TR>
+<TH CAPTION ALIGN="LEFT" COLSPAN="3">TABLE 19.8 CPU Time for Various Program &#215; Equation Combinations
+<TR>
+<TD COLSPAN="3"><HR>
+<TR>
+<TH>
+<TH ALIGN="CENTER" COLSPAN="2">Number of Equations<HR>
+<TR>
+<TH WIDTH="25%" ALIGN="LEFT">Program
+<TH WIDTH="15%" ALIGN="LEFT">&#150;1(0)
+<TH WIDTH="15%" ALIGN="LEFT">1(10)
+<TR>
+<TD COLSPAN="3"><HR>
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT">&#150;1(LaTeX)
+<TD VALIGN="TOP" ALIGN="LEFT">&#150;9.7
+<TD VALIGN="TOP" ALIGN="LEFT">&#150;9.1
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT">1(troff)
+<TD VALIGN="TOP" ALIGN="LEFT">&#150;5.3
+<TD VALIGN="TOP" ALIGN="LEFT">24.1
+<TR>
+<TD COLSPAN="3"><HR>
+<TR>
+</TABLE>
+</CENTER>
+<DL>
+<DD><B>5.</B>&nbsp;&nbsp;If possible, the experiments should be redone with a reduced range of file sizes so that the programs rather than the workload come out as the most significant factor. Alternately, the number of levels of file sizes should be increased.
+</DL>
+<DL>
+<DD><B>Case Study 19.2</B> This case study concerns the design of a scheduler for a WANG VS system. The system allows word processing, data processing, and background data processing. The designers wanted to find out what type of scheduler should be used for each of these three environments and whether the same scheduler could be used for all three classes of jobs. The scheduling policies that were studied had five parameters:
+<DL>
+<DD><B>&#149;</B>&nbsp;&nbsp;Whether the scheduler is preemptive or not.
+<DD><B>&#149;</B>&nbsp;&nbsp;Whether the time slice (quantum size) is small or large.
+<DD><B>&#149;</B>&nbsp;&nbsp;Whether to have one or two queues. The second queue would have a lower priority by assigning it a smaller time slice.
+<DD><B>&#149;</B>&nbsp;&nbsp;How many job classes to keep and into what ready queue to place the task when it becomes runable due to events, such as I/O completion, intertask message received, system locks release, and so on.
+<DD><B>&#149;</B>&nbsp;&nbsp;Whether any jobs waiting for too long should be given preference to improve fairness.
+</DL>
+<P>The five factors and their level assignments are summarized in Table 19.9. A 2<SUP><SMALL>5&#150;1</SMALL></SUP> fractional factorial design with 16 experiments was used to study the relative importance of these factors. The design was based on the generator <I>I</I> = <I>ABCDE</I> or, equivalently, <I>E</I> = <I>ABCD</I>. The level assignments for the five factors in the 16 experiment and the measured throughput using three different synthetic workloads is shown in Table 19.10. In the table, columns <I>T<SUB><SMALL>W</SMALL></SUB></I>, <I>T<SUB><SMALL>I</SMALL></SUB></I>, and <I>T<SUB><SMALL>B</SMALL></SUB></I> denote throughput for word processing, interactive data processing, and batch data processing, respectively.
+<P>The mean effects and the percentage of variation explained for each the three workloads are listed in Table 19.11. The following conclusions can be drawn from this table:
+<DL>
+<DD><B>&#149;</B>&nbsp;&nbsp;The ideal parameter setting for the three workloads is different. Looking at the percentage of variation explained, the effects that impact word processing throughput <I>T<SUB><SMALL>W</SMALL></SUB></I> are <I>A</I> (Preemption), <I>B</I> (Time slice), and <I>AB</I>. For interactive jobs, important factors are <I>E</I> (Fairness), <I>A</I> (preemption), <I>BE</I>, and <I>B</I> (Time slice). For background jobs, the important factors are <I>A</I> (Preemption), <I>AB</I>, <I>B</I> (Time slice), and <I>E</I> (Fairness). Thus, it might be worthwhile to have different policies for different classes of workloads.
+</DL>
+<TABLE WIDTH="100%">
+<TR>
+<TH CAPTION ALIGN="LEFT" COLSPAN="4">TABLE 19.9 Factors and Levels In the Scheduler Design Study
+<TR>
+<TD COLSPAN="4"><HR>
+<TR>
+<TH ALIGN="CENTER" WIDTH="25%">Symbol
+<TH ALIGN="LEFT" WIDTH="25%">Factor
+<TH ALIGN="LEFT" WIDTH="25%">Level &#150;1
+<TH ALIGN="LEFT">Level 1
+<TR>
+<TD COLSPAN="4"><HR>
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER"><I>A</I>
+<TD VALIGN="TOP" ALIGN="LEFT">Preemption
+<TD VALIGN="TOP" ALIGN="LEFT">No
+<TD VALIGN="TOP" ALIGN="LEFT">Yes
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER"><I>B</I>
+<TD VALIGN="TOP" ALIGN="LEFT">Time slice
+<TD VALIGN="TOP" ALIGN="LEFT">Small
+<TD VALIGN="TOP" ALIGN="LEFT">Large
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER"><I>C</I>
+<TD VALIGN="TOP" ALIGN="LEFT">Queue assignment
+<TD VALIGN="TOP" ALIGN="LEFT">One queue
+<TD VALIGN="TOP" ALIGN="LEFT">Two queues
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER"><I>D</I>
+<TD VALIGN="TOP" ALIGN="LEFT">Requeueing
+<TD VALIGN="TOP" ALIGN="LEFT">Two queues
+<TD VALIGN="TOP" ALIGN="LEFT">Five queues
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER"><I>E</I>
+<TD VALIGN="TOP" ALIGN="LEFT">Fairness
+<TD VALIGN="TOP" ALIGN="LEFT">Off
+<TD VALIGN="TOP" ALIGN="LEFT">On
+<TR>
+<TD COLSPAN="4"><HR>
+<TR>
+</TABLE>
+</DL>
+<P><BR></P>
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="19-04.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="19-06.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<hr width="90%" size="1" noshade>
+<div align="center">
+<font face="Verdana,sans-serif" size="1">Copyright &copy; <a href="/reference/wiley00001.html">John Wiley &amp; Sons, Inc.</a></font>
+</div>
+<!-- all of the reference materials (books) have the footer and subfoot reveresed -->
+<!-- reference_subfoot = footer -->
+<!-- reference_footer = subfoot -->
+
+</BODY>
+</HTML>
+
+<!-- END FOOTER -->
+

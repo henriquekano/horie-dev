@@ -1,0 +1,190 @@
+<HTML>
+<HEAD>
+<META name=vsisbn content="0471503363">
+<META name=vstitle content="Art of Computer Systems Performance Analysis Techniques For Experimental Design Measurements Simulation And Modeling">
+<META name=vsauthor content="Raj Jain">
+<META name=vsimprint content="Wiley Computer Publishing">
+<META name=vspublisher content="John Wiley & Sons, Inc.">
+<META name=vspubdate content="05/01/91">
+<META name=vscategory content="Web and Software Development: Software Engineering: Simulation and Modeling">
+
+
+
+
+
+
+
+<TITLE>The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling:2k-p Fractional Factorial Designs</TITLE>
+
+<!-- HEADER -->
+
+<STYLE type="text/css"> 
+ <!--
+ A:hover  {
+ 	color : Red;
+ }
+ -->
+</STYLE>
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+<!--ISBN=0471503363//-->
+<!--TITLE=The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling//-->
+<!--AUTHOR=Raj Jain//-->
+<!--PUBLISHER=Wiley Computer Publishing//-->
+<!--CHAPTER=19//-->
+<!--PAGES=314-316/-->
+<!--UNASSIGNED1//-->
+<!--UNASSIGNED2//-->
+
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="../ch18/18-08.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="19-02.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+<P><BR></P>
+<H2><A NAME="Heading1"></A><FONT COLOR="#000077">CHAPTER 19<BR>2<SMALL><SUP><I>k&#150;p</I></SMALL></SUP> FRACTIONAL FACTORIAL DESIGNS
+</FONT></H2>
+<BLOCKQUOTE>
+<P><I>It is impossible to make anything foolproof because fools are so ingenious.</I></P>
+<P ALIGN="RIGHT">&#151;<I>Arthur Bloch</I></P>
+</BLOCKQUOTE><P>If the number of factors is large, a full factorial design may require a large number of experiments, which may be too expensive. In such cases, a fractional factorial design may be used, which requires considerably fewer experiments. For example, a 2<SUP><SMALL><I>k&#150;p</I></SMALL></SUP> design allows analyzing <I>k</I> two-level factors with only 2<SUP><SMALL><I>k&#150;p</I></SMALL></SUP> experiments, where <I>p</I> is a suitably chosen integer. A 2<SUP><SMALL><I>k&#150;1</I></SMALL></SUP> design requires only half as many experiments as a full factorial 2<SUP><SMALL><I>k</I></SMALL></SUP> design. This design is therefore called a <B>half-replicate</B> of a 2<SUP><SMALL><I>k</I></SMALL></SUP> design. Similarly, a 2<SUP><SMALL><I>k</I>&#150;2</SUP></SMALL> design requires only one-quarter of the experiments required in a full factorial experiments.</P>
+<P>Before discussing the theory of fractional factorial designs, it is helpful to look at an example and its result. A sample 2<SUP><SMALL>7&#150;4</SMALL></SUP> fractional factorial design is shown in Table 19.1. (The preparation of such a sign table is covered in Section 19.1.) A full factorial design in this case would have required 2<SUP><SMALL>7</SMALL></SUP>, or 128, experiments. The design as shown allows us to study seven factors with only eight experiments. The first experiment consists of factors <I>A, B, C</I>, and <I>G</I> being at low level and <I>D, E,</I> and <I>F</I> being at high level. This is indicated by &#150;1 and 1 under respective factors in the first row. The second experiment would consist of A, <I>F</I>, and <I>G</I> at high level and <I>B, C, D</I> and <I>E</I> at low level, and so on.</P>
+<P>The key advantage of a 2<SUP><SMALL><I>k</I></SMALL></SUP> full factorial design is the ease with which various effects could be calculated and their contributions to the total variation</P>
+<TABLE ALIGN="CENTER" WIDTH="80%"><TR>
+<TH CAPTION ALIGN="LEFT" COLSPAN="8">TABLE 19.1 A 2<SUP><SMALL>7&#150;4</SMALL></SUP> Experimental Design
+<TR>
+<TD COLSPAN="8"><HR>
+<TR>
+<TH VALIGN="BOTTOM" ALIGN="CENTER" WIDTH="20%">Experiment<BR>No.
+<TH VALIGN="BOTTOM" ALIGN="RIGHT" WIDTH="12%"><I>A</I>
+<TH VALIGN="BOTTOM" ALIGN="RIGHT" WIDTH="12%"><I>B</I>
+<TH VALIGN="BOTTOM" ALIGN="RIGHT" WIDTH="12%"><I>C</I>
+<TH VALIGN="BOTTOM" ALIGN="RIGHT" WIDTH="12%"><I>D</I>
+<TH VALIGN="BOTTOM" ALIGN="RIGHT" WIDTH="12%"><I>E</I>
+<TH VALIGN="BOTTOM" ALIGN="RIGHT" WIDTH="12%"><I>F</I>
+<TH VALIGN="BOTTOM" ALIGN="RIGHT"><I>G</I>
+<TR>
+<TD COLSPAN="8"><HR>
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER">1
+<TD VALIGN="TOP" ALIGN="RIGHT">&#150;1
+<TD VALIGN="TOP" ALIGN="RIGHT">&#150;1
+<TD VALIGN="TOP" ALIGN="RIGHT">&#150;1
+<TD VALIGN="TOP" ALIGN="RIGHT">1
+<TD VALIGN="TOP" ALIGN="RIGHT">1
+<TD VALIGN="TOP" ALIGN="RIGHT">1
+<TD VALIGN="TOP" ALIGN="RIGHT">&#150;1
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER">2
+<TD VALIGN="TOP" ALIGN="RIGHT">1
+<TD VALIGN="TOP" ALIGN="RIGHT">&#150;1
+<TD VALIGN="TOP" ALIGN="RIGHT">&#150;1
+<TD VALIGN="TOP" ALIGN="RIGHT">&#150;1
+<TD VALIGN="TOP" ALIGN="RIGHT">&#150;1
+<TD VALIGN="TOP" ALIGN="RIGHT">1
+<TD VALIGN="TOP" ALIGN="RIGHT">1
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER">3
+<TD VALIGN="TOP" ALIGN="RIGHT">&#150;1
+<TD VALIGN="TOP" ALIGN="RIGHT">1
+<TD VALIGN="TOP" ALIGN="RIGHT">&#150;1
+<TD VALIGN="TOP" ALIGN="RIGHT">&#150;1
+<TD VALIGN="TOP" ALIGN="RIGHT">1
+<TD VALIGN="TOP" ALIGN="RIGHT">&#150;1
+<TD VALIGN="TOP" ALIGN="RIGHT">1
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER">4
+<TD VALIGN="TOP" ALIGN="RIGHT">1
+<TD VALIGN="TOP" ALIGN="RIGHT">1
+<TD VALIGN="TOP" ALIGN="RIGHT">&#150;1
+<TD VALIGN="TOP" ALIGN="RIGHT">1
+<TD VALIGN="TOP" ALIGN="RIGHT">&#150;1
+<TD VALIGN="TOP" ALIGN="RIGHT">&#150;1
+<TD VALIGN="TOP" ALIGN="RIGHT">&#150;1
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER">5
+<TD VALIGN="TOP" ALIGN="RIGHT">&#150;1
+<TD VALIGN="TOP" ALIGN="RIGHT">&#150;1
+<TD VALIGN="TOP" ALIGN="RIGHT">1
+<TD VALIGN="TOP" ALIGN="RIGHT">1
+<TD VALIGN="TOP" ALIGN="RIGHT">&#150;1
+<TD VALIGN="TOP" ALIGN="RIGHT">&#150;1
+<TD VALIGN="TOP" ALIGN="RIGHT">1
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER">6
+<TD VALIGN="TOP" ALIGN="RIGHT">1
+<TD VALIGN="TOP" ALIGN="RIGHT">&#150;1
+<TD VALIGN="TOP" ALIGN="RIGHT">1
+<TD VALIGN="TOP" ALIGN="RIGHT">&#150;1
+<TD VALIGN="TOP" ALIGN="RIGHT">1
+<TD VALIGN="TOP" ALIGN="RIGHT">&#150;1
+<TD VALIGN="TOP" ALIGN="RIGHT">&#150;1
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER">7
+<TD VALIGN="TOP" ALIGN="RIGHT">&#150;1
+<TD VALIGN="TOP" ALIGN="RIGHT">1
+<TD VALIGN="TOP" ALIGN="RIGHT">1
+<TD VALIGN="TOP" ALIGN="RIGHT">&#150;1
+<TD VALIGN="TOP" ALIGN="RIGHT">&#150;1
+<TD VALIGN="TOP" ALIGN="RIGHT">1
+<TD VALIGN="TOP" ALIGN="RIGHT">&#150;1
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER">8
+<TD VALIGN="TOP" ALIGN="RIGHT">1
+<TD VALIGN="TOP" ALIGN="RIGHT">1
+<TD VALIGN="TOP" ALIGN="RIGHT">1
+<TD VALIGN="TOP" ALIGN="RIGHT">1
+<TD VALIGN="TOP" ALIGN="RIGHT">1
+<TD VALIGN="TOP" ALIGN="RIGHT">1
+<TD VALIGN="TOP" ALIGN="RIGHT">1
+<TR>
+<TD COLSPAN="8"><HR>
+</TABLE>
+<P>could be explained. This advantage is the result of the orthogonality of sign vectors representing levels of various factors in different experiment. This advantage is maintained in 2<SMALL><SUP><I>k&#150;p</I></SUP></SMALL> designs by ensuring that the sip vectors are orthogonal. The factor levels (sips in the column) in Table 19.1 were very carefully chosen. Notice that the columns are mutually orthogonal, that is:</P>
+<DL>
+<DD><B>1.</B>&nbsp;&nbsp;The sum of each column is zero:
+<P ALIGN="CENTER"><IMG SRC="images/19-01d.jpg"></P>
+<BR>where <I>x<SUB><SMALL>ij</I></SMALL></SUB> represents the level of the <I>j</I>th variable in the <I>i</I>th experiment.
+<DD><B>2.</B>&nbsp;&nbsp;The sum of the products of any two columns is zero:
+<P ALIGN="CENTER"><IMG SRC="images/19-02d.jpg"></P>
+<DD><B>3.</B>&nbsp;&nbsp;The sum of the squares of each column is 2<SUP><SMALL>7&#150;4</SMALL></SUP>, that is, 8:
+<P ALIGN="CENTER"><IMG SRC="images/19-03d.jpg"></P>
+</DL>
+<P>The orthogonality allows us to compute the effects as well as their contributions to <I>y</I>&#146;s variation simply by computing inner products. For example, the particular design presented in Table 19.1 allows us to fit the following model to the data:</P>
+<P ALIGN="CENTER"><I>y</I> = <I>q</I><SUB><SMALL>0</SMALL></SUB> &#43; <I>q<SUB><SMALL>A</SMALL></SUB>x<SUB><SMALL>A</SMALL></SUB></I> &#43; <I>q<SUB><SMALL>B</SMALL></SUB>x<SUB><SMALL>B</SMALL></SUB></I> &#43; <I>q<SUB><SMALL>C</SMALL></SUB>c<SUB><SMALL>C</SMALL></SUB></I> &#43; <I>q<SUB><SMALL>D</SMALL></SUB>x<SUB><SMALL>D</SMALL></SUB></I> &#43; <I>q<SUB><SMALL>E</SMALL></SUB>x<SUB><SMALL>E</SMALL></SUB></I> &#43; <I>q<SUB><SMALL>F</SMALL></SUB>x<SUB><SMALL>F</SMALL></SUB></I> &#43; <I>q<SUB><SMALL>G</SMALL></SUB>x<SUB><SMALL>G</SMALL></SUB></I></P>
+<P>Using the orthogonality property of the factor levels chosen, it can be shown that</P>
+<P ALIGN="CENTER"><IMG SRC="images/19-04d.jpg"></P>
+<P>Similarly,
+</P>
+<P ALIGN="CENTER"><IMG SRC="images/19-05d.jpg"></P>
+<P>and so on.
+</P>
+<P>Thus the effects can be easily computed using the inner product of the <I>y</I>-column and various <I>x</I>-columns as we did for the full factorial designs. The formulas for standard deviations of effects and confidence intervals are also similar to that for a full factorial design with <I>k</I> &#150; <I>p</I> factors. In all formulas, we simply need to replace 2<I><SUP><SMALL>k</SMALL></SUP></I> by 2<SUP><SMALL><I>k&#150;p</I></SMALL></SUP>. The following example illustrates this.</P><P><BR></P>
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="../ch18/18-08.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="19-02.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<hr width="90%" size="1" noshade>
+<div align="center">
+<font face="Verdana,sans-serif" size="1">Copyright &copy; <a href="/reference/wiley00001.html">John Wiley &amp; Sons, Inc.</a></font>
+</div>
+<!-- all of the reference materials (books) have the footer and subfoot reveresed -->
+<!-- reference_subfoot = footer -->
+<!-- reference_footer = subfoot -->
+
+</BODY>
+</HTML>
+
+<!-- END FOOTER -->
+
