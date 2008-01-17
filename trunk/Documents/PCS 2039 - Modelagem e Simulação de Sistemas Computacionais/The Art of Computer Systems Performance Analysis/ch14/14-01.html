@@ -1,0 +1,204 @@
+<HTML>
+<HEAD>
+<META name=vsisbn content="0471503363">
+<META name=vstitle content="Art of Computer Systems Performance Analysis Techniques For Experimental Design Measurements Simulation And Modeling">
+<META name=vsauthor content="Raj Jain">
+<META name=vsimprint content="Wiley Computer Publishing">
+<META name=vspublisher content="John Wiley & Sons, Inc.">
+<META name=vspubdate content="05/01/91">
+<META name=vscategory content="Web and Software Development: Software Engineering: Simulation and Modeling">
+
+
+
+
+
+
+
+<TITLE>The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling:Simple Linear Regression Models</TITLE>
+
+<!-- HEADER -->
+
+<STYLE type="text/css"> 
+ <!--
+ A:hover  {
+ 	color : Red;
+ }
+ -->
+</STYLE>
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+<!--ISBN=0471503363//-->
+<!--TITLE=The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling//-->
+<!--AUTHOR=Raj Jain//-->
+<!--PUBLISHER=Wiley Computer Publishing//-->
+<!--CHAPTER=14//-->
+<!--PAGES=221-225//-->
+<!--UNASSIGNED1//-->
+<!--UNASSIGNED2//-->
+
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="../ch13/13-04.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="14-02.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+<P><BR></P>
+<H2><A NAME="Heading1"></A><FONT COLOR="#000077">CHAPTER 14<BR>SIMPLE LINEAR REGRESSION MODELS
+</FONT></H2>
+<BLOCKQUOTE>
+<P ALIGN="RIGHT"><I>Statistics is the art of lying by means of figures.</I></P>
+<P ALIGN="RIGHT">&#151;Dr. Wilhelm Stekhel</P>
+</BLOCKQUOTE><P>Among the statistical models used by analysts, regression models are the most common. A regression model allows one to estimate or predict a random variable as a function of several other variables. The estimated variable is called the <B>response variable</B>, and the variables used to predict the response are called <B>predictor variables</B>, <B>predictors</B>, or <B>factors</B>. Regression analysis assumes that all predictor variables are quantitative so that arithmetic operations such as addition and multiplication are meaningful.</P>
+<P>Most people are familiar with least-squares fitting of straight lines to data. Our objective in discussing regression models is twofold. First, we want to highlight the mistakes that analysts commonly make in using such models. Second, the concepts used in regression models, such as confidence intervals for the model parameters, are applicable to other types of models. In particular, a knowledge of these concepts is required to understand the analysis of experimental designs discussed in Part IV of this book. Although regression techniques can be used to develop a variety of linear and nonlinear models, their most common use is for finding the best linear model. Such models are called <B>linear regression models</B>. To simplify the problem, initially we limit our discussion to the case of a single predictor variable. Because of their simplicity, such models are called <B>simple linear regression models</B>.</P>
+<H3><A NAME="Heading2"></A><FONT COLOR="#000077">14.1 DEFINITION OF A GOOD MODEL</FONT></H3>
+<P>The first issue in developing a regression model is to define what is meant by a good model and a bad model. Figure 14.1 shows three examples of measured data and attempted linear models. The measured data is shown by scattered points while the model is shown by a straight line. Most people would agree that the model in the first two cases looks reasonably close to the data while that for the third one does not appear to be a good model. What is good about the first two models? One possible answer is that the model line in the first two cases is close to more observations than in the third case. Thus, it is obvious that the goodness of the model should be measured by the distance between the observed points and the model line. The next issue, then, is how to measure the distance.
+</P>
+<P>Regression models attempt to minimize the distance measured vertically between the observation point and the model line (or curve). The motivation for this is as follows. Given any value of the predictor variable <I>x</I>, we can estimate the corresponding response using the linear model by simply reading the <I>y</I>-value on the model line at the given <I>x</I>-value. The line segment joining this &#147;predicted point&#148; and the observed point is vertical since both points have the same <I>x</I>-coordinate. The length of the line segment is the difference between the observed response and the predicted response. This is called <B>residual</B>, <B>modeling error</B>, or simply <B>error</B>. The terms <I>residual</I> and <I>error</I> are used interchangeably.</P>
+<P><A NAME="Fig1"></A><A HREF="javascript:displayWindow('images/14-01.jpg',453,420 )"><IMG SRC="images/14-01t.jpg"></A>
+<BR><A HREF="javascript:displayWindow('images/14-01.jpg',453,420)"><FONT COLOR="#000077"><B>FIGURE 14.1</B></FONT></A>&nbsp;&nbsp;Good and bad regression models.</P>
+<P>Some of the errors are positive because the estimated response is less than the observed response while others are negative. One obvious requirement would be to have zero overall error, that is, the negative and positive errors cancel out. Unfortunately, there are many lines that will satisfy this criterion. We need additional criteria. One such criterion could be to choose the line that minimizes the sum of squares of the errors. This criterion is called the <B>least-squares</B> criterion and is the criterion that is used to define the best model.</P>
+<P>A mathematical definition of the least-squares criterion is as follows. Suppose the linear model is</P>
+<P><P ALIGN="CENTER"><IMG SRC="images/14-01d.jpg"></P>
+</IMGD></P>
+<P>where <IMG SRC="images/14-01i.jpg"></IMGI> is the predicted response when the predictor variable is <I>x</I>. The parameters <I>b</I><SUB><SMALL>0</SMALL></SUB> and <I>b</I><SUB><SMALL>1</SMALL></SUB> are fixed <B>regression parameters</B> to be determined from the data. Given <I>n</I> observation pairs {(<I>x</I><SUB><SMALL>1</SMALL></SUB>, <I>y</I><SUB><SMALL>1</SMALL></SUB>),..., (<I>x</I><SUB><SMALL>n</SMALL></SUB>, <I>y</I><SUB><SMALL>n</SMALL></SUB>)}, the estimated response <IMG SRC="images/14-02i.jpg"></IMGI> for the <I>i</I>th observation is</P>
+<P><P ALIGN="CENTER"><IMG SRC="images/14-02d.jpg"></P>
+</IMGD></P>
+<P>The error is</P>
+<P><P ALIGN="CENTER"><IMG SRC="images/14-03d.jpg"></P>
+</IMGD></P>
+<P>The best linear model is given by the regression parameter values, which minimizes the Sum of Squared Errors (<B>SSE</B>):</P>
+<P><P ALIGN="CENTER"><IMG SRC="images/14-04d.jpg"></P>
+</IMGD></P>
+<P>subject to the constraint that the mean error is zero:</P>
+<P><P ALIGN="CENTER"><IMG SRC="images/14-05d.jpg"></P>
+</IMGD></P>
+<P>It can be shown that this constrained minimization problem is equivalent to minimizing the variance of errors (see Exercise 14.1).</P>
+<H3><A NAME="Heading3"></A><FONT COLOR="#000077">14.2 ESTIMATION OF MODEL PARAMETERS</FONT></H3>
+<P>As shown later, the regression parameters that give minimum error variance are
+</P>
+<TABLE WIDTH="100%"><TR>
+<TD WIDTH="90%" ALIGN="CENTER" VALIGN="TOP"><IMG SRC="images/14-03i.jpg"></IMGI>
+<TD WIDTH="10%" ALIGN="LEFT" VALIGN="TOP">(14.1)
+</TABLE>
+<P>and
+</P>
+<TABLE WIDTH="100%"><TR>
+<TD WIDTH="90%" ALIGN="CENTER" VALIGN="TOP"><IMG SRC="images/14-04i.jpg"></IMGI>
+<TD WIDTH="10%" ALIGN="LEFT" VALIGN="TOP">(14.2)
+</TABLE>
+<P>where
+</P>
+<DL>
+<DD><IMG SRC="images/14-05i.jpg"></IMGI> = mean of the values of predictor variables = <IMG SRC="images/14-06i.jpg"></IMGI>
+<DD><IMG SRC="images/14-07i.jpg"></IMGI> = mean response = <IMG SRC="images/14-08i.jpg"></IMGI>
+<P><P ALIGN="CENTER"><IMG SRC="images/14-06d.jpg"></P>
+</IMGD>
+</DL>
+<P>Before deriving these expressions, let us look at an example that illustrates an application of these formulas.
+</P>
+<BLOCKQUOTE><P><B>Example 14.1</B> The number of disk I/O&#146;s and processor times of seven programs were measured as {(14, 2), (16, 5), (27, 7 (42, 9), (39, 10), (50, 13), (83, 20)}.</P>
+<P>A linear model to predict CPU time as a function of disk I/O&#146;s can be developed as follows. Given the data <I>n</I> = 7, &#962;<I>xy</I> = 3375, &#962;<I>x</I> = 271, &#962;<I>x</I><SUP><SMALL>2</SMALL></SUP> = 13,855, &#962;<I>y</I> = 66, &#962;<I>y</I><SUP><SMALL>2</SMALL></SUP> = 828, <IMG SRC="images/14-09i.jpg"></IMGI> = 38.71, and <IMG SRC="images/14-10i.jpg"></IMGI> = 9.43. Therefore,</P>
+<P><P ALIGN="CENTER"><IMG SRC="images/14-07d.jpg"></P>
+</IMGD></P>
+<P><P ALIGN="CENTER"><IMG SRC="images/14-08d.jpg"></P>
+</IMGD></P>
+<P>The desired linear model is</P>
+<DL>
+<DD>CPU time = &#150;0.0083 &#43; 0.2438(number of disk I/O&#146;s)
+</DL>
+<P>A scatter plot of the data is shown in Figure 14.2. A straight line with intercept -0.0083 and slope 0.2438 is also shown in the figure. Notice that the line does give an estimate close to the observed values.
+</P>
+<P><A NAME="Fig2"></A><A HREF="javascript:displayWindow('images/14-02.jpg',500,406 )"><IMG SRC="images/14-02t.jpg"></A>
+<BR><A HREF="javascript:displayWindow('images/14-02.jpg',500,406)"><FONT COLOR="#000077"><B>FIGURE 14.2</B></FONT></A>&nbsp;&nbsp;Scatter plot of disk I/O and CPU time data.</P>
+<TABLE WIDTH="90%">
+<TH CAPTION COLSPAN="5" VALIGN="TOP" ALIGN="LEFT">TABLE 14.1 Error Computation for Disk I/O&#146;s and CPU Time Data
+<TR>
+<TD COLSPAN="5"><HR>
+<TR>
+<TH VALIGN="TOP" ALIGN="CENTER" WIDTH="18%">Disk I/O&#146;s,<BR><I>x</I><SUB><SMALL>i</SMALL></SUB>
+<TH VALIGN="TOP" ALIGN="CENTER" WIDTH="18%">CPU Time,<BR><I>y<SUB><SMALL>i</I></SMALL></SUB>
+<TH VALIGN="TOP" ALIGN="CENTER" WIDTH="18%">Estimate,<BR><IMG SRC="images/14-11i.jpg"></IMGI>
+<TH VALIGN="TOP" ALIGN="CENTER" WIDTH="18%">Error,<BR><IMG SRC="images/14-12i.jpg"></IMGI>
+<TH VALIGN="TOP" ALIGN="CENTER" WIDTH="18%">Error Squared,<BR><I>e</I><SUB><SMALL>i</SMALL></SUB><SUP><SMALL>2</SMALL></SUP>
+<TR>
+<TD COLSPAN="5"><HR>
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER">14
+<TD VALIGN="TOP" ALIGN="CENTER">2
+<TD VALIGN="TOP" ALIGN="CENTER">3.4043
+<TD VALIGN="TOP" ALIGN="CENTER">&#150;1.4043
+<TD VALIGN="TOP" ALIGN="CENTER">1.9721
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER">16
+<TD VALIGN="TOP" ALIGN="CENTER">5
+<TD VALIGN="TOP" ALIGN="CENTER">3.8918
+<TD VALIGN="TOP" ALIGN="CENTER">1.1082
+<TD VALIGN="TOP" ALIGN="CENTER">1.2281
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER">27
+<TD VALIGN="TOP" ALIGN="CENTER">7
+<TD VALIGN="TOP" ALIGN="CENTER">6.5731
+<TD VALIGN="TOP" ALIGN="CENTER">0.4269
+<TD VALIGN="TOP" ALIGN="CENTER">0.1822
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER">42
+<TD VALIGN="TOP" ALIGN="CENTER">9
+<TD VALIGN="TOP" ALIGN="CENTER">10.2295
+<TD VALIGN="TOP" ALIGN="CENTER">&#150;1.2295
+<TD VALIGN="TOP" ALIGN="CENTER">1.5116
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER">39
+<TD VALIGN="TOP" ALIGN="CENTER">10
+<TD VALIGN="TOP" ALIGN="CENTER">9.4982
+<TD VALIGN="TOP" ALIGN="CENTER">0.5018
+<TD VALIGN="TOP" ALIGN="CENTER">0.2518
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER">50
+<TD VALIGN="TOP" ALIGN="CENTER">13
+<TD VALIGN="TOP" ALIGN="CENTER">12.1795
+<TD VALIGN="TOP" ALIGN="CENTER">0.8205
+<TD VALIGN="TOP" ALIGN="CENTER">0.6732
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER"><U>83</U>
+<TD VALIGN="TOP" ALIGN="CENTER"><U>20</U>
+<TD VALIGN="TOP" ALIGN="CENTER"><U>20.2235</U>
+<TD VALIGN="TOP" ALIGN="CENTER"><U>&#150;0.2235</U>
+<TD VALIGN="TOP" ALIGN="CENTER"><U>0.0500</U>
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER">&#962;271
+<TD VALIGN="TOP" ALIGN="CENTER">66
+<TD VALIGN="TOP" ALIGN="CENTER">66.0000
+<TD VALIGN="TOP" ALIGN="CENTER">0.0000
+<TD VALIGN="TOP" ALIGN="CENTER">5.8690
+<TR>
+<TD COLSPAN="5"><HR>
+</TABLE>
+<P>In Table 14.1, we have listed the CPU time predicted by the model, the measured values, errors, and squared errors for each of the seven observations. The SSE is 5.869. This is the minimum possible SSE. Any other values of <I>b</I><SUB><SMALL>0</SMALL></SUB> and <I>b</I><SUB><SMALL>1</SMALL></SUB> would give a higher SSE.</P>
+</BLOCKQUOTE><P><BR></P>
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="../ch13/13-04.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="14-02.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<hr width="90%" size="1" noshade>
+<div align="center">
+<font face="Verdana,sans-serif" size="1">Copyright &copy; <a href="/reference/wiley00001.html">John Wiley &amp; Sons, Inc.</a></font>
+</div>
+<!-- all of the reference materials (books) have the footer and subfoot reveresed -->
+<!-- reference_subfoot = footer -->
+<!-- reference_footer = subfoot -->
+
+</BODY>
+</HTML>
+
+<!-- END FOOTER -->
+

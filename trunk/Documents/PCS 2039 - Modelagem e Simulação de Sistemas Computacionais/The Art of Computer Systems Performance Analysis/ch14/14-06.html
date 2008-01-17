@@ -1,0 +1,211 @@
+<HTML>
+<HEAD>
+<META name=vsisbn content="0471503363">
+<META name=vstitle content="Art of Computer Systems Performance Analysis Techniques For Experimental Design Measurements Simulation And Modeling">
+<META name=vsauthor content="Raj Jain">
+<META name=vsimprint content="Wiley Computer Publishing">
+<META name=vspublisher content="John Wiley & Sons, Inc.">
+<META name=vspubdate content="05/01/91">
+<META name=vscategory content="Web and Software Development: Software Engineering: Simulation and Modeling">
+
+
+
+
+
+
+
+<TITLE>The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling:Simple Linear Regression Models</TITLE>
+
+<!-- HEADER -->
+
+<STYLE type="text/css"> 
+ <!--
+ A:hover  {
+ 	color : Red;
+ }
+ -->
+</STYLE>
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+<!--ISBN=0471503363//-->
+<!--TITLE=The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling//-->
+<!--AUTHOR=Raj Jain//-->
+<!--PUBLISHER=Wiley Computer Publishing//-->
+<!--CHAPTER=14//-->
+<!--PAGES=242-243//-->
+<!--UNASSIGNED1//-->
+<!--UNASSIGNED2//-->
+
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="14-05.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="../ch15/15-01.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+<P><BR></P>
+<CENTER>
+<TABLE WIDTH="50%">
+<TH CAPTION COLSPAN="2" VALIGN="TOP" ALIGN="LEFT">TABLE 14.4 Measured Performance of a Database Information System
+<TR>
+<TD COLSPAN="2"><HR>
+<TR>
+<TH VALIGN="TOP" ALIGN="CENTER" WIDTH=25%">Number of<BR>Days
+<TH VALIGN="TOP" ALIGN="CENTER">Elapsed<BR>Time
+<TR>
+<TD COLSPAN="2"><HR>
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER">1
+<TD VALIGN="TOP" ALIGN="CENTER">0.65
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER">2
+<TD VALIGN="TOP" ALIGN="CENTER">0.79
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER">4
+<TD VALIGN="TOP" ALIGN="CENTER">1.36
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER">8
+<TD VALIGN="TOP" ALIGN="CENTER">2.26
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER">16
+<TD VALIGN="TOP" ALIGN="CENTER">3.59
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER">25
+<TD VALIGN="TOP" ALIGN="CENTER">5.39
+<TR>
+<TD COLSPAN="2"><HR>
+</TABLE>
+</CENTER>
+<DL>
+<DD><B>14.5</B>&nbsp;&nbsp;In the second phase of Exercise 14.4, the analyst measured the elapsed time as a function of the complexity of the query. The complexity was measured by the number of keywords in the query. The number of disk-read operations were also measured, as shown in Table 14.5. For this data prepare regression models to predict the elapsed time as a function of number of keywords and interpret the results.
+</DL>
+<CENTER>
+<TABLE WIDTH="75%">
+<TH CAPTION COLSPAN="3" VALIGN="TOP" ALIGN="LEFT">TABLE 14.5. Database Performance as a Function of Number of Keywords
+<TR>
+<TD COLSPAN="3"><HR>
+<TR>
+<TH VALIGN="TOP" ALIGN="CENTER" WIDTH="25%">Number<BR>of Keywords <TH VALIGN="TOP" ALIGN="CENTER" WIDTH="25%">Elapsed<BR>Time
+<TH VALIGN="TOP" ALIGN="CENTER" WIDTH="25%">Number of<BR>Disk Reads
+<TR>
+<TD COLSPAN="3"><HR>
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER">1
+<TD VALIGN="TOP" ALIGN="CENTER">0.75
+<TD VALIGN="TOP" ALIGN="CENTER">3
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER">2
+<TD VALIGN="TOP" ALIGN="CENTER">0.70
+<TD VALIGN="TOP" ALIGN="CENTER">6
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER">4
+<TD VALIGN="TOP" ALIGN="CENTER">0.80
+<TD VALIGN="TOP" ALIGN="CENTER">7
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER">8
+<TD VALIGN="TOP" ALIGN="CENTER">1.28
+<TD VALIGN="TOP" ALIGN="CENTER">78
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER">16
+<TD VALIGN="TOP" ALIGN="CENTER">1.60
+<TD VALIGN="TOP" ALIGN="CENTER">92
+<TR>
+<TD COLSPAN="3"><HR>
+</TABLE>
+</CENTER>
+<DL>
+<DD><B>14.6</B>&nbsp;&nbsp;Prepare a regression model to predict the number of disk I/O&#146;s as a function of the number of keywords for the data presented in Table 14.5.
+<DD><B>14.7</B>&nbsp;&nbsp;The time to encrypt a <I>k</I>-byte record using an encryption technique is shown in Table 14.6. Fit a linear regression model to this data. Use visual tests to verify the regression assumptions.
+</DL>
+<CENTER>
+<TABLE WIDTH="80%">
+<TH CAPTION COLSPAN="2" VALIGN="TOP" ALIGN="LEFT">TABLE 14.6 Measured Encryption Times for Various Record Sizes
+<TR>
+<TD COLSPAN="2"><HR>
+<TR>
+<TH VALIGN="TOP" ALIGN="CENTER" WIDTH="20%">
+<TH VALIGN="TOP" ALIGN="CENTER">Observations
+</TABLE>
+</CENTER>
+<CENTER>
+<TABLE WIDTH="80%">
+<TH VALIGN="TOP" ALIGN="CENTER" WIDTH="20%">Record
+<TD COLSPAN="3"><HR>
+<TR>
+<TH VALIGN="TOP" ALIGN="CENTER" WIDTH="20%">Size
+<TH VALIGN="TOP" ALIGN="CENTER" WIDTH="20%">1
+<TH VALIGN="TOP" ALIGN="CENTER" WIDTH="20%">2
+<TH VALIGN="TOP" ALIGN="CENTER" WIDTH="20%">3
+<TR>
+<TD COLSPAN="4"><HR>
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER">128
+<TD VALIGN="TOP" ALIGN="CENTER">386
+<TD VALIGN="TOP" ALIGN="CENTER">375
+<TD VALIGN="TOP" ALIGN="CENTER">393
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER">256
+<TD VALIGN="TOP" ALIGN="CENTER">850
+<TD VALIGN="TOP" ALIGN="CENTER">805
+<TD VALIGN="TOP" ALIGN="CENTER">824
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER">384
+<TD VALIGN="TOP" ALIGN="CENTER">1,544
+<TD VALIGN="TOP" ALIGN="CENTER">1,644
+<TD VALIGN="TOP" ALIGN="CENTER">1,553
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER">512
+<TD VALIGN="TOP" ALIGN="CENTER">3,035
+<TD VALIGN="TOP" ALIGN="CENTER">3,123
+<TD VALIGN="TOP" ALIGN="CENTER">3,235
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER">640
+<TD VALIGN="TOP" ALIGN="CENTER">6,650
+<TD VALIGN="TOP" ALIGN="CENTER">6,839
+<TD VALIGN="TOP" ALIGN="CENTER">6,768
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER">768
+<TD VALIGN="TOP" ALIGN="CENTER">13,887
+<TD VALIGN="TOP" ALIGN="CENTER">14,567
+<TD VALIGN="TOP" ALIGN="CENTER">13,456
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER">896
+<TD VALIGN="TOP" ALIGN="CENTER">28,059
+<TD VALIGN="TOP" ALIGN="CENTER">27,439
+<TD VALIGN="TOP" ALIGN="CENTER">27,659
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER">1,024
+<TD VALIGN="TOP" ALIGN="CENTER">50,916
+<TD VALIGN="TOP" ALIGN="CENTER">52,129
+<TD VALIGN="TOP" ALIGN="CENTER">51,360
+<TR>
+<TD COLSPAN="4"><HR>
+</TABLE>
+</CENTER>
+<P><BR></P>
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="14-05.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="../ch15/15-01.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<hr width="90%" size="1" noshade>
+<div align="center">
+<font face="Verdana,sans-serif" size="1">Copyright &copy; <a href="/reference/wiley00001.html">John Wiley &amp; Sons, Inc.</a></font>
+</div>
+<!-- all of the reference materials (books) have the footer and subfoot reveresed -->
+<!-- reference_subfoot = footer -->
+<!-- reference_footer = subfoot -->
+
+</BODY>
+</HTML>
+
+<!-- END FOOTER -->
+
