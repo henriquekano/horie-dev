@@ -1,0 +1,139 @@
+<HTML>
+<HEAD>
+<META name=vsisbn content="0471503363">
+<META name=vstitle content="Art of Computer Systems Performance Analysis Techniques For Experimental Design Measurements Simulation And Modeling">
+<META name=vsauthor content="Raj Jain">
+<META name=vsimprint content="Wiley Computer Publishing">
+<META name=vspublisher content="John Wiley & Sons, Inc.">
+<META name=vspubdate content="05/01/91">
+<META name=vscategory content="Web and Software Development: Software Engineering: Simulation and Modeling">
+
+
+
+
+
+
+
+<TITLE>The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling:Two-Factor Full Factorial Design without Replications</TITLE>
+
+<!-- HEADER -->
+
+<STYLE type="text/css"> 
+ <!--
+ A:hover  {
+ 	color : Red;
+ }
+ -->
+</STYLE>
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+<!--ISBN=0471503363//-->
+<!--TITLE=The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling//-->
+<!--AUTHOR=Raj Jain//-->
+<!--PUBLISHER=Wiley Computer Publishing//-->
+<!--CHAPTER=21//-->
+<!--PAGES=365-367//-->
+<!--UNASSIGNED1//-->
+<!--UNASSIGNED2//-->
+
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="21-09.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="../ch22/22-01.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+<P><BR></P>
+<P><A NAME="Fig11"></A><A HREF="javascript:displayWindow('images/21-11.jpg',500,406 )"><IMG SRC="images/21-11t.jpg"></A>
+<BR><A HREF="javascript:displayWindow('images/21-11.jpg',500,406)"><FONT COLOR="#000077"><B>FIGURE 21.11</B></FONT></A>&nbsp;&nbsp; Confidence intervals for effects in the RISC code size study.</P>
+
+<TABLE BORDER="2" BORDERCOLOR="#0000" ALIGN="CENTER">
+<TR><TD>
+<P><B>Box 21.1 Analysis of Two-Factor Designs without Replications</B></P>
+<DL>
+<DD><B>1.</B>&nbsp;&nbsp;Model: <I>y</I><SUB><I><SMALL><I>ij</I></SMALL></I></SUB> = <I>&#181;</I> &#43; &#945;<SUB><I><SMALL><I>j</I></SMALL></I></SUB> &#43; &#946;<SUB><I><SMALL><I>i</I></SMALL></I></SUB> &#43; <I>e</I><SUB><I><SMALL><I>ij</I></SMALL></I></SUB>; the effects are computed so that
+<DD><B></B>&nbsp;&nbsp;<IMG SRC="images/21-28i.jpg"></IMGI>
+<DD><B>2.</B>&nbsp;&nbsp;Effects: <IMG SRC="images/21-29i.jpg"></IMGI>
+<DD><B>3.</B>&nbsp;&nbsp;Allocation of variation: SSE can be calculated after computing other terms below:
+</DL>
+<P ALIGN="CENTER"><P ALIGN="CENTER"><IMG SRC="images/21-33d.jpg"></P>
+</IMGD></P>
+<P ALIGN="CENTER">SSY = SS0 &#43; SSA &#43; SSB &#43; SSE</P>
+<DL>
+<DD><B>4.</B>&nbsp;&nbsp;Degrees of freedom:
+</DL>
+<P ALIGN="CENTER">SSY = SS0 &#43; SSA &#43; SSB &#43; SSE
+</P>
+<P ALIGN="CENTER"><I>ab</I> = 1 &#43; (<I>a</I> - 1) &#43; (<I>b</I> - 1) &#43; (<I>a</I> - 1)(<I>b</I> - 1)</P>
+<DL>
+<DD><B>5.</B>&nbsp;&nbsp;Mean squares:
+</DL>
+<P ALIGN="CENTER"><P ALIGN="CENTER"><IMG SRC="images/21-34d.jpg"></P>
+</IMGD></P>
+<DL>
+<DD><B>6.</B>&nbsp;&nbsp;Analysis of variance:
+<DL>
+<DD>MSA/MSE should be greater than <I>F</I><SUB><I><SMALL>[1-&#945;;<I>a</I>-1,(<I>a</I>-1)(<I>b</I>-1)]</SMALL></I></SUB>.
+<DD>MSB/MSE should be greater than <I>F</I><SUB><I><SMALL>[1-&#945;;<I>b</I>-1,(<I>a</I>-1)(<I>b</I>-1)]</SMALL></I></SUB>.
+</DL>
+<DD><B>7.</B>&nbsp;&nbsp;Standard deviation of effects: <I>s</I><SUP><SMALL>2</SMALL></SUP><SUB><I><SMALL><I><I>&#181;</I></I></SMALL></I></SUB> = <I>s</I><SUP><SMALL>2</SMALL></SUP><SUB><I><SMALL><I>e</I></SMALL></I></SUB>/ab;<BR><I>s</I><SUP><SMALL>2</SMALL></SUP><SUB><I><SMALL><I>&#945;j</I></SMALL></I></SUB> = <I>s</I><SUP><SMALL>2</SMALL></SUP><SUB><I><SMALL><I>e</I></SMALL></I></SUB>(<I>a</I> -1)/<I>ab</I>;<I>s</I><SUP><SMALL>2</SMALL></SUP><SUB><I><SMALL><I>&#946;i</I></SMALL></I></SUB> = <I>s</I><SUP><SMALL>2</SMALL></SUP><SUB><I><SMALL><I>e</I></SMALL></I></SUB>(<I>b</I> - 1)/<I>ab</I>
+<DD><B>8.</B>&nbsp;&nbsp;Contrasts:
+</DL>
+<P ALIGN="CENTER"><IMG SRC="images/21-35d.jpg"></P>
+</IMGD>
+<DL>
+<DD><B>9.</B>&nbsp;&nbsp;All confidence intervals are calculated using t<SUB><I><SMALL>[1-&#945;/2;(<I>a</I>-1)(<I>b</I>-1)]</SMALL></I></SUB>.
+<DD><B>10.</B>&nbsp;&nbsp;Model assumptions:
+<DL>
+<DD><B>(a)</B>&nbsp;&nbsp;Errors are IID normal variates with zero mean.
+<DD><B>(b)</B>&nbsp;&nbsp;Errors have the same variance for all factor levels.
+<DD><B>(c)</B>&nbsp;&nbsp;The effects of various factors and errors are additive.
+</DL>
+<DD><B>11.</B>&nbsp;&nbsp;Visual tests:
+<DL>
+<DD><B>(a)</B>&nbsp;&nbsp;The scatter plot of errors versus predicted responses should not have any trend.
+<DD><B>(b)</B>&nbsp;&nbsp;The normal quantile-quantile plot of errors should be linear.
+<BR>If any test fails or if the ratio <I>y</I><SUB><SMALL>max</SMALL></SUB>/<I>y</I><SUB><SMALL>min</SMALL></SUB> is large, multiplicative models or transformations should be investigated.
+</DL>
+</DL>
+</TABLE>
+
+<H3><A NAME="Heading10"></A><FONT COLOR="#000077">EXERCISES</FONT></H3>
+<DL>
+<DD><B>21.1</B>&nbsp;&nbsp;Analyze the data of Case Study 21.2 using an additive model. Plot residuals as a function of predicted response. Also, plot a normal quantile-quantile plot for the residuals. Determine 90% confidence intervals for the paired differences. Are the processors significantly different? Discuss what indicators in the data, analysis, or plot would suggest that this is not a good model.
+<DD><B>21.2</B>&nbsp;&nbsp;Analyze the data of Table 21.18 using a multiplicative model and verify your analysis with the results presented in Table 21.19.
+<DD><B>21.3</B>&nbsp;&nbsp;Analyze the code size data of Table 21.23. Ignore the second column corresponding to the 68000 for this exercise. Answer the following:
+<DL>
+<DD><B>a.</B>&nbsp;&nbsp;What percentage of variation is explained by the processor?
+<DD><B>b.</B>&nbsp;&nbsp;What percentage of variation can be attributed to the workload?
+<DD><B>c.</B>&nbsp;&nbsp;Is there a significant (at 90% confidence) difference between any two processors?
+</DL>
+<DD><B>21.4</B>&nbsp;&nbsp;Repeat Exercise 21.3 with the 68000 column included.
+</DL>
+<P><BR></P>
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="21-09.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="../ch22/22-01.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<hr width="90%" size="1" noshade>
+<div align="center">
+<font face="Verdana,sans-serif" size="1">Copyright &copy; <a href="/reference/wiley00001.html">John Wiley &amp; Sons, Inc.</a></font>
+</div>
+<!-- all of the reference materials (books) have the footer and subfoot reveresed -->
+<!-- reference_subfoot = footer -->
+<!-- reference_footer = subfoot -->
+
+</BODY>
+</HTML>
+
+<!-- END FOOTER -->
+

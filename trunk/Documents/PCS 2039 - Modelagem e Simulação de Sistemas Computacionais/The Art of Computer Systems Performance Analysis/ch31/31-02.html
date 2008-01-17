@@ -1,0 +1,202 @@
+<HTML>
+<HEAD>
+<META name=vsisbn content="0471503363">
+<META name=vstitle content="Art of Computer Systems Performance Analysis Techniques For Experimental Design Measurements Simulation And Modeling">
+<META name=vsauthor content="Raj Jain">
+<META name=vsimprint content="Wiley Computer Publishing">
+<META name=vspublisher content="John Wiley & Sons, Inc.">
+<META name=vspubdate content="05/01/91">
+<META name=vscategory content="Web and Software Development: Software Engineering: Simulation and Modeling">
+
+
+
+
+
+
+
+<TITLE>The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling:Analysis of a Single Queue</TITLE>
+
+<!-- HEADER -->
+
+<STYLE type="text/css"> 
+ <!--
+ A:hover  {
+ 	color : Red;
+ }
+ -->
+</STYLE>
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+<!--ISBN=0471503363//-->
+<!--TITLE=The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling//-->
+<!--AUTHOR=Raj Jain//-->
+<!--PUBLISHER=Wiley Computer Publishing//-->
+<!--CHAPTER=31//-->
+<!--PAGES=522-526//-->
+<!--UNASSIGNED1//-->
+<!--UNASSIGNED2//-->
+
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="31-01.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="31-03.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+<P><BR></P>
+<H3><A NAME="Heading3"></A><FONT COLOR="#000077">31.2 M/M/1 QUEUE</FONT></H3>
+<P>An M/M/1 queue, which is the most commonly used type of queue, can be used to model single&#150;processor systems or to model individual devices in a computer system. It is assumed that the interarrival times and the service times are exponentially distributed and there is only one server. There are no buffer or population size limitations and the service discipline is FCFS. Th analyze this type of queue, we need to know only the mean arrival rate &#955; and the mean service rate <I>&#181;</I>.</P>
+<P>The state of this queue is given by the number of jobs in the system. A state transition diagram for the system is shown in Figure 31.2. It is similar to that of the birth-death processes with the following correspondence:</P>
+<P ALIGN="CENTER">&#955;<I><SUB><SMALL>n</SMALL></SUB></I> = &#955;, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <I>n</I> = 0,1,2,...,&#8734;</P>
+<P ALIGN="CENTER"><I>&#181;</I><I><SUB><SMALL>n</SMALL></SUB></I> = <I>&#181;</I>, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <I>n</I> = 1,2,...,&#8734;</P>
+<P>Theorem 31.1 gives us the following expression for the probability of <I>n</I> jobs in the system:</P>
+<P><P ALIGN="CENTER"><IMG SRC="images/31-08d.jpg"></P>
+</IMGD></P>
+<P>The quantity &#955;/<I>&#181;</I> is called <B>traffic intensity</B> and is usually denoted by symbol <I>&#961;</I>. Thus</P>
+<P ALIGN="CENTER"><I>P<SUB><SMALL>n</SMALL></SUB></I> = <I>&#961;<SUP><SMALL>n</SMALL></SUP>p</I><SUB><SMALL>0</SMALL></SUB></P>
+<P>Since all probabilities should add to 1, we have the following expression for the probability of zero jobs in the system:</P>
+<P><P ALIGN="CENTER"><IMG SRC="images/31-09d.jpg"></P>
+</IMGD></P>
+<P>Substituting for &#961;<SUB><SMALL>0</SMALL></SUB> in <I>p<SUB><SMALL>n</SMALL></SUB></I>, we get</P>
+<P ALIGN="CENTER"><I>p<SUB><SMALL>n</SMALL></SUB></I> = (1 &#150; <I>&#961;</I>)<I>&#961;</I><SUP><SMALL>n</SMALL></SUP>, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <I>n</I> = 0,1,2,...&#8734;</P>
+<P><A NAME="Fig2"></A><A HREF="javascript:displayWindow('images/31-02.jpg',500,67 )"><IMG SRC="images/31-02t.jpg"></A>
+<BR><A HREF="javascript:displayWindow('images/31-02.jpg',500,67)"><FONT COLOR="#000077"><B>FIGURE 31.2</B></FONT></A>&nbsp;&nbsp;State transition diagram for an M/M/1 queue.</P>
+<P>Notice that <I>n</I> is geometrically distributed. We can now derive many other properties of the M/M/1 queues. For example, the utilization of the server is given by the probability of having one or more jobs in the system:</P>
+<P ALIGN="CENTER"><I>U</I> = 1 &#150; &#961;<SUB><SMALL>0</SMALL></SUB> = <I>&#961;</I></P>
+<P>The mean number of jobs in the system is given by</P>
+<P ALIGN="CENTER"><P ALIGN="CENTER"><IMG SRC="images/31-10d.jpg"></P>
+</IMGD></P>
+<P>The variance of the number of jobs in the system is</P>
+<P ALIGN="CENTER"><P ALIGN="CENTER"><IMG SRC="images/31-11d.jpg"></P>
+</IMGD></P>
+<P>The probability of <I>n</I> or more jobs in the system is</P>
+<P ALIGN="CENTER"><P ALIGN="CENTER"><IMG SRC="images/31-12d.jpg"></P>
+</IMGD></P>
+<P>The mean response time can be computed using Little&#146;s law, which states that</P>
+<DL>
+<DD>Mean number in system = arrival rate &#215; mean response time
+</DL>
+<P>That is,
+</P>
+<P ALIGN="CENTER"><I>E</I>[<I>n</I>] = &#955;<I>E</I>[<I>r</I>]</P>
+<P>or</P>
+<P ALIGN="CENTER"><P ALIGN="CENTER"><IMG SRC="images/31-13d.jpg"></P>
+</IMGD></P>
+<P>The cumulative distribution function (CDF) of the response time can be shown to be</P>
+<P ALIGN="CENTER"><I>F</I>(<I>r</I>) = 1 &#150; <I>e</I><SUP><SMALL>&#150;r <I>&#181;</I>(1&#150;<I>&#961;</I>)</SMALL></SUP></P>
+<P>Notice that the response time is exponentially distributed. From the distribution, we can also find out its percentiles. For example, the <I>q</I>-percentile of the response time can be computed as follows:</P>
+<P><P ALIGN="CENTER"><IMG SRC="images/31-14d.jpg"></P>
+</IMGD></P>
+<P>Similarly, the CDF of the waiting time can be shown to be</P>
+<P ALIGN="CENTER"><I>F</I>(<I>w</I>) = 1 &#150; <I>&#961;e<SUP><SMALL>&#150;w</I>&#181;(1&#150;<I>&#961;</I>)</SMALL></SUP></P>
+<P>This is a truncated exponential distribution. Its <I>q</I>-percentile is given by</P>
+<P ALIGN="CENTER"><P ALIGN="CENTER"><IMG SRC="images/31-15d.jpg"></P>
+</IMGD></P>
+<P>This formula applies only if <I>q</I> is greater than 100(1 &#150; <I>&#961;</I>). All lower percentiles are zero. This can be stated in one equation as follows:</P>
+<P ALIGN="CENTER"><P ALIGN="CENTER"><IMG SRC="images/31-16d.jpg"></P>
+</IMGD></P>
+<P>The mean number of jobs in the queue is given by</P>
+<P ALIGN="CENTER"><P ALIGN="CENTER"><IMG SRC="images/31-17d.jpg"></P>
+</IMGD></P>
+<P>When there are no jobs in the system, the server is said to be idle; at all other times the server is busy. The time interval between two successive idle intervals is called <B>busy period.</B> All results for M/M/1 queues including some for the busy period are summarized in Box 31.1. The following example illustrates the application of these results in modeling a network gateway.</P>
+<DL>
+<DD><B>Example 31.1</B> On a network gateway, measurements show that the packets arrive at a mean rate of 125 packets per second (<B>pps</B>) and the gateway takes about 2 milliseconds to forward them. Using an M/M/1 model, analyze the gateway. What is the probability of buffer overflow if the gateway had only 13 buffers? How many buffers do we need to keep packet loss below one packet per million?
+<DL>
+<DD>Arrival rate &#955; = 125 pps
+<DD>Service rate <I>&#181;</I> = 1/0.002 = 500 pps
+<DD>Gateway utilization &#961; = &#955;/<I>&#181;</I> = 0.25
+<DD>Probability of <I>n</I> packets in gateway = (1 &#150; <I>&#961;</I>)<I>&#961;<SUP><SMALL>n</SMALL></SUP></I> = 0.75(0.25)<I><SUP><SMALL>n</SMALL></SUP></I>
+<DD>Mean number of packets in gateway =<IMG SRC="images/31-01i.jpg"></IMGI>
+<DD>Mean time spent in gateway =<IMG SRC="images/31-02i.jpg"></IMGI>
+<DD>Probability of buffer overflow = &#961;(more than 13 packets in gateway)
+</DL>
+<P ALIGN="CENTER">&#961;<SUP><SMALL>13</SMALL></SUP> = 0.25<SUP><SMALL>13</SMALL></SUP> = 1.49 &#215 10<SUP><SMALL>&#150;8</SMALL></SUP>
+<P ALIGN="CENTER">&#8776; 15 packets per billion packets
+<DL>
+<DD> 
+<P>To limit the probability of loss to less than 10<SUP><SMALL>&#150;6</SMALL></SUP>,
+<P ALIGN="CENTER">&#961;<SUP><SMALL><I>n</I></SMALL></SUP> &#8804; 10<SUP><SMALL>&#150;6</SMALL></SUP>
+</DL>
+</DL>
+
+<TABLE BORDER="2" BORDERCOLOR="#0000" ALIGN="CENTER">
+<TR><TD>
+<P><B>Box 31.1 M/M/1 Queue</B></P>
+<DL>
+<DD><B>1.</B>&nbsp;&nbsp;Parameters:
+<DL>
+<DD>&#955; = arrival rate in jobs per unit time
+<DD><I>&#181;</I> = service rate in jobs per unit time
+</DL>
+<DD><B>2.</B>&nbsp;&nbsp;Traffic intensity: &#961; = &#955;/<I>&#181;</I>
+<DD><B>3.</B>&nbsp;&nbsp;Stability condition: Traffic intensity &#961; must be less than 1.
+<DD><B>4.</B>&nbsp;&nbsp;Probability of zero jobs in the system: <I>p</I><SUB><SMALL>0</SMALL></SUB> = 1 &#150; &#961;
+<DD><B>5.</B>&nbsp;&nbsp;Probability of <I>n</I> jobs in the system: <I>p<SUB><SMALL>n</SMALL></SUB></I> = (1 - &#961;)&#961;<SUP><SMALL><I>n</I></SMALL></SUP>, <I>n</I> = 0, 1,...,&#8734;
+<DD><B>6.</B>&nbsp;&nbsp;Mean number of jobs in the system: <I>E</I>[<I>n</I>] = &#961;/(1 &#150; &#961;)
+<DD><B>7.</B>&nbsp;&nbsp;Variance of number of jobs in the system: Var[<I>n</I>] = &#961;/(1 &#150; &#961;)<SUP><SMALL>2</SMALL></SUP>
+<DD><B>8.</B>&nbsp;&nbsp;Probability of <I>k</I> jobs in the queue:
+<BR><P ALIGN="CENTER"><IMG SRC="images/31-18d.jpg"></P>
+</IMGD>
+<DD><B>9.</B>&nbsp;&nbsp;Mean number of jobs in the queue:
+<BR><I>E</I>[<I>n<SUB><SMALL>q</SMALL></SUB></I>] = &#961;<SUP><SMALL>2</SMALL></SUP>/(1 &#150; &#961;)
+<DD><B>10.</B>&nbsp;&nbsp;Variance of number of jobs in the queue:
+<BR>Var[<I>n<SUB><SMALL>q</SMALL></SUB></I>] = &#961;<SUP><SMALL>2</SMALL></SUP>(1 &#43; &#961; &#150; &#961;2)/(1 &#150; &#961;)<SUP><SMALL>2</SMALL></SUP>
+<DD><B>11.</B>&nbsp;&nbsp;Cumulative distribution function of the response time:
+<BR><I>F</I>(<I>r</I>) = 1<SUP><SMALL>&#150; <I>e&#150;r</I>(1&#150;&#961;)</SMALL></SUP>
+<DD><B>12.</B>&nbsp;&nbsp;Mean response time: E[<I>r</I>] = (1/<I>&#181;</I>)/(1 &#150; &#961;)
+<DD><B>13.</B>&nbsp;&nbsp;Variance of the response time: Var[<I>r</I>] = <IMG SRC="images/31-03i.jpg"></IMGI>
+<DD><B>14.</B>&nbsp;&nbsp;<I>q</I>&#150;Percentile of the response time: <I>E</I>[<I>r</I>]ln[100/(100 &#150; <I>q</I>)]
+<DD><B>15.</B>&nbsp;&nbsp;90&#150;Percentile of the response time: 2.3<I>E</I>[<I>r</I>]
+<DD><B>16.</B>&nbsp;&nbsp;Cumulative distribution function of waiting time:
+<BR><I>F</I>(<I>w</I>) = 1 &#150; &#961;<I>e</I><SUP><SMALL>&#150;<I>&#181;</I><I>w</I>(1&#150;&#961;)</SMALL></SUP>
+<DD><B>17.</B>&nbsp;&nbsp;Mean waiting time: <I>E</I>[<I>w</I>] = <IMG SRC="images/31-04i.jpg"></IMGI>
+<DD><B>18.</B>&nbsp;&nbsp;Variance of the waiting time: Var[<I>w</I>] = (2 &#150; &#961;)&#961;/[<I>&#181;</I><SUP><SMALL>2</SMALL></SUP>(1 &#150; &#961;)<SUP><SMALL>2</SMALL></SUP>]
+<DD><B>19.</B>&nbsp;&nbsp;<I>q</I>-Percentile of the waiting time: max <IMG SRC="images/31-05i.jpg"></IMGI>
+<DD><B>20.</B>&nbsp;&nbsp;90-Percentile of the waiting time: max <IMG SRC="images/31-06i.jpg"></IMGI>
+<DD><B>21.</B>&nbsp;&nbsp;Probability of finding <I>n or more</I> jobs in the system: &#961;<SUP><SMALL><I>n</I></SMALL></SUP>
+<DD><B>22.</B>&nbsp;&nbsp;Probability of serving <I>n</I> jobs in one busy period: <IMG SRC="images/31-07i.jpg"></IMGI>
+<DD><B>23.</B>&nbsp;&nbsp;Mean number of jobs served in one busy period: 1/(1 &#150; &#961;)
+<DD><B>24.</B>&nbsp;&nbsp;Variance of number of jobs served in one busy period: &#961;(1 &#43; &#961;)/(1 &#150; &#961;)<SUP><SMALL>3</SMALL></SUP>
+<DD><B>25.</B>&nbsp;&nbsp;Mean busy period duration: 1/[<I>&#181;</I>(1 &#150; &#961;)]
+<DD><B>26.</B>&nbsp;&nbsp;Variance of the busy period: 1/[<I>&#181;</I><SUP><SMALL>2</SMALL></SUP>(1 &#150; &#961;)<SUP><SMALL>3</SMALL></SUP>] &#150; 1/[<I>&#181;</I><SUP><SMALL>2</SMALL></SUP>(1 &#150; &#961;)<SUP><SMALL>2</SMALL></SUP>]
+</DL>
+</TABLE>
+
+<DL>
+<DD>or
+</DL>
+<P ALIGN="CENTER"><I>n</I> &gt; log(10<SUP><SMALL>&#150;6</SMALL></SUP>)/log(0.25) = 9.96</P>
+<DL>
+<DD>We need about 10 buffers.
+<P>The last two results about buffer overflow are approximate. Strictly speaking, the gateway should actually be modeled as a finite buffer M/M/1/B queue. However, since the utilization is low and the number of buffers is far above the mean queue length, the results obtained are a close approximation.
+</DL>
+<P>Figure 31.3 shows the response time as a function of the utilization at the gateway of Example 31.1. As the rate increases, the utilization approaches 1 and the number of jobs in the system and response time approach infinity. This infinite response time is the key reason for not subjecting a server to 100% utilization. For an M/M/1 queue to be stable, the traffic intensity &#961; must be less than 1.
+</P>
+<P><A NAME="Fig3"></A><A HREF="javascript:displayWindow('images/31-03.jpg',500,405 )"><IMG SRC="images/31-03t.jpg"></A>
+<BR><A HREF="javascript:displayWindow('images/31-03.jpg',500,405)"><FONT COLOR="#000077"><B>FIGURE 31.3</B></FONT></A>&nbsp;&nbsp;Gateway response time as a function of utilization.<P><BR></P>
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="31-01.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="31-03.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<hr width="90%" size="1" noshade>
+<div align="center">
+<font face="Verdana,sans-serif" size="1">Copyright &copy; <a href="/reference/wiley00001.html">John Wiley &amp; Sons, Inc.</a></font>
+</div>
+<!-- all of the reference materials (books) have the footer and subfoot reveresed -->
+<!-- reference_subfoot = footer -->
+<!-- reference_footer = subfoot -->
+
+</BODY>
+</HTML>
+
+<!-- END FOOTER -->
+

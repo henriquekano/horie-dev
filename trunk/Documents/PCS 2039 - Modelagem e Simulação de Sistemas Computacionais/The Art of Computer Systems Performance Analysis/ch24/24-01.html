@@ -1,0 +1,121 @@
+<HTML>
+<HEAD>
+<META name=vsisbn content="0471503363">
+<META name=vstitle content="Art of Computer Systems Performance Analysis Techniques For Experimental Design Measurements Simulation And Modeling">
+<META name=vsauthor content="Raj Jain">
+<META name=vsimprint content="Wiley Computer Publishing">
+<META name=vspublisher content="John Wiley & Sons, Inc.">
+<META name=vspubdate content="05/01/91">
+<META name=vscategory content="Web and Software Development: Software Engineering: Simulation and Modeling">
+
+
+
+
+
+
+
+<TITLE>The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling:Introduction to Simulation</TITLE>
+
+<!-- HEADER -->
+
+<STYLE type="text/css"> 
+ <!--
+ A:hover  {
+ 	color : Red;
+ }
+ -->
+</STYLE>
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+<!--ISBN=0471503363//-->
+<!--TITLE=The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling//-->
+<!--AUTHOR=Raj Jain//-->
+<!--PUBLISHER=Wiley Computer Publishing//-->
+<!--CHAPTER=24//-->
+<!--PAGES=391-396//-->
+<!--UNASSIGNED1//-->
+<!--UNASSIGNED2//-->
+
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="../ch23/23-08.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="24-02.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+<P><BR></P>
+<H2 ALIGN="CENTER"><FONT COLOR="#000077"><I>PART V<BR>SIMULATION
+</I></FONT></H2>
+<P>This part presents the key issues in simulation modeling. Following is a list of types of questions that you should be able to answer after reading this part:
+</P>
+<DL>
+<DD><B>&#149;</B>&nbsp;&nbsp;What are the common mistakes in simulation and why do most simulations fail?
+<DD><B>&#149;</B>&nbsp;&nbsp;What language should you use for developing a simulation model?
+<DD><B>&#149;</B>&nbsp;&nbsp;What are the different types of simulations?
+<DD><B>&#149;</B>&nbsp;&nbsp;How should you schedule events in a simulation?
+<DD><B>&#149;</B>&nbsp;&nbsp;How should you verify and validate a model?
+<DD><B>&#149;</B>&nbsp;&nbsp;How should you determine that the simulation has reached a steady state?
+<DD><B>&#149;</B>&nbsp;&nbsp;How long should you run a simulation?
+<DD><B>&#149;</B>&nbsp;&nbsp;How should you generate uniform random numbers?
+<DD><B>&#149;</B>&nbsp;&nbsp;How should you verify that a given random-number generator is good?
+<DD><B>&#149;</B>&nbsp;&nbsp;How should you select seeds for a random-number generators?
+<DD><B>&#149;</B>&nbsp;&nbsp;How should you generate random variables with a given distribution?
+<DD><B>&#149;</B>&nbsp;&nbsp;What distributions should you use and when?
+</DL>
+<P>A knowledge of these issues will help you perform simulation correctly and successfully.
+</P>
+<H2><A NAME="Heading1"></A><FONT COLOR="#000077">CHAPTER 24<BR>INTRODUCTION TO SIMULATION
+</FONT></H2>
+<BLOCKQUOTE>
+<P><I>The best advice to those about to embark on a very large simulation is often the same as Punch&#146;s famous advice to those about to marry. Don&#146;t!</I></P>
+<P ALIGN="RIGHT">&#151;Bratley, Fox, and Schrage (1986)</P>
+</BLOCKQUOTE><P>Simulation is a useful technique for computer systems performance analysis. If the system to be characterized is not available, as is often the case during the design or procurement stage, a simulation model provides an easy way to predict the performance or compare several alternatives. Further, even if a system is available for measurement, a simulation model may be preferred over measurements because it allows the alternatives to be compared under a wider variety of workloads and environments. Criteria for selecting among simulation, analytical modeling, and measurement have already been discussed in Section 3.1.
+</P>
+<P>However, simulation models often fail; that is, they produce no useful results or misleading results. This is either because the model developers are proficient in software development but lack statistical background or because they are proficient in statistical techniques but are not aware of good software development techniques. More simulation efforts are terminated prematurely than completed. This is because simulation models take a long time to develop&#151;much longer than initially anticipated.</P>
+<P>This chapter therefore begins with a list of common mistakes in simulation. Techniques to overcome these mistakes are presented subsequently.</P>
+<H3><A NAME="Heading2"></A><FONT COLOR="#000077">24.1 COMMON MISTAKES IN SIMULATION</FONT></H3>
+<DL>
+<DD><B>1.</B>&nbsp;&nbsp;<I>Inappropriate Level of Detail</I>: Simulation allows a system to be studied in more detail than analytical modeling. Analysis requires several simplifications and assumptions. In other words, an analytical model is less detailed. In a simulation model, the level of detail is limited only by the time available for simulation development. A more detailed simulation requires more time to develop. The likelihood of bugs increases and it becomes harder to spot them. The debugging time increases. A more detailed simulation also requires a greater computer time to run. This is particularly important for large simulations where the execution time may be of the order of several hours or days.
+<BR>It is generally assumed that a more detailed model is a better model, since it makes fewer assumptions. This is not always true. A detailed model may require more detailed knowledge of input parameters, which, if not available, may make the model inaccurate. For example, in simulating a timesharing system, suppose time spent in servicing disk requests needs to be simulated. One alternative is to generate it using an exponential distribution. A more detailed alternative is to simulate the head movement and disk rotation. If the second alternative is chosen, one would get more accurate results only if sector and track references are known. In an actual case study, an analyst chose the second alternative. However, since the sector reference information was not available for inputting into the model, the analyst then decided to generate exponentially distributed random sector numbers. The net result was that the service time came out exponentially distributed&#151;an effect that could have been less expensively obtained with the first alternative.
+<BR>Another problem with detailed models is that they take too much time to develop. It is better to start with a less detailed model, get some results, study sensitivities, and introduce details in the areas that have the highest impact on the results.
+<DD><B>2.</B>&nbsp;&nbsp;<I>Improper Language</I>: The choice of the programming language has a significant impact on the timely development of the model. Special-purpose simulation languages require less time for model development and ease several common tasks such as verification (using traces) and statistical analysis. General-purpose languages, on the other hand, are more portable and provide more control over the efficiency and run time of the simulation. This issue is discussed further in Section 24.4.
+<DD><B>3.</B>&nbsp;&nbsp;<I>Unverified Models</I>: Simulation models are generally large computer programs, and unless special precautions are taken, it is possible to have several bugs or programming errors, which would make the conclusions meaningless. A number of techniques to verify simulation models are described in Section 25.1.
+<DD><B>4.</B>&nbsp;&nbsp;<I>Invalid Models</I>: Even if a simulation program has no errors, it may not represent the real system correctly because of incorrect assumptions about the system&#146;s behavior. It is essential that the models be validated to ensure that the conclusion reached would be the same as those obtained from the real system. All simulation model results should be suspected until confirmed by analytical models, measurements, or intuition.
+<BR>Techniques for model validation are described in Section 25.2.
+<DD><B>5.</B>&nbsp;&nbsp;<I>Improperly Handled Initial Conditions</I>: The initial part of a simulation trajectory is generally not representative of the system behavior in a steady state. The initial part should therefore be discarded. Several techniques for identifying the initial part are described in Section 25.3.
+<DD><B>6.</B>&nbsp;&nbsp;<I>Too Short Simulations</I>: Analysts often try to save their own time as well as the computer&#146;s time by running simulations that are too short. The results in such cases are heavily dependent on initial conditions and may not be representative of the real system. The correct length for simulations depends upon the accuracy (width of the confidence intervals) desired and the variance of the observed quantities.
+<BR>Straightforward computation of variance from several values of a random variable does not produce a correct estimate of the variance in simulation models because of the correlation among the values. Several techniques for variance estimation are described in Section 25.5.
+<DD><B>7.</B>&nbsp;&nbsp;<I>Poor Random-Number Generators</I>: Simulation models require random quantities, and the procedures to generate the random numbers are called random-number generators. It is safer to use a well-known generator that has been extensively analyzed than to develop one&#146;s own. Even well-known generators have been known to have problems. This is discussed further in Chapter 26.
+<DD><B>8.</B>&nbsp;&nbsp;<I>Improper Selection of Seeds</I>: Random-number generators are computer procedures that given one random number generate another one. The first random number in the sequence is called the <B>seed</B> and has to be supplied by the analyst. The seed for different random-number streams should be carefully chosen to maintain independence among the streams. Often, analysts either share one stream among several different processes or use the same seed (generally initialized to zeros) for all streams. This introduces a correlation among various processes in the system and leads to conclusions that may not be representative of the real system. Guidelines for proper selection of seeds are presented in Section 26.7.
+</DL>
+<H3><A NAME="Heading3"></A><FONT COLOR="#000077">24.2 OTHER CAUSES OF SIMULATION ANALYSIS FAILURE</FONT></H3>
+<P ALIGN="RIGHT"><I>Any given program, when running, is obsolete.</I></P>
+<P ALIGN="RIGHT"><I>If a program is useful, it will have to be changed.</I></P>
+<P ALIGN="RIGHT"><I>Program complexity grows until it exceeds the capacity<BR>of the programmer who must maintain it.</I><BR>&#151;Datamation 1968</P>
+<P ALIGN="RIGHT"><I>Adding manpower to a late software project makes it later.</I><BR>&#151;Fred Brooks</P><P><BR></P>
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="../ch23/23-08.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="24-02.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<hr width="90%" size="1" noshade>
+<div align="center">
+<font face="Verdana,sans-serif" size="1">Copyright &copy; <a href="/reference/wiley00001.html">John Wiley &amp; Sons, Inc.</a></font>
+</div>
+<!-- all of the reference materials (books) have the footer and subfoot reveresed -->
+<!-- reference_subfoot = footer -->
+<!-- reference_footer = subfoot -->
+
+</BODY>
+</HTML>
+
+<!-- END FOOTER -->
+

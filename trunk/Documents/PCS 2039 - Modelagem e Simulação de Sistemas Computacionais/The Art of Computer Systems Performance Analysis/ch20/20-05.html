@@ -1,0 +1,203 @@
+<HTML>
+<HEAD>
+<META name=vsisbn content="0471503363">
+<META name=vstitle content="Art of Computer Systems Performance Analysis Techniques For Experimental Design Measurements Simulation And Modeling">
+<META name=vsauthor content="Raj Jain">
+<META name=vsimprint content="Wiley Computer Publishing">
+<META name=vspublisher content="John Wiley & Sons, Inc.">
+<META name=vspubdate content="05/01/91">
+<META name=vscategory content="Web and Software Development: Software Engineering: Simulation and Modeling">
+
+
+
+
+
+
+
+<TITLE>The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling:One-Factor Experiments</TITLE>
+
+<!-- HEADER -->
+
+<STYLE type="text/css"> 
+ <!--
+ A:hover  {
+ 	color : Red;
+ }
+ -->
+</STYLE>
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+<!--ISBN=0471503363//-->
+<!--TITLE=The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling//-->
+<!--AUTHOR=Raj Jain//-->
+<!--PUBLISHER=Wiley Computer Publishing//-->
+<!--CHAPTER=20//-->
+<!--PAGES=338-340//-->
+<!--UNASSIGNED1//-->
+<!--UNASSIGNED2//-->
+
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="20-04.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="20-06.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+<P><BR></P>
+<DL>
+<DD><B>Example 20.7</B> Consider again the code size comparison study of Example 20.1. Suppose after the measurements have been completed, it is discovered that three of the observations had not been done correctly and their observations should not be used in the analysis. Of the three incorrect observations, suppose one is for system V and two are for system Z. This is now a case of single-factor design with unequal sample sizes. The resulting data and its analysis is shown in Table 20.8 Column sums, obtained by adding all available observations in each column, are divided by the number of observations in that column to produce the column mean. The grand mean is 172.25 and is obtained by dividing the grand sum (2067, the total of column sums) by 12, which is the total number of observations. The column effects are 2.15, 13.75, and -21.92. A breakdown of the observations into components corresponding to the grand mean, column effects, and residual terms of the model is as follows:
+</DL>
+<CENTER>
+<TABLE WIDTH="50%">
+<TH CAPTION COLSPAN="4" ALIGN="LEFT">TABLE 20.8 Code Size Comparison Data with Unequal sample Sizes
+<TR>
+<TD COLSPAN="4"><HR>
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER" WIDTH="20%">
+<TD VALIGN="TOP" ALIGN="CENTER" WIDTH="10%">R
+<TD VALIGN="TOP" ALIGN="CENTER" WIDTH="10%">V
+<TD VALIGN="TOP" ALIGN="CENTER" WIDTH="10%">Z
+<TR>
+<TD COLSPAN="4"><HR>
+<TR>
+<TD VALIGN="TOP" ALIGN="RIGHT">
+<TD VALIGN="TOP" ALIGN="RIGHT">144
+<TD VALIGN="TOP" ALIGN="RIGHT">101
+<TD VALIGN="TOP" ALIGN="RIGHT">130
+<TR>
+<TD VALIGN="TOP" ALIGN="RIGHT">
+<TD VALIGN="TOP" ALIGN="RIGHT">120
+<TD VALIGN="TOP" ALIGN="RIGHT">144
+<TD VALIGN="TOP" ALIGN="RIGHT">180
+<TR>
+<TD VALIGN="TOP" ALIGN="RIGHT">
+<TD VALIGN="TOP" ALIGN="RIGHT">176
+<TD VALIGN="TOP" ALIGN="RIGHT">211
+<TD VALIGN="TOP" ALIGN="RIGHT">141
+<TR>
+<TD VALIGN="TOP" ALIGN="RIGHT">
+<TD VALIGN="TOP" ALIGN="RIGHT">288
+<TD VALIGN="TOP" ALIGN="RIGHT">288
+<TD VALIGN="TOP" ALIGN="RIGHT">
+<TR>
+<TD VALIGN="TOP" ALIGN="RIGHT">
+<TD VALIGN="TOP" ALIGN="RIGHT">144
+<TD VALIGN="TOP" ALIGN="RIGHT">
+<TD VALIGN="TOP" ALIGN="RIGHT">
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT">Column sum
+<TD VALIGN="TOP" ALIGN="RIGHT">872
+<TD VALIGN="TOP" ALIGN="RIGHT">744
+<TD VALIGN="TOP" ALIGN="RIGHT">451
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT">Column mean
+<TD VALIGN="TOP" ALIGN="RIGHT">174.40
+<TD VALIGN="TOP" ALIGN="RIGHT">186.00
+<TD VALIGN="TOP" ALIGN="RIGHT">150.33
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT">Column effect
+<TD VALIGN="TOP" ALIGN="RIGHT">2.15
+<TD VALIGN="TOP" ALIGN="RIGHT">13.75
+<TD VALIGN="TOP" ALIGN="RIGHT">-21.92
+<TR>
+<TD COLSPAN="4"><HR>
+</TABLE>
+</CENTER>
+<P ALIGN="CENTER"><IMG SRC="images/20-18d.jpg"></P>
+</IMGD>
+<P>The sums of squares, obtained by squaring and adding the available terms in each array, are
+</P>
+<DL>
+<DD>SSY = <IMG SRC="images/20-58i.jpg"></IMGI> = 397,375
+<DD>SS0 = <I>N</I><I>&#181;</I><SUP><SMALL>2</SMALL></SUP> = 356,040.75
+<DD>SSA = 5<I>&#945;</I><SUP><SMALL>2</SMALL></SUP><SUB><SMALL>1</SMALL></SUB> &#43; 4<I>&#945;</I><SUP><SMALL>2</SMALL></SUP><SUB><SMALL>2</SMALL> </SUB> &#43; 3<I>&#945;</I><SUP><SMALL>2</SMALL></SUP><SUB><SMALL>3</SMALL></SUB> = 2220.38
+<DD>SSE = (-30.40)<SUP><SMALL>2</SMALL></SUP> &#43; (-54.40)<SUP><SMALL>2</SMALL></SUP> &#43; ... &#43; (-9.33)<SUP><SMALL>2</SMALL></SUP> = 39,113.87
+<DD>SST = SSY - SS0 = 41,334.25
+</DL>
+<P>By counting the number of independent terms in each array, the degrees of freedom corresponding to various sums of square are
+</P>
+<TABLE><TH CAPTION COLSPAN="7" ALIGN="LEFT">TABLE 20.9 ANOVA Table for the Code Size Comparison Data
+<TR>
+<TD COLSPAN="7"><HR>
+<TR>
+<TH WIDTH="15%" VALIGN="TOP" ALIGN="CENTER">Component
+<TH VALIGN="TOP" ALIGN="CENTER">Sum of<BR>Squares
+<TH VALIGN="TOP" ALIGN="CENTER">Percentage of<BR>Variation
+<TH VALIGN="TOP" ALIGN="CENTER">Degrees of<BR>Freedom
+<TH VALIGN="TOP" ALIGN="CENTER">Mean<BR>Square
+<TH VALIGN="TOP" ALIGN="CENTER"><I>F-</I><BR>Computed
+<TH VALIGN="TOP" ALIGN="CENTER"><I>F-</I><BR>Table
+<TR>
+<TD COLSPAN="7"><HR>
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT"><I>y</I>
+<TD VALIGN="TOP" ALIGN="RIGHT">397,375.00
+<TD VALIGN="TOP" ALIGN="RIGHT">
+<TD VALIGN="TOP" ALIGN="RIGHT">
+<TD VALIGN="TOP" ALIGN="RIGHT">
+<TD VALIGN="TOP" ALIGN="RIGHT">
+<TD VALIGN="TOP" ALIGN="RIGHT">
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT"><IMG SRC="images/20-59i.jpg"></IMGI>
+<TD VALIGN="TOP" ALIGN="RIGHT">356,040.75
+<TD VALIGN="TOP" ALIGN="RIGHT">
+<TD VALIGN="TOP" ALIGN="RIGHT">
+<TD VALIGN="TOP" ALIGN="RIGHT">
+<TD VALIGN="TOP" ALIGN="RIGHT">
+<TD VALIGN="TOP" ALIGN="RIGHT">
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT"><IMG SRC="images/20-60i.jpg"></IMGI>
+<TD VALIGN="TOP" ALIGN="RIGHT">41,334.25
+<TD VALIGN="TOP" ALIGN="RIGHT">100.00
+<TD VALIGN="TOP" ALIGN="RIGHT">11
+<TD VALIGN="TOP" ALIGN="RIGHT">
+<TD VALIGN="TOP" ALIGN="RIGHT">
+<TD VALIGN="TOP" ALIGN="RIGHT">
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT"><I>A</I>
+<TD VALIGN="TOP" ALIGN="RIGHT">2,220.38
+<TD VALIGN="TOP" ALIGN="RIGHT">5.37
+<TD VALIGN="TOP" ALIGN="RIGHT">2
+<TD VALIGN="TOP" ALIGN="RIGHT">1110.19
+<TD VALIGN="TOP" ALIGN="RIGHT">0.26
+<TD VALIGN="TOP" ALIGN="RIGHT">3.01
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT">Errors
+<TD VALIGN="TOP" ALIGN="RIGHT">39,113.87
+<TD VALIGN="TOP" ALIGN="RIGHT">94.63
+<TD VALIGN="TOP" ALIGN="RIGHT">9
+<TD VALIGN="TOP" ALIGN="RIGHT">4345.99
+<TD VALIGN="TOP" ALIGN="RIGHT">
+<TD VALIGN="TOP" ALIGN="RIGHT">
+<TR>
+<TD COLSPAN="7"><HR>
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER" COLSPAN="7"><IMG SRC="images/20-61i.jpg"></IMGI>
+</TABLE>
+<P><BR></P>
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="20-04.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="20-06.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<hr width="90%" size="1" noshade>
+<div align="center">
+<font face="Verdana,sans-serif" size="1">Copyright &copy; <a href="/reference/wiley00001.html">John Wiley &amp; Sons, Inc.</a></font>
+</div>
+<!-- all of the reference materials (books) have the footer and subfoot reveresed -->
+<!-- reference_subfoot = footer -->
+<!-- reference_footer = subfoot -->
+
+</BODY>
+</HTML>
+
+<!-- END FOOTER -->
+

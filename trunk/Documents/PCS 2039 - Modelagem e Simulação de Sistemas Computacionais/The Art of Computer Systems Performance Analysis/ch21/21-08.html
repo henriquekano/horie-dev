@@ -1,0 +1,368 @@
+<HTML>
+<HEAD>
+<META name=vsisbn content="0471503363">
+<META name=vstitle content="Art of Computer Systems Performance Analysis Techniques For Experimental Design Measurements Simulation And Modeling">
+<META name=vsauthor content="Raj Jain">
+<META name=vsimprint content="Wiley Computer Publishing">
+<META name=vspublisher content="John Wiley & Sons, Inc.">
+<META name=vspubdate content="05/01/91">
+<META name=vscategory content="Web and Software Development: Software Engineering: Simulation and Modeling">
+
+
+
+
+
+
+
+<TITLE>The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling:Two-Factor Full Factorial Design without Replications</TITLE>
+
+<!-- HEADER -->
+
+<STYLE type="text/css"> 
+ <!--
+ A:hover  {
+ 	color : Red;
+ }
+ -->
+</STYLE>
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+<!--ISBN=0471503363//-->
+<!--TITLE=The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling//-->
+<!--AUTHOR=Raj Jain//-->
+<!--PUBLISHER=Wiley Computer Publishing//-->
+<!--CHAPTER=21//-->
+<!--PAGES=360-361//-->
+<!--UNASSIGNED1//-->
+<!--UNASSIGNED2//-->
+
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="21-07.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="21-09.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+<P><BR></P>
+</P>
+<H3><A NAME="Heading9"></A><FONT COLOR="#000077">21.8 MISSING OBSERVATIONS</FONT></H3>
+<P>If a few of the <I>ab</I> observations are missing in a design without replications, the methodology presented here can still be used. That is, the effects can be computed from the row (column) means and overall mean. Of course, the means should be obtained by dividing the sums by the respective number of observations added. The degrees of freedoms of sums of squares should also be adjusted accordingly. Further, the formulas for standard deviations of effects should be adjusted to reflect the number of observations present in the column or row.</P>
+<P>Several other statistical alternatives have been proposed for missing values, and there is some controversy regarding their usefulness. One method, called the replacement method, requires that the missing value be replaced by an estimate <IMG SRC="images/21-27i.jpg"></IMGI> such that the residual for the missing experiment is zero. Another method, called the minimum residual variance method, requires that a symbol <I>y</I> be placed in the missing value cell and the SSE be written as a function of <I>y</I>. The value of <I>y</I> that minimizes the SSE is the desired missing value. The problem is that these two methods will result in different estimates of SSA and SSB and the conclusions using the two methods may be different.</P>
+<DL>
+<DD><B>Case Study 21.5</B> In order to quantify the performance gains from RISC architecture, several processors, including a RISC implementation called RISC-I designed at the University of California, Berkeley, were compared in terms of execution times of various benchmarks. The times for 11 different benchmarks on six different computers are listed in Table 21.20.
+<DD>There are six missing values, which are indicated by a &#147;dash&#148; in the table. To analyze this data, we use a multiplicative model. The log of execution times as well as the analysis of effects is shown in Table 21.21. Various column sums are divided by the number of observations in that column to produce column mean. Row means are also similarly obtained. The grand mean is obtained by dividing the grand sum by the total number of observations, which in this case is 60. The column effects are simply the difference between the column means and the grand mean. Similarly, the row effect is the difference between the row mean and the grand mean.
+</DL>
+<TABLE WIDTH="100%">
+<TH COLSPAN="7" CAPTION ALIGN="LEFT">TABLE 21.20 Measured Data for the RISC Execution Time Study
+<TR>
+<TD COLSPAN="7"><HR>
+<TR>
+<TH ALIGN="LEFT" VALIGN="TOP">
+<TH ALIGN="LEFT" VALIGN="TOP">
+<TH ALIGN="LEFT" VALIGN="TOP">
+<TH ALIGN="LEFT" VALIGN="TOP">
+<TH ALIGN="LEFT" VALIGN="TOP">VAX-
+<TH ALIGN="LEFT" VALIGN="TOP">PDP-
+<TH ALIGN="LEFT" VALIGN="TOP">
+<TR>
+<TH ALIGN="LEFT" VALIGN="TOP">Workload
+<TH ALIGN="LEFT" VALIGN="TOP">RISC-I
+<TH ALIGN="LEFT" VALIGN="TOP">68000
+<TH ALIGN="LEFT" VALIGN="TOP">Z8002
+<TH ALIGN="LEFT" VALIGN="TOP">11/780
+<TH ALIGN="LEFT" VALIGN="TOP">11/70
+<TH ALIGN="LEFT" VALIGN="TOP">C/70
+<TR>
+<TD COLSPAN="7"><HR>
+<TR>
+<TD ALIGN="LEFT" VALIGN="TOP">E-String Search
+<TD ALIGN="LEFT" VALIGN="TOP">0.46
+<TD ALIGN="LEFT" VALIGN="TOP">1.29
+<TD ALIGN="LEFT" VALIGN="TOP">0.74
+<TD ALIGN="LEFT" VALIGN="TOP">0.60
+<TD ALIGN="LEFT" VALIGN="TOP">0.41
+<TD ALIGN="LEFT" VALIGN="TOP">1.01
+<TR>
+<TD ALIGN="LEFT" VALIGN="TOP"><I>F</I>-Bit Test
+<TD ALIGN="LEFT" VALIGN="TOP">0.06
+<TD ALIGN="LEFT" VALIGN="TOP">0.29
+<TD ALIGN="LEFT" VALIGN="TOP">0.43
+<TD ALIGN="LEFT" VALIGN="TOP">0.29
+<TD ALIGN="LEFT" VALIGN="TOP">0.37
+<TD ALIGN="LEFT" VALIGN="TOP">0.55
+<TR>
+<TD ALIGN="LEFT" VALIGN="TOP">H-Linked List 0.10
+<TD ALIGN="LEFT" VALIGN="TOP">0.16
+<TD ALIGN="LEFT" VALIGN="TOP">0.24
+<TD ALIGN="LEFT" VALIGN="TOP">0.12
+<TD ALIGN="LEFT" VALIGN="TOP">0.19
+<TD ALIGN="LEFT" VALIGN="TOP">0.25
+<TR>
+<TD ALIGN="LEFT" VALIGN="TOP">K-Bit Matrix
+<TD ALIGN="LEFT" VALIGN="TOP">0.43
+<TD ALIGN="LEFT" VALIGN="TOP">1.72
+<TD ALIGN="LEFT" VALIGN="TOP">2.24
+<TD ALIGN="LEFT" VALIGN="TOP">1.29
+<TD ALIGN="LEFT" VALIGN="TOP">1.72
+<TD ALIGN="LEFT" VALIGN="TOP">4.00
+<TR>
+<TD ALIGN="LEFT" VALIGN="TOP">I-Quick Sort
+<TD ALIGN="LEFT" VALIGN="TOP">50.40
+<TD ALIGN="LEFT" VALIGN="TOP">206.64
+<TD ALIGN="LEFT" VALIGN="TOP">262.08
+<TD ALIGN="LEFT" VALIGN="TOP">151.20
+<TD ALIGN="LEFT" VALIGN="TOP">181.44
+<TD ALIGN="LEFT" VALIGN="TOP">292.32
+<TR>
+<TD ALIGN="LEFT" VALIGN="TOP">Ackermann(3,6)
+<TD ALIGN="LEFT" VALIGN="TOP">3,200.00
+<TD ALIGN="LEFT" VALIGN="TOP">&#151;
+<TD ALIGN="LEFT" VALIGN="TOP">8,960.00
+<TD ALIGN="LEFT" VALIGN="TOP">5,120.00
+<TD ALIGN="LEFT" VALIGN="TOP">5,120.00
+<TD ALIGN="LEFT" VALIGN="TOP">&#151;
+<TR>
+<TD ALIGN="LEFT" VALIGN="TOP">Recursive Qsort
+<TD ALIGN="LEFT" VALIGN="TOP">800.00
+<TD ALIGN="LEFT" VALIGN="TOP">&#151;
+<TD VALIGN="TOP" ALIGN="LEFT">4,720.00
+<TD ALIGN="LEFT" VALIGN="TOP">1,840.00
+<TD ALIGN="LEFT" VALIGN="TOP">2,560.00
+<TD ALIGN="LEFT" VALIGN="TOP">1,040.00
+<TR>
+<TD ALIGN="LEFT" VALIGN="TOP">Puzzle (Subscript)
+<TD ALIGN="LEFT" VALIGN="TOP">4,700.00
+<TD ALIGN="LEFT" VALIGN="TOP">&#151;
+<TD ALIGN="LEFT" VALIGN="TOP">19,740.00
+<TD ALIGN="LEFT" VALIGN="TOP">9,400.00
+<TD ALIGN="LEFT" VALIGN="TOP">7,520.00
+<TD ALIGN="LEFT" VALIGN="TOP">15,980.00
+<TR>
+<TD ALIGN="LEFT" VALIGN="TOP">Puzzle (Pointer)
+<TD ALIGN="LEFT" VALIGN="TOP">3,200.00
+<TD ALIGN="LEFT" VALIGN="TOP">13,440.00
+<TD ALIGN="LEFT" VALIGN="TOP">7,360.00
+<TD ALIGN="LEFT" VALIGN="TOP">4,160.00
+<TD ALIGN="LEFT" VALIGN="TOP">6,400.00
+<TD ALIGN="LEFT" VALIGN="TOP">6,720.00
+<TR>
+<TD ALIGN="LEFT" VALIGN="TOP">SED (Batch Editor)
+<TD ALIGN="LEFT" VALIGN="TOP">5,100.00
+<TD ALIGN="LEFT" VALIGN="TOP">&#151;
+<TD ALIGN="LEFT" VALIGN="TOP">22,440.00
+<TD ALIGN="LEFT" VALIGN="TOP">5,610.00
+<TD ALIGN="LEFT" VALIGN="TOP">5,610.00
+<TD ALIGN="LEFT" VALIGN="TOP">13,260.00
+<TR>
+<TD ALIGN="LEFT" VALIGN="TOP">Towers Hanoi<BR>(18)
+<TD ALIGN="LEFT" VALIGN="TOP">6,800.00
+<TD ALIGN="LEFT" VALIGN="TOP">&#151;
+<TD ALIGN="LEFT" VALIGN="TOP">28,560.00
+<TD ALIGN="LEFT" VALIGN="TOP">12,240.00
+<TD ALIGN="LEFT" VALIGN="TOP">15,640.00
+<TD ALIGN="LEFT" VALIGN="TOP">10,880.00
+<TR>
+<TD COLSPAN="7"><HR>
+<TR>
+</TABLE>
+<P>Adapted with permission from Patterson and Sequin (1982).
+</P>
+<TABLE WIDTH="100%"><TH CAPTION ALIGN="LEFT" COLSPAN="10">TABLE 21.21 Computation of Effects for the RISC Execution Time Study
+<TR>
+<TD COLSPAN="10"><HR>
+<TR>
+<TH ALIGN="LEFT" VALIGN="BOTTOM">Workload
+<TH ALIGN="LEFT" VALIGN="BOTTOM">RISC-I
+<TH ALIGN="LEFT" VALIGN="BOTTOM">68000
+<TH ALIGN="LEFT" VALIGN="BOTTOM">Z8002
+<TH ALIGN="LEFT" VALIGN="BOTTOM">VAX-11/780
+<TH ALIGN="LEFT" VALIGN="BOTTOM">PDP-11/70
+<TH ALIGN="LEFT" VALIGN="BOTTOM">C/70
+<TH ALIGN="LEFT" VALIGN="BOTTOM">Row<BR>Sum
+<TH ALIGN="LEFT" VALIGN="BOTTOM">Row<BR>Mean
+<TH ALIGN="LEFT" VALIGN="BOTTOM">Row<BR>Effect
+<TR>
+<TD COLSPAN="10"><HR>
+<TR>
+<TD ALIGN="LEFT" VALIGN="TOP">E-String Search
+<TD ALIGN="LEFT" VALIGN="TOP">-0-34
+<TD ALIGN="LEFT" VALIGN="TOP">0.11
+<TD ALIGN="LEFT" VALIGN="TOP">-0.13
+<TD ALIGN="LEFT" VALIGN="TOP">-0.22
+<TD ALIGN="LEFT" VALIGN="TOP">-0.38
+<TD ALIGN="LEFT" VALIGN="TOP">0.01
+<TD ALIGN="LEFT" VALIGN="TOP">-0.96
+<TD ALIGN="LEFT" VALIGN="TOP">-0.16
+<TD ALIGN="LEFT" VALIGN="TOP">-2.16
+<TR>
+<TD ALIGN="LEFT" VALIGN="TOP">F-Bit Test
+<TD ALIGN="LEFT" VALIGN="TOP">-1.22
+<TD ALIGN="LEFT" VALIGN="TOP">-0.54
+<TD ALIGN="LEFT" VALIGN="TOP">-0.36
+<TD ALIGN="LEFT" VALIGN="TOP">-0.54
+<TD ALIGN="LEFT" VALIGN="TOP">-0.43
+<TD ALIGN="LEFT" VALIGN="TOP">-0.26
+<TD ALIGN="LEFT" VALIGN="TOP">-3.36
+<TD ALIGN="LEFT" VALIGN="TOP">-0.56
+<TD ALIGN="LEFT" VALIGN="TOP">-2.55
+<TR>
+<TD ALIGN="LEFT" VALIGN="TOP">H-Linked List
+<TD ALIGN="LEFT" VALIGN="TOP">-1.00
+<TD ALIGN="LEFT" VALIGN="TOP">-0.80
+<TD ALIGN="LEFT" VALIGN="TOP">-0.62
+<TD ALIGN="LEFT" VALIGN="TOP">-0.92
+<TD ALIGN="LEFT" VALIGN="TOP">-0.72
+<TD ALIGN="LEFT" VALIGN="TOP">-0.60
+<TD ALIGN="LEFT" VALIGN="TOP">-4.66
+<TD ALIGN="LEFT" VALIGN="TOP">-0.78
+<TD ALIGN="LEFT" VALIGN="TOP">-2.77
+<TR>
+<TD ALIGN="LEFT" VALIGN="TOP">K-Bit Matrix
+<TD ALIGN="LEFT" VALIGN="TOP">-0.37
+<TD ALIGN="LEFT" VALIGN="TOP">0.24
+<TD ALIGN="LEFT" VALIGN="TOP">0.35
+<TD ALIGN="LEFT" VALIGN="TOP">0.11
+<TD ALIGN="LEFT" VALIGN="TOP">0.24
+<TD ALIGN="LEFT" VALIGN="TOP">0.60
+<TD ALIGN="LEFT" VALIGN="TOP">1.17
+<TD ALIGN="LEFT" VALIGN="TOP">0.19
+<TD ALIGN="LEFT" VALIGN="TOP">-1.80
+<TR>
+<TD ALIGN="LEFT" VALIGN="TOP">I-Quick Sort
+<TD ALIGN="LEFT" VALIGN="TOP">1.70
+<TD ALIGN="LEFT" VALIGN="TOP">2.32
+<TD ALIGN="LEFT" VALIGN="TOP">2.42
+<TD ALIGN="LEFT" VALIGN="TOP">2.18
+<TD ALIGN="LEFT" VALIGN="TOP">2.26
+<TD ALIGN="LEFT" VALIGN="TOP">2.47
+<TD ALIGN="LEFT" VALIGN="TOP">13.34
+<TD ALIGN="LEFT" VALIGN="TOP">2.22
+<TD ALIGN="LEFT" VALIGN="TOP">0.23
+<TR>
+<TD ALIGN="LEFT" VALIGN="TOP">Ackermann(3,6)
+<TD ALIGN="LEFT" VALIGN="TOP">3.51
+<TD ALIGN="LEFT" VALIGN="TOP">&#151;
+<TD ALIGN="LEFT" VALIGN="TOP">3.95
+<TD ALIGN="LEFT" VALIGN="TOP">3.71
+<TD ALIGN="LEFT" VALIGN="TOP">3.71
+<TD ALIGN="LEFT" VALIGN="TOP">&#151;
+<TD ALIGN="LEFT" VALIGN="TOP">14.88
+<TD ALIGN="LEFT" VALIGN="TOP">3.72
+<TD ALIGN="LEFT" VALIGN="TOP">1.72
+<TR>
+<TD ALIGN="LEFT" VALIGN="TOP">Recursive Qsort
+<TD ALIGN="LEFT" VALIGN="TOP">2.90
+<TD ALIGN="LEFT" VALIGN="TOP">&#151;
+<TD ALIGN="LEFT" VALIGN="TOP">3.67
+<TD ALIGN="LEFT" VALIGN="TOP">3.26
+<TD ALIGN="LEFT" VALIGN="TOP">3.41
+<TD ALIGN="LEFT" VALIGN="TOP">3.02
+<TD ALIGN="LEFT" VALIGN="TOP">16.27
+<TD ALIGN="LEFT" VALIGN="TOP">3.25
+<TD ALIGN="LEFT" VALIGN="TOP">1.26
+<TR>
+<TD ALIGN="LEFT" VALIGN="TOP">Puzzle (Subscript)
+<TD ALIGN="LEFT" VALIGN="TOP">3.67
+<TD ALIGN="LEFT" VALIGN="TOP">&#151;
+<TD ALIGN="LEFT" VALIGN="TOP">4.30
+<TD ALIGN="LEFT" VALIGN="TOP">3.97
+<TD ALIGN="LEFT" VALIGN="TOP">3.88
+<TD ALIGN="LEFT" VALIGN="TOP">4.20
+<TD ALIGN="LEFT" VALIGN="TOP">20.02
+<TD ALIGN="LEFT" VALIGN="TOP">4.00
+<TD ALIGN="LEFT" VALIGN="TOP">2.01
+<TR>
+<TD ALIGN="LEFT" VALIGN="TOP">Puzzle (Pointer)
+<TD ALIGN="LEFT" VALIGN="TOP">3.51
+<TD ALIGN="LEFT" VALIGN="TOP">4.13
+<TD ALIGN="LEFT" VALIGN="TOP">3.87
+<TD ALIGN="LEFT" VALIGN="TOP">3.62
+<TD ALIGN="LEFT" VALIGN="TOP">3.81
+<TD ALIGN="LEFT" VALIGN="TOP">3.83
+<TD ALIGN="LEFT" VALIGN="TOP">22.75
+<TD ALIGN="LEFT" VALIGN="TOP">3.79
+<TD ALIGN="LEFT" VALIGN="TOP">1.80
+<TR>
+<TD ALIGN="LEFT" VALIGN="TOP">SED (Batch Editor)
+<TD ALIGN="LEFT" VALIGN="TOP">3.71
+<TD ALIGN="LEFT" VALIGN="TOP">&#151;
+<TD ALIGN="LEFT" VALIGN="TOP">4.35
+<TD ALIGN="LEFT" VALIGN="TOP">3.75
+<TD ALIGN="LEFT" VALIGN="TOP">3.75
+<TD ALIGN="LEFT" VALIGN="TOP">4.12
+<TD ALIGN="LEFT" VALIGN="TOP">19.68
+<TD ALIGN="LEFT" VALIGN="TOP">3.94
+<TD ALIGN="LEFT" VALIGN="TOP">1.94
+<TR>
+<TD ALIGN="LEFT" VALIGN="TOP">Towers Hanoi (18)
+<TD ALIGN="LEFT" VALIGN="TOP">3.83
+<TD ALIGN="LEFT" VALIGN="TOP">&#151;
+<TD ALIGN="LEFT" VALIGN="TOP">4.46
+<TD ALIGN="LEFT" VALIGN="TOP">4.09
+<TD ALIGN="LEFT" VALIGN="TOP">4.19
+<TD ALIGN="LEFT" VALIGN="TOP">4.04
+<TD ALIGN="LEFT" VALIGN="TOP">20.61
+<TD ALIGN="LEFT" VALIGN="TOP">4.12
+<TD ALIGN="LEFT" VALIGN="TOP">2.13
+<TR>
+<TD ALIGN="LEFT" VALIGN="TOP">Column sum
+<TD ALIGN="LEFT" VALIGN="TOP">19.90
+<TD ALIGN="LEFT" VALIGN="TOP">5.45
+<TD ALIGN="LEFT" VALIGN="TOP">26.25
+<TD ALIGN="LEFT" VALIGN="TOP">23.01
+<TD ALIGN="LEFT" VALIGN="TOP">23.70
+<TD ALIGN="LEFT" VALIGN="TOP">21.42
+<TD ALIGN="LEFT" VALIGN="TOP">119.73
+<TD ALIGN="LEFT" VALIGN="TOP">
+<TR>
+<TD ALIGN="LEFT" VALIGN="TOP">Column mean
+<TD ALIGN="LEFT" VALIGN="TOP">1.81
+<TD ALIGN="LEFT" VALIGN="TOP">0.91
+<TD ALIGN="LEFT" VALIGN="TOP">2.39
+<TD ALIGN="LEFT" VALIGN="TOP">2.09
+<TD ALIGN="LEFT" VALIGN="TOP">2.15
+<TD ALIGN="LEFT" VALIGN="TOP">2.14
+<TD ALIGN="LEFT" VALIGN="TOP">
+<TD ALIGN="LEFT" VALIGN="TOP">2.00
+<TD ALIGN="LEFT" VALIGN="TOP">
+<TR>
+<TD ALIGN="LEFT" VALIGN="TOP">Column effect
+<TD ALIGN="LEFT" VALIGN="TOP">-0.19
+<TD ALIGN="LEFT" VALIGN="TOP">-1.09
+<TD ALIGN="LEFT" VALIGN="TOP">0.39
+<TD ALIGN="LEFT" VALIGN="TOP">0.10
+<TD ALIGN="LEFT" VALIGN="TOP">0.16
+<TD ALIGN="LEFT" VALIGN="TOP">0.15
+<TD ALIGN="LEFT" VALIGN="TOP">
+<TD ALIGN="LEFT" VALIGN="TOP">
+<TD ALIGN="LEFT" VALIGN="TOP">
+<TR>
+<TD COLSPAN="10"><HR>
+</TABLE>
+<P><BR></P>
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="21-07.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="21-09.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<hr width="90%" size="1" noshade>
+<div align="center">
+<font face="Verdana,sans-serif" size="1">Copyright &copy; <a href="/reference/wiley00001.html">John Wiley &amp; Sons, Inc.</a></font>
+</div>
+<!-- all of the reference materials (books) have the footer and subfoot reveresed -->
+<!-- reference_subfoot = footer -->
+<!-- reference_footer = subfoot -->
+
+</BODY>
+</HTML>
+
+<!-- END FOOTER -->
+

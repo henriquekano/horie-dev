@@ -1,0 +1,126 @@
+<HTML>
+<HEAD>
+<META name=vsisbn content="0471503363">
+<META name=vstitle content="Art of Computer Systems Performance Analysis Techniques For Experimental Design Measurements Simulation And Modeling">
+<META name=vsauthor content="Raj Jain">
+<META name=vsimprint content="Wiley Computer Publishing">
+<META name=vspublisher content="John Wiley & Sons, Inc.">
+<META name=vspubdate content="05/01/91">
+<META name=vscategory content="Web and Software Development: Software Engineering: Simulation and Modeling">
+
+
+
+
+
+
+
+<TITLE>The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling:Introduction to Simulation</TITLE>
+
+<!-- HEADER -->
+
+<STYLE type="text/css"> 
+ <!--
+ A:hover  {
+ 	color : Red;
+ }
+ -->
+</STYLE>
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+<!--ISBN=0471503363//-->
+<!--TITLE=The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling//-->
+<!--AUTHOR=Raj Jain//-->
+<!--PUBLISHER=Wiley Computer Publishing//-->
+<!--CHAPTER=24//-->
+<!--PAGES=396-398//-->
+<!--UNASSIGNED1//-->
+<!--UNASSIGNED2//-->
+
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="24-01.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="24-03.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+<P><BR></P>
+<P>These quotations apply to all software development projects including simulation programs. Most simulation efforts become large projects that, unless managed properly, can fail. The following list of common causes of simulation failures is based largely on those pointed out by Annino and Russell (1979):
+</P>
+<DL>
+<DD><B>1.</B>&nbsp;&nbsp;<I>Inadequate Time Estimate</I>: The first and foremost cause of failures of simulation models is that the model developers underestimate the time and effort required to develop a simulation model. It is common for simulation projects to start off as a &#147;one-week&#148; or &#147;one-month&#148; project and then continue for years. If a simulation is successful and provides useful information, its users want more features, parameters, and details to be added. On the other hand, if a simulation does not provide useful information, it is often expected that adding more features, parameters, and details will probably make it useful. In either case, the project continues far beyond initial projections.
+<BR>Among the three performance analysis techniques&#151;modeling, measurement, and simulation&#151;the simulation generally takes the longest time, particularly if a complete new model has to be developed from scratch. Time should also be allocated for model verification. Analysts new to the field underestimate the complexity of simulation development. For long simulation projects, provision should be made for incorporating changes in the system, which are inevitable over a long period.
+<DD><B>2.</B>&nbsp;&nbsp;<I>No Achievable Goal</I>: Simulation is a large complex project. Like any other project it should have a clearly specified set of goals that are specific, measurable, achievable, repeatable, and thorough (SMART) (see Section 3.5 for a discussion of SMART goals). The goals should be clearly written down and agreed to by the analysts and the end users of the results before beginning the model development.
+<BR>A common example of a goal that is not measurable is &#147;to model <I>X</I>.&#148; It is possible to model several different characteristics of <I>X</I> at several different levels of detail. Without proper specification, it is impossible to tell whether the goal has been achieved. The projects without goals continue forever and are eventually terminated when the funding runs out.
+<DD><B>3.</B>&nbsp;&nbsp;<I>Incomplete Mix of Essential Skills</I>: A simulation project requires at least the following four areas of skills:
+<DL>
+<DD><B>(a)</B>&nbsp;&nbsp;Project Leadership: The ability to motivate, lead, and manage the members of the simulation team.
+<DD><B>(b)</B>&nbsp;&nbsp;Modeling and Statistics: The ability to identify the key characteristics of the system and model them at the required level of detail.
+<DD><B>(c)</B>&nbsp;&nbsp;Programming: The ability to write a readable and verifiable computer program that implements the model correctly.
+<DD><B>(d)</B>&nbsp;&nbsp;Knowledge of the Modeled System: The ability to understand the system, explain it to the modeling team, and interpret the modeling results in terms of their impact on the system design.
+</DL>
+<BR>A simulation team should have members with these skills and be ideally led by a member who has some knowledge of all of the skills.
+<DD><B>4.</B>&nbsp;&nbsp;<I>Inadequate Level of User Participation</I>: It is essential that the modeling team and the user organizations meet periodically and discuss the progress, problems, and changes, if any, in the system. Most systems evolve or change with time, and a model developed without end user participation is rarely successful. The periodic meetings help point out the &#147;modeling bugs&#148; at an early stage and help keep the model in sync with changes in the system.
+<DD><B>5.</B>&nbsp;&nbsp;<I>Obsolete or Nonexistent Documentation</I>: Most simulation models evolve over a long period of time and are continuously modified as the system is modified or better understood. Documentation of these models often lags behind the development and, unless special care is taken to keep it up to date, it soon becomes obsolete. The best strategy is to include the documentation in the program itself and to use computer languages that are easier to read.
+<DD><B>6.</B>&nbsp;&nbsp;<I>Inability to Manage the Development of a Large Complex Computer Program</I>: A number of software engineering tools are available for management of large software projects. These tools help keep track of design objectives, functional requirements, data structures, and progress estimates. Also, a number of design principles, such as top-down design and structured programming, have been developed to help orderly development of large computer programs. Without the use of these tools and techniques, it is impossible to successfully develop a large simulation model.
+<DD><B>7.</B>&nbsp;&nbsp;<I>Mysterious Results</I>: Most mysterious results are due to bugs in the simulation program, invalid model assumptions, or lack of understanding of the real system. The model developers should therefore try to verify the model and, if the mysterious result still persists, bring it to the attention of the end users. It may provide a valuable insight into the system behavior or may point to the system features that need to be modeled in more detail.
+</DL>
+<P>The list of mistakes presented in Section 24.1 and the causes of simulation failures presented in this section lead to the checklist presented in Box 24.1. The questions in the list should all be anwered in the affirmative. The list consists of three sublists corresponding to the planning, development, and usage phases of a simulation project.
+</P>
+
+<TABLE BORDER="2" BORDERCOLOR="#0000" ALIGN="CENTER">
+<TR><TD>
+<P><B>Box 24.1 Checklist for Simulations</B></P>
+<DL>
+<DD><B>1.</B>&nbsp;&nbsp;Checks before developing a simulation:
+<DL>
+<DD><B>(a)</B>&nbsp;&nbsp;Is the goal of the simulation properly specified?
+<DD><B>(b)</B>&nbsp;&nbsp;Is the level of detail in the model appropriate for the goal?
+<DD><B>(c)</B>&nbsp;&nbsp;Does the simulation team include personnel with project leadership, modeling, programming, and computer systems backgrounds?
+<DD><B>(d)</B>&nbsp;&nbsp;Has sufficient time been planned for the project?
+</DL>
+<DD><B>2.</B>&nbsp;&nbsp;Checks during development:
+<DL>
+<DD><B>(a)</B>&nbsp;&nbsp;Has the random-number generator used in the simulation been tested for uniformity and independence?
+<DD><B>(b)</B>&nbsp;&nbsp;Is the model reviewed regularly with the end user?
+<DD><B>(c)</B>&nbsp;&nbsp;Is the model documented?
+</DL>
+<DD><B>3.</B>&nbsp;&nbsp;Checks after the simulation is running:
+<DL>
+<DD><B>(a)</B>&nbsp;&nbsp;Is the simulation length appropriate?
+<DD><B>(b)</B>&nbsp;&nbsp;Are the initial transients removed before computation?
+<DD><B>(c)</B>&nbsp;&nbsp;Has the model been verified thoroughly?
+<DD><B>(d)</B>&nbsp;&nbsp;Has the model been validated before using its results?
+<DD><B>(e)</B>&nbsp;&nbsp;If there are any surprising results, have they been validated?
+<DD><B>(f)</B>&nbsp;&nbsp;Are all seeds such that the random-number streams will not overlap?
+</DL>
+<BR>See also Box 2.1 for a checklist applicable to all performance evaluation projects.
+</DL>
+</TABLE>
+
+<P><BR></P>
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="24-01.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="24-03.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<hr width="90%" size="1" noshade>
+<div align="center">
+<font face="Verdana,sans-serif" size="1">Copyright &copy; <a href="/reference/wiley00001.html">John Wiley &amp; Sons, Inc.</a></font>
+</div>
+<!-- all of the reference materials (books) have the footer and subfoot reveresed -->
+<!-- reference_subfoot = footer -->
+<!-- reference_footer = subfoot -->
+
+</BODY>
+</HTML>
+
+<!-- END FOOTER -->
+

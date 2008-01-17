@@ -1,0 +1,189 @@
+<HTML>
+<HEAD>
+<META name=vsisbn content="0471503363">
+<META name=vstitle content="Art of Computer Systems Performance Analysis Techniques For Experimental Design Measurements Simulation And Modeling">
+<META name=vsauthor content="Raj Jain">
+<META name=vsimprint content="Wiley Computer Publishing">
+<META name=vspublisher content="John Wiley & Sons, Inc.">
+<META name=vspubdate content="05/01/91">
+<META name=vscategory content="Web and Software Development: Software Engineering: Simulation and Modeling">
+
+
+
+
+
+
+
+<TITLE>The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling:One-Factor Experiments</TITLE>
+
+<!-- HEADER -->
+
+<STYLE type="text/css"> 
+ <!--
+ A:hover  {
+ 	color : Red;
+ }
+ -->
+</STYLE>
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+<!--ISBN=0471503363//-->
+<!--TITLE=The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling//-->
+<!--AUTHOR=Raj Jain//-->
+<!--PUBLISHER=Wiley Computer Publishing//-->
+<!--CHAPTER=20//-->
+<!--PAGES=33-336//-->
+<!--UNASSIGNED1//-->
+<!--UNASSIGNED2//-->
+
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="20-02.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="20-04.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+<P><BR></P>
+<P>The <I>F</I>-test, explained in Section 15.1, can now be used to check if SSA is significantly greater than SSE. Assuming that the errors are normally distributed, SSE and SSA have chi-square distributions. The ratio (SSA/<I>v</I><SUB><SMALL><I>A</I></SMALL></SUB>)/ (SSE/<I>v</I><SUB><SMALL><I>e</I></SMALL></SUB>), where <I>v</I><SUB><SMALL><I>A</I></SMALL></SUB> = <I>a</I> - 1 and <I>v</I><SUB><SMALL><I>e</I></SMALL></SUB> = <I>a</I>(<I>r</I> - 1) are degrees of freedom (DF) for SSA and SSE, respectively, has an <I>F</I> distribution with <I>v</I><SUB><SMALL><I>A</I></SMALL></SUB> numerator and <I>v</I><SUB><SMALL><I>e</I></SMALL></SUB> denominator degrees of freedoms. If the computed ratio is greater than the quantile F<SUB><SMALL>[1 - <I>&#945;</I>;<I>v</I><SUB><SMALL><I>A</I></SMALL></SUB>, <I>v</I><SUB><SMALL><I>e</I></SMALL></SUB>]</SUB></SMALL> obtained from the table of quantiles of <I>F</I>-variates (Tables A.6 to A.8 in the Appendix), SSA is considered significantly higher than SSE.</P>
+<P>The quantity SSA/<I>v</I><SUB><SMALL><I>A</I></SMALL></SUB> is called the <B>Mean Square</B> of <I>A</I> (MSA). Similary, SSE/<I>v</I><SUB><SMALL><I>e</I></SMALL></SUB> is called the Mean Square of Errors (MSE). If the computed ratio MSA/MSE is greater than the value read from the table of quantiles of <I>F</I>-variates (Tables A.6 to A.8 in the Appendix), the factor is assumed to explain a significant fraction of the variation. A convenient tabular arrangement to conduct the <I>F</I>-test is shown in Table 20.3.</P>
+<DL>
+<DD><B>Example 20.4</B> The ANOVA for the code size comparison study of Example 20.1 is shown in Table 20.4. From the table we see that the computed <I>F</I>-value is less than that from the table, and therefore once again we conclude that the observed difference in the code sizes is mostly due to experimental errors and not to any significant difference among the processors.
+</DL>
+<TABLE>
+<TH CAPTION COLSPAN="7" ALIGN="LEFT">TABLE 20.4 ANOVA Table for the Code Size Comparison Study
+<TR>
+<TD COLSPAN="7"><HR>
+<TR>
+<TH WIDTH="15%" VALIGN="TOP" ALIGN="CENTER">Component
+<TH WIDTH="15%" VALIGN="TOP" ALIGN="CENTER">Sum of<BR>Squares
+<TH WIDTH="15%" VALIGN="TOP" ALIGN="CENTER">Percentage of<BR>Variation
+<TH WIDTH="15%" VALIGN="TOP" ALIGN="CENTER">Degrees of<BR>Freedom
+<TH WIDTH="15%" VALIGN="TOP" ALIGN="CENTER">Mean<BR>Square
+<TH WIDTH="15%" VALIGN="TOP" ALIGN="CENTER"><I>F</I>-<BR>Computed
+<TH WIDTH="10%" VALIGN="TOP" ALIGN="CENTER"><I>F</I>-<BR>Table
+<TR>
+<TD COLSPAN="7"><HR>
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT"><I>y</I>
+<TD VALIGN="TOP" ALIGN="RIGHT">633,639.00
+<TD VALIGN="TOP" ALIGN="RIGHT">
+<TD VALIGN="TOP" ALIGN="RIGHT">
+<TD VALIGN="TOP" ALIGN="RIGHT">
+<TD VALIGN="TOP" ALIGN="RIGHT">
+<TD VALIGN="TOP" ALIGN="RIGHT">
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT"><I>y</I><SUB><SMALL>..</SMALL></SUB>
+<TD VALIGN="TOP" ALIGN="RIGHT">528,281.69
+<TD VALIGN="TOP" ALIGN="RIGHT">
+<TD VALIGN="TOP" ALIGN="RIGHT">
+<TD VALIGN="TOP" ALIGN="RIGHT">
+<TD VALIGN="TOP" ALIGN="RIGHT">
+<TD VALIGN="TOP" ALIGN="RIGHT">
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT"><I>y</I> - <I>y</I><SUB><SMALL>..</SMALL></SUB>
+<TD VALIGN="TOP" ALIGN="RIGHT">105,357.31
+<TD VALIGN="TOP" ALIGN="RIGHT">100.0
+<TD VALIGN="TOP" ALIGN="RIGHT">14
+<TD VALIGN="TOP" ALIGN="RIGHT">
+<TD VALIGN="TOP" ALIGN="RIGHT">
+<TD VALIGN="TOP" ALIGN="RIGHT">
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT"><I>A</I>
+<TD VALIGN="TOP" ALIGN="RIGHT">10,992.13
+<TD VALIGN="TOP" ALIGN="RIGHT">10.4
+<TD VALIGN="TOP" ALIGN="RIGHT">2
+<TD VALIGN="TOP" ALIGN="RIGHT">5496.1
+<TD VALIGN="TOP" ALIGN="RIGHT">0.7
+<TD VALIGN="TOP" ALIGN="RIGHT">2.8
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT">Errors
+<TD VALIGN="TOP" ALIGN="RIGHT">94,365.20
+<TD VALIGN="TOP" ALIGN="RIGHT">89.6
+<TD VALIGN="TOP" ALIGN="RIGHT">12
+<TD VALIGN="TOP" ALIGN="RIGHT">7863.8
+<TD VALIGN="TOP" ALIGN="RIGHT">
+<TD VALIGN="TOP" ALIGN="RIGHT">
+<TR>
+<TD COLSPAN="7"><HR>
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER" COLSPAN="7"><IMG SRC="images/20-28i.jpg"></IMGI>
+</TABLE>
+<H3><A NAME="Heading7"></A><FONT COLOR="#000077">20.6 VISUAL DIAGNOSTIC TESTS</FONT></H3>
+<P>The analysis of one-factor experiments as presented here is based on the same set of assumptions as those discussed earlier in Section 14.7 for regression models and then in Section 18.7 for 2<SUP><SMALL><I>k</I></SMALL></SUP><I>r</I> experimental designs:</P>
+<DL>
+<DD><B>&#149;</B>&nbsp;&nbsp;The effects of various factors are additive.
+<DD><B>&#149;</B>&nbsp;&nbsp;Errors are additive.
+<DD><B>&#149;</B>&nbsp;&nbsp;Errors are independent of the factor levels.
+<DD><B>&#149;</B>&nbsp;&nbsp;Errors are normally distributed.
+<DD><B>&#149;</B>&nbsp;&nbsp;Errors have the same variance for all factor levels.
+</DL>
+<P>The visual tests to verify these assumptions are also the same as those discussed earlier. A normal quantile-quantile plot of the residuals should be prepared. If plot is approximately linear, normality can be assumed.
+</P>
+<P>A scatter plot of residuals versus predicted response should be prepared and checked to see that there is no trend in the residuals or their spread. If the relative magnitude of errors is smaller than the response by an order of magnitude or more, the trends may be ignored.</P>
+<DL>
+<DD><B>Example 20.5</B> A scatter plot of residuals versus predicted response for the code size comparison study of Example 20.1 is shown in Figure 20.1. Notice that the residuals are not small. This is seen easily by comparing the ranges of scales along the vertical and horizontal axis. This reconfirms our previous conclusion that the variation due to factors, which is indicated by the spread along the horizontal axis, is small compared to the unexplained variation, which is indicated by the spread along the vertical axis. Notice, however, that the spread of errors is homogeneous and there is no visible trend in the errors.
+<DD>A normal quantile-quantile plot for the residuals is shown in Figure 20.2. Notice that the plot is slightly S-shaped, which indicates that the distribution of residuals, although symmetrical, has slightly shorter tails than a normal distribution.
+</DL>
+<P><A NAME="Fig1"></A><A HREF="javascript:displayWindow('images/20-01.jpg',500,406 )"><IMG SRC="images/20-01t.jpg"></A>
+<BR><A HREF="javascript:displayWindow('images/20-01.jpg',500,406)"><FONT COLOR="#000077"><B>FIGURE 20.1</B></FONT></A>&nbsp;&nbsp;Plot of the residuals versus predicted response for the code size comparison study.</P>
+<P><A NAME="Fig2"></A><A HREF="javascript:displayWindow('images/20-02.jpg',500,432 )"><IMG SRC="images/20-02t.jpg"></A>
+<BR><A HREF="javascript:displayWindow('images/20-02.jpg',500,432)"><FONT COLOR="#000077"><B>FIGURE 20.2</B></FONT></A>&nbsp;&nbsp;Normal quantile-quantile plot for the residuals of the code size comparison study.</P>
+<H3><A NAME="Heading8"></A><FONT COLOR="#000077">20.7 CONFIDENCE INTERVALS FOR EFFECTS</FONT></H3>
+<P>The estimated values of the model parameters are random variables since they are based on one sample. The estimates obtained from another sample would be different. The variance of the model parameters can be estimated from that of the errors (see Exercise 20.1). These variances are listed in Table 20.5. The confidence intervals for the effects can be computed using <I>t</I>-values read at <I>r</I>(<I>a</I> - 1) degrees of freedom (which are the degrees of freedom associated with errors).</P>
+<P>In the table, we have also shown the estimates for linear combination of effects such as <I>&#181;</I> &#43; <I>&#945;</I><SUB><SMALL><I>j</I></SMALL></SUB> and for contrasts <IMG SRC="images/20-29i.jpg"></IMGI>. The former can be used to estimate confidence intervals for mean responses since</P>
+<P ALIGN="CENTER"><IMG SRC="images/20-15d.jpg"></P>
+</IMGD>
+<CENTER>
+<TABLE WIDTH="60%">
+<TH VALIGN="TOP" ALIGN="LEFT" CAPTION COLSPAN="3">TABLE 20.5 Parameter Estimation from One-Factor Experiments
+<TR>
+<TD COLSPAN="3"><HR>
+<TR>
+<TH WIDTH="15%" VALIGN="TOP" ALIGN="LEFT">Parameter
+<TH WIDTH="15%" VALIGN="TOP" ALIGN="LEFT">Estimate
+<TH WIDTH="15%" VALIGN="TOP" ALIGN="LEFT">Variance
+<TR>
+<TD COLSPAN="3"><HR>
+<TR>
+<TD COLSPAN="3" VALIGN="TOP" ALIGN="LEFT"><IMG SRC="images/20-30i.jpg"></IMGI>
+<TR>
+<TD COLSPAN="3"><HR>
+<TR>
+<TD COLSPAN="3" VALIGN="TOP" ALIGN="CENTER">Degrees of freedom for errors = <I>a</I>(<I>r</I> - 1)
+</TABLE>
+</CENTER>
+<P>The contrasts can be used to compare any subset of effects. For example, the confidence interval for <I>&#945;</I><SUB><SMALL>1</SMALL></SUB> - <I>&#945;</I><SUB><SMALL>2</SMALL></SUB> can be used to check if there is a significant difference between alternatives 1 and 2.</P>
+<DL>
+<DD><B>Example 20.6</B> For the code size comparison study of Example 20.1
+<P ALIGN="CENTER">Error variance = <I>s</I><SUP><SMALL>2</SMALL></SUP><SUB><SMALL><I>e</I></SMALL></SUB> = <IMG SRC="images/20-31i.jpg"></IMGI> = 7863.8
+<P ALIGN="CENTER">Standard deviation of errors = <IMG SRC="images/20-32i.jpg"></IMGI> = 88.7
+<P ALIGN="CENTER">Standard deviation of <I>&#181;</I> = <IMG SRC="images/20-33i.jpg"></IMGI> = 22.9
+<P ALIGN="CENTER">Standard deviation of <I>&#945;</I><SUB><SMALL><I>j</I></SMALL></SUB> = <IMG SRC="images/20-34i.jpg"></IMGI> = 32.4
+</DL>
+<P><BR></P>
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="20-02.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="20-04.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<hr width="90%" size="1" noshade>
+<div align="center">
+<font face="Verdana,sans-serif" size="1">Copyright &copy; <a href="/reference/wiley00001.html">John Wiley &amp; Sons, Inc.</a></font>
+</div>
+<!-- all of the reference materials (books) have the footer and subfoot reveresed -->
+<!-- reference_subfoot = footer -->
+<!-- reference_footer = subfoot -->
+
+</BODY>
+</HTML>
+
+<!-- END FOOTER -->
+

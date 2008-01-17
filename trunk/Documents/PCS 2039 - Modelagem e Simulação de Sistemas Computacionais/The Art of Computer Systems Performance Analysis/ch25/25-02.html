@@ -1,0 +1,127 @@
+<HTML>
+<HEAD>
+<META name=vsisbn content="0471503363">
+<META name=vstitle content="Art of Computer Systems Performance Analysis Techniques For Experimental Design Measurements Simulation And Modeling">
+<META name=vsauthor content="Raj Jain">
+<META name=vsimprint content="Wiley Computer Publishing">
+<META name=vspublisher content="John Wiley & Sons, Inc.">
+<META name=vspubdate content="05/01/91">
+<META name=vscategory content="Web and Software Development: Software Engineering: Simulation and Modeling">
+
+
+
+
+
+
+
+<TITLE>The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling:Analysis of Simulation Results</TITLE>
+
+<!-- HEADER -->
+
+<STYLE type="text/css"> 
+ <!--
+ A:hover  {
+ 	color : Red;
+ }
+ -->
+</STYLE>
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+<!--ISBN=0471503363//-->
+<!--TITLE=The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling//-->
+<!--AUTHOR=Raj Jain//-->
+<!--PUBLISHER=Wiley Computer Publishing//-->
+<!--CHAPTER=25//-->
+<!--PAGES=416-420//-->
+<!--UNASSIGNED1//-->
+<!--UNASSIGNED2//-->
+
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="25-01.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="25-03.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+<P><BR></P>
+<H4 ALIGN="LEFT"><A NAME="Heading5"></A><FONT COLOR="#000077">25.1.3 Structured Walk-Through</FONT></H4>
+<P>Structured walk-through consists of explaining the code to another person or a group. The code developer explains what each line of code does, which can be very helpful. It turns out that even if the listeners do not understand the model, the developers discover bugs simply by reading the code carefully, trying to explain it, and finding that the code does not exactly match the expectation.
+</P>
+<H4 ALIGN="LEFT"><A NAME="Heading6"></A><FONT COLOR="#000077">25.1.4 Deterministic Models</FONT></H4>
+<P>The key problem in debugging simulation models is the randomness of variables. It is obvious that a deterministic program is easier to debug than a program with random variables. A common verification technique, therefore, is to allow the user to specify any distribution. Of course, the default parameter values should be set to represent the behavior in the real systems. But by specifying constant (deterministic) distributions, the user can easily determine output variables and thus debug the modules.
+</P>
+<H4 ALIGN="LEFT"><A NAME="Heading7"></A><FONT COLOR="#000077">25.1.5 Run Simplified Cases</FONT></H4>
+<P>The model may be run with simple cases, for example, only one packet, or only one source, or only one intermediate node. These cases can be easily analyzed and the simulation results can be compared with the analysis. Of course, a model that works for simple cases is not guaranteed to work for more complex cases. Therefore, the test cases should be as complex as can be easily analyzed without simulation.
+</P>
+<H4 ALIGN="LEFT"><A NAME="Heading8"></A><FONT COLOR="#000077">25.1.6 Trace</FONT></H4>
+<P>A trace consists of a time-ordered list of events and their associated variables. They may be presented at several levels of detail: events trace, procedure trace, or variables trace. The trace outputs are useful in debugging the model. Tracing causes additional processing overhead, and therefore, the model should have switches that allow the traces to be turned on and off.
+</P>
+<P>A sample event trace for the computer network simulation is shown in Figure 25.3. The trace lists the time, event code, and various packet characteristics associated with the event. In the trace <I>S<SUB><SMALL>i</SMALL></SUB></I>, <I>D<SUB><SMALL>i</SMALL></SUB></I>, and <I>R<SUB><SMALL>i</SMALL></SUB></I>&#146;s are the <I>i</I>th source, <I>i</I>th destination, and <I>i</I>th intermediate node (router), respectively.</P>
+<P>It is possible to have much more detail in a trace than exhibited in the sample trace of Figure 25.3. For example, the trace could show events and procedure names as well as values of the key variables. Each procedure&#146;s name could be printed as it is executed. The list is sometimes indented to indicate the call/return sequence. The trace statements explicitly put in the procedures print values of the key variables. The user should be able to select the level of detail in the trace, including no trace at all, which should be the default. The user may be allowed to trace only some selected events such as those belonging to a particular node in a computer network or a particular type of packet and so forth.</P>
+<P><A NAME="Fig3"></A><A HREF="javascript:displayWindow('images/25-03.jpg',450,420 )"><IMG SRC="images/25-03t.jpg"></A>
+<BR><A HREF="javascript:displayWindow('images/25-03.jpg',450,420)"><FONT COLOR="#000077"><B>FIGURE 25.3</B></FONT></A>&nbsp;&nbsp;Sample packet event-trace output from the simulation model.</P>
+<H4 ALIGN="LEFT"><A NAME="Heading9"></A><FONT COLOR="#000077">25.1.7 On-Line Graphic Displays</FONT></H4>
+<P>Simulations take a long time to run. On-line graphic displays and traces help to keep the user informed of the status of the simulation. They also make the simulation interesting and are helpful in selling the simulation results to others. Most of all, the displays help debug the simulation; they can present the same information as in the trace but in a more comprehensive form. It is difficult to look at a long trace, while it is easy to inspect the display for the same period.
+</P>
+<H4 ALIGN="LEFT"><A NAME="Heading10"></A><FONT COLOR="#000077">25.1.8 Continuity Test</FONT></H4>
+<P>Continuity tests consist of running the simulation several times for slightly different values of input parameters. For any one parameter, a slight change in input should generally produce only a slight change in the output. Any sudden changes in the output should be investigated. Often, they are due to modeling error.
+</P>
+<P>An example of a continuity test is shown in Figure 25.4, which shows the response time for various values of an input parameter using an undebugged version of the simulation model. The output jumps caused us to carefully trace the code. The same graph from the verified version of the model is shown in Figure 25.5. Notice that the response time curve is now smooth.</P>
+<P><A NAME="Fig4"></A><A HREF="javascript:displayWindow('images/25-04.jpg',500,300 )"><IMG SRC="images/25-04t.jpg"></A>
+<BR><A HREF="javascript:displayWindow('images/25-04.jpg',500,300)"><FONT COLOR="#000077"><B>FIGURE 25.4</B></FONT></A>&nbsp;&nbsp;Discontinuities in the curve indicate the possibility of a programming error.</P>
+<P><A NAME="Fig5"></A><A HREF="javascript:displayWindow('images/25-05.jpg',500,302 )"><IMG SRC="images/25-05t.jpg"></A>
+<BR><A HREF="javascript:displayWindow('images/25-05.jpg',500,302)"><FONT COLOR="#000077"><B>FIGURE 25.5</B></FONT></A>&nbsp;&nbsp;The curve after verification.</P>
+<H4 ALIGN="LEFT"><A NAME="Heading11"></A><FONT COLOR="#000077">25.1.9 Degeneracy Tests</FONT></H4>
+<P>Degeneracy tests consist of checking that the model works for extreme (lowest or highest allowed) values of system, configuration, or workload parameters. For example, a multi-CPU, multidisk workstation model should work for a single CPU without a disk (diskless) as long as these are valid system configurations. Although these extreme cases may not represent a typical case, they help discover bugs that the analyst would not have thought of otherwise. It is useful to incorporate checks for input parameter values and to verify that they are within the allowed bounds. The analyst should have verified that the model works for any combination of these allowed bounds.
+</P>
+<P>For example, the network simulation model works for a system with no sources, no routers, routers with zero service times, or sources with infinite flow control windows.</P>
+<H4 ALIGN="LEFT"><A NAME="Heading12"></A><FONT COLOR="#000077">25.1.10 Consistency Tests</FONT></H4>
+<P>These tests consist of checking that the model produces similar results for input parameter values that have similar effects. For example, two sources with an arrival rate of 100 packets per second should load the network to approximately the same level as four sources with an arrival rate of 50 packets per second each. If the model output shows a significant difference, either the difference should be explainable or it could be due to programming errors.
+</P>
+<P>The test cases used in continuity, degeneracy, and consistency tests should be saved in a test library so that whenever the model is changed, the tests can be repeated to verify the new model.</P>
+<H4 ALIGN="LEFT"><A NAME="Heading13"></A><FONT COLOR="#000077">25.1.11 Seed Independence</FONT></H4>
+<P>The seeds used in random-number generation should not affect the final conclusion. Thus, the model should produce similar results for different seed values. The analyst should verify this by running the simulation with different seed values.
+</P>
+<H3><A NAME="Heading14"></A><FONT COLOR="#000077">25.2 MODEL VALIDATION TECHNIQUES</FONT></H3>
+<P>Validation refers to ensuring that the assumptions used in developing the model are reasonable in that, if correctly implemented, the model would produce results close to that observed in real systems. The validation techniques depend upon the assumptions and, hence, on the systems being modeled. Thus, unlike verification techniques that are generally applicable, the validation techniques used in one simulation may not apply to another.
+</P>
+<P>Model validation consists of validating the three key aspects of the model:</P>
+<DL>
+<DD><B>1.</B>&nbsp;&nbsp;Assumptions
+<DD><B>2.</B>&nbsp;&nbsp;Input parameter values and distributions
+<DD><B>3.</B>&nbsp;&nbsp;Output values and conclusions
+</DL>
+<P>Each of these three aspects may be subjected to a validity test by comparing it with that obtained from the following three possible sources:
+</P>
+<DL>
+<DD><B>1.</B>&nbsp;&nbsp;Expert intuition
+<DD><B>2.</B>&nbsp;&nbsp;Real system measurements
+<DD><B>3.</B>&nbsp;&nbsp;Theoretical results
+</DL>
+<P><BR></P>
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="25-01.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="25-03.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<hr width="90%" size="1" noshade>
+<div align="center">
+<font face="Verdana,sans-serif" size="1">Copyright &copy; <a href="/reference/wiley00001.html">John Wiley &amp; Sons, Inc.</a></font>
+</div>
+<!-- all of the reference materials (books) have the footer and subfoot reveresed -->
+<!-- reference_subfoot = footer -->
+<!-- reference_footer = subfoot -->
+
+</BODY>
+</HTML>
+
+<!-- END FOOTER -->
+

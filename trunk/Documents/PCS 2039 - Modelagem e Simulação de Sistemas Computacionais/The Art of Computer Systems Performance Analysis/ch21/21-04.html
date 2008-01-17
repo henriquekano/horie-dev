@@ -1,0 +1,184 @@
+<HTML>
+<HEAD>
+<META name=vsisbn content="0471503363">
+<META name=vstitle content="Art of Computer Systems Performance Analysis Techniques For Experimental Design Measurements Simulation And Modeling">
+<META name=vsauthor content="Raj Jain">
+<META name=vsimprint content="Wiley Computer Publishing">
+<META name=vspublisher content="John Wiley & Sons, Inc.">
+<META name=vspubdate content="05/01/91">
+<META name=vscategory content="Web and Software Development: Software Engineering: Simulation and Modeling">
+
+
+
+
+
+
+
+<TITLE>The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling:Two-Factor Full Factorial Design without Replications</TITLE>
+
+<!-- HEADER -->
+
+<STYLE type="text/css"> 
+ <!--
+ A:hover  {
+ 	color : Red;
+ }
+ -->
+</STYLE>
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+<!--ISBN=0471503363//-->
+<!--TITLE=The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling//-->
+<!--AUTHOR=Raj Jain//-->
+<!--PUBLISHER=Wiley Computer Publishing//-->
+<!--CHAPTER=21//-->
+<!--PAGES=352-354//-->
+<!--UNASSIGNED1//-->
+<!--UNASSIGNED2//-->
+
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="21-03.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="21-05.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+<P><BR></P>
+<DL>
+<DD>The confidence interval for the grand mean is
+<P ALIGN="CENTER"><P ALIGN="CENTER"><IMG SRC="images/21-24d.jpg"></P>
+</IMGD>
+<P>Confidence intervals for other parameters can be similarly calculated and are shown in Table 21.7. From the table we see that all three cache alternatives are significantly different from the average. All workloads, except TECO, are similar to the average and hence to each other.
+<P>Using the formula for contrasts, we can also compare the caching alternatives in pairs. The confidence intervals for the differences of effects are shown in Table 21.8. From this table, we see that two-cache and one-cache alternatives are both significantly better than a no-cache alternative. However, there is no significant difference between two-cache and one-cache alternatives.
+</DL>
+<TABLE WIDTH="100%">
+<TH COLSPAN="4" ALIGN="LEFT" VALIGN="TOP" CAPTION>TABLE 21.8 Confidence Intervals for Differences of Cache Effects
+<TR>
+<TD COLSPAN="4" ALIGN="LEFT" VALIGN="TOP"><HR>
+<TR>
+<TH ALIGN="LEFT" VALIGN="TOP" WIDTH="25%">
+<TH ALIGN="LEFT" VALIGN="TOP" WIDTH="25%">Two Caches
+<TH ALIGN="LEFT" VALIGN="TOP" WIDTH="25%">One Cache
+<TH ALIGN="LEFT" VALIGN="TOP" WIDTH="25%">No Cache
+<TR>
+<TD COLSPAN="4" ALIGN="LEFT" VALIGN="TOP"><HR>
+<TR>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH="25%">Two caches
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH="25%">
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH="25%">(-7.4, 5.4)<SUP><SMALL>a</SMALL></SUP>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH="25%">(-69.0, -56.2)
+<TR>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH="25%">One cache
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH="25%">
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH="25%">
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH="25%">(-68.0, -55.2)
+<TR>
+<TD COLSPAN="4" ALIGN="LEFT" VALIGN="TOP"><HR><SUP><SMALL>a</SMALL></SUP> <SMALL>Not significant.</SMALL>
+<TR>
+</TABLE>
+<DL>
+<DD><B>Case Study 21.1</B> This case study is an extension of the cache comparison study that we presented in several preceding examples. In that study, it was concluded that two-cache and single-cache alternatives are not significantly different and so using one cache was the only cost-effective alternative. However, detailed investigation showed that each program that was used as the workload could easily fit into one set of cache. In the next phase of the project, therefore, the measurements were repeated in a multiprocess environment. Five jobs were executed in parallel. The new measurements are shown in Table 21.9. The first four workloads are five processes of the same type. The last workload, labeled &#147;ALL,&#148; consists of running five different programs ASM, TECO, SIEVE, DHRYSTONE, and SORT in parallel. The confidence intervals for differences of effects are shown in Table 21.10. Notice that even for this case the two caches do not produce statistically better performance.
+</DL>
+<TABLE ALIGN="CENTER" WIDTH="85%">
+<TH CAPTION COLSPAN="4" ALIGN="LEFT" VALIGN="TOP">TABLE 21.9 Processor Time for Cache Comparison Study in Multiprocess Environment
+<TR>
+<TD COLSPAN="4" ALIGN="LEFT" VALIGN="TOP"><HR>
+<TR>
+<TH ALIGN="LEFT" VALIGN="TOP" WIDTH="25%">Workload
+<TH ALIGN="CENTER" VALIGN="TOP" WIDTH="20%">Two Caches
+<TH ALIGN="CENTER" VALIGN="TOP" WIDTH="20%">One Cache
+<TH ALIGN="CENTER" VALIGN="TOP" WIDTH="20%">No Cache
+<TR>
+<TD COLSPAN="4" ALIGN="LEFT" VALIGN="TOP"><HR>
+<TR>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH="25%">ASM5
+<TD ALIGN="CENTER" VALIGN="TOP" WIDTH="25%">231
+<TD ALIGN="CENTER" VALIGN="TOP" WIDTH="25%">262
+<TD ALIGN="CENTER" VALIGN="TOP" WIDTH="25%">489
+<TR>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH="25%">TECO5
+<TD ALIGN="CENTER" VALIGN="TOP" WIDTH="25%">300
+<TD ALIGN="CENTER" VALIGN="TOP" WIDTH="25%">314
+<TD ALIGN="CENTER" VALIGN="TOP" WIDTH="25%">620
+<TR>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH="25%">SIEVE5
+<TD ALIGN="CENTER" VALIGN="TOP" WIDTH="25%">213
+<TD ALIGN="CENTER" VALIGN="TOP" WIDTH="25%">214
+<TD ALIGN="CENTER" VALIGN="TOP" WIDTH="25%">604
+<TR>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH="25%">DHRYSTONE5
+<TD ALIGN="CENTER" VALIGN="TOP" WIDTH="25%">245
+<TD ALIGN="CENTER" VALIGN="TOP" WIDTH="25%">263
+<TD ALIGN="CENTER" VALIGN="TOP" WIDTH="25%">564
+<TR>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH="25%">ALL
+<TD ALIGN="CENTER" VALIGN="TOP" WIDTH="25%">229
+<TD ALIGN="CENTER" VALIGN="TOP" WIDTH="25%">242
+<TD ALIGN="CENTER" VALIGN="TOP" WIDTH="25%">551
+<TR>
+<TD COLSPAN="4" ALIGN="LEFT" VALIGN="TOP"><HR>
+<TR>
+</TABLE>
+<P>
+</P>
+<TABLE WIDTH="100%"><TH CAPTION COLSPAN="4" ALIGN="LEFT" VALIGN="TOP">TABLE 21.10 Confidence Intervals for Differences for Cache Comparison Study in Multiprocess Environment
+<TR>
+<TD COLSPAN="4" ALIGN="LEFT" VALIGN="TOP"><HR>
+<TR>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH="25%">
+<TH ALIGN="CENTER" VALIGN="TOP" WIDTH="25%">Two Caches
+<TH ALIGN="CENTER" VALIGN="TOP" WIDTH="25%">One Cache
+<TH ALIGN="CENTER" VALIGN="TOP" WIDTH="25%">No Cache
+<TR>
+<TD COLSPAN="4" ALIGN="LEFT" VALIGN="TOP"><HR>
+<TR>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH="25%">Two caches
+<TD ALIGN="CENTER" VALIGN="TOP" WIDTH="25%">&#151;
+<TD ALIGN="CENTER" VALIGN="TOP" WIDTH="25%">(-51.6, 20.8)<SUP><SMALL><I>a</I></SMALL></SUP>
+<TD ALIGN="CENTER" VALIGN="TOP" WIDTH="25%">(-358.2, -285.8)
+<TR>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH="25%">One cache
+<TD ALIGN="CENTER" VALIGN="TOP" WIDTH="25%">&#151;
+<TD ALIGN="CENTER" VALIGN="TOP" WIDTH="25%">&#151;
+<TD ALIGN="CENTER" VALIGN="TOP" WIDTH="25%">(-342.8, -270.4)
+<TR>
+<TD COLSPAN="4" ALIGN="LEFT" VALIGN="TOP"><HR><SUP><SMALL>a</SMALL></SUP> <SMALL>Not significant</SMALL>.
+<TR>
+</TABLE>
+<H3><A NAME="Heading8"></A><FONT COLOR="#000077">21.7 MULTIPLICATIVE MODELS FOR TWO-FACTOR EXPERIMENTS</FONT></H3>
+<P>The multiplicative models discussed earlier in Section 18.8 on 2<SUP><I><SMALL>2</SMALL></I></SUP><I>r</I> designs can also be used in the analysis of two-factor experiments. In the analysis presented so far, the following additive model was assumed:</P>
+<P ALIGN="CENTER"><I>y</I><SUB><I><SMALL>i</SMALL></I></SUB> = <I>&#181;</I> &#43; &#945;<SUB><I><SMALL>j</SMALL></I></SUB> &#43; &#946;<SUB><I><SMALL>i</SMALL></I></SUB> &#43; <I>e</I><SUB><I><SMALL>ij</SMALL></I></SUB></P>
+<P>This model assumes that the effect of the factors are additive. It was argued in Section 18.8 that in many cases such as those involving processors and workloads, the effects are multiplicative rather than additive. In such cases, the log of the response follows an additive model. A need for logarithmic transformation is also indicated if the spread in the residuals increases with the mean response.</P>
+<P>The following example illustrates a case where the multiplicative model (or log transformation) is useful.</P>
+<DL>
+<DD><B>Case Study 21.2</B> Two approaches to design high-speed processors are to use parallelism in time and parallelism in space. Parallelism in time is achieved by pipelining stages of execution in a single processor while parallelism in space is obtained by having several execution units that operate simultaneously. In this case study, to compare the two approaches, implementations of two architectures called Spectrum and Scheme86 were compared using several workloads. Spectrum is a Reduced Instruction Set Computer (RISC) architecture. One of its implementations, which is sold commercially as the HP9000/840 computer, is implemented with three pipelined stages. Each stage has a latency of 125 nanoseconds. The Scheme86 architecture uses a long instruction word with several independent execution units. It was designed at the Artificial Intelligence Laboratory at the Massachusetts Institute of Technology. A simulation model capable of executing any specified workloads on machines of the two architectures was used to compare their performance during design stages of Scheme86. Two different processor cycle times (125 and 62.5 nanoseconds) were used for Spectrum. They were compared with a Scheme86 implementation with 150-nanosecond technology. Execution times of the three implementations for five different workloads are listed in Table 21.11.
+<P>An analysis using an additive model (see Exercise 21.1) would conclude that there is no significant difference among the processors. This is clearly counterintuitive since it is easily seen from the data that Scheme86 is roughly two to three times faster than Spectrum125 for all workloads. (This was expected since Scheme86 has three execution units). Also, notice that Spectrum62.5 is twice as fast as Spectrum125. The reason for the misleading conclusion is that the right model for this problem is a multiplicative model. Also, statistically it is not appropriate to add observations that vary as much as those shown in Table 21.11. The ratio of <I>y</I><SUB><SMALL>max</SMALL></SUB>/<I>y</I><SUB><SMALL>min</SMALL></SUB> is over three orders of magnitude.
+<P>To analyze this data, we take a log of the execution times. Computation of effects using the transformed data is shown in Table 21.12 and the ANOVA is shown in Table 21.13. Notice that the effect of the processors is significant. The model explains 99.9% of the variation as compared to 88% in the additive model.
+</DL>
+<P><BR></P>
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="21-03.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="21-05.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<hr width="90%" size="1" noshade>
+<div align="center">
+<font face="Verdana,sans-serif" size="1">Copyright &copy; <a href="/reference/wiley00001.html">John Wiley &amp; Sons, Inc.</a></font>
+</div>
+<!-- all of the reference materials (books) have the footer and subfoot reveresed -->
+<!-- reference_subfoot = footer -->
+<!-- reference_footer = subfoot -->
+
+</BODY>
+</HTML>
+
+<!-- END FOOTER -->
+

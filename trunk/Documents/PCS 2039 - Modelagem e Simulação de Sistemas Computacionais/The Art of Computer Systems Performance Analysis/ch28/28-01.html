@@ -1,0 +1,162 @@
+<HTML>
+<HEAD>
+<META name=vsisbn content="0471503363">
+<META name=vstitle content="Art of Computer Systems Performance Analysis Techniques For Experimental Design Measurements Simulation And Modeling">
+<META name=vsauthor content="Raj Jain">
+<META name=vsimprint content="Wiley Computer Publishing">
+<META name=vspublisher content="John Wiley & Sons, Inc.">
+<META name=vspubdate content="05/01/91">
+<META name=vscategory content="Web and Software Development: Software Engineering: Simulation and Modeling">
+
+
+
+
+
+
+
+<TITLE>The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling:Random-variate Generation</TITLE>
+
+<!-- HEADER -->
+
+<STYLE type="text/css"> 
+ <!--
+ A:hover  {
+ 	color : Red;
+ }
+ -->
+</STYLE>
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+<!--ISBN=0471503363//-->
+<!--TITLE=The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling//-->
+<!--AUTHOR=Raj Jain//-->
+<!--PUBLISHER=Wiley Computer Publishing//-->
+<!--CHAPTER=28//-->
+<!--PAGES=474-478//-->
+<!--UNASSIGNED1//-->
+<!--UNASSIGNED2//-->
+
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="../ch27/27-06.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="28-02.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+<P><BR></P>
+<H2><A NAME="Heading1"></A><FONT COLOR="#000077">CHAPTER 28<BR>RANDOM-VARIATE GENERATION
+</FONT></H2>
+<BLOCKQUOTE>
+<P ALIGN="RIGHT"><I>A man with one watch knows what time it is.</I><BR><I>A man with two watches is never sure.</I></P>
+<P ALIGN="RIGHT">&#151; Segal&#146;s Law</P>
+</BLOCKQUOTE><P>There are a number of methods used to generate nonuniform variables. Each method is applicable only to a subset of the distribution. Also, for a particular distribution, one method may be more efficient than the others. In this chapter, some of the commonly used methods are described. Then, in Chapter 29, a list of distributions commonly used in computer systems modeling and their generation algorithms is presented.
+</P>
+<H3><A NAME="Heading2"></A><FONT COLOR="#000077">28.1 INVERSE TRANSFORMATION</FONT></H3>
+<P>This method is based on the observation that given any random variable <I>x</I> with a CDF <I>F</I>(<I>x</I>), the variable <I>u</I> = <I>F</I>(<I>x</I>) is uniformly distributed between 0 and 1. Therefore, <I>x</I> can be obtained by generating uniform random numbers and computing <I>x</I> = <I>F</I><SUP><SMALL>&#150;1</SMALL></SUP>(<I>u</I>), as shown in Figure 28.1. Let us first prove this observation.</P>
+<DL>
+<DD><B>Proof 28.1</B> Given the distribution of a random variable <I>x</I>, it is possible to find the distribution of any nondecreasing function <I>g</I>(<I>x</I>) of <I>x</I> as follows:
+<BR>Let <I>y</I> = <I>g</I>(<I>x</I>) so that <I>x</I> = <I>g</I><SUP><SMALL>&#150;1</SMALL></SUP>(<I>y</I>). Here <I>g</I><SUP><SMALL>&#150;1</SMALL></SUP>( ) is the inverse function of <I>g</I>( ):
+<P ALIGN="CENTER"><I>F</I><SUB><SMALL>y</SMALL></SUB>(<I>y</I>) = <I>P</I>(<I>Y</I> &#8804; <I>y</I>) = <I>P</I>(<I>x</I> &#8804; <I>g</I><SUP><SMALL>&#150;1</SMALL></SUP>(<I>y</I>)) = <I>F</I><SUB><SMALL>x</SMALL></SUB>(<I>g</I><SUP><SMALL>&#150;1</SMALL></SUP>(<I>y</I>))
+</DL>
+<DL>
+<DD> 
+<P><A NAME="Fig1"></A><A HREF="javascript:displayWindow('images/28-01.jpg',500,361 )"><IMG SRC="images/28-01t.jpg"></A>
+<BR><A HREF="javascript:displayWindow('images/28-01.jpg',500,361)"><FONT COLOR="#000077"><B>FIGURE 28.1</B></FONT></A>&nbsp;&nbsp;Inverse transformation of the CDF.</P>
+<P>Now we select <I>g</I>( ) such that <I>g</I>(<I>x</I>) = <I>F</I>(<I>x</I>), or <I>y</I> = <I>F</I>(<I>x</I>), so that y is a random variable between 0 and 1 and its distribution is given by
+<P ALIGN="CENTER"><I>F</I>(<I>y</I>) = <I>F</I>(<I>F</I><SUP><SMALL>&#150;1</SMALL></SUP>(<I>y</I>)) = <I>y</I>
+</DL>
+<DL>
+<DD> 
+<BR>and
+<P ALIGN="CENTER"><I>f</I>(<I>y</I>) = <I>dF</I>/<I>dy</I> = 1
+<P>That is, <I>y</I> is uniformly distributed between 0 and 1.
+</DL>
+<P>The preceding observation allows us to generate random variables with distributions for which <I>F</I><SUP><SMALL>&#150;1</SMALL></SUP> can be determined either analytically or empirically. We present one example of each case.</P>
+<DL>
+<DD><B>Example 28.1</B> To generate exponential variates, proceed as follows:
+<P ALIGN="CENTER"><IMG SRC="images/28-01d.jpg"></P>
+<BR>Thus, exponential variates <I>x</I><SUB><SMALL>i</SMALL></SUB> can be produced by generating a uniform variable <I>u</I><SUB><SMALL>i</SMALL></SUB> and by using the preceding equation to determine <I>x</I><SUB><SMALL>i</SMALL></SUB>. Since <I>u</I> is uniformly distributed between 0 and 1, 1 &#150; <I>u</I> is also uniformly distributed between 0 and 1. Therefore, the generation algorithm can be simplified to
+<P ALIGN="CENTER"><IMG SRC="images/28-02d.jpg"></P>
+</DL>
+<P>The next example illustrates the use of the inverse-transformation method for a case in which the inverse is found empirically.
+</P>
+<DL>
+<DD><B>Example 28.2</B> The packet sizes in computer networks were measured and found to be trimodal with the following probabilities:
+<CENTER>
+<TABLE WIDTH="55%">
+<TH VALIGN="TOP" ALIGN="CENTER" WIDTH="30%">Size (bytes)
+<TH VALIGN="TOP" ALIGN="CENTER">Probability
+<TR>
+<TD COLSPAN="2"><HR>
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER">64
+<TD VALIGN="TOP" ALIGN="CENTER">0.7
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER">128
+<TD VALIGN="TOP" ALIGN="CENTER">0.1
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER">512
+<TD VALIGN="TOP" ALIGN="CENTER">0.2
+</TABLE>
+</CENTER>
+<P>The CDF for this distribution is
+<P ALIGN="CENTER"><IMG SRC="images/28-03d.jpg"></P>
+<P>The inverse of the CDF is
+<P ALIGN="CENTER"><IMG SRC="images/28-04d.jpg"></P>
+<P>Thus, the packet sizes can be produced by generating a uniform random number between 0 and 1 and by comparing it with 0.7 and 0.8. If the number is less than or equal to 0.7, the packet size should be 64. If it is greater than 0.7 but less than or equal to 0.8, the packet size should be 128 bytes. If it is greater than 0.8, the packet size should be 512 bytes.
+</DL>
+<P>It should be pointed out that, by definition, the CDF is <I>continuous from the right</I>, that is, at any point where there is a discontinuity, the value on the right of the discontinuity is used. In Example 28.2, the CDF jumps from 0 to 0.7 at <I>x</I> = 64. The value at <I>x</I> = 64 is read as 0.7 (the value to the right of <I>x</I> = 64). Following this convention, the inverse function is <I>continuous from the left</I>. The inverse function is discontinuous at <I>u</I> = 0.7. However, if the random number generated comes out to be 0.7, the value of <I>x</I> to the left of <I>u</I> = 0.7, that is, <I>x</I> = 64, is used.</P>
+<P>Inverse transformation is a powerful random-variate generation technique. Table 28.1 lists a number of distributions that can be generated using this technique. In each case, a <I>U</I>(0, 1) random number <I>u</I> is generated and the function listed under the &#147;inverse&#148; column is computed and returned as the desired variate. In the table, [&#183;] is used to denote rounding up to the next integer.</P>
+<H3><A NAME="Heading3"></A><FONT COLOR="#000077">28.2 REJECTION</FONT></H3>
+<P>A rejection technique can be used if another density function <I>g</I>(<I>x</I>) exists so that <I>cg</I>(<I>x</I>) <I>majorizes</I> the density function <I>f</I>(<I>x</I>), that is, <I>cg</I>(<I>x</I>) &#8805; <I>f</I>(<I>x</I>) for all</P>
+<P ALIGN="CENTER"><IMG SRC="images/28-05d.jpg"></P>
+<P>values of <I>x</I>. If such a function can be found, then the following steps can be used to generate random variate <I>x</I> with density <I>f</I>(<I>x</I>):</P>
+<DL>
+<DD><B>1.</B>&nbsp;&nbsp;Generate <I>x</I> with pdf <I>g</I>(<I>x</I>).
+<DD><B>2.</B>&nbsp;&nbsp;Generate y uniform on [0, <I>cg</I>(<I>x</I>)].
+<DD><B>3.</B>&nbsp;&nbsp;If <I>y</I> &#8804; <I>f</I>(<I>x</I>), then output <I>x</I> and return. Otherwise, repeat from step 1.
+</DL>
+<P>The algorithm continues <I>rejecting</I> the random variates <I>x</I> and <I>y</I> until the condition <I>y</I> &#8804; <I>f</I>(<I>x</I>) is satisfied; hence, the name of the technique.</P>
+<P>The following example illustrates the rejection technique.</P>
+<DL>
+<DD><B>Example 28.3</B> Consider the beta (2, 4) density function
+<P ALIGN="CENTER"><I>f</I>(<I>x</I>) = 20<I>x</I>(1&#150;<I>x</I>)<SUP><SMALL>3</SMALL></SUP>, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0 &#8804; <I>x</I> &#8804 1
+<P>The function is shown in Figure 28.2. It can be bounded inside a rectangle of height 2.11. Therefore, we can use <I>c</I> = 2.11, and
+<P ALIGN="CENTER"><I>g</I>(<I>x</I>) = 1, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0 &#8804; <I>x</I> &#8804; 1
+<P>The beta (2, 4) variates can be generated as follows:
+<DL>
+<DD><B>1.</B>&nbsp;&nbsp;Generate <I>x</I> uniform on [0, 1].
+<DD><B>2.</B>&nbsp;&nbsp;Generate <I>y</I> uniform on [0, 2.11].
+<DD><B>3.</B>&nbsp;&nbsp;If <I>y</I> &#8804; 20<I>x</I>(1 &#150; <I>x</I>)<SUP><SMALL>3</SMALL></SUP>, then output <I>x</I> and return. Otherwise repeat from step 1.
+</DL>
+<P>Steps 1 and 2 generate a point (<I>x</I>, <I>y</I>) uniformly distributed over the rectangle shown in Figure 28.2. If the point falls above the beta density function <I>f</I>(<I>x</I>), then step 3 rejects <I>x</I>.
+</DL>
+<P>The efficiency of the rejection technique depends upon the function <I>g</I>(<I>x</I>) and how closely it envelopes <I>f</I>(<I>x</I>). If there is a large area between <I>cg</I>(<I>x</I>) and <I>f</I>(<I>x</I>), then a large percentage of random variates generated in steps 1 and 2 are rejected. Similarly, if generation of random variates with <I>g</I>(<I>x</I>) is complex, this method may not be efficient.</P>
+<P><A NAME="Fig2"></A><A HREF="javascript:displayWindow('images/28-02.jpg',500,408 )"><IMG SRC="images/28-02t.jpg"></A>
+<BR><A HREF="javascript:displayWindow('images/28-02.jpg',500,408)"><FONT COLOR="#000077"><B>FIGURE 28.2</B></FONT></A>&nbsp;&nbsp;Generating a beta distribution.<P><BR></P>
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="../ch27/27-06.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="28-02.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<hr width="90%" size="1" noshade>
+<div align="center">
+<font face="Verdana,sans-serif" size="1">Copyright &copy; <a href="/reference/wiley00001.html">John Wiley &amp; Sons, Inc.</a></font>
+</div>
+<!-- all of the reference materials (books) have the footer and subfoot reveresed -->
+<!-- reference_subfoot = footer -->
+<!-- reference_footer = subfoot -->
+
+</BODY>
+</HTML>
+
+<!-- END FOOTER -->
+

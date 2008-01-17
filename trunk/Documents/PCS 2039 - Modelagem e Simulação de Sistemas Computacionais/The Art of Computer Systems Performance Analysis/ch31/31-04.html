@@ -1,0 +1,167 @@
+<HTML>
+<HEAD>
+<META name=vsisbn content="0471503363">
+<META name=vstitle content="Art of Computer Systems Performance Analysis Techniques For Experimental Design Measurements Simulation And Modeling">
+<META name=vsauthor content="Raj Jain">
+<META name=vsimprint content="Wiley Computer Publishing">
+<META name=vspublisher content="John Wiley & Sons, Inc.">
+<META name=vspubdate content="05/01/91">
+<META name=vscategory content="Web and Software Development: Software Engineering: Simulation and Modeling">
+
+
+
+
+
+
+
+<TITLE>The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling:Analysis of a Single Queue</TITLE>
+
+<!-- HEADER -->
+
+<STYLE type="text/css"> 
+ <!--
+ A:hover  {
+ 	color : Red;
+ }
+ -->
+</STYLE>
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+<!--ISBN=0471503363//-->
+<!--TITLE=The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling//-->
+<!--AUTHOR=Raj Jain//-->
+<!--PUBLISHER=Wiley Computer Publishing//-->
+<!--CHAPTER=31//-->
+<!--PAGES=533-537//-->
+<!--UNASSIGNED1//-->
+<!--UNASSIGNED2//-->
+
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="31-03.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="31-05.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+<P><BR></P>
+<DL>
+<DD><B>Example 31.3</B> The students would like to limit their waiting time to an average of 2 minutes and no more than 5 minutes in 90% of the cases. Is it feasible? If yes, then how many terminals are required?
+<BR>Let us analyze the system with <I>m</I> = 6,7,... terminals while keeping the same arrival and service rates of &#955; = 0.167 and <I>&#181;</I> = 0.05, respectively.
+<BR>With <I>m</I> = 6 terminals, we have
+<DL>
+<DD>Traffic intensity &#961; = <IMG SRC="images/31-29i.jpg"></IMGI> = 0.556
+<DD>Probability of all terminals being idle = <I>p</I><SUB><SMALL>0</SMALL></SUB> = 0.0346
+<DD>Probability of all terminals being busy = <IMG SRC="images/31-30i.jpg"></IMGI> = 0.15
+<DD>Average waiting time = <I>E</I>[<I>w</I>] = 1.1 minutes
+</DL>
+<BR>The 90-percentile of waiting time is
+<BR><P ALIGN="CENTER"><IMG SRC="images/31-51d.jpg"></P>
+</IMGD>
+<BR>Thus, with just one more terminal we will be able to satisfy the students&#146; demands.
+</DL>
+<P>One of the important decisions to be made when there is more than one identical server is whether to keep separate queues for each server or to keep just one queue for all servers. For Poisson arrivals and exponential service times, the first option of separate queues can be modeled using <I>m</I> M/M/1 queues, each with an arrival rate of &#955;/<I>m</I>. The second option of one queue can be modeled using an M/M/<I>m</I> queue with an arrival rate of &#955;. It is easy to show that the single-queue alternative is better. We illustrate this with an example.</P>
+<DL>
+<DD><B>Example 31.4</B> Consider what would have happened if the five terminals in Example 31.2 were located in five different locations on the campus, thereby needing a separate queue for each.
+<BR>In this case, the system can be modeled as five separate M/M/1 queues. The arrival rate for each terminal would be one-fifth of the total arrival rate. Using <I>m</I> = 1, &#955; = 0.167/5 = 0.0333, and <I>&#181;</I> = 0.05, we have
+<BR><P ALIGN="CENTER"><IMG SRC="images/31-52d.jpg"></P>
+</IMGD>
+<BR>The mean time spent in the terminal room is
+<BR><P ALIGN="CENTER"><IMG SRC="images/31-53d.jpg"></P>
+</IMGD>
+<BR>The variance of the time spent in the terminal room is
+<BR><P ALIGN="CENTER"><IMG SRC="images/31-54d.jpg"></P>
+</IMGD>
+<BR>Compare this to the mean of 24 minutes and a variance of 479 in Example 31.2 when all five terminals were located in one facility. It is clear that the single-queue alternative is better. In this example, we have ignored the difference in the walking time to the terminal room(s) from the dormitory. It is quite possible that having several terminal rooms distributed across the campus may reduce the walking time considerably and may become the preferred solution.
+</DL>
+<P>In general, if all jobs are identical, it is better to have just one queue than to have multiple queues. Of course, if some students need very short terminal sessions and others need very long sessions, this recommendation would not apply.
+</P>
+<P>A special case of an M/M/<I>m</I> queue is the M/M/&#8734; queue with infinite servers. In such a queue, the jobs never have to wait. The response time is equal to the service time. The mean response time is equal to the mean service time regardless of the arrival rate. Such service centers are therefore also called <B>delay centers</B>. A delay center is used to represent dedicated resources, such as terminals in timesharing systems. Properties of such queues can be easily derived from those for M/M/<I>m</I> queues, Also results presented for M/G/&#8734; queues in Box 31.8 apply to delay centers as well.</P>
+<H3><A NAME="Heading5"></A><FONT COLOR="#000077">31.4 M/M/<I>m/B</I> OUEUE WITH FINITE BUFFERS
+</FONT></H3>
+<P>An M/M/<I>m</I>/<I>B</I> queue is similar to the M/M/<I>m</I> queue except that the number of buffers <I>B</I> is finite. After <I>B</I> buffers are full, all arrivals are lost. We assume that <I>B</I> is greater than or equal to <I>m</I>; otherwise, some servers will never be able to operate due to a lack of buffers and the system will effectively operate as an M/M/<I>B</I>/<I>B</I> queue.</P>
+<P><A NAME="Fig5"></A><A HREF="javascript:displayWindow('images/31-05.jpg',500,79 )"><IMG SRC="images/31-05t.jpg"></A>
+<BR><A HREF="javascript:displayWindow('images/31-05.jpg',500,79)"><FONT COLOR="#000077"><B>FIGURE 31.5</B></FONT></A>&nbsp;&nbsp;State transition diagram for an M/M/<I>m</I>/<I>B</I> queue.
+</P>
+<P>The state transition diagram for an M/M/<I>m</I>/<I>B</I> queue is shown in Figure 31.5. The system can be modeled as a birth-death process using the following arrival and service rates:</P>
+<P><P ALIGN="CENTER"><IMG SRC="images/31-55d.jpg"></P>
+</IMGD></P>
+<P>Theorem 31.1 gives us the following expression for the probability of <I>n</I> jobs in the system:</P>
+<P><P ALIGN="CENTER"><IMG SRC="images/31-56d.jpg"></P>
+</IMGD></P>
+<P>In terms of the traffic intensity &#961; = &#955;/<I>m&#181;</I>, we have</P>
+<P><P ALIGN="CENTER"><IMG SRC="images/31-57d.jpg"></P>
+</IMGD></P>
+<P>The probability of zero jobs in the system is computed by the relationship</P>
+<P><P ALIGN="CENTER"><IMG SRC="images/31-58d.jpg"></P>
+</IMGD></P>
+<P>This gives</P>
+<P><P ALIGN="CENTER"><IMG SRC="images/31-59d.jpg"></P>
+</IMGD></P>
+<P>or</P>
+<P><P ALIGN="CENTER"><IMG SRC="images/31-60d.jpg"></P>
+</IMGD></P>
+<P>Using the expression for <I>p<SUB><SMALL>n</SMALL></SUB></I>, the mean number of jobs in the system <I>E</I>[<I>n</I>] and the mean number of jobs in the queue <I>E</I>[<I>n<SUB><SMALL>q</SMALL></SUB></I>] can be computed straightforwardly:</P>
+<P><P ALIGN="CENTER"><IMG SRC="images/31-61d.jpg"></P>
+</IMGD></P>
+<P>Variance and other statistics on <I>n</I> and <I>n<SUB><SMALL>q</SMALL></SUB></I> can be similarly computed.</P>
+<P>All arrivals occurring when the system is in the state <I>n</I> = <I>B</I> are lost. The rate of the jobs actually entering the system, called <B>effective arrival rate</B>, is</P>
+<P><P ALIGN="CENTER"><IMG SRC="images/31-62d.jpg"></P>
+</IMGD></P>
+<P>The difference &#955; &#150; &#955;&#146; = &#955;<I>p<SUB><SMALL>B</SMALL></SUB></I> represents the packet loss rate.</P>
+<P>Since the jobs are not lost after entering the system, Little&#146;s law can be used to determine the mean response time:</P>
+<P><P ALIGN="CENTER"><IMG SRC="images/31-63d.jpg"></P>
+</IMGD></P>
+<P>Similarly, the mean waiting time is</P>
+<P><P ALIGN="CENTER"><IMG SRC="images/31-64d.jpg"></P>
+</IMGD></P>
+<P>If we observe the system for a long time, <I>T</I> seconds, for instance, the total number of jobs arriving and getting service will be &#955;&#146;<I>T</I>. Tle total busy time of <I>m</I> servers to service these jobs will be &#955;&#146;<I>T</I>/<I>&#181;</I>, and the utilization of each server will be</P>
+<P><P ALIGN="CENTER"><IMG SRC="images/31-65d.jpg"></P>
+</IMGD></P>
+<P>The probability of the full system is given by <I>p<SUB><SMALL>B</SMALL></SUB></I>. For a M/M/<I>m</I>/<I>m</I> system, the number of buffers is exactly equal to the number of servers, and the loss probability is</P>
+<P><P ALIGN="CENTER"><IMG SRC="images/31-66d.jpg"></P>
+</IMGD></P>
+<P>This formula is called <B>Erlang&#146;s loss formula</B>. It was originally derived by Erlang to compute the probability of lost phone calls at a telephone exchange. It turns out that the formula is valid not only for an M/M/<I>m</I>/<I>m</I> queue but also for M/G/<I>m</I>/<I>m</I> queues.</P>
+<P>The results for the M/M/<I>m</I>/<I>B</I> queues are summarized in Box 31.3. For the special case of a single server, many of the results can be expressed in closed forms. This special case is summarized in Box 31.4. The following example illustrates the application of these results.</P>
+<DL>
+<DD><B>Example 31.5</B> Consider the gateway of Example 31.1 again. Let us analyze the gateway assuming it has only two buffers. The arrival rate and the service rate, as before, are 125 pps and 500 pps, respectively.
+<BR>In this case
+<BR><P ALIGN="CENTER"><IMG SRC="images/31-67d.jpg"></P>
+</IMGD>
+<BR>For <I>n</I> = 1, 2,..., <I>B</I> are the <I>p<SUB><SMALL>n</SMALL></SUB></I>
+<P ALIGN="CENTER"><I>p</I><SUB><SMALL>1</SMALL></SUB> = &#961;<I>p</I><SUB><SMALL>0</SMALL></SUB> = 0.25<I>p</I><SUB><SMALL>0</SMALL></SUB>
+<P ALIGN="CENTER"><I>p</I><SUB><SMALL>2</SMALL></SUB> = &#961;<SUP><SMALL>2</SMALL></SUP><I>p</I><SUB><SMALL>0</SMALL></SUB> = 0.25<SUP><SMALL>2</SMALL></SUP> <I>p</I><SUB><SMALL>0</SMALL></SUB> = 0.0625<I>p</I><SUB><SMALL>0</SMALL></SUB>
+</DL>
+<DL>
+<DD> 
+<BR>Then <I>p</I><SUB><SMALL>0</SMALL></SUB> is determined by summing all probabilities:
+<P ALIGN="CENTER"><I>p</I><SUB><SMALL>0</SMALL></SUB> &#43; <I>p</I><SUB><SMALL>1</SMALL></SUB> &#43; <I>p</I><SUB><SMALL>2</SMALL></SUB> = 1 = &#8658; <I>p</I><SUB><SMALL>0</SMALL></SUB> &#43; 0.25<I>p</I><SUB><SMALL>0</SMALL></SUB> &#43; 0.0625<I>p</I><SUB><SMALL>0</SMALL></SUB> = 1 = &#8658; <I>p</I><SUB><SMALL>0</SMALL></SUB>
+<P><P ALIGN="CENTER"><IMG SRC="images/31-68d.jpg"></P>
+</IMGD>
+</DL>
+<P><BR></P>
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="31-03.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="31-05.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<hr width="90%" size="1" noshade>
+<div align="center">
+<font face="Verdana,sans-serif" size="1">Copyright &copy; <a href="/reference/wiley00001.html">John Wiley &amp; Sons, Inc.</a></font>
+</div>
+<!-- all of the reference materials (books) have the footer and subfoot reveresed -->
+<!-- reference_subfoot = footer -->
+<!-- reference_footer = subfoot -->
+
+</BODY>
+</HTML>
+
+<!-- END FOOTER -->
+

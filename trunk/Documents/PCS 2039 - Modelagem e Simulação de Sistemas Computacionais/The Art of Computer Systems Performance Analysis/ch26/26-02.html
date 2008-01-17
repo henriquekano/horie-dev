@@ -1,0 +1,151 @@
+<HTML>
+<HEAD>
+<META name=vsisbn content="0471503363">
+<META name=vstitle content="Art of Computer Systems Performance Analysis Techniques For Experimental Design Measurements Simulation And Modeling">
+<META name=vsauthor content="Raj Jain">
+<META name=vsimprint content="Wiley Computer Publishing">
+<META name=vspublisher content="John Wiley & Sons, Inc.">
+<META name=vspubdate content="05/01/91">
+<META name=vscategory content="Web and Software Development: Software Engineering: Simulation and Modeling">
+
+
+
+
+
+
+
+<TITLE>The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling:Random-Number Generation</TITLE>
+
+<!-- HEADER -->
+
+<STYLE type="text/css"> 
+ <!--
+ A:hover  {
+ 	color : Red;
+ }
+ -->
+</STYLE>
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+<!--ISBN=0471503363//-->
+<!--TITLE=The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling//-->
+<!--AUTHOR=Raj Jain//-->
+<!--PUBLISHER=Wiley Computer Publishing//-->
+<!--CHAPTER=26//-->
+<!--PAGES=440-444//-->
+<!--UNASSIGNED1//-->
+<!--UNASSIGNED2//-->
+
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="26-01.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="26-03.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+<P><BR></P>
+<P>Notice that all of these conditions are met if <I>m</I> = 2<I><SUP><SMALL>k</SUP></SMALL></I>, <I>a</I> = 4<I>c</I> &#43; 1, and <I>b</I> is odd. Here, <I>c</I>, <I>b</I>, and <I>k</I> are positive integers.</P>
+<P>A generator that has the maximum possible period is called a <B>full-period</B> generator. All full-period generators are not equally good. Generators with lower autocorrelation between successive numbers are preferable. For example, both of the following two generators have the same full period, but the first one has a correlation of 0.25 between <I>x<SUB><SMALL>n</I>-1</SMALL></SUB> and <I>x<SUB><SMALL>n</I></SMALL></SUB>, whereas the second one has a negligible correlation of less than 2<SUP><SMALL>-18</SMALL></SUP>:</P>
+<TABLE WIDTH="100%"><TD WIDTH="15%" ALIGN="LEFT">
+<TD ALIGN="LEFT"><I>x<SUB><SMALL>n</SMALL></SUB></I> = (2<SUP><SMALL>34</SMALL></SUP> &#43; 1)<I>x<SUB><SMALL>n</I>-1</SMALL></SUB> &#43; mod 2<SUP><SMALL>35</SMALL></SUP>
+<TD VALIGN="TOP" ALIGN="RIGHT">(26.5)
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT">
+<TD VALIGN="TOP" ALIGN="LEFT"><I>x<SUB><SMALL>n</SMALL></SUB></I> = (2<SUP><SMALL>18</SMALL></SUP> &#43; 1)<I>x<SUB><SMALL>n</I>-1</SMALL></SUB> &#43; mod 2<SUP><SMALL>35</SMALL></SUP>
+<TD VALIGN="TOP" ALIGN="RIGHT">(26.6)
+</TABLE>
+<H4 ALIGN="LEFT"><A NAME="Heading4"></A><FONT COLOR="#000077">26.2.1 Multiplicative LCG</FONT></H4>
+<P>All the LCGs presented so far are mixed LCGs. If the increment <I>b</I> is zero, as was the case in Lehmer&#146;s original proposal, no addition is involved and the generator is called a <B>multiplicative LCG</B>. Such generators have the form</P>
+<P ALIGN="CENTER"><I>x<SUB><SMALL>n</SMALL></SUB></I> = <I>ax<SUB><SMALL>n</I>-1</SMALL></SUB> mod <I>m</I></P>
+<P>It is obvious that multiplicative LCGs are more efficient than the mixed LCGS in terms of processor time required for computation. Further efficiency can be obtained by choosing <I>m</I> to be a power of 2 so that the mod operation is trivial.</P>
+<P>Thus, there are two types of multiplicative LCGs, those in which <I>m</I> = 2<I><SUP><SMALL>k</SMALL></SUP></I> and those in which <I>m</I> &#8800; 2<I><SUP><SMALL>k</SMALL></SUP></I>.</P>
+<H4 ALIGN="LEFT"><A NAME="Heading5"></A><FONT COLOR="#000077">26.2.2 Multiplicative LCG with <I>m</I> = 2<SUP><SMALL><I>k</I></SMALL></SUP>
+</FONT></H4>
+<P>The key argument in favor of choosing <I>m</I> = 2<I><SUP><SMALL>k</SMALL></SUP></I> is the ease of the mod operation. However, such generators do not have a full period. The maximum possible period for a multiplicative LCG with modulus <I>m</I> = 2<I><SUP><SMALL>k</SMALL></SUP></I> is only one-fourth the full period, that is, 2<SUP><SMALL><I>k</I>-2</SMALL></SUP>. This period is achieved if the multiplier <I>a</I> is of the form 8<I>i</I> &#177; 3 and the initial seed is an odd integer.</P>
+<DL>
+<DD><B>Example 26.1</B> Consider the following multiplicative LCG:
+<P ALIGN="CENTER"><I>x<SUB><SMALL>n</SMALL></SUB></I> = 5<I>x<SUB><SMALL>n</I>-1</SMALL></SUB> mod 2<SUP><SMALL>5</SMALL></SUP>
+<DD>Using a seed of <I>x</I><SUB><SMALL>0</SMALL></SUB> = 1, we get the sequence 5, 25, 29, 17, 21, 9, 13, 1, 5,....
+<DD>The period is 8, which is one-fourth the maximum possible 32. If we change the seed to <I>x</I><SUB><SMALL>0</SMALL></SUB> = 2, the sequence is 10, 18, 26, 2, 10, ....
+<DD>Here, the period is only 4. Thus, choosing an odd seed is important in this case. To see what happens if the multiplier is not of the form 8<I>i</I> &#177; 3, consider the LCG
+<P ALIGN="CENTER"><I>x<SUB><SMALL>n</SMALL></SUB></I> = 7<I>x<SUB><SMALL>n</I>-1</SMALL></SUB> mod 2<SUP><SMALL>5</SMALL></SUP>
+<DD>Using a seed of <I>x</I><SUB><SMALL>0</SMALL></SUB> = 1, we get the sequence 7, 17, 23, 1, 7, ....
+<DD>Again, the period is only 4. Thus, both conditions are necessary to achieve the maximum period.
+</DL>
+<P>Although the maximum period possible from a multiplicative LCG with <I>m</I> = 2<I><SUP><SMALL>k</SMALL></SUP></I> is only one-fourth the maximum possible, the resulting period may not be too small for many applications. In such cases, it may be more efficient to use a multiplicative generator than a mixed generator. It must be pointed out that low-order bits of random numbers obtained using multiplicative LCGs with <I>m</I> = 2<I><SUP><SMALL>k</SMALL></SUP></I> have a cyclic pattern, as discussed later in Section 26.8.</P>
+<H4 ALIGN="LEFT"><A NAME="Heading6"></A><FONT COLOR="#000077">26.2.3 Multiplicative LCG with <I>m</I> &#8800; 2<SUP><SMALL><I>k</I></SMALL></SUP>
+</FONT></H4>
+<P>A solution to the small-period problem is to use a modulus <I>m</I> that is a prime number. In this case, with a proper choice of the multiplier <I>a</I>, it is possible to get a period of <I>m</I> - 1, which is almost equal to the maximum possible length <I>m</I>. Notice that unlike a mixed LCG, <I>x<SUB><SMALL>n</SMALL></SUB></I> obtained from a multiplicative LCG can never be zero if <I>m</I> is prime. The values of <I>x<SUB><SMALL>n</SMALL></SUB></I> lie between 1 and <I>m</I> - 1, and any multiplicative LCG with a period of <I>m</I> - 1 is called a full-period generator.</P>
+<P>Not all values of the multiplier are equally good. It can be shown that a multiplicative LCG will be a full-period generator if and only if the multiplier <I>a</I> is a <I>primitive root</I> of the modulus <I>m</I>. By definition, <I>a</I> is a primitive root of <I>m</I> if and only if <I>a<SUP><SMALL>n</SMALL></SUP></I> mod <I>m</I> &#8800; 1 for <I>n</I> = 1, 2,..., <I>m</I> - 2.</P>
+<DL>
+<DD><B>Example 26.2</B> Consider the following multiplicative LCG:
+<P ALIGN="CENTER"><I>x<SUB><SMALL>n</SMALL></SUB></I> = 3<I>x<SUB><SMALL>n-1</SMALL></SUB></I> mod 31
+<DD>Starting with a seed of <I>x</I><SUB><SMALL>0</SMALL></SUB> = 1, the sequence is 1, 3, 9, 27, 19, 26, 16, 17, 20, 29, 25, 13, 8, 24, 10, 30, 28, 22, 4, 12, 5, 15, 14, 11, 2, 6, 18, 23, 7, 21, 1,.... The period is 30, so this is a full-period generator.
+<DD>If we use a multiplier of <I>a</I> = 5 instead, we get the sequence 1, 5, 25, 1, .... The period is only 3.
+<DD>Notice that the multiplier 3 is a primitive root of 31 since the smallest positive value for <I>n</I> for which 3<I><SUP><SMALL>n</SMALL></SUP></I> mod 31 = 1 is <I>n</I> = 30.
+<DD>Also, 5 is not a primitive root of 31 since
+<P ALIGN="CENTER">5<SUP><SMALL>3</SMALL></SUP> mod 31 = 125 mod 31 = 1
+<DD>Other primitive roots of 31 are 11, 12, 13, 17, 21, 22, and 24.
+<DD>The following multiplicative LCG is an example of a full-period generator:
+</DL>
+<TABLE WIDTH="100%">
+<TD WIDTH="15%" ALIGN="LEFT">
+<TD VALIGN="TOP" ALIGN="LEFT"><I>x<SUB><SMALL>n</SMALL></SUB></I> = 7<SUP><SMALL>5</SMALL></SUP><I>x<SUB><SMALL>n</I>-1</SMALL></SUB> mod(2<SUP><SMALL>31</SMALL></SUP> - 1)
+<TD VALIGN="TOP" ALIGN="RIGHT">(26.7)
+</TABLE>
+<P>Notice that 2<SUP><SMALL>31</SMALL></SUP> - 1 = 2,147,483,647 is a prime number and 7<SUP><SMALL>5</SMALL></SUP> is one of its 534,600,000 primitive roots.</P>
+<P>One of the important cautions in implementing LCGs is that the properties are guaranteed only if the computations are done exactly, without any roundoff errors. This means that the computations should be done using integer arithmetic without overflow. In particular, the analyst should be careful in implementing such functions in languages like BASIC, in which all computation is done using real numbers. In such cases, truncation may cause the period to be reduced considerably.</P>
+<P>The second problem in implementing LCGs is that the product <I>ax<SUB><SMALL>n</I>-1</SMALL></SUB> can exceed the largest integer allowed on the system, causing integer overflow. One solution to this problem due to Schrage (1979) is based on the following identity:</P>
+<P ALIGN="CENTER"><I>ax</I> mod <I>m</I> = <I>g</I>(<I>x</I>) &#43; <I>mh</I>(<I>x</I>)</P>
+<P>where</P>
+<P ALIGN="CENTER"><I>g</I>(<I>x</I>) = <I>a</I>(<I>x</I> mod <I>q</I>) - <I>r</I>(<I>x</I> div <I>q</I>)</P>
+<P>and</P>
+<P ALIGN="CENTER"><I>h(x)</I> = (<I>x</I> div <I>q</I>) - (<I>ax</I> div <I>m</I>)</P>
+<P>Here, <I>q</I> = <I>m</I> div <I>a, r</I> = <I>m</I> mod <I>a</I>. The operation <I>A</I> div <I>B</I> is equivalent to dividing <I>A</I> by <I>B</I> and truncating the result. It can be shown that for all <I>x</I>&#146;s in the range 1,2,..,<I>m</I> - 1, the expressions involved in computing <I>g(x)</I> are all less than <I>m</I> - 1. Also, if <I>r</I> &lt; <I>q, h</I>(<I>x</I>) is either 0 or 1 and can be inferred from <I>g</I>(<I>x</I>); <I>h</I>(<I>x</I>) is 1 if and only if <I>g</I>(<I>x</I>) is negative. Thus, the operation <I>ax</I>, which could cause overflow, need not be executed. The following example illustrates the application of these implementation concepts.</P>
+<DL>
+<DD><B>Example 26.3</B> Consider the implementation of the multiplicative generator:
+<P ALIGN="CENTER"><I>x<SUB><SMALL>n</SMALL></SUB></I> = 7<SUP><SMALL>5</SMALL></SUP><I>x<SUB><SMALL>n</I>-1</SMALL></SUB> mod(2<SUP><SMALL>31</SMALL></SUP> - 1)
+<DD>or
+<P ALIGN="CENTER"><I>x<SUB><SMALL>n</SMALL></SUB></I> = 16,807<I>X<SUB><SMALL>n</I>-1</SMALL></SUB> mod 2,147,483,647
+<DD>The product <I>ax<SUB><SMALL>n</I>-1</SMALL></SUB> can be as large as 16,807 x 2,147,483,647 &#8776; 1.03 &#215; 2<SUP><SMALL>45</SMALL></SUP>. A straightforward implementation of the generator using integer arithmetic will produce integer overflow unless the machine supports 46 bits or larger integers.
+<DD>In this case:
+<DL>
+<DD><I>a</I> = 16,807
+<DD><I>m</I> = 2,147,483,647
+<DD><I>q</I> = <I>m</I> div <I>a</I> = 2,147,483,647 div 16,807 = 12,773
+<DD><I>r</I> = <I>m</I> mod <I>a</I> = 2,147,483,647 mod 16,807 = 2,836
+</DL>
+</DL>
+<P>The Pascal routine shown in Figure 26.2 will correctly implement this generator on systems where the largest positive integer supported is 2<SUP><SMALL>31</SMALL></SUP> - 1 or larger. If the largest positive integer is smaller, a real version of the routine shown in Figure 26.3 can be used provided the reals are represented with a 32-bit or larger mantissa (including the sign bit). On many systems, this would require the use of double-precision real numbers.</P>
+<P>One method to test whether an implementation of this generator is correct is to compute <I>x</I><SUB><SMALL>10,000</SMALL></SUB> starting with <I>x</I><SUB><SMALL>0</SMALL></SUB>. For a correct implementation, the result would be 1,043,618,065.</P>
+<P><A NAME="Fig2"></A><A HREF="javascript:displayWindow('images/26-02.jpg',500,308 )"><IMG SRC="images/26-02t.jpg"></A>
+<BR><A HREF="javascript:displayWindow('images/26-02.jpg',500,308)"><FONT COLOR="#000077"><B>FIGURE 26.2</B></FONT></A>&nbsp;&nbsp;Random-number generator using integer arithmetic.</P>
+<P><A NAME="Fig3"></A><A HREF="javascript:displayWindow('images/26-03.jpg',500,306 )"><IMG SRC="images/26-03t.jpg"></A>
+<BR><A HREF="javascript:displayWindow('images/26-03.jpg',500,306)"><FONT COLOR="#000077"><B>FIGURE 26.3</B></FONT></A>&nbsp;&nbsp;Random-number generator using real arithmetic.</P>
+<P>Exercises 26.6 and 26.7 show that Schrage&#146;s method cannot be used if the condition <I>r</I> &lt; <I>q</I> is not satisfied.</P><P><BR></P>
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="26-01.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="26-03.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<hr width="90%" size="1" noshade>
+<div align="center">
+<font face="Verdana,sans-serif" size="1">Copyright &copy; <a href="/reference/wiley00001.html">John Wiley &amp; Sons, Inc.</a></font>
+</div>
+<!-- all of the reference materials (books) have the footer and subfoot reveresed -->
+<!-- reference_subfoot = footer -->
+<!-- reference_footer = subfoot -->
+
+</BODY>
+</HTML>
+
+<!-- END FOOTER -->
+

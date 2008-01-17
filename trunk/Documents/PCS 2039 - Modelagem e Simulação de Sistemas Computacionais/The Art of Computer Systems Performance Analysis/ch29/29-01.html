@@ -1,0 +1,173 @@
+<HTML>
+<HEAD>
+<META name=vsisbn content="0471503363">
+<META name=vstitle content="Art of Computer Systems Performance Analysis Techniques For Experimental Design Measurements Simulation And Modeling">
+<META name=vsauthor content="Raj Jain">
+<META name=vsimprint content="Wiley Computer Publishing">
+<META name=vspublisher content="John Wiley & Sons, Inc.">
+<META name=vspubdate content="05/01/91">
+<META name=vscategory content="Web and Software Development: Software Engineering: Simulation and Modeling">
+
+
+
+
+
+
+
+<TITLE>The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling:Commonly Used Distributions</TITLE>
+
+<!-- HEADER -->
+
+<STYLE type="text/css"> 
+ <!--
+ A:hover  {
+ 	color : Red;
+ }
+ -->
+</STYLE>
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+<!--ISBN=0471503363//-->
+<!--TITLE=The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling//-->
+<!--AUTHOR=Raj Jain//-->
+<!--PUBLISHER=Wiley Computer Publishing//-->
+<!--CHAPTER=29//-->
+<!--PAGES=483-486//-->
+<!--UNASSIGNED1//-->
+<!--UNASSIGNED2//-->
+
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="../ch28/28-02.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="29-02.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+<P><BR></P>
+<H2><A NAME="Heading1"></A><FONT COLOR="#000077">CHAPTER 29<BR>COMMONLY USED DISTRIBUTIONS
+</FONT></H2>
+<P ALIGN="RIGHT"><I>Question: Why did you use the Gaussian assumption?</I></P>
+<P ALIGN="RIGHT"><I>Answer. Because it&#146;s the normal assumption!</I></P>
+<P ALIGN="RIGHT"><I>&#151;Overheard at a conference.</I></P>
+<P ALIGN="RIGHT">&#151;S. Pasupathy (1989)</P>
+<P>This chapter describes the random-number generation algorithms for distributions commonly used by computer systems performance analysts. This chapter is organized in a manner convenient for future reference. The distributions are listed in an alphabetic order. For each distribution, the key characteristics are summarized, algorithms for random-number generation are presented, and examples of their applications are given.</P>
+<H3><A NAME="Heading2"></A><FONT COLOR="#000077">29.1 BERNOULLI DISTRIBUTION</FONT></H3>
+<P>The Bernoulli distribution is the simplest discrete distribution. A Bernoulli variate can take only two values, which are usually denoted as failure and success or <I>x</I> = 0 and <I>x</I> = 1, respectively. If <I>p</I> denotes the probability of success, 1 &#150; <I>p</I> is the probability of failure. The experiments to generate a Bernoulli variate are called <B>Bernoulli trials.</B></P>
+<P>The key characteristics of the Bernoulli distribution are summarized in Table 29.1. The Bernoulli distribution is used to model the probability of an outcome having a desired class or characteristic, for example,</P>
+<P><B>TABLE 29.1 Bernoulli Distribution Bernoulli</B>(<I>p</I>)<HR></P>
+<DL>
+<DD><B>1.</B>&nbsp;&nbsp;Parameters: <I>p</I> = probability of success (<I>x</I> = 1), 0 1 &#8804; <I>p</I> &#8804; 1
+<DD><B>2.</B>&nbsp;&nbsp;Range: <I>x</I> = 0, 1
+<DD><B>3.</B>&nbsp;&nbsp;pmf: <IMG SRC="images/29-01i.jpg"></IMGI>
+<DD><B>4.</B>&nbsp;&nbsp;Mean: <I>p</I>
+<DD><B>5.</B>&nbsp;&nbsp;Variance: <I>p</I>(1 &#150; <I>p</I>)
+</DL>
+<HR>
+<DL>
+<DD><B>1.</B>&nbsp;&nbsp;a computer system is up or down,
+<DD><B>2.</B>&nbsp;&nbsp;a packet in a computer network reaches or does not reach the destination, or
+<DD><B>3.</B>&nbsp;&nbsp;a bit in the packet is affected by noise and arrives in error.
+</DL>
+<P>The Bernoulli distribution and its derivative distributions can be used only if the trials are independent and identical so that the probability of success in each trial is <I>p</I> and is not affected by the outcomes of the past trials.</P>
+<P>Using inverse transformation, Bernoulli variates can be generated as follows. Generate <I>u~U</I>(0, 1). If <I>u&#8804;p</I>, return 0. Otherwise, return 1.</P>
+<H3><A NAME="Heading3"></A><FONT COLOR="#000077">29.2 BETA DISTRIBUTION</FONT></H3>
+<P>The beta distribution is used to represent random variates that are bounded, for instance, between 0 and 1. The key characteristics of the beta distribution are summarized in Table 29.2.
+</P>
+<B>TABLE 29.2 Beta Distribution beta</B>(<I>a,b</I>)<HR>
+<DL>
+<DD><B>1.</B>&nbsp;&nbsp;Parameters: <I>a,b</I> = shape parameters, <I>a</I> &gt 0, <I>b</I> &gt 0
+<DD><B>2.</B>&nbsp;&nbsp;Range: 0 &#8804; <I>x</I> &#8804; 1
+<DD><B>3.</B>&nbsp;&nbsp;pdf: <IMG SRC="images/29-02i.jpg"></IMGI>
+<BR>&#945;(&#183;) is the beta function and is related to the gamma function as follows:
+<DD><B></B>&nbsp;&nbsp;<P ALIGN="CENTER"><IMG SRC="images/29-01d.jpg"></P>
+</IMGD>
+<DD><B>4.</B>&nbsp;&nbsp;Mean: <I>a</I>/(<I>a</I> &#43; <I>b</I>)
+<DD><B>5.</B>&nbsp;&nbsp;Variance: <I>ab</I>/[(<I>a</I> &#43; <I>b</I>)<SMALL><SUP>2</SUP></SMALL>(<I>a</I> &#43; <I>b</I> &#43; 1)]
+</DL>
+<HR>
+<P>The range of the beta variate as defined in Table 29.2 is [0, 1], that is, 0 &#8804; <I>x</I> &#8804; 1. It can also be defined for any other range [<I>x</I><SMALL><SUB>min</SUB></SMALL>, <I>x</I><SMALL><SUB>max</SUB></SMALL>] by substituting (<I>x</I> &#150; <I>x</I><SUB><SMALL>min</SUB></SMALL>) / (<I>x</I><SMALL><SUB>max</SUB></SMALL> &#150; <I>x</I><SMALL><SUB>min</SUB></SMALL>) in place of <I>x</I> in the pdf specified.</P>
+<P>The beta distribution is used to model random proportions, for example,</P>
+<DL>
+<DD><B>1.</B>&nbsp;&nbsp;the fraction of packets requiring retransmissions or
+<DD><B>2.</B>&nbsp;&nbsp;the fraction of remote procedure calls (RPCs) taking more than a specified time.
+</DL>
+<P>Beta variates can be generated as follows:
+</P>
+<DL>
+<DD><B>1.</B>&nbsp;&nbsp;Generate two gamma variates &#947;(1,<I>a</I>) and &#947;(1,<I>b</I>), and take the ratio:
+<DD><B></B>&nbsp;&nbsp;<P ALIGN="CENTER"><IMG SRC="images/29-02d.jpg"></P>
+</IMGD>
+<DD><B>2.</B>&nbsp;&nbsp;If both parameters <I>a</I> and <I>b</I> are integers, the following algorithm by Fox (1963) can be used:
+<DL>
+<DD>(a) Generate <I>a</I> &#43; <I>b</I> &#43; 1 uniform <I>U</I>(0,1) random numbers.
+<DD>(b) Return the <I>a</I>th smallest number as beta(<I>a,b</I>).
+</DL>
+<DD><B>3.</B>&nbsp;&nbsp;If both <I>a</I> and <I>b</I> are less than 1, the following method by J&#246;hnk (1964) may be used:
+<DL>
+<DD>(a) Generate two uniform <I>U</I>(0, 1) random numbers <I>u</I><SUB>1</SUB> and <I>u</I><SUB>2</SUB>
+<DD>(b) Let <I>x</I> = <I>u</I><SMALL><SUB>1</SUB><SUP>1/b</SUP></SMALL> and <I>y</I> = <I>u</I><SMALL><SUB>2</SUB><SUP>1/b</SUP></SMALL>. If <I>x</I> &#43; <I>y</I> &gt 1, go back to the previous step. Otherwise, return <I>x</I>/(<I>x</I> &#43; <I>y</I>) as beta(<I>a,b</I>).
+</DL>
+<DD><B>4.</B>&nbsp;&nbsp;If both <I>a</I> and <I>b</I> are greater than 1, an algorithm based on rejection techniques can be easily developed to generate beta variates.
+</DL>
+<H3><A NAME="Heading4"></A><FONT COLOR="#000077">29.3 BINOMIAL DISTRIBUTION</FONT></H3>
+<P>The number of successes <I>x</I> in a sequence of <I>n</I> Bernoulli trials has a binomial distribution. The key characteristics of the binomial distribution are summarized in Table 29.3.</P>
+<P><B>TABLE 29.3 Binomial Distribution binomial</B>(<I>p,n</I>)<HR></P>
+<DL>
+<DD><B>1.</B>&nbsp;&nbsp;Parameters: <I>p</I> = probability of success in a trial, 0 &lt <I>p</I> &lt 1
+<DL>
+<DL>
+<DD><I>n</I> = number of trials; <I>n</I> must be a positive integer
+</DL>
+</DL>
+<DD><B>2.</B>&nbsp;&nbsp;Range: <I>x</I> = 0,1,...,<I>n</I>
+<DD><B>3.</B>&nbsp;&nbsp;pdf: <IMG SRC="images/29-03i.jpg"></IMGI>
+<DD><B>4.</B>&nbsp;&nbsp;Mean: <I>n p</I>
+<DD><B>5.</B>&nbsp;&nbsp;Variance: <I>n p</I>(1 &#150; <I>p</I>)
+</DL>
+<HR>
+<P>The binomial distribution is used to model the number of successes in a sequence of <I>n</I> independent and identical Bernoulli trials, for example,</P>
+<DL>
+<DD><B>1.</B>&nbsp;&nbsp;the number of processors that are up in a multiprocessor system,
+<DD><B>2.</B>&nbsp;&nbsp;the number of packets that reach the destination without loss,
+<DD><B>3.</B>&nbsp;&nbsp;the number of bits in a packet that are not affected by noise, or
+<DD><B>4.</B>&nbsp;&nbsp;the number of items in a batch that have certain characteristics.
+</DL>
+<P>The variance of the binomial distribution is always less than the mean. For all the preceding applications, negative binomial or Poisson distributions can be used in place of a binomial distribution if the variance is greater than the mean or equal to the mean, respectively.
+</P>
+<P>Binomial variates can be generated as follows:</P>
+<DL>
+<DD><B>1.</B>&nbsp;&nbsp;Generate <I>n U</I>(0,1) random numbers. The number of random numbers that are less than <I>p</I> is binomial(<I>p, n</I>). This is the composition method based on the observation that the sum of <I>n</I> Bernoulli variates has a binomial distribution.
+<DD><B>2.</B>&nbsp;&nbsp;For small <I>p</I>, a faster technique is as follows:
+<DL>
+<DD>(a) Generate geometric random numbers <I>G<SMALL><SUB>i</SUB></SMALL></I>(<I>p</I>) = [ln(<I>u<SMALL><SUB>i</SUB></SMALL></I>)/ln(1 &#150; <I>p</I>)].
+<DD>(b) If the sum of geometric random numbers so far is less than or equal to <I>n</I>, go back to the previous step. Otherwise, return the number of random numbers generated minus 1. If <IMG SRC="images/29-04i.jpg"></IMGI>, return <I>m</I> &#150; 1.
+</DL>
+<DD><B>3.</B>&nbsp;&nbsp;Inverse transformation method: Compute the CDF <I>F</I>(<I>x</I>) for <I>x</I> = 0, 1, 2,..., <I>n</I> and store in an array. For each binomial variate, generate a <I>U</I>(0, 1) variate <I>u</I> and search the array to find <I>x</I> so that <I>F</I>(<I>x</I>) &#8804; <I>u</I> &lt <I>F</I>(<I>x</I> &#43; 1); return <I>x</I>.
+</DL>
+<P><BR></P>
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="../ch28/28-02.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="29-02.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<hr width="90%" size="1" noshade>
+<div align="center">
+<font face="Verdana,sans-serif" size="1">Copyright &copy; <a href="/reference/wiley00001.html">John Wiley &amp; Sons, Inc.</a></font>
+</div>
+<!-- all of the reference materials (books) have the footer and subfoot reveresed -->
+<!-- reference_subfoot = footer -->
+<!-- reference_footer = subfoot -->
+
+</BODY>
+</HTML>
+
+<!-- END FOOTER -->
+

@@ -1,0 +1,144 @@
+<HTML>
+<HEAD>
+<META name=vsisbn content="0471503363">
+<META name=vstitle content="Art of Computer Systems Performance Analysis Techniques For Experimental Design Measurements Simulation And Modeling">
+<META name=vsauthor content="Raj Jain">
+<META name=vsimprint content="Wiley Computer Publishing">
+<META name=vspublisher content="John Wiley & Sons, Inc.">
+<META name=vspubdate content="05/01/91">
+<META name=vscategory content="Web and Software Development: Software Engineering: Simulation and Modeling">
+
+
+
+
+
+
+
+<TITLE>The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling:Analysis of Simulation Results</TITLE>
+
+<!-- HEADER -->
+
+<STYLE type="text/css"> 
+ <!--
+ A:hover  {
+ 	color : Red;
+ }
+ -->
+</STYLE>
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+<!--ISBN=0471503363//-->
+<!--TITLE=The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling//-->
+<!--AUTHOR=Raj Jain//-->
+<!--PUBLISHER=Wiley Computer Publishing//-->
+<!--CHAPTER=25//-->
+<!--PAGES=427-430//-->
+<!--UNASSIGNED1//-->
+<!--UNASSIGNED2//-->
+
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="25-04.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="25-06.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+<P><BR></P>
+<H4 ALIGN="LEFT"><A NAME="Heading23"></A><FONT COLOR="#000077">25.3.5 Moving Average of Independent Replications</FONT></H4>
+<P>The method of moving averages of independent replications is similar to the initial data deletion. The key difference is that this method requires computing the mean over a moving time interval window instead of the overall mean.
+</P>
+<P>Given <I>m</I> replications of size <I>n</I> each, again let <I>x<SUB><SMALL>ij</SMALL></SUB></I> denote the <I>j</I>th observation in the <I>i</I>th replication. The steps are as follows:</P>
+<P><A NAME="Fig9"></A><A HREF="javascript:displayWindow('images/25-09.jpg',500,228 )"><IMG SRC="images/25-09t.jpg"></A>
+<BR><A HREF="javascript:displayWindow('images/25-09.jpg',500,228)"><FONT COLOR="#000077"><B>FIGURE 25.9</B></FONT></A>&nbsp;&nbsp;Moving average of independent replications.</P>
+<DL>
+<DD><B>1.</B>&nbsp;&nbsp;Get a mean trajectory by averaging across replications:
+<P ALIGN="CENTER"><IMG SRC="images/25-05d.jpg"></P>
+</IMGD>
+<BR>Set <I>k</I> = 1 and proceed to the next step.
+<DD><B>2.</B>&nbsp;&nbsp;Plot a trajectory of the moving average of successive 2<I>k</I> &#43; 1 values:
+<P ALIGN="CENTER"><IMG SRC="images/25-06d.jpg"></P>
+</IMGD>
+<DD><B>3.</B>&nbsp;&nbsp;Repeat step 2, with <I>k</I> = 2,3,... until the plot is sufficiently smooth.
+<DD><B>4.</B>&nbsp;&nbsp;Find the knee of the plot. The value of <I>j</I> at the knee gives the length of the transient phase.
+</DL>
+<P>Figure 25.9 shows two sample trajectories of moving averages. In the second trajectory, the plot is smooth and the knee can be easily identified.
+</P>
+<H4 ALIGN="LEFT"><A NAME="Heading24"></A><FONT COLOR="#000077">25.3.6 Batch Means</FONT></H4>
+<P>The method of batch means requires running a very long simulation and later dividing it up into several parts of equal duration. Each part is called a <B>batch</B> or <B>subsample</B>. The mean of observations in each batch is called the <B>batch mean</B>. The method requires studying the variance of these batch means as a function of the batch size.</P>
+<P>As shown in Figure 25.10, a long run of <I>N</I> observations can be divided into <I>m</I> batches of size <I>n</I> each, where <I>m</I> = <IMG SRC="images/25-01i.jpg"></IMGI> Here, [&#183;] is used to denote truncation to the lower integer value. Start with a small value for <I>n</I>, say, 2. Again, let <I>x<SUB><SMALL>ij</SMALL></SUB></I> denote the <I>j</I>th observation in the <I>i</I>th batch.</P>
+<P><A NAME="Fig10"></A><A HREF="javascript:displayWindow('images/25-10.jpg',500,235 )"><IMG SRC="images/25-10t.jpg"></A>
+<BR><A HREF="javascript:displayWindow('images/25-10.jpg',500,235)"><FONT COLOR="#000077"><B>FIGURE 25.10</B></FONT></A>&nbsp;&nbsp;Transient removal by batch means requires dividing the data into <I>m</I> batches of size <I>n</I> each.
+</P>
+<DL>
+<DD><B>1.</B>&nbsp;&nbsp;For each batch, compute a batch mean:
+<P ALIGN="CENTER"><IMG SRC="images/25-07d.jpg"></P>
+</IMGD>
+<DD><B>2.</B>&nbsp;&nbsp;Compute the overall mean:
+<P ALIGN="CENTER"><IMG SRC="images/25-08d.jpg"></P>
+</IMGD>
+<DD><B>3.</B>&nbsp;&nbsp;Compute the variance of the batch means:
+<P ALIGN="CENTER"><IMG SRC="images/25-09d.jpg"></P>
+</IMGD>
+</DL>
+<P>Increase <I>n</I> and repeat steps 1 and 3, for <I>n</I> = 3,4,5,.... Plot the variance as a function of batch size <I>n</I>. The length of the transient interval is the value of <I>n</I> at which the variance definitely starts decreasing.</P>
+<P>The rationale behind this method is as follows. Suppose the length of the transient period is <I>T</I>. If the batch size <I>n</I> is much less than <I>T</I>, initial batches bring the overall mean toward the initial batch means and the variance is small. As the batch size is increased, the variance increases. At <I>n</I> larger than <I>T</I>, only the first batch mean is different; other batch means are approximately equal. This results in the decrease of the variance.</P>
+<P>Note that in using this method, you should ignore those peaks on the variance curve that are followed by an upswing, as shown in Figure 25.11.</P>
+<H3><A NAME="Heading25"></A><FONT COLOR="#000077">25.4 TERMINATING SIMULATIONS</FONT></H3>
+<P>Although a majority of simulations are such that steady-state performance is of interest, there are systems that never reach a steady state. These systems always operate under transient conditions. For example, if the network traffic consists of the transfer of small files (one to three packets), steady-state simulations using large files will give results of no interest to a typical user. In such cases, it is necessary to study the system in a transient state. Such simulations are called <B>terminating simulations</B>. Other examples of terminating simulations are systems that shut down, for instance, at 5 PM every day, or systems that have parameters that change with time. Such simulations do not require transient removal.</P>
+<P><A NAME="Fig11"></A><A HREF="javascript:displayWindow('images/25-11.jpg',500,301 )"><IMG SRC="images/25-11t.jpg"></A>
+<BR><A HREF="javascript:displayWindow('images/25-11.jpg',500,301)"><FONT COLOR="#000077"><B>FIGURE 25.11</B></FONT></A>&nbsp;&nbsp;Transient removal by batch means.</P>
+<P>Another related issue is that of <B>final conditions</B>&#151;the conditions at the end of the simulation. The system state at the end of the simulation may not be typical of the steady state. In such cases, it is necessary to exclude the final portion of the response from the steady-state computations. The methods for this would be similar to those used for determining initial transient periods.</P>
+<P>Finally, the analyst should be careful in handling the entities left at the end of the simulation. Consider the example of the CPU scheduling simulation. In computing mean service time, only those jobs that completed service must be included, that is,</P>
+<P ALIGN="CENTER"><IMG SRC="images/25-10d.jpg"></P>
+</IMGD>
+<P>In computing mean waiting time, only those jobs that completed waiting and started execution should be used, that is,
+</P>
+<P ALIGN="CENTER"><IMG SRC="images/25-11d.jpg"></P>
+</IMGD>
+<P>If <I>q<SUB><SMALL>j</SMALL></SUB></I>&#146;s is the queue length at the <I>j</I>th event that resulted in a queue length change, the average of <I>q<SUB><SMALL>j</SMALL></SUB></I>&#146;s does not give the mean queue length, that is,</P>
+<P ALIGN="CENTER"><IMG SRC="images/25-12d.jpg"></P>
+</IMGD>
+<P>Instead, a time average of the queue length process should be used, that is,
+</P>
+<P ALIGN="CENTER"><IMG SRC="images/25-13d.jpg"></P>
+</IMGD>
+<P><A NAME="Fig12"></A><A HREF="javascript:displayWindow('images/25-12.jpg',500,347 )"><IMG SRC="images/25-12t.jpg"></A>
+<BR><A HREF="javascript:displayWindow('images/25-12.jpg',500,347)"><FONT COLOR="#000077"><B>FIGURE 25.12</B></FONT></A>&nbsp;&nbsp;Mean queue length is time average of the queue length.</P>
+<DL>
+<DD><B>Example 25.3</B> Figure 25.12 shows the length of a hypothetical queue. Two jobs arrive at time <I>t</I> = 0. The first job departs at <I>t</I> = 1 and the second one departs at <I>t</I> = 4. There are three events&#151;one arrival and two departures. The queue lengths at these events are 2, 1, and 0, respectively. The average queue length is not (2 &#43; 1 &#43; 0)/3, that is, 1. The area under the queue length curve is 5. Therefore, the correct average queue length is <IMG SRC="images/25-02i.jpg"></IMGI>, or 1.25.
+</DL>
+<H3><A NAME="Heading26"></A><FONT COLOR="#000077">25.5 STOPPING CRITERIA: VARIANCE ESTIMATION</FONT></H3>
+<P>It is important that the length of the simulation be properly chosen. If the simulation is too short, the results may be highly variable. On the other hand, if the simulation is too long, computing resources and manpower may be unnecessarily wasted. From the discussion in Section 13.9 on determining the sample sizes, it follows that the simulation should be run until the confidence interval for the mean response narrows to a desired width. If the sample mean is <IMG SRC="images/25-03i.jpg"></IMGI> and its variance is Var<IMG SRC="images/25-04i.jpg"></IMGI>, a 100(1 - &#945;)% confidence interval for the mean is given by</P>
+<P ALIGN="CENTER"><IMG SRC="images/25-14d.jpg"></P>
+</IMGD>
+<P>Recall that <I>z</I><SMALL><SUB><SMALL>1-&#945;/2</SMALL></SUB></SMALL> is the (1 - &#945;/2)th quantile of a unit normal variate. Its values are listed in Table A.2 of the Appendix.</P>
+<P>The variance of the sample mean of <I>n independent</I> observations can be obtained easily from the variance of the observations as follows:</P>
+<P ALIGN="CENTER"><IMG SRC="images/25-15d.jpg"></P>
+</IMGD>
+<P><BR></P>
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="25-04.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="25-06.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<hr width="90%" size="1" noshade>
+<div align="center">
+<font face="Verdana,sans-serif" size="1">Copyright &copy; <a href="/reference/wiley00001.html">John Wiley &amp; Sons, Inc.</a></font>
+</div>
+<!-- all of the reference materials (books) have the footer and subfoot reveresed -->
+<!-- reference_subfoot = footer -->
+<!-- reference_footer = subfoot -->
+
+</BODY>
+</HTML>
+
+<!-- END FOOTER -->
+

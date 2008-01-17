@@ -1,0 +1,95 @@
+<HTML>
+<HEAD>
+<META name=vsisbn content="0471503363">
+<META name=vstitle content="Art of Computer Systems Performance Analysis Techniques For Experimental Design Measurements Simulation And Modeling">
+<META name=vsauthor content="Raj Jain">
+<META name=vsimprint content="Wiley Computer Publishing">
+<META name=vspublisher content="John Wiley & Sons, Inc.">
+<META name=vspubdate content="05/01/91">
+<META name=vscategory content="Web and Software Development: Software Engineering: Simulation and Modeling">
+
+
+
+
+
+
+
+<TITLE>The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling:Testing Random-Number Generators</TITLE>
+
+<!-- HEADER -->
+
+<STYLE type="text/css"> 
+ <!--
+ A:hover  {
+ 	color : Red;
+ }
+ -->
+</STYLE>
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+<!--ISBN=0471503363//-->
+<!--TITLE=The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling//-->
+<!--AUTHOR=Raj Jain//-->
+<!--PUBLISHER=Wiley Computer Publishing//-->
+<!--CHAPTER=27//-->
+<!--PAGES=462-464//-->
+<!--UNASSIGNED1//-->
+<!--UNASSIGNED2//-->
+
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="27-01.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="27-03.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+<P><BR></P>
+<H3><A NAME="Heading3"></A><FONT COLOR="#000077">27.2 KOLMOGOROV-SMIRNOV TEST</FONT></H3>
+<P>This test is named after the statisticians A. N. Kolmogorov and N. V. Smirnov who developed it. An earlier version of this test was proposed by A. N. Kolmogorov in 1933. It was later modified by N. V. Smirnov in 1939. Like the chi-square test, the <B>K-S test</B> allows one to test if a given sample of <I>n</I> observations is from a specified continuous distribution. It is based on the observation that the difference between the observed CDF (Cumulative Distribution Function) <I>F<SUB><SMALL>0</SMALL></SUB></I>(<I>x</I>) and the expected CDF <I>F<SUB>e</SUB></I>(<I>x</I>) should be small. The symbols <I>K</I><SUP><SMALL>&#43;</SMALL></SUP> and <I>K</I><SUP><SMALL>-</SMALL></SUP> are used to denote the maximum observed deviations above and below the expected CDF in a sample of size <I>n:</I></P>
+<P ALIGN="CENTER"><IMG SRC="images/27-02d.jpg"></P>
+</IMGD>
+<P><A NAME="Fig1"></A><A HREF="javascript:displayWindow('images/27-01.jpg',500,339 )"><IMG SRC="images/27-01t.jpg"></A>
+<BR><A HREF="javascript:displayWindow('images/27-01.jpg',500,339)"><FONT COLOR="#000077"><B>FIGURE 27.1</B></FONT></A>&nbsp;&nbsp;A K-S test requires measuring the maximum deviation of the observed CDF from the theoretical CDF.</P>
+<P>Here, <I>K</I><SUP><SMALL>&#43;</SMALL></SUP> measures the maximum deviation when the observed CDF is above the expected CDF, and <I>K</I><SUP><SMALL>-</SMALL></SUP> measures the maximum deviation when the observed CDF is below the expected CDF If the values <I>K</I><SUP><SMALL>&#43;</SMALL></SUP> and <I>K</I><SUP><SMALL>-</SMALL></SUP> are smaller than <I>K</I><SUB><SMALL>[1-&#945;;<I>n</I>]</SMALL></SUB> listed in Table A.9 of the Appendix, the observations are said to come from the specified distribution at the &#945; level of significance.</P>
+<P>One common mistake in finding the <I>K</I><SUP><SMALL>-</SMALL></SUP> statistics is to compute the maximum of <I>F<SUB><SMALL>e</SMALL></SUB></I>(<I>x<SUB><SMALL>i</SMALL></SUB></I>) - <I>F<SUB><SMALL>o</SMALL></SUB></I>(<I>x<SUB><SMALL>i</SMALL></SUB></I>) . This is incorrect. Since <I>F<SUB><SMALL>o</SMALL></SUB></I> consists of a horizontal line segment at <I>F<SUB><SMALL>o</SMALL></SUB></I>(<I>x<SUB><SMALL>i</SMALL></SUB></I>) in the interval [<I>x<SUB><SMALL>i</SMALL></SUB></I>, <I>x<SUB><SMALL>i</I> &#43;1</SMALL></SUB>) the maximum difference occurs just before <I>x<SUB><SMALL>i</I>&#43;1</SMALL></SUB>, shown in Figure 27.1. Thus, <I>F<SUB><SMALL>e</SMALL></SUB></I>(<I>x<SUB><SMALL>i &#43; 1</SMALL></SUB></I>) - <I>F<SUB><SMALL>o</SMALL></SUB></I>(<I>x<SUB><SMALL>i</SMALL></SUB></I>) is the correct difference to use in computing <I>K</I><SUP><SMALL>-</SMALL></SUP>.</P>
+<P>For random numbers distributed uniformly between 0 and 1, the expected CDF is <I>F<SUB><SMALL>e</SMALL></SUB></I>(<I>x</I>) = <I>x</I> and if <I>x</I> is greater than <I>j</I> - 1 other observations in a sample of <I>n</I> observations, then the observed CDF is <I>F<SUB><SMALL>o</SMALL></SUB></I>(<I>x</I>) = <I>j</I>/<I>n</I>. Therefore, to test whether a sample of <I>n</I> random numbers is from a uniform distribution, first sort the observations in an increasing order. Let the sorted numbers be {<I>x</I><SUB><SMALL>1</SMALL></SUB>, <I>x</I><SUB><SMALL>2</SMALL></SUB>,..., <I>x<SUB><SMALL>n</SMALL></SUB></I>} such that <I>x<SUB><SMALL>n</I>-1</SMALL></SUB> &#8804; <I>x<SUB><SMALL>n</SMALL></SUB></I>. Then <I>K</I><SUP><SMALL>&#43;</SMALL></SUP> and <I>K</I><SUP><SMALL>-</SMALL></SUP> are computed as follows:</P>
+<P ALIGN="CENTER"><IMG SRC="images/27-03d.jpg"></P>
+</IMGD>
+<P>By comparing the computed <I>K</I>&#146;s with the values listed in Table A.9, we can determine if the observations are uniformly distributed.</P>
+<DL>
+<DD><B>Example 27.2</B> Thirty random numbers were generated using a seed of <I>x<SUB>0</SUB></I> = 15 in the following LCG:
+<CENTER>
+<TABLE WIDTH="20%">
+<TD VALIGN="TOP" ALIGN="CENTER"><I>x<SUB><SMALL>n</SMALL></SUB></I> = 3<I>x<SUB><SMALL>n</I>-1</SMALL></SUB> mod 31
+</TABLE>
+</CENTER>
+<DD>The numbers are 14, 11, 2, 6, 18, 23, 7, 21, 1, 3, 9, 27, 19, 26, 16, 17, 20, 29, 25, 13, 8, 24, 10, 30, 28, 22, 4, 12, 5, 15.
+</DL>
+<P>The normalized numbers obtained by dividing the sequence by 31 are 0.45161, 0.35484, 0.06452, 0.19355, 0.58065, 0.74194, 0.22581, 0.67742, 0.03226, 0.09677, 0.29032, 0.87097, 0.61290, 0.83871, 0.51613, 0.54839, 0.64516, 0.93548, 0.80645, 0.41935, 0.25806, 0.77419, 0.32258, 0.96774, 0.90323, 0.70968, 0.12903, 0.38710, 0.16129, 0.48387.
+</P><P><BR></P>
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="27-01.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="27-03.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<hr width="90%" size="1" noshade>
+<div align="center">
+<font face="Verdana,sans-serif" size="1">Copyright &copy; <a href="/reference/wiley00001.html">John Wiley &amp; Sons, Inc.</a></font>
+</div>
+<!-- all of the reference materials (books) have the footer and subfoot reveresed -->
+<!-- reference_subfoot = footer -->
+<!-- reference_footer = subfoot -->
+
+</BODY>
+</HTML>
+
+<!-- END FOOTER -->
+

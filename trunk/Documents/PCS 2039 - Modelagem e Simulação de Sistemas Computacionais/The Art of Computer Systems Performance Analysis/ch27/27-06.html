@@ -1,0 +1,140 @@
+<HTML>
+<HEAD>
+<META name=vsisbn content="0471503363">
+<META name=vstitle content="Art of Computer Systems Performance Analysis Techniques For Experimental Design Measurements Simulation And Modeling">
+<META name=vsauthor content="Raj Jain">
+<META name=vsimprint content="Wiley Computer Publishing">
+<META name=vspublisher content="John Wiley & Sons, Inc.">
+<META name=vspubdate content="05/01/91">
+<META name=vscategory content="Web and Software Development: Software Engineering: Simulation and Modeling">
+
+
+
+
+
+
+
+<TITLE>The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling:Testing Random-Number Generators</TITLE>
+
+<!-- HEADER -->
+
+<STYLE type="text/css"> 
+ <!--
+ A:hover  {
+ 	color : Red;
+ }
+ -->
+</STYLE>
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+<!--ISBN=0471503363//-->
+<!--TITLE=The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling//-->
+<!--AUTHOR=Raj Jain//-->
+<!--PUBLISHER=Wiley Computer Publishing//-->
+<!--CHAPTER=27//-->
+<!--PAGES=470-473//-->
+<!--UNASSIGNED1//-->
+<!--UNASSIGNED2//-->
+
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="27-05.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="../ch28/28-01.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+<P><BR></P>
+<H3><A NAME="Heading8"></A><FONT COLOR="#000077">27.7 SPECTRAL TEST</FONT></H3>
+<P>Proposed by Conveyou and McPherson (1967), a spectral test determines how densely the <I>k</I>-tuples {<I>x</I><SUB><SMALL>1</SMALL></SUB>, <I>x</I><SUB><SMALL>2</SMALL></SUB>,...,<I><SUB><SMALL>k</SMALL></SUB></I>} can fill up the <I>k</I>-dimensional hyperspace. It was observed that the <I>k</I>-tuples from an LCG fall on a finite number of parallel hyperplanes. For example, if we plot successive pairs of numbers as points in two-dimensional space, all points would lie on a finite number of lines. In three dimensions, successive triplets lie on a finite number of planes. The following example illustrates this for a sample LCG.</P>
+<DL>
+<DD><B>Example 27.6</B> Consider the generator
+<P ALIGN="CENTER"><I>x<SUB><SMALL>n</SMALL></SUB></I> = 3<I>x<SUB><SMALL>n</I>-1</SMALL></SUB> mod 31
+<DD>Figure 27.6 shows the plot of overlapping pairs obtained from the LCG. It is shown that all the points lie on three straight lines. This is not a coincidence. By definition, the successive numbers obtained from the LCG are linearly related:
+<P ALIGN="CENTER"><I>x<SUB><SMALL>n</SMALL></SUB></I> = 3<I>x<SUB><SMALL>n</I>-1</SMALL></SUB> mod 31
+<DD>The equations of the straight lines are easily seen to be
+<P ALIGN="CENTER"><I>x<SUB><SMALL>n</SMALL></SUB></I> = 3<I>x<SUB><SMALL>n</I>-1</SMALL></SUB>
+<P ALIGN="CENTER"><I>x<SUB><SMALL>n</SMALL></SUB></I> = 3<I>x<SUB><SMALL>n</I>-1</SMALL></SUB> - 31
+<P ALIGN="CENTER"><I>x<SUB><SMALL>n</SMALL></SUB></I> = 3<I>x<SUB><SMALL>n</I>-1</SMALL></SUB> - 62
+<P>or
+<P ALIGN="CENTER"><I>x<SUB><SMALL>n</SMALL></SUB></I> = 3<I>x<SUB><SMALL>n</I>-1</SMALL></SUB> - 31<I>k</I>, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <I>k</I> = 0,1,2
+</DL>
+<P><A NAME="Fig6"></A><A HREF="javascript:displayWindow('images/27-06.jpg',498,420 )"><IMG SRC="images/27-06t.jpg"></A>
+<BR><A HREF="javascript:displayWindow('images/27-06.jpg',498,420)"><FONT COLOR="#000077"><B>FIGURE 27.6</B></FONT></A>&nbsp;&nbsp;Plot of overlapping pairs from the LCG <I>x<SUB><SMALL>n</SMALL></SUB></I> = 3<I>x<SUB><SMALL>n</I>-1</SMALL></SUB> mod 31.
+</P>
+<DL>
+<DD>Similarly, in three dimensions, the points (<I>x<SUB><SMALL>n</SMALL></SUB></I>, <I>x<SUB><SMALL>n</I>-1</SMALL></SUB>, <I>x<SUB><SMALL>n</I>-2</SMALL></SUB>) for the generator would lie on five planes given by
+<P ALIGN="CENTER"><I>x<SUB><SMALL>n</SMALL></SUB></I> = 2<I>x<SUB><SMALL>n</I>-1</SMALL></SUB> &#43; 3<I>x<SUB><SMALL>n</I>-2</SMALL></SUB> -31<I>k</I>, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <I>k</I> = 0,1,...,4
+<DD>This equation is obtained by adding the following equation to Equation (27.2):
+<P ALIGN="CENTER"><I>x<SUB><SMALL>n</I>-1</SMALL></SUB> = 3<I>x<SUB><SMALL>n</I>-2</SMALL></SUB> -31<I>k</I><SUB><SMALL>1</SMALL></SUB>, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <I>k</I><SUB><SMALL>1</SMALL></SUB> = 0,1,2
+<DD>Note that <I>k</I> &#43; <I>k</I><SUB><SMALL>1</SMALL></SUB> will be an integer between 0 and 4.
+</DL>
+<P>Marsaglia (1968) has shown that successive <I>k</I>-tuples obtained from an LCG fall on, at most, (<I>k</I>!<I>m</I><SUP><SMALL>1/<I>k</I></SMALL></SUP>) parallel hyperplanes, where <I>m</I> is the modulus used in the LCG. For example, with <I>m</I> = 2<SUP><SMALL>32</SMALL></SUP>, fewer than 2953 hyperplanes will contain all 3-tuples, fewer than 566 hyperplanes will contain all 4-tuples, and fewer than 41 hyperplanes will contain all 10-tuples. Thus, this is a weakness of LCGs.</P>
+<P>The spectral test determines the maximum distance between adjacent hyperplanes. The larger this distance, the worse is the generator. For generators with a small period, the distance can be determined by complete enumeration as illustrated by the following example.</P>
+<DL>
+<DD><B>Example 27.7</B> Let us compare the following two generators:
+<P ALIGN="CENTER"><I>x<SUB><SMALL>n</SMALL></SUB></I> = 3<I>x<SUB><SMALL>n</I>-1</SMALL></SUB> mod 31
+<P ALIGN="CENTER"><I>x<SUB><SMALL>n</SMALL></SUB></I> = 13<I>x<SUB><SMALL>n</I>-1</SMALL></SUB> mod 31
+<DD>Using a seed of <I>x</I><SUB><SMALL>0</SMALL></SUB> = 15, we obtain the following sequence from the first generator: 14, 11, 2, 6, 18, 23, 7, 21, 1, 3, 9, 27, 19, 26, 16, 17, 20, 29, 25, 13, 8, 24, 10, 30, 28, 22, 4, 12, 5, 15, 14.
+<DD>Using the same seed in the second generator, we obtain the following sequence: 9, 24, 2, 26, 28, 23, 20, 12, 1, 13, 14, 27, 10, 6, 16, 22, 7, 29, 5, 3, 8, 11, 19, 30, 18, 17, 4, 21, 25, 15, 9.
+<DD>Notice that every number between 1 and 30 occurs once and only once in both sequences. Thus, both sequences will pass the chi-square test for uniformity. A plot of successive overlapping pairs of the first sequence is shown in Figure 27.6. We see that the points lie on 3 straight lines of positive slope or 10 lines of negative slope. Since the distance between the lines of positive slope is more, we consider only the lines with positive slope. Their equations are
+<P ALIGN="CENTER"><I>x<SUB><SMALL>n</SMALL></SUB></I> = 3<I>x<SUB><SMALL>n</I>-1</SMALL></SUB>
+<P ALIGN="CENTER"><I>x<SUB><SMALL>n</SMALL></SUB></I> = 3<I>x<SUB><SMALL>n</I>-1</SMALL></SUB> -31
+<P ALIGN="CENTER"><I>x<SUB><SMALL>n</SMALL></SUB></I> = 3<I>x<SUB><SMALL>n</I>-1</SMALL></SUB> -62
+</DL>
+<P><A NAME="Fig7"></A><A HREF="javascript:displayWindow('images/27-07.jpg',500,394 )"><IMG SRC="images/27-07t.jpg"></A>
+<BR><A HREF="javascript:displayWindow('images/27-07.jpg',500,394)"><FONT COLOR="#000077"><B>FIGURE 27.7</B></FONT></A>&nbsp;&nbsp;Plot of <I><SUB><SMALL>n</I> &#43; 1</SMALL></SUB> versus <I>x<SUB><SMALL>n</SMALL></SUB></I> for the LCG <I>x<SUB><SMALL>n</SMALL></SUB></I> = 13<I>x<SUB><SMALL>n</I>-1</SMALL></SUB> mod 31.
+</P>
+<DL>
+<DD>The distance between two parallel lines <I>y</I> = <I>ax</I> &#43; <I>c</I><SUB><SMALL>1</SMALL></SUB> and <I>y</I> = <I>ax</I> &#43; <I>c</I><SUB><SMALL>2</SMALL></SUB> is given by <IMG SRC="images/27-05i.jpg"></IMGI>. Thus, the distance between the lines is <IMG SRC="images/27-06i.jpg"></IMGI>, or 9.80.
+<DD>The plot of successive overlapping pairs of the second sequence is shown in Figure 27.7. In this case, all points fall on seven straight lines of positive slope or six straight lines of negative slope. The distance between lines of negative slope is larger than that between lines of positive slope, and therefore, for this generator, we will consider the set of lines with negative slopes. Their equations are
+<P ALIGN="CENTER"><IMG SRC="images/27-08d.jpg"></P>
+</IMGD>
+<DD>The distance between lines is <IMG SRC="images/27-07i.jpg"></IMGI>
+<DD>Compared to the first generator, the second generator has a smaller maximum distance, and hence, the second generator has a better 2-distributivity.
+<DD>It must be pointed out that in selecting between the sets of lines with positive and negative slopes, it is the set with a larger distance that is se-lected. This may not always be the set with fewer lines.
+</DL>
+<P>Notice that we used <I>overlapping k</I>-tuples in Example 27.7. Either overlapping or nonoverlapping <I>k</I>-tuples can be used. With overlapping <I>k</I>-tuples, we have <I>k</I> times as many points, which makes the graph visually more complete. The number of hyperplanes and the distance between them are the same with either choice. Thus, the result of the spectral test remains the same. This is not true for the serial test described in Section 27.6 where only nonoverlapping <I>k</I>-tuples should be used.</P>
+<P>For generators with a large <I>m</I> and for higher dimensions, complete enumeration is not easy, and finding the maximum distance becomes quite complex. See Knuth (1981) for computing the maximum distance without complete enumeration.</P>
+<H3><A NAME="Heading9"></A><FONT COLOR="#000077">EXERCISES</FONT></H3>
+<DL>
+<DD><B>27.1</B>&nbsp;&nbsp;Generate 10,000 numbers using a seed of <I>x</I><SUB>0</SUB> = 1 in the following generator:
+<P ALIGN="CENTER"><I>x<SUB><SMALL>n</SMALL></SUB></I> = 7<SUP><SMALL>5</SMALL></SUP><I>x<SUB><SMALL>n</I>-1</SMALL></SUB> mod(2<SUP><SMALL>31</SMALL></SUP> -1)
+<DD><B></B>&nbsp;&nbsp;Classify the numbers into 10 equal-size cells and test for uniformity using the chi-square test at 90% confidence.
+<DD><B>27.2</B>&nbsp;&nbsp;Generate 15 numbers using a seed of <I>x</I><SUB>0</SUB> = 1 in the following generator:
+<P ALIGN="CENTER"><I>x<SUB><SMALL>n</SMALL></SUB></I> = (5<I>x<SUB><SMALL>n</I>-1</SMALL></SUB> &#43; 1) mod16
+<DD><B></B>&nbsp;&nbsp;Perform a K-S test and check whether the sequence passes the test at a 95% confidence level.
+<DD><B>27.3</B>&nbsp;&nbsp;Generate 10,000 numbers using a seed of <I>x</I><SUB>0</SUB> = 1 in the following LCG:
+<P ALIGN="CENTER"><I>x<SUB><SMALL>n</SMALL></SUB></I> = 48271<I>x<SUB><SMALL>n</I>-1</SMALL></SUB> mod(2<SUP><SMALL>31</SMALL></SUP> -1)
+<DD><B></B>&nbsp;&nbsp;Perform the serial correlation test of randomness at 90% confidence and report the result.
+<DD><B>27.4</B>&nbsp;&nbsp;Using the spectral test, compare the following two generators:
+<P ALIGN="CENTER"><I>x<SUB><SMALL>n</SMALL></SUB></I> = (7<I>x<SUB><SMALL>n</I>-1</SMALL></SUB> &#43; 1) mod13
+<P ALIGN="CENTER"><I>x<SUB><SMALL>n</SMALL></SUB></I> = (11<I>x<SUB><SMALL>n</I>-1</SMALL></SUB> &#43; 1) mod13
+<DD><B></B>&nbsp;&nbsp;Which generator has a better 2-distributivity?
+</DL>
+<P><BR></P>
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="27-05.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="../ch28/28-01.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<hr width="90%" size="1" noshade>
+<div align="center">
+<font face="Verdana,sans-serif" size="1">Copyright &copy; <a href="/reference/wiley00001.html">John Wiley &amp; Sons, Inc.</a></font>
+</div>
+<!-- all of the reference materials (books) have the footer and subfoot reveresed -->
+<!-- reference_subfoot = footer -->
+<!-- reference_footer = subfoot -->
+
+</BODY>
+</HTML>
+
+<!-- END FOOTER -->
+

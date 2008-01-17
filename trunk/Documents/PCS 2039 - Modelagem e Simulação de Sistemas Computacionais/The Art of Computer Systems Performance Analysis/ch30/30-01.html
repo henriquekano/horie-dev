@@ -1,0 +1,133 @@
+<HTML>
+<HEAD>
+<META name=vsisbn content="0471503363">
+<META name=vstitle content="Art of Computer Systems Performance Analysis Techniques For Experimental Design Measurements Simulation And Modeling">
+<META name=vsauthor content="Raj Jain">
+<META name=vsimprint content="Wiley Computer Publishing">
+<META name=vspublisher content="John Wiley & Sons, Inc.">
+<META name=vspubdate content="05/01/91">
+<META name=vscategory content="Web and Software Development: Software Engineering: Simulation and Modeling">
+
+
+
+
+
+
+
+<TITLE>The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling:Introduction to Queueing Theory</TITLE>
+
+<!-- HEADER -->
+
+<STYLE type="text/css"> 
+ <!--
+ A:hover  {
+ 	color : Red;
+ }
+ -->
+</STYLE>
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+<!--ISBN=0471503363//-->
+<!--TITLE=The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling//-->
+<!--AUTHOR=Raj Jain//-->
+<!--PUBLISHER=Wiley Computer Publishing//-->
+<!--CHAPTER=30//-->
+<!--PAGES=505-509//-->
+<!--UNASSIGNED1//-->
+<!--UNASSIGNED2//-->
+
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="../ch29/29-05.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="30-02.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+<P><BR></P>
+<H2 ALIGN="CENTER"><FONT COLOR="#000077"><I>PART VI<BR>QUEUEING MODELS
+</I></FONT></H2>
+<P>Queueing theory is the key analytical modeling technique used for computer systems performance analysis. The literature on queueing theory is vast. Several hundred papers are published every year. Fortunately, a large percentage of day-to-day performance questions can be answered using only a few techniques. To begin with, you need a knowledge of the queueing notation and some results on single-queue systems. For systems with multiple queues, operational analysis, mean-value analysis, and convolution are very useful. In addition, the technique of hierarchical modeling is helpful in analyzing large systems. The discussion in this part has been limited to these techniques.
+</P>
+<P>Following are examples of questions that you should be able to answer after reading this part:</P>
+<DL>
+<DD><B>1.</B>&nbsp;&nbsp;What are the various types of queues?
+<DD><B>2.</B>&nbsp;&nbsp;What is meant by an M/M/<I>m/B/K</I> queue?
+<DD><B>3.</B>&nbsp;&nbsp;How should you obtain response time, queue lengths, and server utilizations?
+<DD><B>4.</B>&nbsp;&nbsp;How should you represent a system using a network of several queues?
+<DD><B>5.</B>&nbsp;&nbsp;How should you analyze simple queueing networks?
+<DD><B>6.</B>&nbsp;&nbsp;How should you obtain bounds on the system performance using queueing models?
+<DD><B>7.</B>&nbsp;&nbsp;How should you obtain variance and other statistics on system performance?
+<DD><B>8.</B>&nbsp;&nbsp;How should you subdivide a large queueing network model and solve it?
+</DL>
+<H2><A NAME="Heading1"></A><FONT COLOR="#000077">CHAPTER 30<BR>INTRODUCTION TO QUEUEING THEORY
+</FONT></H2>
+<BLOCKQUOTE>
+<P ALIGN="RIGHT"><I>If the facts don&#146;t fit the theory, change the facts.</I></P>
+<P ALIGN="RIGHT">&#151;Albert Einstein</P>
+</BLOCKQUOTE><P>In computer systems, many jobs share the system resources such as CPU, disks, and other devices. Since generally only one job can use the resource at any time, all other jobs wanting to use that resource wait in queues. Queueing theory helps in determining the time that the jobs spend in various queues in the system. These times can then be combined to predict the response time, which is basically the total time that the job spends inside the system. It is not, therefore, surprising that queueing models have become so popular among computer systems performance analysts.
+</P>
+<H3><A NAME="Heading2"></A><FONT COLOR="#000077">30.1 QUEUEING NOTATION</FONT></H3>
+<P>Imagine yourself waiting in a queue with other computer science students at a typical computer terminal room, as shown in Figure 30.1. The service facility has a number of terminals to be used by students. If all terminals are busy, the arriving students wait in a queue. In queueing theory terms, the students would be called &#147;customers.&#148; In order to analyze such a system, the following characteristics of the system should be specified:
+</P>
+<DL>
+<DD><B>1.</B>&nbsp;&nbsp;<I>Arrival Process:</I> If the students arrive at times <I>t</I><SUB><SMALL>1</SMALL></SUB>,<I>t</I><SUB><SMALL>2</SMALL></SUB>,...,<I>t</I><SUB><SMALL>j</SMALL></SUB>, the random variables <IMG SRC="images/30-01i.jpg"></IMGI> are called the <B>interarrival times</B>.It is generally assumed that the <IMG SRC="images/30-02i.jpg"> </IMGI> form a sequence of Independent and Identically Distributed (IID) random variables. The most common arrival process is the so-called <B>Poisson arrivals</B>, which simply means that the interarrival times are IID and are exponentially distributed. Other distributions, such as the Erlang and hyperexponential, are also used. In fact, several queueing results are valid for all distributions of interarrival times. In such a case, the result is said to hold for a <B>general</B> distribution.
+<P><A NAME="Fig1"></A><A HREF="javascript:displayWindow('images/30-01.jpg',500,271 )"><IMG SRC="images/30-01t.jpg"></A>
+<BR><A HREF="javascript:displayWindow('images/30-01.jpg',500,271)"><FONT COLOR="#000077"><B>FIGURE 30.1</B></FONT></A>&nbsp;&nbsp;Basic components of a queue.</P>
+<DD><B>2.</B>&nbsp;&nbsp;<I>Service Time Distribution:</I> We also need to know the time each student spends at the terminal. This is called the service time. It is common to assume that the service times are random variables, which are IID. The distribution most commonly used is the exponential distribution. Other distributions, such as the Erlang, hyperexponential, and general, are also used. Again the results for a general distribution apply to all service time distributions.
+<DD><B>3.</B>&nbsp;&nbsp;<I>Number of Servers:</I> The terminal room may have one or more terminals, all of which are considered part of the same queueing system since they are all identical, and any terminal may be assigned to any student. If all the servers are not identical, they are usually divided into groups of identical servers with separate queues for each group. In this case, each group is a queueing system.
+<DD><B>4.</B>&nbsp;&nbsp;<I>System Capacity:</I> The maximum number of students who can stay may be limited due to space availability and also to avoid long waiting times. This number is called the system capacity. In most systems, the capacity is finite. However, if the number is large, it is easier to analyze if infinite capacity is assumed. The system capacity includes those waiting for service as well as those receiving service.
+<DD><B>5.</B>&nbsp;&nbsp;<I>Population Size:</I> The total number of potential students who can ever come to the computer center is the population size. In most real systems, the population size is finite. If this size is large, once again, it is easier to analyze if we assume that the size is infinite.
+<DD><B>6.</B>&nbsp;&nbsp;<I>Service Discipline:</I> The order in which the students are served is called the service discipline. The most common discipline is First Come, First Served (FCFS). Other possibilities are Last Come, First Served (LCFS) and Last Come, First Served with Preempt and Resume (LCFS-PR). Computer system CPUs generally use Round-Robin (RR) with a fixed-size quantum. If the quantum size is small compared to average service time, it is called Processor Sharing (PS) since each of the <I>n</I> waiting jobs would then receive 1/<I>n</I>th of the processor&#146;s time. A system with a fixed delay, for example, a satellite communication link, is called an <B>Infinite Server</B> (IS) or a <B>delay center</B>. Terminals in timesharing systems are usually modeled as delay centers.
+<BR>Sometimes the scheduling is based on the service time required. Examples of such disciplines are Shortest Processing Time first (SPT), Shortest Remaining Processing Time first (SRPT), Shortest Expected Processing Time first (SEPT), and Shortest Expected Remaining Pro-first (SERPT). In the real world, occasionally one may encounter Biggest In, First Served (BIFS) or Loudest Voice, First Served (LVFS).
+</DL>
+<P>To specify a queueing system, we need to specify these six parameters. Queueing theorists, therefore, use a shorthand notation called the <B>Kendall notation</B> in the form A/S/<I>m</I>/<I>B</I>/<I>K</I>/SD, where the letters correspond in order to the six parameters listed above. That is, A is the interarrival time distribution, S is the service time distribution, <I>m</I> is the number of servers, <I>B</I> is the number of buffers (system capacity), <I>K</I> is the population size, and SD is the service discipline.</P>
+<P>The distributions for interarrival time and service times are generally denoted by a one-letter symbol as follows:</P>
+<TABLE WIDTH="100%"><TR>
+<TD WIDTH="15%" ALIGN="LEFT" VALIGN="TOP">
+<TD WIDTH="10%" VALIGN="TOP" ALIGN="LEFT">M
+<TD VALIGN="TOP" ALIGN="LEFT">Exponential
+<TR>
+<TD WIDTH="15%" ALIGN="LEFT" VALIGN="TOP">
+<TD WIDTH="10%" VALIGN="TOP" ALIGN="LEFT">E<SUB><SMALL><SMALL><I>k</I></SMALL></SMALL></SUB>
+<TD VALIGN="TOP" ALIGN="LEFT">Erlang with parameter <I>k</I>
+<TR>
+<TD WIDTH="15%" ALIGN="LEFT" VALIGN="TOP">
+<TD WIDTH="10%" VALIGN="TOP" ALIGN="LEFT">H<SUB><SMALL><SMALL><I>k</I></SMALL></SMALL></SUB>
+<TD VALIGN="TOP" ALIGN="LEFT">Hyperexponential with parameter <I>k</I>
+<TR>
+<TD WIDTH="15%" ALIGN="LEFT" VALIGN="TOP">
+<TD WIDTH="10%" VALIGN="TOP" ALIGN="LEFT">D
+<TD VALIGN="TOP" ALIGN="LEFT">Deterministic
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT">
+<TD VALIGN="TOP" ALIGN="LEFT">G
+<TD VALIGN="TOP" ALIGN="LEFT">General
+</TABLE>
+<P>Exponential and Erlang distributions were defined earlier in Chapter 29. A deterministic distribution implies that the times are constant and there is no variance. A general distribution means that the distribution is not specified and the results are valid for all distributions.
+</P><P><BR></P>
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="../ch29/29-05.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="30-02.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<hr width="90%" size="1" noshade>
+<div align="center">
+<font face="Verdana,sans-serif" size="1">Copyright &copy; <a href="/reference/wiley00001.html">John Wiley &amp; Sons, Inc.</a></font>
+</div>
+<!-- all of the reference materials (books) have the footer and subfoot reveresed -->
+<!-- reference_subfoot = footer -->
+<!-- reference_footer = subfoot -->
+
+</BODY>
+</HTML>
+
+<!-- END FOOTER -->
+

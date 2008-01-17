@@ -1,0 +1,146 @@
+<HTML>
+<HEAD>
+<META name=vsisbn content="0471503363">
+<META name=vstitle content="Art of Computer Systems Performance Analysis Techniques For Experimental Design Measurements Simulation And Modeling">
+<META name=vsauthor content="Raj Jain">
+<META name=vsimprint content="Wiley Computer Publishing">
+<META name=vspublisher content="John Wiley & Sons, Inc.">
+<META name=vspubdate content="05/01/91">
+<META name=vscategory content="Web and Software Development: Software Engineering: Simulation and Modeling">
+
+
+
+
+
+
+
+<TITLE>The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling:General Full Factorial Designs with k Factors</TITLE>
+
+<!-- HEADER -->
+
+<STYLE type="text/css"> 
+ <!--
+ A:hover  {
+ 	color : Red;
+ }
+ -->
+</STYLE>
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+<!--ISBN=0471503363//-->
+<!--TITLE=The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling//-->
+<!--AUTHOR=Raj Jain//-->
+<!--PUBLISHER=Wiley Computer Publishing//-->
+<!--CHAPTER=23//-->
+<!--PAGES=381-382//-->
+<!--UNASSIGNED1//-->
+<!--UNASSIGNED2//-->
+
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="../ch22/22-02.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="23-02.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+<P><BR></P>
+<H2><A NAME="Heading1"></A><FONT COLOR="#000077">CHAPTER 23<BR>GENERAL FULL FACTORIAL DESIGNS WITH <I>k</I> FACTORS
+</FONT></H2>
+<P ALIGN="RIGHT"><I>Work expands to fill the time available for its completion.</I></P>
+<P ALIGN="RIGHT">&#151;C. Northcote Parkinson</P>
+<P>The experimental designs analyzed so far are sufficient to solve problems encountered frequently. They can be easily extended to a larger number of factors. This chapter briefly describes the models used for such designs and illustrates it with a case study involving four factors. Three informal methods are then presented in Section 23.3 for analysis of experimental designs that can be used for larger number of factors as well as for designs discussed in earlier chapters.</P>
+<H3><A NAME="Heading2"></A><FONT COLOR="#000077">23.1 MODEL</FONT></H3>
+<P>The model for a <I>k</I>-factor full factorial design contains 2<SUP>k</SUP> - 1 effects. This includes k main effects, (<SUP><I>k</I></SUP><SUB>2</SUB>) two-factor interactions, (<I><SUP>k</SUP></I><SUB>3</SUB>) three-factor interactions, and so on. For example, with three factors <I>A</I>, <I>B</I>, and <I>C</I> at <I>a</I>, <I>b</I>, and <I>c</I> levels, respectively and r replications, the model is</P>
+<P><P ALIGN="CENTER"><IMG SRC="images/23-01d.jpg"></P>
+</IMGD></P>
+<P>where</P>
+<DL>
+<DD><I>y<SUB>ijkl</SUB></I> =response (observation) in the I<I>th</I> replication of<BR>experiment with factors <I>A</I>, <I>B</I>, and <I>C</I> at levels <I>i</I>, <I>j</I>, and <I>k</I>, respectively.
+<DD>&#956; =mean response
+<DD>&#945;<SUB><SMALL>i</SMALL></SUB> =effect of factor <I>A</I> at level <I>i</I>
+</DL>
+<P>and
+</P>
+<DL>
+<DD>&#946; =effect of factor <I>B</I> at level <I>j</I>
+<DD>&#958;<SUB><SMALL><I>k</I></SMALL></SUB> =effect of factor <I>C</I> at level <I>k</I>
+<DD>&#947;<SUB><SMALL><I>ABij</I></SMALL></SUB> =interaction between <I>A</I> and <I>B</I> at levels <I>i</I> and <I>j</I>.
+<DD>&#947;<SUB><I><SMALL>ABCijk</SMALL></SUB></I> =interaction between <I>A</I>, <I>B</I>, <I>C</I> at levels <I>i</I>, <I>j</I>, <I>k</I>.
+</DL>
+<P>and so on.
+</P>
+<H3><A NAME="Heading3"></A><FONT COLOR="#000077">23.2 ANALYSIS OF A GENERAL DESIGN</FONT></H3>
+<P>The analysis of full factorial designs with <I>k</I> factors is similar to that with two factors presented earlier in Chapters 21 and 22. For example, the parameters can be estimated from means taken along various dimensions:</P>
+<P><P ALIGN="CENTER"><IMG SRC="images/23-02d.jpg"></P>
+</IMGD></P>
+<P>The sums of squares, degrees of freedom, and <I>F</I>-test also extend as expected. The following case study illustrates the analysis of a general <I>k</I>-factor design.</P>
+<DL>
+<DD><B>Case Study 23.1</B> In a study to quantify the effect of various factors on the paging process, a full factorial 3 x 3 x 3 x 3 experimental design was used. The factors were main memory size, problem program, deck arrangement, and replacement algorithm. The effect of four factors each at three levels was used. The factors and their levels are listed in Thble 23.1. The design consisted of a total of 81 experiments for which the number of page swaps (PS) was measured. The measured values are listed in Table 23.2. It is seen from this table that the number of page swaps has a wide range, the ratio of <I>y</I><SMALL><SUB>max</SUB></SMALL>/<I>y</I><SMALL><SUB>min</SUB></SMALL> is 23134/32, or about 723. This suggests that we should try using a log transformation of the data. This is confirmed also by the observation that as a factor is changed from one level to the next, the change in response is approximately proportional to the response. A log transformation was therefore used. The transformed data, which was called log page swaps (LPS), is shown in Table 23.3. The effects of various factors and their interactions can be obtained by averaging along various axes. For example, the effect of algorithm (factor A) at level 1 is obtained as follows:
+</DL>
+<P ALIGN="CENTER">&#945; = <I>y</I><SUB><SMALL>1...</SUB></SMALL> - <I>y</I><SUB><SMALL>...</SMALL></SUB> = 2.74-2.90 = -0.16</P>
+<TABLE WIDTH="100%"><TH COLSPAN="5" CAPTION ALIGN="LEFT" VALIGN="TOP">TABLE 23.1 Fhetors and Levels for Page Swap Study
+<TR>
+<TH COLSPAN="5"><HR>
+<TR>
+<TH WIDTH="10%" ALIGN="LEFT" VALIGN="TOP">Symbol
+<TH WIDTH="30%" ALIGN="CENTER" VALIGN="TOP">Factor
+<TH WIDTH="20%" ALIGN="LEFT" VALIGN="TOP">Level 1
+<TH WIDTH="20%" ALIGN="LEFT" VALIGN="TOP">Level 2
+<TH WIDTH="20%" ALIGN="LEFT" VALIGN="TOP">Level 3
+<TR>
+<TH COLSPAN="5"><HR>
+<TR>
+<TD VALIGN="TOP" WIDTH="10%" ALIGN="LEFT">A
+<TD VALIGN="TOP" WIDTH="30%" ALIGN="LEFT">Page replacement algorithm
+<TD VALIGN="TOP" WIDTH="20%" ALIGN="LEFT">LRUV
+<TD VALIGN="TOP" WIDTH="20%" ALIGN="LEFT">FIFO
+<TD VALIGN="TOP" WIDTH="20%" ALIGN="LEFT">RAND
+<TR>
+<TD VALIGN="TOP" WIDTH="10%" ALIGN="LEFT">D
+<TD VALIGN="TOP" WIDTH="30%" ALIGN="LEFT">Deck arrangement
+<TD VALIGN="TOP" WIDTH="20%" ALIGN="LEFT">GROUP
+<TD VALIGN="TOP" WIDTH="20%" ALIGN="LEFT">FREQY
+<TD VALIGN="TOP" WIDTH="20%" ALIGN="LEFT">ALPHA
+<TR>
+<TD VALIGN="TOP" WIDTH="10%" ALIGN="LEFT">P
+<TD VALIGN="TOP" WIDTH="30%" ALIGN="LEFT">Problem program
+<TD VALIGN="TOP" WIDTH="20%" ALIGN="LEFT">Small
+<TD VALIGN="TOP" WIDTH="20%" ALIGN="LEFT">Medium
+<TD VALIGN="TOP" WIDTH="20%" ALIGN="LEFT">Large
+<TR>
+<TD VALIGN="TOP" WIDTH="10%" ALIGN="LEFT">M
+<TD VALIGN="TOP" WIDTH="30%" ALIGN="LEFT">Memory pages
+<TD VALIGN="TOP" WIDTH="20%" ALIGN="LEFT">24P
+<TD VALIGN="TOP" WIDTH="20%" ALIGN="LEFT">20P
+<TD VALIGN="TOP" WIDTH="20%" ALIGN="LEFT">16P
+<TR>
+<TH COLSPAN="5"><HR>
+<TR>
+</TABLE>
+<P><BR></P>
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="../ch22/22-02.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="23-02.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<hr width="90%" size="1" noshade>
+<div align="center">
+<font face="Verdana,sans-serif" size="1">Copyright &copy; <a href="/reference/wiley00001.html">John Wiley &amp; Sons, Inc.</a></font>
+</div>
+<!-- all of the reference materials (books) have the footer and subfoot reveresed -->
+<!-- reference_subfoot = footer -->
+<!-- reference_footer = subfoot -->
+
+</BODY>
+</HTML>
+
+<!-- END FOOTER -->
+
