@@ -1,0 +1,166 @@
+<HTML>
+<HEAD>
+<META name=vsisbn content="0471503363">
+<META name=vstitle content="Art of Computer Systems Performance Analysis Techniques For Experimental Design Measurements Simulation And Modeling">
+<META name=vsauthor content="Raj Jain">
+<META name=vsimprint content="Wiley Computer Publishing">
+<META name=vspublisher content="John Wiley & Sons, Inc.">
+<META name=vspubdate content="05/01/91">
+<META name=vscategory content="Web and Software Development: Software Engineering: Simulation and Modeling">
+
+
+
+
+
+
+
+<TITLE>The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling:Introduction</TITLE>
+
+<!-- HEADER -->
+
+<STYLE type="text/css"> 
+ <!--
+ A:hover  {
+ 	color : Red;
+ }
+ -->
+</STYLE>
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+<!--ISBN=0471503363//-->
+<!--TITLE=The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling//-->
+<!--AUTHOR=Raj Jain//-->
+<!--PUBLISHER=Wiley Computer Publishing//-->
+<!--CHAPTER=01//-->
+<!--PAGES=005-007//-->
+<!--UNASSIGNED1//-->
+<!--UNASSIGNED2//-->
+
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="01-01.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="01-03.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+<P><BR></P>
+<TABLE ALIGN="CENTER" WIDTH="50%">
+<TH CAPTION COLSPAN="3" ALIGN="CENTER" VALIGN="TOP">TABLE 1.1 Packets Lost on Two Links
+<TR>
+<TD COLSPAN="3" VALIN="TOP"><HR>
+<TR>
+<TH ALIGN="CENTER" WIDTH="20%" VALIGN="TOP">File Size
+<TH ALIGN="CENTER" WIDTH="20%" VALIGN="TOP">Link A
+<TH ALIGN="CENTER" WIDTH="10%" VALIGN="TOP">Link B
+<TR>
+<TD COLSPAN="3"><HR>
+<TR>
+<TD ALIGN="CENTER" VALIGN="TOP">1000
+<TD ALIGN="CENTER" VALIGN="TOP">5
+<TD ALIGN="CENTER" VALIGN="TOP">10
+<TR>
+<TD ALIGN="CENTER" VALIGN="TOP">1200
+<TD ALIGN="CENTER" VALIGN="TOP">7
+<TD ALIGN="CENTER" VALIGN="TOP">3
+<TR>
+<TD ALIGN="CENTER" VALIGN="TOP">1300
+<TD ALIGN="CENTER" VALIGN="TOP">3
+<TD ALIGN="CENTER" VALIGN="TOP">0
+<TR>
+<TD ALIGN="CENTER" VALIGN="TOP">50
+<TD ALIGN="CENTER" VALIGN="TOP">0
+<TD ALIGN="CENTER" VALIGN="TOP">1
+<TR>
+<TD COLSPAN="3" VALIN="TOP"><HR>
+</TABLE>
+<DL>
+<BR>Which link is better?
+<DD><B>4.</B>&nbsp;&nbsp;<I>Design measurement and simulation experiments to provide the most information with the least effort.</I> Given a number of factors that affect the system performance, it is useful to separate out the effects of individual factors. In Part IV on experimental design, techniques to organize experiments to obtain maximum information with a minimum number of experiments are presented. The following is an example of an experimental design question that you should be able to answer after reading that part.
+<BR><B>Example 1.4</B> The performance of a system depends on the following three factors:
+<DL>
+<DD><B>(a)</B>&nbsp;&nbsp;Garbage collection technique used: G1, G2, or none.
+<DD><B>(b)</B>&nbsp;&nbsp;Type of workload: editing, computing, or artificial intelligence (AI).
+<DD><B>(c)</B>&nbsp;&nbsp;Type of CPU: C1, C2, or C3.
+</DL>
+<BR>How many experiments are needed? How does one estimate the performance impact of each factor?
+<DD><B>5.</B>&nbsp;&nbsp;<I>Perform simulations correctly.</I> In designing a simulation model, one has to select a language for simulation, select seeds and algorithms for random-number generation, decide the length of simulation run, and analyze the simulation results. These issues are discussed in Part V on simulation. After reading that part, you should be able to answer the following simulation-related question.
+<BR><B>Example 1.5</B> In order to compare the performance of two cache replacement algorithms:
+<DL>
+<DD><B>(a)</B>&nbsp;&nbsp;What type of simulation model should be used?
+<DD><B>(b)</B>&nbsp;&nbsp;How long should the simulation be run?
+<DD><B>(c)</B>&nbsp;&nbsp;What can be done to get the same accuracy with a shorter run?
+<DD><B>(d)</B>&nbsp;&nbsp;How can one decide if the random-number generator in the simulation is a good generator?
+</DL>
+<DD><B>6.</B>&nbsp;&nbsp;<I>Use simple queueing models to analyze the performance of systems.</I> Queueing models are commonly used for analytical modeling of computer systems. In Part VI, different types of queues and networks of queues are discussed and and their use to answer commonly asked questions about system performance is described. The following is an exercise that you will be able to solve after reading that part.
+<BR><B>Example 1.6</B> The average response time of a database system is 3 seconds. During a 1-minute observation interval, the idle time on the system was 10 seconds. Using a queueing model for the system, determine the following:
+<DL>
+<DD><B>(a)</B>&nbsp;&nbsp;System utilization
+<DD><B>(b)</B>&nbsp;&nbsp;Average service time per query
+<DD><B>(c)</B>&nbsp;&nbsp;Number of queries completed during the observation interval
+<DD><B>(d)</B>&nbsp;&nbsp;Average number of jobs in the system
+<DD><B>(e)</B>&nbsp;&nbsp;Probability of number of jobs in the system being greater than 10
+<DD><B>(f)</B>&nbsp;&nbsp;90-percentile response time
+<DD><B>(g)</B>&nbsp;&nbsp;90-percentile waiting time
+</DL>
+</DL>
+<P>The preceding six examples correspond to the six parts of this book.
+</P>
+<P>The remainder of Part I explains the steps common to all performance studies beginning with an example of the performance games people play to show that their system is better. Some common mistakes that beginners make are described. In addition, the key components of performance studies, in particular, the selection of performance metrics and evaluation techniques, are discussed.</P>
+<H3><A NAME="Heading3"></A><FONT COLOR="#000077">1.2 THE ART OF PERFORMANCE EVALUATION</FONT></H3>
+<P>Contrary to common belief, performance evaluation is an art. Like a work of art, successful evaluation cannot be produced mechanically. Every evaluation requires an intimate knowledge of the system being modeled and a careful selection of the methodology, workload, and tools. When first presented to an analyst, most performance problems are expressed as an abstract feeling, like a rough sketch, by the end user. Defining the real problem and converting it to a form in which established tools and techniques can be used and where time and other constraints can be met is a major part of the analyst&#146;s &#147;art.&#148;
+</P>
+<P>Like an artist, each analyst has a unique style. Given the same problem, two analysts may choose different performance metrics and evaluation methodologies. In fact, given the same data, two analysts may interpret them differently. The following example shows a typical case for which, given the same measurements, two system designers can each prove that his/her system is better than that of the other.</P>
+<DL>
+<DD><B>Example 1.7</B> The throughputs of two systems A and B were measured in transactions per second. The results are shown in Table 1.2.
+</DL>
+<TABLE WIDTH="60%" ALIGN="CENTER">
+<TH CAPTION ALIGN="CENTER" COLSPAN="3" VALIGN="TOP">TABLE 1.2 Throughput in Transactions per Second
+<TR>
+<TD COLSPAN="3" VALIN="TOP"><HR>
+<TR>
+<TH ALIGN="CENTER" WIDTH="20%" VALIGN="TOP">System
+<TH ALIGN="CENTER" WIDTH="20%" VALIGN="TOP">Workload 1
+<TH ALIGN="CENTER" WIDTH="20%" VALIGN="TOP">Workload 2
+<TR>
+<TD COLSPAN="3" VALIN="TOP"><HR>
+<TR>
+<TD ALIGN="CENTER" VALIGN="TOP">A
+<TD ALIGN="CENTER" VALIGN="TOP">20
+<TD ALIGN="CENTER" VALIGN="TOP">10
+<TR>
+<TD ALIGN="CENTER" VALIGN="TOP">B
+<TD ALIGN="CENTER" VALIGN="TOP">10
+<TD ALIGN="CENTER" VALIGN="TOP">20
+<TR>
+<TD COLSPAN="3" VALIN="TOP"><HR>
+</TABLE>
+<DL>
+<DD>There are three ways to compare the performance of the two systems. The first way is to take the average of the performances on the two workloads. This leads to the analysis shown in Table 1.3. The conclusion in this case is that the two systems are equally good. The second way is to consider the ratio of the performances with system B as the base, as shown in Table 1.4. The conclusion in this case is that system A is better than B. The third way is to consider the performance ratio with system A as the base, as shown in Table 1.5. The conclusion in this case is that system B is better than A.
+</DL>
+<P><BR></P>
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="01-01.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="01-03.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<hr width="90%" size="1" noshade>
+<div align="center">
+<font face="Verdana,sans-serif" size="1">Copyright &copy; <a href="/reference/wiley00001.html">John Wiley &amp; Sons, Inc.</a></font>
+</div>
+<!-- all of the reference materials (books) have the footer and subfoot reveresed -->
+<!-- reference_subfoot = footer -->
+<!-- reference_footer = subfoot -->
+
+</BODY>
+</HTML>
+
+<!-- END FOOTER -->
+
