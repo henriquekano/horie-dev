@@ -1,0 +1,118 @@
+<HTML>
+<HEAD>
+<META name=vsisbn content="0471503363">
+<META name=vstitle content="Art of Computer Systems Performance Analysis Techniques For Experimental Design Measurements Simulation And Modeling">
+<META name=vsauthor content="Raj Jain">
+<META name=vsimprint content="Wiley Computer Publishing">
+<META name=vspublisher content="John Wiley & Sons, Inc.">
+<META name=vspubdate content="05/01/91">
+<META name=vscategory content="Web and Software Development: Software Engineering: Simulation and Modeling">
+
+
+
+
+
+
+
+<TITLE>The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling:Comparing Systems Using Sample Data</TITLE>
+
+<!-- HEADER -->
+
+<STYLE type="text/css"> 
+ <!--
+ A:hover  {
+ 	color : Red;
+ }
+ -->
+</STYLE>
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+<!--ISBN=0471503363//-->
+<!--TITLE=The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling//-->
+<!--AUTHOR=Raj Jain//-->
+<!--PUBLISHER=Wiley Computer Publishing//-->
+<!--CHAPTER=13//-->
+<!--PAGES=203-207//-->
+<!--UNASSIGNED1//-->
+<!--UNASSIGNED2//-->
+
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="../ch12/12-08.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="13-02.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+<P><BR></P>
+<H2><A NAME="Heading1"></A><FONT COLOR="#000077">CHAPTER 13<BR>COMPARING SYSTEMS USING SAMPLE DATA
+</FONT></H2>
+<BLOCKQUOTE>
+<P ALIGN="RIGHT"><I>Statistics are like alienists &#151;they will testify for either side.</I></P>
+<P ALIGN="RIGHT">&#151;Fiorello La Guardia</P>
+</BLOCKQUOTE><P>The English words <I>sample</I> and <I>example</I> both originated from an Old French word <I>essample</I>. Although the two words are now distinct, it is important to remember their common root. A sample is only an example. One example is often not enough to prove a theory. Similarly, one sample is often not enough to make a definite statement about all systems. Yet this distinction is often forgotten. We measure two systems on just 5 or 10 workloads and then declare one system definitely better than the other. The purpose of this chapter is to reinforce the distinction and to discuss how to use sample data to compare two or more systems.</P>
+<P>The basic idea is that a definite statement cannot be made about the characteristics of all systems, but a probabilistic statement about the range in which the characteristics of most systems would lie can be made. The concept of confidence interval introduced in this chapter is one of the fundamental concepts that every performance analyst needs to understand well. In the remainder of this book, most conclusions drawn from samples are stated in terms of confidence intervals.</P>
+<H3><A NAME="Heading2"></A><FONT COLOR="#000077">13.1 SAMPLE VERSUS POPULATION</FONT></H3>
+<P>Suppose we write a computer program to generate several million random numbers with a given property, for instance, mean &#956; and standard deviation &#963;. We now put these numbers in an urn and draw a sample of <I>n</I> observations.</P>
+<P>Suppose the sample {<I>x</I><SUB><SMALL>1</SMALL></SUB>, <I>x</I><SUB><SMALL>2</SMALL></SUB>, . . . , <I>x</I><I><SUB><SMALL>n</SMALL></SUB></I>} has a sample mean <IMG SRC="images/13-01i.jpg"></IMGI>. The sample mean <IMG SRC="images/13-02i.jpg"></IMGI>is likely to be different from &#963;. To distinguish between the two, <IMG SRC="images/13-03i.jpg"></IMGI> is called the sample mean and &#956; is called population mean. The word <I>population</I> denotes all the numbers inside the urn.</P>
+<P>In most real-world problems, the population characteristics (for example, population mean) are unknown, and the goal of the analyst is to estimate these characteristics. For example, in our experiment of measuring a program&#146;s processor time, the sample mean obtained from a single sample of <I>n</I> observations is simply an estimate of the population mean. To determine the population mean exactly, we need to repeat the experiment infinitely many times, which is clearly impossible.</P>
+<P>The population characteristics are called <B>parameters</B> while the sample estimates are called <B>statistics.</B> For example, the population mean is a parameter while the sample mean is a statistic. It is necessary to distinguish between the two because the parameters are fixed while the statistic is a random variable. For instance, if we draw two samples of size <I>n</I> from a normally distributed population with mean &#956; and standard deviation &#963;, the sample means <IMG SRC="images/13-04i.jpg"></IMGI> and <IMG SRC="images/13-05i.jpg"></IMGI> for the two samples would be different. In fact, we can draw many such samples and draw a distribution for the sample mean. No such distribution is possible for the population mean. It is fixed and can be determined only if we consider the entire population. Traditionally, the Greek letters such as &#956; and &#963; are used to denote the parameters, while the English letters such as <IMG SRC="images/13-06i.jpg"></IMGI> and <I>s</I> are used to denote the statistic.</P>
+<H3><A NAME="Heading3"></A><FONT COLOR="#000077">13.2 CONFIDENCE INTERVAL FOR THE MEAN</FONT></H3>
+<P>Each sample mean is an estimate of the population mean. Given <I>k</I> samples, we have <I>k</I> estimates &#151;all of them different. The next problem is to get a single estimate of the population mean from these <I>k</I> estimates.</P>
+<P>In fact, it is not possible to get a perfect estimate of the population mean from any finite number of finite size samples. The best we can do is to get probabilistic bounds. Thus, we may be able to get two bounds, for instance, c<SUB><SMALL>1</SMALL></SUB> and c<SUB><SMALL>2</SMALL></SUB>, such that there is a high probability, 1 - &#945;, that the population mean is in the interval (c<SUB><SMALL>1</SMALL></SUB>, c<SUB><SMALL>2</SMALL></SUB>):</P>
+<P ALIGN="CENTER">Probability{<I>c</I><SUB><SMALL>1</SMALL></SUB>&#8804;&#956;&#8804;<I>c</I><SUB><SMALL>2</SMALL></SUB>} = 1 - &#945;</P>
+<P>The interval (<I>c</I><SUB><SMALL>1</SMALL></SUB>, <I>c</I><SUB><SMALL>2</SMALL></SUB>) is called the <B>confidence interval</B> for the population mean, &#945; is called the <B>significance level,</B> 100(1 - &#945;) is called the <B>confidence level</B>, and 1 - &#945; is called the <B>confidence coefficient</B>. Notice that the confidence level is traditionally expressed as a percentage and is typically near 100%, for instance, 90 or 95%; while the significance level a is expressed as a fraction and is typically near zero, for instance, 0.05 or 0.1.</P>
+<P>One way to determine the 90% confidence interval would be to use 5-percentile and 95-percentile of the sample means as the bounds. For example, we could take <I>k</I> samples, find sample means, sort them out in an increasing order, and take the [1 + 0.05(<I>k</I> - 1)]th and [1 + 0.95(<I>k</I> - 1)th element of the sorted set.</P>
+<P>Fortunately, it is not necessary to gather too many samples. It is possible to determine the confidence interval from just one sample. This is because of the central limit theorem, which allows us to determine the distribution of the sample mean. This theorem states that if the observations in a sample {<I>x</I><SUB><SMALL>1</SMALL></SUB>, <I>x</I><SUB><SMALL>2</SMALL></SUB>, . . . , <I>x</I><SUB><SMALL>n</SMALL></SUB>} are independent and come from the same population that has a mean &#956; and a standard deviation &#963;, then the sample mean for large samples is approximately normally distributed with mean &#956; and standard deviation <IMG SRC="images/13-07i.jpg"></IMGI>:</P>
+<P><P ALIGN="CENTER"><IMG SRC="images/13-01d.jpg"></P>
+</IMGD></P>
+<P>The standard deviation of the sample mean is called the <B>standard error</B>. Again, the standard error is different from the population standard deviation. If the population standard deviation is &#963;, the standard error is only <IMG SRC="images/13-08i.jpg"></IMGI>. From this expression, it is easy to see that as the sample size <I>n</I> increases, the standard error decreases.</P>
+<P>Using the central limit theorem, a 100(1 - &#945;)% confidence interval for the population mean is given by</P>
+<P><P ALIGN="CENTER"><IMG SRC="images/13-02d.jpg"></P>
+</IMGD></P>
+<P>Here, <IMG SRC="images/13-09i.jpg"></IMGI> is the sample mean, <I>s</I> is the sample standard deviation, <I>n</I> is the sample size, and <I>z</I><SUB><SMALL>1-&#945;/2</SMALL></SUB> is the (1 - &#945;/2)-quantile of a unit normal variate. Since these quantiles are used very frequently, their values are listed in Table A.2 in the Appendix.</P>
+<DL>
+<DD><B>Example 13.1</B> For the sample of Example 12.4, the mean <IMG SRC="images/13-10i.jpg"></IMGI> = 3.90, the standard deviation <I>s</I> = 0.95 and <I>n</I> = 32:
+</DL>
+<DL>
+<DD>A 90% confidence interval for the mean = <IMG SRC="images/13-11i.jpg"></IMGI>
+</DL>
+<P>We can state with 90% confidence that the population mean is between 3.62 and 4.17. The chance of error in this statement is 10%. That is, if we take 100 samples and construct a confidence interval for each sample as shown in Figure 13.1, in 90 cases the interval would include the population mean and in 10 cases the interval would not include the population mean.
+</P>
+<P>Similarly,</P>
+<P ALIGN="CENTER"><IMG SRC="images/13-12i.jpg"></IMGI></P>
+<P><A NAME="Fig1"></A><A HREF="javascript:displayWindow('images/13-01.jpg',400,470 )"><IMG SRC="images/13-01t.jpg"></A>
+<BR><A HREF="javascript:displayWindow('images/13-01.jpg',400,470)"><FONT COLOR="#000077"><B>FIGURE 13.1</B></FONT></A>&nbsp;&nbsp;Meaning of a confidence interval.</P>
+<P>The preceding confidence interval applies only for large samples, that is, for samples of size greater than 30. For smaller samples, confidence intervals can be constructed only if the observations come from a normally distributed population. For such samples, the 100(1 - &#945;)% confidence interval is given by
+</P>
+<P ALIGN="CENTER"><IMG SRC="images/13-03d.jpg"></P>
+</IMGD>
+<P>Here, t<SUB><SMALL>[1-&#945;/2;n-1]</SMALL></SUB> is the (1 - &#945;/2)-quantile of a <I>t</I>-variate with <I>n</I> - 1 degrees of freedom. These quantiles are listed in Table A.4 in the Appendix. The interval is based on the fact that for samples from a normal population <IMG SRC="images/13-13i.jpg"></IMGI>, <IMG SRC="images/13-14i.jpg"></IMGI> has a <I>N</I>(0, 1) distribution and (<I>n</I>-1)<I>s</I><SUP><SMALL>2</SMALL></SUP>/<IMG SRC="images/13-15i.jpg"></IMGI> has a chi-square distribution with <I>n</I> - 1 degrees of freedom, and therefore, <IMG SRC="images/13-16i.jpg"></IMGI> has a <I>t</I> distribution with <I>n</I> - 1 degrees of freedom (see Section 29.16 for a description of the <I>t</I> distribution). Figure 13.2 shows a sample <I>t</I> density function; the value <I>t</I><SUB><SMALL>[1-&#945;/2;<I>n</I>-1]</SMALL></SUB> is such that the probability of the random variable being less than -<I>t</I><SUB><SMALL>[1-&#945;/2;<I>n</I>-1]</SMALL></SUB>is &#945;/2. Similarly, the probability of the random variable being more than <I>t</I><SUB><SMALL>[1-&#945;/2;<I>n</I>-1]</SMALL></SUB>. The probability that the variable will lie between <IMG SRC="images/13-17i.jpg"></IMGI> is 1-&#945;.</P>
+<P><A NAME="Fig2"></A><A HREF="javascript:displayWindow('images/13-02.jpg',500,275 )"><IMG SRC="images/13-02t.jpg"></A>
+<BR><A HREF="javascript:displayWindow('images/13-02.jpg',500,275)"><FONT COLOR="#000077"><B>FIGURE 13.2</B></FONT></A>&nbsp;&nbsp;</P>
+<P>The ratio <IMG SRC="images/13-18i.jpg"></IMGI> for samples from normal populations follows a <I>t</I>(<I>n</I> - 1) distribution.</P><P><BR></P>
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="../ch12/12-08.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="13-02.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<hr width="90%" size="1" noshade>
+<div align="center">
+<font face="Verdana,sans-serif" size="1">Copyright &copy; <a href="/reference/wiley00001.html">John Wiley &amp; Sons, Inc.</a></font>
+</div>
+<!-- all of the reference materials (books) have the footer and subfoot reveresed -->
+<!-- reference_subfoot = footer -->
+<!-- reference_footer = subfoot -->
+
+</BODY>
+</HTML>
+
+<!-- END FOOTER -->
+

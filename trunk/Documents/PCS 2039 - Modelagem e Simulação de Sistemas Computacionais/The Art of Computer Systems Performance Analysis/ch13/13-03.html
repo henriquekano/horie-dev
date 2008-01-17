@@ -1,0 +1,162 @@
+<HTML>
+<HEAD>
+<META name=vsisbn content="0471503363">
+<META name=vstitle content="Art of Computer Systems Performance Analysis Techniques For Experimental Design Measurements Simulation And Modeling">
+<META name=vsauthor content="Raj Jain">
+<META name=vsimprint content="Wiley Computer Publishing">
+<META name=vspublisher content="John Wiley & Sons, Inc.">
+<META name=vspubdate content="05/01/91">
+<META name=vscategory content="Web and Software Development: Software Engineering: Simulation and Modeling">
+
+
+
+
+
+
+
+<TITLE>The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling:Comparing Systems Using Sample Data</TITLE>
+
+<!-- HEADER -->
+
+<STYLE type="text/css"> 
+ <!--
+ A:hover  {
+ 	color : Red;
+ }
+ -->
+</STYLE>
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+<!--ISBN=0471503363//-->
+<!--TITLE=The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling//-->
+<!--AUTHOR=Raj Jain//-->
+<!--PUBLISHER=Wiley Computer Publishing//-->
+<!--CHAPTER=13//-->
+<!--PAGES=211-215//-->
+<!--UNASSIGNED1//-->
+<!--UNASSIGNED2//-->
+
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="13-02.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="13-04.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+<P><BR></P>
+<H4 ALIGN="LEFT"><A NAME="Heading8"></A><FONT COLOR="#000077">13.4.3 Approximate Visual Test</FONT></H4>
+<P>A simpler visual test to compare two unpaired samples is to simply compute the confidence interval for each alternative separately as follows.
+</P>
+<P>There are three possibilities as shown graphically in Figure 13.4:</P>
+<P><A NAME="Fig4"></A><A HREF="javascript:displayWindow('images/13-04.jpg',500,167 )"><IMG SRC="images/13-04t.jpg"></A>
+<BR><A HREF="javascript:displayWindow('images/13-04.jpg',500,167)"><FONT COLOR="#000077"><B>FIGURE 13.4</B></FONT></A>&nbsp;&nbsp;Comparing two alternatives.</P>
+<DL>
+<DD><B>1.</B>&nbsp;&nbsp;The confidence intervals do not overlap. The alternative with higher sample mean is significantly better.
+<DD><B>2.</B>&nbsp;&nbsp;The confidence intervals overlap considerably such that the mean of one falls in the interval for the other. The two alternatives are equal with the desired confidence.
+<DD><B>3.</B>&nbsp;&nbsp;The confidence intervals overlap slightly such that the the mean of either is outside the confidence interval for the other. In this case, no visual conclusion can be drawn. We need to do the <I>t</I>-test as described previously.
+</DL>
+<DL>
+<DD><B>Example 13.7</B> For the data of Example 13.6,
+<DL>
+<DD><I>t</I>-value at five degrees of freedom and 90% confidence = 2.015
+<DD>90% confidence interval for mean of A = 5.31 <IMG SRC="images/13-22i.jpg"></IMGI>
+<!-- CODE SNIP //-->
+<PRE>
+                             =(0.24,10.38)
+</PRE>
+<!-- END CODE SNIP //-->
+<DD>90% confidence interval for mean of B = 5.64 <IMG SRC="images/13-23i.jpg"></IMGI>
+<!-- CODE SNIP //-->
+<PRE>
+                             =(0.18,11.10)
+</PRE>
+<!-- END CODE SNIP //-->
+</DL>
+</DL>
+<P>The two confidence intervals overlap and the mean of one falls in the confidence interval for the other. Therefore, the two systems are not different at this level of confidence.
+</P>
+<H3><A NAME="Heading9"></A><FONT COLOR="#000077">13.5 WHAT CONFIDENCE LEVEL TO USE</FONT></H3>
+<P>Throughout this book, we use confidence levels of 90 or 95%. This should not lead one to believe that the confidence levels should always be that high. The choice of the confidence level is based on the loss one would sustain if the parameter is outside the range and the gain one would have if the parameter is inside the range. If the loss is high compared to the gain, the confidence levels should be high. If the loss is negligible compared to the gain, a lower confidence level is fine.
+</P>
+<P>Consider, for example, a lottery in which a ticket costs one dollar but pays five million dollars to the winner. Suppose the probability of winning is 10<SUP><SMALL>-7</SMALL></SUP> or one in ten million. To win the lottery with 90% confidence would require one to buy nine million tickets. It is clear that no one would be willing to spend that much for winning just five million. For most people, a very low confidence such as 0.01% would be fine in this case.</P>
+<P>The system design decisions that computer systems performance analysts and designers face are not very different from those of the lottery. Although the loss (if the decision turns out wrong) and the gain (if the decision turns out correct) are not as widely different as in the case of the lottery, the risk level is decided essentially in the same manner.</P>
+<P>The point is that if you come across a parameter that is significant only at 50% confidence level, do not automatically assume that the confidence is low and it is not worth making a decision based on that parameter. Similarly, even if a parameter is significant at 99% confidence level, it is possible for the decision makers to say that the confidence level is not high enough if the loss due to wrong decision is enormous.</P>
+<H3><A NAME="Heading10"></A><FONT COLOR="#000077">13.6 HYPOTHESIS TESTING VERSUS CONFIDENCE INTERVALS</FONT></H3>
+<P>Most books on statistics have a chapter devoted to hypothesis testing. Here, we prefer an alternate method of doing the same thing. This alternate method makes use of confidence intervals and helps us to easily solve a few commonly encountered cases of hypothesis testing. Testing for zero mean is the first example in this book of a problem that can be solved by a hypothesis test as well as by a confidence interval. In practice, a confidence interval is preferable because it provides more information. A hypothesis test is usually a yes-no decision. We either reject a hypothesis or accept it. A confidence interval not only gives that answer, it also provides information about the possible range of values for the parameter. A narrow confidence interval indicates that the parameter has been estimated with a high degree of precision. A wide confidence interval, on the other hand, indicates that the precision is not high. Knowing the precision is often more helpful to decision makers than the simple yes-no answer from the hypothesis tests. For example, if the difference <I>A - B</I> in the mean performance of two systems has a confidence interval for (-100, 100), we can say that there is no difference between the systems since the interval includes a zero. On the other hand, if the interval was (-1, 1), the conclusion is still &#147;no difference&#148; but we can now say it more loudly. Thus, confidence intervals tell us not only what to say but also how loudly to say it.</P>
+<P>Confidence intervals are in general easier to understand and explain to decision makers than hypothesis tests. This is because the width of the interval is in the same units of measurements as the parameter being estimated. The decision makers find it easier to grasp. For example, it is more useful to know that a parameter is in the range, for instance, 100 to 200, than to know that the probability of the parameter being 110 is less than 3%.</P>
+<H3><A NAME="Heading11"></A><FONT COLOR="#000077">13.7 ONE-SIDED CONFIDENCE INTERVALS</FONT></H3>
+<P>In all the tests so far, two-sided confidence intervals have been used. For such intervals, if the confidence level is 100(1-&#945;)%, there is a 100&#945;/2% chance that the difference will be more than the upper confidence limit. Similarly, there is a 100&#945;/2% chance that the difference will be less than the lower confidence limit. For example, with a 90% two-sided confidence interval, there is a 5% chance that the difference will be less than the lower confidence limit. Similarly, there is a 5% chance that the difference will be more than the upper confidence limit.
+</P>
+<P>Sometimes only one-sided comparison is desired. For example, you may want to test the hypothesis that the mean is greater than a certain value. In this case, a one-sided lower confidence interval for &#945; is desired and it is given by</P>
+<P><P ALIGN="CENTER"><IMG SRC="images/13-15d.jpg"></P>
+</IMGD></P>
+<P>Notice that the <I>t</I>-value is read at 1 - &#945; confidence rather than at 1 - &#945;/2. Similarly, the one-sided upper confidence interval for the population mean is given by</P>
+<P><P ALIGN="CENTER"><IMG SRC="images/13-16d.jpg"></P>
+</IMGD></P>
+<P>For large samples, <I>z</I>-values are used instead of <I>t</I>-values.</P>
+<DL>
+<DD><B>Example 13.8</B> Time between crashes was measured for two systems A and B. The mean and standard deviations of the time are listed in Table 13.1. To check if System A is more susceptible to failures than System B, we use the procedure of unpaired observations. The mean difference is
+</DL>
+<P><P ALIGN="CENTER"><IMG SRC="images/13-17d.jpg"></P>
+</IMGD></P>
+<P>The standard deviation of the difference is</P>
+<P><P ALIGN="CENTER"><IMG SRC="images/13-18d.jpg"></P>
+</IMGD></P>
+<P>The effective number of degrees of freedom is</P>
+<P><P ALIGN="CENTER"><IMG SRC="images/13-19d.jpg"></P>
+</IMGD></P>
+<CENTER>
+<TABLE WIDTH="80%"><TH COLSPAN="4" CAPTION ALIGN="LEFT" VALIGN="TOP">TABLE 13.1 Time between System Crashes
+<TR>
+<TD COLSPAN="4"><HR>
+<TR>
+<TH WIDTH="15%" ALIGN="CENTER" VALIGN="BOTTOM">System 
+<TH WIDTH="15%" ALIGN="CENTER" VALIGN="BOTTOM">Number 
+<TH WIDTH="15%" ALIGN="CENTER" VALIGN="BOTTOM">Mean 
+<TH WIDTH="15%" ALIGN="CENTER" VALIGN="BOTTOM">Standard deviation
+<TR>
+<TD COLSPAN="4"><HR>
+<TR>
+<TD WIDTH="15%" ALIGN="CENTER" VALIGN="TOP">A 
+<TD WIDTH="15%" ALIGN="CENTER" VALIGN="TOP">972 
+<TD WIDTH="15%" ALIGN="CENTER" VALIGN="TOP">124.10 
+<TD WIDTH="15%" ALIGN="CENTER" VALIGN="TOP">198.20
+<TR>
+<TD WIDTH="15%" ALIGN="CENTER" VALIGN="TOP">B 
+<TD WIDTH="15%" ALIGN="CENTER" VALIGN="TOP">153 
+<TD WIDTH="15%" ALIGN="CENTER" VALIGN="TOP">141.47 
+<TD WIDTH="15%" ALIGN="CENTER" VALIGN="TOP">226.11
+<TR>
+<TD COLSPAN="4"><HR>
+<TR>
+</TABLE>
+</CENTER>
+<P>Since the degrees of freedom are more than 30, we use the unit normal quantiles instead of <I>t</I> quantiles. Also, since this is a one-sided test, we use <I>z</I><SUB><SMALL>0.90</SMALL></SUB> = 1.28 for a 90% confidence interval, which is</P>
+<P ALIGN="CENTER">(-17.37, -17.37 + 1.28 x 19.35) = (-17.37, 7.402)</P>
+<P>Since the confidence interval includes zero, we reject the hypothesis that System A is more susceptible to crashes than System B.</P><P><BR></P>
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="13-02.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="13-04.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<hr width="90%" size="1" noshade>
+<div align="center">
+<font face="Verdana,sans-serif" size="1">Copyright &copy; <a href="/reference/wiley00001.html">John Wiley &amp; Sons, Inc.</a></font>
+</div>
+<!-- all of the reference materials (books) have the footer and subfoot reveresed -->
+<!-- reference_subfoot = footer -->
+<!-- reference_footer = subfoot -->
+
+</BODY>
+</HTML>
+
+<!-- END FOOTER -->
+

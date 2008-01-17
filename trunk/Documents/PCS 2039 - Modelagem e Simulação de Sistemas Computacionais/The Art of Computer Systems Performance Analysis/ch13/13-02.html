@@ -1,0 +1,164 @@
+<HTML>
+<HEAD>
+<META name=vsisbn content="0471503363">
+<META name=vstitle content="Art of Computer Systems Performance Analysis Techniques For Experimental Design Measurements Simulation And Modeling">
+<META name=vsauthor content="Raj Jain">
+<META name=vsimprint content="Wiley Computer Publishing">
+<META name=vspublisher content="John Wiley & Sons, Inc.">
+<META name=vspubdate content="05/01/91">
+<META name=vscategory content="Web and Software Development: Software Engineering: Simulation and Modeling">
+
+
+
+
+
+
+
+<TITLE>The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling:Comparing Systems Using Sample Data</TITLE>
+
+<!-- HEADER -->
+
+<STYLE type="text/css"> 
+ <!--
+ A:hover  {
+ 	color : Red;
+ }
+ -->
+</STYLE>
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+<!--ISBN=0471503363//-->
+<!--TITLE=The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling//-->
+<!--AUTHOR=Raj Jain//-->
+<!--PUBLISHER=Wiley Computer Publishing//-->
+<!--CHAPTER=13//-->
+<!--PAGES=207-211//-->
+<!--UNASSIGNED1//-->
+<!--UNASSIGNED2//-->
+
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="13-01.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="13-03.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+<P><BR></P>
+<DL>
+<DD><B>Example 13.2</B> Consider the error data of Example 12.5, which was shown to have a normal distribution. The eight error values are -0.04, -0.19, 0.14, -0.09, -0.14, 0.19, 0.04, and 0.09.
+</DL>
+<P>The mean of these values is zero and their sample standard deviation is 0.138. The <I>t</I><SUB><SMALL>[0.95;7]</SMALL></SUB> from Table A.4 is 1.895. Thus, the confidence interval for the mean error is</P>
+<P><P ALIGN="CENTER"><IMG SRC="images/13-04d.jpg"></P>
+</IMGD></P>
+<H3><A NAME="Heading4"></A><FONT COLOR="#000077">13.3 TESTING FOR A ZERO MEAN</FONT></H3>
+<P>A common use of confidence intervals is to check if a measured value is significantly different from zero. When comparing a random measurement with zero, the statements have to be made probabilistically, that is, at a desired level of confidence. If the measured value passes our test of difference with a probability greater than or equal to the specified level of confidence, 100(1 - &#945;)%, then the value is significantly different from zero.
+</P>
+<P>The test consists of determining a confidence interval and simply checking if the interval includes zero. The four possibilities are shown in Figure 13.3, where <B>CI</B> is used as an abbreviation for confidence interval. The CI is shown by a vertical line stretching between the lower and upper confidence limits. The sample mean is indicated by a small circle. In cases (a) and (b), the confidence interval includes zero, and therefore, the measured values are not significantly different from zero. In cases (c) and (d), the confidence interval does not include zero, and therefore, the measured value is significantly different from zero.</P>
+<P><A NAME="Fig3"></A><A HREF="javascript:displayWindow('images/13-03.jpg',437,285 )"><IMG SRC="images/13-03t.jpg"></A>
+<BR><A HREF="javascript:displayWindow('images/13-03.jpg',437,285)"><FONT COLOR="#000077"><B>FIGURE 13.3</B></FONT></A>&nbsp;&nbsp;Testing for a zero mean.</P>
+<DL>
+<DD><B>Example 13.3</B> The difference in the processor times of two different implementations of the same algorithm was measured on seven similar workloads. The differences are {1.5, 2.6, -1.8, 1.3, -0.5, 1.7, 2.4}. Can we say with 99% confidence that one implementation is superior to the other?
+</DL>
+<P ALIGN="CENTER">Sample size = <I>n</I> = 7</P>
+<P ALIGN="CENTER">Mean = 7.20/7 = 1.03</P>
+<P ALIGN="CENTER">Sample variance = (22.84 - 7.20*7.20/ 7)/6 = 2.57</P>
+<P ALIGN="CENTER">Sample standard deviation = <IMG SRC="images/13-19i.jpg"></IMGI> = 1.60</P>
+<P ALIGN="CENTER"><IMG SRC="images/13-20i.jpg"></IMGI></P>
+<P ALIGN="CENTER">100(1-&#947;) = 99, &#947; = 0.01, 1-&#947;/2 = 0.995</P>
+<P>From Table A.4 in the Appendix, the <I>t</I>-value at six degrees of freedom is <I>t</I><SUB><SMALL>[0.995;6]</SMALL></SUB> = 3.707, and</P>
+<P ALIGN="CENTER">99% confidence interval = (-1.21, 3.27)</P>
+<P>The confidence interval includes zero. Therefore, we cannot say with 99% confidence that the mean difference is significantly different from zero.</P>
+<P>The procedure for testing for zero mean applies equally well to any other value as well. For example, to test if the mean is equal to a given value <I>a</I>, a confidence interval is constructed as before, and if the interval includes <I>a</I>, then the hypothesis that the mean is equal to a cannot be rejected at the given level of confidence. The following example illustrates this extension of the test.</P>
+<DL>
+<DD><B>Example 13.4</B> Consider again the data of Example 13.3. To test if the difference is equal to 1 at 99% confidence level, the confidence interval as determined in that example is (-1.21, 3.27). The interval includes 1. Thus, a difference equal to 1 is also accepted at this confidence level.
+</DL>
+<H3><A NAME="Heading5"></A><FONT COLOR="#000077">13.4 COMPARING TWO ALTERNATIVES</FONT></H3>
+<P>A majority of performance analysis projects require comparing two or more systems and finding the best among them. This is the problem addressed in
+</P>
+<P>this section. The discussion, however, is limited to comparing just two systems on very similar workloads. If there are more than two systems or if the workloads are significantly different, the analysis of experimental design techniques discussed later in Part IV of this book should be used.</P>
+<P>The statistical procedures to compare two systems are an extension of the test for a zero mean described earlier in Section 13.3. The procedure for paired and unpaired observations are different. These terms and the corresponding procedures are described next.</P>
+<H4 ALIGN="LEFT"><A NAME="Heading6"></A><FONT COLOR="#000077">13.4.1 Paired Observations</FONT></H4>
+<P>If we conduct <I>n</I> experiments on each of the two systems such that there is a one-to-one correspondence between the <I>i</I>th test on system A and the ith test on system B, then the observations are called <B>paired.</B> For example, if <I>x<SUB><SMALL>i</SMALL></SUB></I> and <I>y<SUB><SMALL>i</SMALL></SUB></I> represent the performance on the <I>i</I>th workload, the observations would be called paired. If there is no correspondence between the two samples, the observations are called <B>unpaired.</B></P>
+<P>The analysis of paired observation is straightforward. The two samples are treated as one sample of <I>n</I> pairs. For each pair, the difference in performance can be computed. A confidence interval can be constructed for the difference. If the confidence interval includes zero, the systems are not significantly different.</P>
+<DL>
+<DD><B>Example 13.5</B> Six similar workloads were used on two systems. The observations are {(5.4, 19.1), (16.6, 3.5), (0.6, 3.4), (1.4, 2.5), (0.6, 3.6), (7.3, 1.7)}. Is one system better than the other?
+</DL>
+<P>The performance differences constitute a sample of six observations, {-13.7, 13.1, -2.8, -1.1, -3.0, 5.6}.
+</P>
+<P>For this sample:</P>
+<P ALIGN="CENTER">Sample mean = -0.32</P>
+<P ALIGN="CENTER">Sample variance = 81.62</P>
+<P ALIGN="CENTER">Sample standard deviation = 9.03</P>
+<P><P ALIGN="CENTER"><IMG SRC="images/13-05d.jpg"></P>
+</IMGD></P>
+<P>The 0.95-quantile of a <I>t</I>-variate with five degrees of freedom is is 2.015:</P>
+<P><P ALIGN="CENTER"><IMG SRC="images/13-06d.jpg"></P>
+</IMGD></P>
+<P>The confidence interval includes zero. Therefore, the two systems are not different.</P>
+<H4 ALIGN="LEFT"><A NAME="Heading7"></A><FONT COLOR="#000077">13.4.2 Unpaired Observations</FONT></H4>
+<P>The analysis of unpaired observations is a bit more complicated than that of the paired observations. Suppose we have two samples of size <I>n</I><SUB><SMALL>a</SMALL></SUB> and <I>n</I><SUB><SMALL>b</SMALL></SUB> for alternatives A and B, respectively. The observations are unpaired in the sense that there is no correspondence between <I>i</I>th observations in the two samples. The steps to determine the confidence interval for the difference in mean performance requires making an estimate of the variance and an effective number of degrees of freedom. The procedure is as follows:</P>
+<DL>
+<DD><B>1.</B>&nbsp;&nbsp;Compute the sample means:
+<BR><P ALIGN="CENTER"><IMG SRC="images/13-07d.jpg"></P>
+</IMGD>
+<DD><B>2.</B>&nbsp;&nbsp;Compute the sample standard deviations:
+<BR><P ALIGN="CENTER"><IMG SRC="images/13-08d.jpg"></P>
+</IMGD>
+<DD><B>3.</B>&nbsp;&nbsp;Compute the mean difference:<IMG SRC="images/13-21i.jpg"></IMGI>
+<DD><B>4.</B>&nbsp;&nbsp;Compute the standard deviation of the mean difference: 
+<BR><P ALIGN="CENTER"><IMG SRC="images/13-09d.jpg"></P>
+</IMGD>
+<DD><B>5.</B>&nbsp;&nbsp;Compute the effective number of degrees of freedom:
+<BR><P ALIGN="CENTER"><IMG SRC="images/13-10d.jpg"></P>
+</IMGD>
+<DD><B>6.</B>&nbsp;&nbsp;Compute the confidence interval for the mean difference:
+<BR><P ALIGN="CENTER"><IMG SRC="images/13-11d.jpg"></P>
+</IMGD>
+<BR>Here, <I>t</I><SUB><SMALL>[1-&#945;/2;<I>v</I>]</SMALL></SUB> is the (1-&#945;/2)-quantile of a <I>t</I>-variate with <I>v</I> degrees of freedom.
+<DD><B>7.</B>&nbsp;&nbsp;If the confidence interval includes zero, the difference is not significant at 100(1 - &#945;)% confidence level. If the confidence interval does not include zero, then the sign of the mean difference indicates which system is better.
+</DL>
+<P>This procedure is known as a <B><I>t</I>-test.</B></P>
+<DL>
+<DD><B>Example 13.6</B> The processor time required to execute a task was measured on two systems. The times on system A were {5.36, 16.57, 0.62, 1.41, 0.64, 7.26}. The times on system B were {19.12, 3.52, 3.38, 2.50, 3.60, 1.74}. Are the two systems significantly different? 
+</DL>
+<P>For system A:
+</P>
+<P><P ALIGN="CENTER"><IMG SRC="images/13-12d.jpg"></P>
+</IMGD></P>
+<P>For System B:</P>
+<P><P ALIGN="CENTER"><IMG SRC="images/13-13d.jpg"></P>
+</IMGD></P>
+<P>Then</P>
+<P><P ALIGN="CENTER"><IMG SRC="images/13-14d.jpg"></P>
+</IMGD></P>
+<P ALIGN="CENTER">Standard deviation of mean difference = 3.698</P>
+<P ALIGN="CENTER">Effective number of degrees of freedom f = 11.921</P>
+<P ALIGN="CENTER">0.95-quantile of t-variate with 12 degrees of freedom = 1.71</P>
+<P ALIGN="CENTER">90% confidence interval for difference = (-6.92, 6.26)</P>
+<P>The confidence interval includes zero. Therefore, at this confidence level the two systems are not different.</P><P><BR></P>
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="13-01.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="13-03.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<hr width="90%" size="1" noshade>
+<div align="center">
+<font face="Verdana,sans-serif" size="1">Copyright &copy; <a href="/reference/wiley00001.html">John Wiley &amp; Sons, Inc.</a></font>
+</div>
+<!-- all of the reference materials (books) have the footer and subfoot reveresed -->
+<!-- reference_subfoot = footer -->
+<!-- reference_footer = subfoot -->
+
+</BODY>
+</HTML>
+
+<!-- END FOOTER -->
+
