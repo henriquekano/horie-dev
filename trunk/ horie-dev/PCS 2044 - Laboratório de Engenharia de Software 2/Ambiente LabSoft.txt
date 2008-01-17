@@ -1,6 +1,0 @@
-Servidores LabSoft:
-Admin: labsoft_adm
-Senha: pcs2008
-
-Wireless:
-Enviar MAC Address para <elizabeth.maciel@poli.usp.br>
