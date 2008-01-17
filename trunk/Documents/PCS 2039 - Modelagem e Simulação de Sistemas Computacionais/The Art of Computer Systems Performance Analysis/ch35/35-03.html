@@ -1,0 +1,199 @@
+<HTML>
+<HEAD>
+<META name=vsisbn content="0471503363">
+<META name=vstitle content="Art of Computer Systems Performance Analysis Techniques For Experimental Design Measurements Simulation And Modeling">
+<META name=vsauthor content="Raj Jain">
+<META name=vsimprint content="Wiley Computer Publishing">
+<META name=vspublisher content="John Wiley & Sons, Inc.">
+<META name=vspubdate content="05/01/91">
+<META name=vscategory content="Web and Software Development: Software Engineering: Simulation and Modeling">
+
+
+
+
+
+
+
+<TITLE>The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling:Convolution Algorithm</TITLE>
+
+<!-- HEADER -->
+
+<STYLE type="text/css"> 
+ <!--
+ A:hover  {
+ 	color : Red;
+ }
+ -->
+</STYLE>
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+<!--ISBN=0471503363//-->
+<!--TITLE=The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling//-->
+<!--AUTHOR=Raj Jain//-->
+<!--PUBLISHER=Wiley Computer Publishing//-->
+<!--CHAPTER=35//-->
+<!--PAGES=598-602//-->
+<!--UNASSIGNED1//-->
+<!--UNASSIGNED2//-->
+
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="35-02.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="35-04.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+<P><BR></P>
+<P>When the algorithm terminates, the final values of <I>G</I>[1],...,<I>G</I>[<I>N</I>] correspond to the rightmost column of Table 35.2, that is, to <I>g</I>(<I>n</I>,<I>M</I>) for <I>n</I> = 1, 2,..., <I>N</I>. Thus, the values of <I>G</I>(1),...<I>G</I>(<I>N</I> &#150; 1) are produced as a by&#150;product of the computation of <I>G</I>(<I>N</I>).</P>
+<P>Note that each evaluation of <I>G</I>[<I>n</I>] requires one addition and one multiplication and that <I>G</I>[<I>n</I>] is evaluated a total of <I>NM</I> times. Thus, the algorithm requires <I>NM</I> additions and <I>NM</I> multiplications for computation of <I>G</I>(<I>N</I>).</P>
+<BLOCKQUOTE><P><B>Example 35.3</B> Consider the central server model of Example 35.1 again. Using the convolution method, we can compute <I>G</I>(<I>N</I>) as shown in Table 35.3. The first row of the table is initialized to all 1&#146;s. The first column consists of successive powers of <I>y</I><SUB><SMALL>1</SMALL></SUB>, which in this case happens to be 1. Each of the remaining entries is obtained using the entry to its left and the entry above it in Equation (35.5). For example, 1 &#43; 3 &#215; 1 gives 4; 1 &#43; 3 &#215; 4 gives 13; 1 &#43; 3 &#215; 13 gives 40; 4 &#43; 2 &#215; 1 give 6; and so on.</P>
+</BLOCKQUOTE><CENTER>
+<TABLE WIDTH="60%">
+<TR>
+<TH CAPTION ALIGN="LEFT" COLSPAN="4">TABLE 35.3 Computing Normalizing Constant for Example 35.3
+<TR>
+<TD COLSPAN="4"><HR>
+<TR>
+<TH WIDTH="10%" ALIGN="CENTER" VALIGN="TOP"><I>n</I>
+<TH WIDTH="15%" ALIGN="CENTER" VALIGN="TOP"><I>y</I><SUB><SMALL>CPU</SMALL></SUB> = 1
+<TH WIDTH="15%" ALIGN="CENTER" VALIGN="TOP"><I>y</I><SUB><SMALL><I>A</I></SMALL></SUB> = 3
+<TH WIDTH="15%" ALIGN="CENTER" VALIGN="TOP"><I>y</I><SUB><SMALL><I>B</I></SMALL></SUB> = 2
+<TR>
+<TD COLSPAN="4"><HR>
+<TR>
+<TD ALIGN="CENTER" VALIGN="TOP">0
+<TD ALIGN="CENTER" VALIGN="TOP">1
+<TD ALIGN="CENTER" VALIGN="TOP">1
+<TD ALIGN="CENTER" VALIGN="TOP">1
+<TR>
+<TR>
+<TD ALIGN="CENTER" VALIGN="TOP">1
+<TD ALIGN="CENTER" VALIGN="TOP">1
+<TD ALIGN="CENTER" VALIGN="TOP">4
+<TD ALIGN="CENTER" VALIGN="TOP">6
+<TR>
+<TD ALIGN="CENTER" VALIGN="TOP">2
+<TD ALIGN="CENTER" VALIGN="TOP">1
+<TD ALIGN="CENTER" VALIGN="TOP">13
+<TD ALIGN="CENTER" VALIGN="TOP">25
+<TR>
+<TD ALIGN="CENTER" VALIGN="TOP">3
+<TD ALIGN="CENTER" VALIGN="TOP">1
+<TD ALIGN="CENTER" VALIGN="TOP">40
+<TD ALIGN="CENTER" VALIGN="TOP">90
+<TR>
+<TD COLSPAN="4"><HR>
+<TR>
+</TABLE>
+</CENTER>
+<H3><A NAME="Heading4"></A><FONT COLOR="#000077">35.3 COMPUTING PERFORMANCE USING G(N)</FONT></H3>
+<P>Once the <I>G</I>(1),...,<I>G</I>(<I>N</I>) are known, other performance statistics can be computed as follows:</P>
+<DL>
+<DD><B>1.</B>&nbsp;&nbsp;<I>Queue Length Distributions:</I> The probability of having <I>j</I> or more jobs at the ith device is given by:
+<P ALIGN="CENTER"><P ALIGN="CENTER"><IMG SRC="images/35-05d.jpg"></P>
+</IMGD>
+<BR>The probability of exactly <I>j</I> jobs at the <I>i</I>th device is
+<P ALIGN="CENTER"><P ALIGN="CENTER"><IMG SRC="images/35-06d.jpg"></P>
+</IMGD>
+<BR>The mean number of jobs at the ith device, <I>E</I>[<I>n<SUB><SMALL>i</SMALL></SUB></I>], is given by
+<P ALIGN="CENTER"><P ALIGN="CENTER"><IMG SRC="images/35-07d.jpg"></P>
+</IMGD>
+<BR>The joint probability of having <I>j</I> or more jobs at the <I>i</I>th device and <I>l</I> or more jobs at the <I>k</I>th device is
+<P ALIGN="CENTER"><P ALIGN="CENTER"><IMG SRC="images/35-08d.jpg"></P>
+</IMGD>
+<DD><B>2.</B>&nbsp;&nbsp;<I>Utilizations:</I> The device utilization is the same as the probability of having one or more jobs at the device:
+<P ALIGN="CENTER"><P ALIGN="CENTER"><IMG SRC="images/35-09d.jpg"></P>
+</IMGD>
+<DD><B>3.</B>&nbsp;&nbsp;<I>Throughputs:</I> The device throughputs are given by the utilization law:
+<P ALIGN="CENTER"><P ALIGN="CENTER"><IMG SRC="images/35-10d.jpg"></P>
+</IMGD>
+<BR>The system throughput is given by the forced flow law:
+<P ALIGN="CENTER"><P ALIGN="CENTER"><IMG SRC="images/35-11d.jpg"></P>
+</IMGD>
+<DD><B>4.</B>&nbsp;&nbsp;<I>Response Times:</I> The mean response time of a device is given by Little&#146;s law:
+<P ALIGN="CENTER"><P ALIGN="CENTER"><IMG SRC="images/35-12d.jpg"></P>
+</IMGD>
+<BR>The mean system response time is given by the general response time law:
+<P ALIGN="CENTER"><P ALIGN="CENTER"><IMG SRC="images/35-13d.jpg"></P>
+</IMGD>
+</DL>
+<P>We now illustrate the algorithm using an example.
+</P>
+<BLOCKQUOTE><P><B>Example 35.4</B> Once again, consider the central server model of Example 35.1. In Example 35.3, we computed the normalizing constants for this system. From Table 35.3 we know that <I>G</I>(1) = 6, <I>G</I>(2) = 25, and <I>G</I>(3) = 90.</P>
+<DL>
+<DD><B>1.</B>&nbsp;&nbsp;<I>Queue Length Distributions</I>: The probability of having two or more jobs at disk A is
+<P ALIGN="CENTER"><P ALIGN="CENTER"><IMG SRC="images/35-14d.jpg"></P>
+</IMGD>
+<BR>We can also obtain this probability from Table 35.1 by adding the probabilities for all states in which <I>n<SUB><SMALL>A</SMALL></SUB></I> is 2 or 3. There are three such states in the table, and their probabilities are 0.2, 0.3, and 0.1, which add up to 0.6, as already computed.
+<BR>The probability of exactly one job at disk A is
+<P ALIGN="CENTER"><P ALIGN="CENTER"><IMG SRC="images/35-15d.jpg"></P>
+</IMGD>
+<BR>Again, from Table 35.1, we see that there are three states with <I>n<SUB><SMALL>A</SMALL></SUB></I> = 1; the sum of their probabilities is 0.133 &#43; 0.067 &#43; 0.033 = 0.233.
+<BR>The probability of exactly zero, two, and three jobs at disk A can be similarly computed:
+<P ALIGN="CENTER"><P ALIGN="CENTER"><IMG SRC="images/35-16d.jpg"></P>
+</IMGD>
+<BR>Now that we have a complete distribution of queue length at disk A, we can compute its mean, variance, and any higher order statistics:
+<P ALIGN="CENTER"><P ALIGN="CENTER"><IMG SRC="images/35-17d.jpg"></P>
+</IMGD>
+<BR>The probability that both disks are busy is given by the joint probability of having one or more jobs at disk A and one or more jobs at disk B:
+<P ALIGN="CENTER"><P ALIGN="CENTER"><IMG SRC="images/35-18d.jpg"></P>
+</IMGD>
+<BR>Again, this probability can be obtained from Table 35.1.
+<BR>The mean queue lengths at the three service centers are
+<P ALIGN="CENTER"><P ALIGN="CENTER"><IMG SRC="images/35-19d.jpg"></P>
+</IMGD>
+<BR>Notice that <I>Q<SUB><SMALL>A</SMALL></SUB></I> is the same as <I>E</I>[<I>n<SUB><SMALL>A</SMALL></SUB></I>] computed earlier using queue length distribution. Also, as a check, note that the three queue lengths sum to 3, which is the total number of jobs in the system.
+<DD><B>2.</B>&nbsp;&nbsp;<I>Utilizations</I>: The CPU utilization is
+<P ALIGN="CENTER"><P ALIGN="CENTER"><IMG SRC="images/35-20d.jpg"></P>
+</IMGD>
+<DD><B>3.</B>&nbsp;&nbsp;<I>Throughputs</I>: The system throughput is
+<P ALIGN="CENTER"><P ALIGN="CENTER"><IMG SRC="images/35-21d.jpg"></P>
+</IMGD>
+<BR>The CPU throughput is
+<P ALIGN="CENTER"><I>X</I><SUB><SMALL>CPU</SMALL></SUB> = <I>XV</I><SUB><SMALL>CPU</SMALL></SUB> 0.356 x 20 = 7.12 jobs/second
+<DD><B>4.</B>&nbsp;&nbsp;<I>Response Times</I>: The mean response times of the three devices are
+<P ALIGN="CENTER"><P ALIGN="CENTER"><IMG SRC="images/35-22d.jpg"></P>
+</IMGD>
+<BR>The mean system response time as given by the general response time law is
+<P ALIGN="CENTER"><P ALIGN="CENTER"><IMG SRC="images/35-23d.jpg"></P>
+</IMGD>
+<BR>As a check, we can use Little&#146;s law to find the mean number of jobs in the system:
+<P ALIGN="CENTER"><I>N</I> = <I>XR</I> = 0.356&#215;8.42 = 3
+</DL>
+</BLOCKQUOTE>
+<H3><A NAME="Heading5"></A><FONT COLOR="#000077">35.4 TIMESHARING SYSTEMS</FONT></H3>
+<P>The convolution algorithm, as specified so far, applies only to networks of fixed&#150;capacity service centers. It can be extended to networks of load&#150;dependent service centers. While general load&#150;dependent service centers are beyond the scope of this book, we do want to allow the possibility of the network having one set of terminals that are modeled as delay centers with think time <I>Z</I>. The easiest way to compute <I>G</I>(<I>N</I>) in this case is to assume that the terminals are zeroth devices and the initialization Equation (35.6) is modified as follows:</P>
+<P ALIGN="CENTER"><P ALIGN="CENTER"><IMG SRC="images/35-24d.jpg"></P>
+</IMGD></P>
+<P>Here, <I>y</I><SUB><SMALL>o</SMALL></SUB> = &#945;<I>Z</I> is the scaled value of the think time. The system state is now represented by a (<I>M</I> &#43; 1)&#150;component vector <B>n</B> = {<I>n</I><SUB><SMALL>0</SMALL></SUB>,<I>n</I><SUB><SMALL>1</SMALL></SUB>,...,<I>n<SUB><SMALL>M</SMALL></SUB></I>}, where <I>n</I><SUB><SMALL>i</SMALL></SUB> is the number of jobs at the <I>i</I>th device and <I>n</I><SUB><SMALL>0</SMALL></SUB> is the number of jobs at the terminals. Obviously, all queue lengths <I>n<SUB><SMALL>i</SMALL></SUB></I> must be nonnegative (<I>n<SUB><SMALL>i</SMALL></SUB></I>&#8805;0), and they should add to <IMG SRC="images/35-10i.jpg"></IMGI>. The state probabilities are given by</P>
+<TABLE WIDTH="100%"><TR>
+<TD ALIGN="CENTER"><IMG SRC="images/35-11i.jpg"></IMGI>
+<TD ALIGN="RIGHT">(35.8)
+</TABLE>
+<P>If there is more than one delay center in the network, they can all be combined into one service center by adding their total demands <I>D<SUB><SMALL>i</SMALL></SUB></I> to <I>Z</I>. The computed value of <I>G</I>(<I>N</I>) is still correct, and <I>n</I><SUB><SMALL>0</SMALL></SUB> now represents the sum of queue lengths at all delay centers. The mean queue lengths at individual delay centers are proportional to their service demands <I>D<SUB><SMALL>i</SMALL></SUB></I>.</P><P><BR></P>
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="35-02.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="35-04.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<hr width="90%" size="1" noshade>
+<div align="center">
+<font face="Verdana,sans-serif" size="1">Copyright &copy; <a href="/reference/wiley00001.html">John Wiley &amp; Sons, Inc.</a></font>
+</div>
+<!-- all of the reference materials (books) have the footer and subfoot reveresed -->
+<!-- reference_subfoot = footer -->
+<!-- reference_footer = subfoot -->
+
+</BODY>
+</HTML>
+
+<!-- END FOOTER -->
+

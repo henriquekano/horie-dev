@@ -1,0 +1,138 @@
+<HTML>
+<HEAD>
+<META name=vsisbn content="0471503363">
+<META name=vstitle content="Art of Computer Systems Performance Analysis Techniques For Experimental Design Measurements Simulation And Modeling">
+<META name=vsauthor content="Raj Jain">
+<META name=vsimprint content="Wiley Computer Publishing">
+<META name=vspublisher content="John Wiley & Sons, Inc.">
+<META name=vspubdate content="05/01/91">
+<META name=vscategory content="Web and Software Development: Software Engineering: Simulation and Modeling">
+
+
+
+
+
+
+
+<TITLE>The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling:Convolution Algorithm</TITLE>
+
+<!-- HEADER -->
+
+<STYLE type="text/css"> 
+ <!--
+ A:hover  {
+ 	color : Red;
+ }
+ -->
+</STYLE>
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+<!--ISBN=0471503363//-->
+<!--TITLE=The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling//-->
+<!--AUTHOR=Raj Jain//-->
+<!--PUBLISHER=Wiley Computer Publishing//-->
+<!--CHAPTER=35//-->
+<!--PAGES=602-603//-->
+<!--UNASSIGNED1//-->
+<!--UNASSIGNED2//-->
+
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="35-03.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="35-05.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+<P><BR></P>
+<P>The equations for system performance metrics given earlier in Section 35.3 are still valid. The queue length distribution formulas apply to devices other than terminals. Queue length distributions for terminals are somewhat difficult to compute and are not covered here. Interested readers may refer to Buzen (1973). The mean queue lengths and device utilizations for the terminals can be computed as follows:
+</P>
+<DL>
+<DD><B>1.</B>&nbsp;&nbsp;<I>Mean Queue Length:</I> Using Little&#146;s law, the mean number of jobs at the terminals (or the number of thinking users) is given by
+<P ALIGN="CENTER"><I>Q</I><SUB><SMALL>0</SMALL></SUB> = <I>XZ</I>
+<DD><B>2.</B>&nbsp;&nbsp;<I>Utilizations:</I> Using the utilization law, the average utilization of the terminal facility is
+<P ALIGN="CENTER"><I>U</I><SUB><SMALL>0</SMALL></SUB> = <I>XZ</I>
+<BR>This is the combined utilization of <I>N</I> terminals. Utilization of individual terminals is
+</DL>
+<P ALIGN="CENTER"><P ALIGN="CENTER"><IMG SRC="images/35-25d.jpg"></P>
+</IMGD></P>
+<P><B>Example 35.5</B> Consider a timesharing system similar to the batch system of Example 35.1. The system consists of a central processor, two disks labeled A and B, and three terminals. It can be represented by the queueing network shown in Figure 32.8. An average user makes 13 I/O requests to disk A and 6 I/O requests to disk B. The service times per visit to the CPU, disk A, and disk B are 39, 180, and 260 milliseconds, respectively. The users have an average think time of 4.68 seconds.</P>
+<P>For this system the service times are</P>
+<P ALIGN="CENTER"><I>S</I><SUB><SMALL>CPU</SMALL></SUB> = 0.039, <I>S<SUB><SMALL>A</SMALL></SUB></I> = 0.18, <I>S<SUB><SMALL>B</SMALL></SUB></I> = 0.26</P>
+<P>the visit ratios are</P>
+<P ALIGN="CENTER"><I>V</I><SUB><SMALL>CPU</SMALL></SUB> = 13 &#43; 6 &#43; 1 = 20, <I>V<SUB><SMALL>A</SMALL></SUB></I> = 13, <I>V<SUB><SMALL>B</SMALL></SUB></I> = 6</P>
+<P>total service demands are</P>
+<P ALIGN="CENTER"><I>D</I><SUB><SMALL>CPU</SMALL></SUB> = 20 &#215; 0.039 = 0.78,</P>
+<P ALIGN="CENTER"><I>D<SUB><SMALL>A</SMALL></SUB></I> = 13 &#215; 0.18 = 2.34,</P>
+<P ALIGN="CENTER"><I>D<SUB><SMALL>B</SMALL></SUB></I> = 6 &#215; 0.26 = 1.56,</P>
+<P>and <I>Z</I> = 4.68.</P>
+<P>For the scaling factor, we once again choose &#945; = 1/0.78. This results in <I>y</I><SUB><SMALL>0</SMALL></SUB> = 6, <I>y</I><SUB><SMALL>CPU</SMALL></SUB> = 1, <I>y<SUB><SMALL>A</SMALL></SUB></I> = 3, and <I>y<SUB><SMALL>B</SMALL></SUB></I> = 2. Computation of the normalizing constant is shown in Table 35.4. The tabular arrangement is identical to that of Table 35.3 except that a new column for the terminal has been added. The nth row of this column is <I>y<SUP><SMALL>n</SMALL></SUP></I><SUB><SMALL>0</SMALL></SUB>/<I>n</I>!. Computation of other columns is done as before.</P>
+<P>From the last column of the table we can see that <I>G</I>(0) = 1, <I>G</I>(1) = 12, <I>G</I>(2) = 79, and <I>G</I>(3) = 384. The total number of system states is <IMG SRC="images/35-12i.jpg"></IMGI> or 20. These 20 states and their probabilities, as computed using Equation (35.8), are listed in Table 35.5. From Table 35.5, we can compute any desired statistics on the queue length of any device including terminals. For example, the probability of two jobs at the terminals is 0.094 &#43; 0.141 &#43; 0.047 = 0.282. Similarly, the probability of one job at disk A is 0.031 &#43; 0.016 &#43; 0.008 &#43; 0.094 &#43; 0.047 &#43; 0.141 = 0.336.</P>
+<CENTER>
+<TABLE WIDTH="80%"><TR>
+<TH CAPTION ALIGN="LEFT" COLSPAN="5">TABLE 35.4 Computing Normalizing Constant for Example 35.5
+<TR>
+<TD COLSPAN="5"><HR>
+<TR>
+<TH WIDTH="10%" ALIGN="CENTER" VALIGN="TOP"><I>n</I>
+<TH WIDTH="15%" ALIGN="CENTER" VALIGN="TOP"><I>y</I><SUB><SMALL>0</SMALL></SUB> = 6
+<TH WIDTH="15%" ALIGN="CENTER" VALIGN="TOP"><I>y</I><SUB><SMALL>CPU</SMALL></SUB> = 1
+<TH WIDTH="15%" ALIGN="CENTER" VALIGN="TOP"><I>y</I><SUB><SMALL><I>A</I></SMALL></SUB> = 3
+<TH WIDTH="20%" ALIGN="CENTER" VALIGN="TOP"><I>y</I><SUB><SMALL><I>B</I></SMALL></SUB> = 2
+<TR>
+<TD COLSPAN="5"><HR>
+<TR>
+<TD ALIGN="CENTER" VALIGN="TOP">0
+<TD ALIGN="CENTER" VALIGN="TOP">1
+<TD ALIGN="CENTER" VALIGN="TOP">1
+<TD ALIGN="CENTER" VALIGN="TOP">1
+<TD ALIGN="CENTER" VALIGN="TOP">1
+<TR>
+<TD ALIGN="CENTER" VALIGN="TOP">1
+<TD ALIGN="CENTER" VALIGN="TOP">6
+<TD ALIGN="CENTER" VALIGN="TOP">7
+<TD ALIGN="CENTER" VALIGN="TOP">10
+<TD ALIGN="CENTER" VALIGN="TOP">12
+<TR>
+<TD ALIGN="CENTER" VALIGN="TOP">2
+<TD ALIGN="CENTER" VALIGN="TOP">18
+<TD ALIGN="CENTER" VALIGN="TOP">25
+<TD ALIGN="CENTER" VALIGN="TOP">55
+<TD ALIGN="CENTER" VALIGN="TOP">79
+<TR>
+<TD ALIGN="CENTER" VALIGN="TOP">3
+<TD ALIGN="CENTER" VALIGN="TOP">36
+<TD ALIGN="CENTER" VALIGN="TOP">61
+<TD ALIGN="CENTER" VALIGN="TOP">226
+<TD ALIGN="CENTER" VALIGN="TOP">384
+<TR>
+<TD COLSPAN="5"><HR>
+<TR>
+</TABLE>
+</CENTER>
+<P><BR></P>
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="35-03.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="35-05.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<hr width="90%" size="1" noshade>
+<div align="center">
+<font face="Verdana,sans-serif" size="1">Copyright &copy; <a href="/reference/wiley00001.html">John Wiley &amp; Sons, Inc.</a></font>
+</div>
+<!-- all of the reference materials (books) have the footer and subfoot reveresed -->
+<!-- reference_subfoot = footer -->
+<!-- reference_footer = subfoot -->
+
+</BODY>
+</HTML>
+
+<!-- END FOOTER -->
+

@@ -1,0 +1,163 @@
+<HTML>
+<HEAD>
+<META name=vsisbn content="0471503363">
+<META name=vstitle content="Art of Computer Systems Performance Analysis Techniques For Experimental Design Measurements Simulation And Modeling">
+<META name=vsauthor content="Raj Jain">
+<META name=vsimprint content="Wiley Computer Publishing">
+<META name=vspublisher content="John Wiley & Sons, Inc.">
+<META name=vspubdate content="05/01/91">
+<META name=vscategory content="Web and Software Development: Software Engineering: Simulation and Modeling">
+
+
+
+
+
+
+
+<TITLE>The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling:Operational Laws</TITLE>
+
+<!-- HEADER -->
+
+<STYLE type="text/css"> 
+ <!--
+ A:hover  {
+ 	color : Red;
+ }
+ -->
+</STYLE>
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+<!--ISBN=0471503363//-->
+<!--TITLE=The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling//-->
+<!--AUTHOR=Raj Jain//-->
+<!--PUBLISHER=Wiley Computer Publishing//-->
+<!--CHAPTER=33//-->
+<!--PAGES=562-565//-->
+<!--UNASSIGNED1//-->
+<!--UNASSIGNED2//-->
+
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="33-02.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="33-04.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+<P><BR></P>
+</P>
+<P>Substituting for <I>Q</I><SUB><SMALL><I>i</I></SMALL></SUB> from Equation (33.5) yields</P>
+<P ALIGN="CENTER"><I>XR</I> = <I>X</I><SUB><SMALL>1</SMALL></SUB><I>R</I><SUB><SMALL>1</SMALL></SUB> &#43; <I>X</I><SUB><SMALL>2</SMALL></SUB><I>R</I><SUB><SMALL><I>2</I></SMALL></SUB> &#43; ... &#43; <I>X</I><SUB><SMALL><I>M</I></SMALL></SUB><I>R</I><SUB><SMALL><I>M</I></SMALL></SUB></P>
+<P>Dividing both sides of this equation by <I>X</I> and using the forced flow law, we get</P>
+<P ALIGN="CENTER"><I>R</I> = <I>V</I><SUB><SMALL>1</SMALL></SUB><I>R</I><SUB><SMALL>1</SMALL></SUB> &#43; <I>V</I><SUB><SMALL>2</SMALL></SUB><I>R</I><SUB><SMALL><I>2</I></SMALL></SUB> &#43; ... &#43; <I>V</I><SUB><SMALL><I>M</I></SMALL></SUB><I>R</I><SUB><SMALL><I>M</I></SMALL></SUB></P>
+<P>or</P>
+<P><P ALIGN="CENTER"><IMG SRC="images/33-14d.jpg"></P>
+</IMGD></P>
+<P>This is called the <B>general response time law.</B> It is possible to show that this law holds even if the job flow is not balanced. Intuitively, the law states that the total time spent by a job at a server is the product of time per visit and the number of visits to the server; and the total time in the system is equal to the sum of total times at various servers.</P>
+<DL>
+<DD><B>Example 33.5</B> Let us compute the response time for the timesharing system of Examples 33.2 and 33.4. For this system
+<P ALIGN="CENTER"><I>V</I><SUB><SMALL>CPU</SMALL></SUB> = 181, <I>V</I><SUB><SMALL><I>A</I></SMALL></SUB> = 80, <I>V</I><SUB><SMALL><I>B</I></SMALL></SUB> = 100
+<P ALIGN="CENTER"><I>R</I><SUB><SMALL>CPU</SMALL></SUB> = 0.250, <I>R</I><SUB><SMALL><I>A</I></SMALL></SUB> = 0.203, <I>R</I><SUB><SMALL><I>B</I></SMALL></SUB> = 0.071
+<DD>The system response time is
+<DL>
+<DL>
+<DL>
+<DD><I>R</I> = <I>R</I><SUB><SMALL>CPU</SMALL></SUB><I>V</I><SUB><SMALL><I>CPU</I></SMALL></SUB> &#43; <I>R</I><SUB><SMALL><I>A</I></SMALL></SUB><I>V</I><SUB><SMALL><I>A</I></SMALL></SUB> &#43; <I>R</I><SUB><SMALL><I>B</I></SMALL></SUB><I>V</I><SUB><SMALL><I>B</I></SMALL></SUB>
+<DL>
+<DD>= 0.250 &#215; 181 &#43; 0.203 &#215; 80 &#43; 0.071 &#215; 100 = 68.6
+</DL>
+</DL>
+</DL>
+</DL>
+<DD>The system response time is 68.6 seconds.
+</DL>
+<H3><A NAME="Heading6"></A><FONT COLOR="#000077">33.5 INTERACTIVE RESPONSE TIME LAW</FONT></H3>
+<P>In an interactive system, the users generate requests that are serviced by the central subsystem and responses come back to the terminal. After a think time <I>Z</I>, the users submit the next request. If the system response time is <I>R</I>, the total cycle time of requests is <I>R</I> &#43; <I>Z</I>. Each user generates about <I>T</I>/(<I>R</I> &#43; <I>Z</I>) requests in time period <I>T</I>. If there are <I>N</I> users,</P>
+<P><P ALIGN="CENTER"><IMG SRC="images/33-15d.jpg"></P>
+</IMGD></P>
+<P>This is the <B>interactive response time law.</B></P>
+<DL>
+<DD><B>Example 33.6</B> For the timesharing system of Example 33.2, we can compute the response time using the interactive response time law as follows:
+<P ALIGN="CENTER"><I>X</I> = 0.1963, <I>N</I> = 17, <I>Z</I> = 18
+<DD>Therefore,
+<P ALIGN="CENTER"><IMG SRC="images/33-16d.jpg"></P>
+</IMGD>
+<DD>This is the same as that obtained earlier in Example 33.5. 
+</DL>
+<H3><A NAME="Heading7"></A><FONT COLOR="#000077">33.6 BOTTLENECK ANALYSIS</FONT></H3>
+<P>One consequence of the forced flow law is that the device utilizations are proportional to their respective total service demands:
+</P>
+<P ALIGN="CENTER"><I>U</I><SUB><SMALL><I>i</I></SMALL></SUB> <SUB><SMALL><I></I></SMALL></SUB> &#8733; <I>D</I><SUB><SMALL><I>i</I></SMALL></SUB></P>
+<P>The device with the highest total service demand <I>D</I><SUB><SMALL><I>i</I></SMALL></SUB> has the highest utilization<SUP><SMALL><B>1</B></SMALL></SUP> and is called the <B>bottleneck device.</B> This device is the key limiting factor in achieving higher throughput. Improving this device will provide the highest payoff in terms of system throughput. Improving other devices will have little effect on the system performance. Therefore, <I>identifying the bottleneck device should be the first step in any performance improvement project.</I></P>
+
+<BLOCKQUOTE>
+<HR>
+<SUP><SMALL><B>1</B></SMALL></SUP><FONT SIZE="-1">Delay centers can have utilizations more than one without any stability problems. Therefore, delay centers cannot be a bottleneck device. Only queueing centers should be considered in finding the bottleneck or computing <I>D</I><SUB><SMALL>max</SMALL></SUB>.
+</FONT>
+<HR>
+</BLOCKQUOTE>
+
+<P>Suppose we find that the device <I>b</I> is the bottleneck. This implies that <I>D</I><SUB><SMALL><I>b</I></SMALL></SUB> = <I>D</I><SUB><SMALL>max</SMALL></SUB> is the highest among <I>D</I><SUB><SMALL>1</SMALL></SUB>, <I>D</I><SUB><SMALL>2</SMALL></SUB>,...,<I>D</I><SUB><SMALL><I>M</I></SMALL></SUB>. Then the throughput and response times of the system are bound as follows:</P>
+<P><P ALIGN="CENTER"><IMG SRC="images/33-17d.jpg"></P>
+</IMGD></P>
+<P>Here, <IMG SRC="images/33-02i.jpg"></IMGI> is the sum of total service demands on all devices except terminals. Equations (33.8) and (33.9) are known as <B>asymptotic bounds.</B> The proof follows.</P>
+<DL>
+<DD><B>Proof 33.1</B> The asymptotic bounds are based on the following observations:
+<DL>
+<DD><B>1.</B>&nbsp;&nbsp;The utilization of any device cannot exceed 1. This puts a limit on the maximum obtainable throughput.
+<DD><B>2.</B>&nbsp;&nbsp;The response time of the system with <I>N</I> users cannot be less than a system with just one user. This puts a limit on the minimum response time.
+<DD><B>3.</B>&nbsp;&nbsp;The interactive response time formula can be used to convert the bound on throughput to that on response time and vice versa.
+</DL>
+<DD>We now derive the bounds using these observations. For the bottleneck device <I>b</I> we have
+<P ALIGN="CENTER"><I>U</I><SUB><SMALL><I>b</I></SMALL></SUB> = <I>XD</I><SUB><SMALL>max</SMALL></SUB>
+<DD>Since <I>U</I><SUB><SMALL><I>b</I></SMALL></SUB> cannot be more than 1, we have
+<P ALIGN="CENTER"><IMG SRC="images/33-18d.jpg"></P>
+</IMGD>
+<DD>With just one job in the system, there is no queueing and the system response time is simply the sum of the service demands:
+<P ALIGN="CENTER"><I>R</I>(1) = <I>D</I><SUB><SMALL>1</SMALL></SUB> &#43; <I>D</I><SUB><SMALL>2</SMALL></SUB> &#43; ... &#43; <I>D</I><SUB><SMALL><I>M</I></SMALL></SUB> = <I>D</I>
+<DD>Here, <I>D</I> is defined as the sum of all service demands. With more than one user there may be some queueing and so the response time will be higher. That is,
+<TABLE WIDTH="100%">
+<TR>
+<TD WIDTH="25%" ALIGN="LEFT">
+<TD  VALIGN="TOP" ALIGN="LEFT"><I>R</I>(<I>N</I>) &#8805; <I>D</I>
+<TD VALIGN="TOP" ALIGN="RIGHT">(33.11)
+</TABLE>
+<DD>Applying the interactive response time law to the bounds specified by Equations (33.10) and (33.11), we get
+<P><P ALIGN="CENTER"><IMG SRC="images/33-19d.jpg"></P>
+</IMGD>
+<P>and
+<P><P ALIGN="CENTER"><IMG SRC="images/33-20d.jpg"></P>
+</IMGD>
+<P><A NAME="Fig3"></A><A HREF="javascript:displayWindow('images/33-03.jpg',409,420 )"><IMG SRC="images/33-03t.jpg"></A>
+<BR><A HREF="javascript:displayWindow('images/33-03.jpg',409,420)"><FONT COLOR="#000077"><B>FIGURE 33.3</B></FONT></A>&nbsp;&nbsp;Typical asymptotic bounds.</P>
+<DD>Combining these bounds with Equations (33.10) and (33.11), we get the asymptotic bounds as specified in Equations (33.8) and (33.9).
+</DL>
+<P>Figure 33.3 shows asymptotic bounds for a typical case. As shown in the figure, both throughput and response time bounds consist of two straight lines. The response time bounds consist of a horizontal straight line at <I>R</I> = <I>D</I> and a line passing through the point (-<I>Z</I>,O) at a slope of <I>D</I><SUB><SMALL>max</SMALL></SUB>. The throughput bounds consist of a horizontal straight line at <I>X</I> = 1/<I>D</I><SUB><SMALL>max</SMALL></SUB>. and a line passing through the origin at a slope of 1/(<I>D</I> &#43; <I>Z</I>). The point of intersection of the two lines is called the knee. For both response time and throughput, the <B>knee</B> occurs at the same value of number of users. The number of jobs <I>N</I>* at the knee is given by</P>
+<P><P ALIGN="CENTER"><IMG SRC="images/33-21d.jpg"></P>
+</IMGD></P>
+<P>If the number of jobs is more than <I>N</I>*, then we can say with certainty that there is queueing somewhere in the system.</P><P><BR></P>
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="33-02.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="33-04.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<hr width="90%" size="1" noshade>
+<div align="center">
+<font face="Verdana,sans-serif" size="1">Copyright &copy; <a href="/reference/wiley00001.html">John Wiley &amp; Sons, Inc.</a></font>
+</div>
+<!-- all of the reference materials (books) have the footer and subfoot reveresed -->
+<!-- reference_subfoot = footer -->
+<!-- reference_footer = subfoot -->
+
+</BODY>
+</HTML>
+
+<!-- END FOOTER -->
+

@@ -1,0 +1,96 @@
+<HTML>
+<HEAD>
+<META name=vsisbn content="0471503363">
+<META name=vstitle content="Art of Computer Systems Performance Analysis Techniques For Experimental Design Measurements Simulation And Modeling">
+<META name=vsauthor content="Raj Jain">
+<META name=vsimprint content="Wiley Computer Publishing">
+<META name=vspublisher content="John Wiley & Sons, Inc.">
+<META name=vspubdate content="05/01/91">
+<META name=vscategory content="Web and Software Development: Software Engineering: Simulation and Modeling">
+
+
+
+
+
+
+
+<TITLE>The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling:Hierarchical Decomposition of Large Queueing Networks</TITLE>
+
+<!-- HEADER -->
+
+<STYLE type="text/css"> 
+ <!--
+ A:hover  {
+ 	color : Red;
+ }
+ -->
+</STYLE>
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+<!--ISBN=0471503363//-->
+<!--TITLE=The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling//-->
+<!--AUTHOR=Raj Jain//-->
+<!--PUBLISHER=Wiley Computer Publishing//-->
+<!--CHAPTER=36//-->
+<!--PAGES=613-616//-->
+<!--UNASSIGNED1//-->
+<!--UNASSIGNED2//-->
+
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="36-01.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="36-03.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+<P><BR></P>
+<H3><A NAME="Heading3"></A><FONT COLOR="#000077">36.2 HIERARCHICAL DECOMPOSITION</FONT></H3>
+<P>&#147;Divide and conquer&#148; is a well-known technique to solve complex problems. It requires breaking the complex problem into several smaller subproblems. An example of such a decomposition occurs with electrical circuits, where Norton&#146;s theorem allows any part of the circuit to be replaced by an equivalent current source with a resistance in parallel. For example, Figure 36.2a shows a sample electrical circuit. If we are interested in studying the behavior for various values of resistor <I>R</I>, we can replace the remaining components by a current source whose current capacity is determined by shorting the &#147;designated&#148; resistor <I>R</I> and finding the current through the short circuit. The internal resistance <I>R</I><SUB><SMALL>0</SMALL></SUB> of the current source is determined by the open-circuit voltage. Norton&#146;s theorem states that the current of the designated resistor <I>R</I> in the equivalent circuit is always the same as in the given circuit for all values of <I>R</I>.</P>
+<P><A NAME="Fig2"></A><A HREF="javascript:displayWindow('images/36-02.jpg',500,175 )"><IMG SRC="images/36-02t.jpg"></A>
+<BR><A HREF="javascript:displayWindow('images/36-02.jpg',500,175)"><FONT COLOR="#000077"><B>FIGURE 36.2</B></FONT></A>&nbsp;&nbsp; Norton&#146;s theoram for electrical networks.</P>
+<P>Chandy, Herzog, and Woo (1975) discovered a similar method for queueing networks. They showed that if a queueing network satisfies certain conditions, it can be decomposed and solved in a manner very similar to that of applying Norton&#146;s theorem.
+</P>
+<P>Consider, for example, the queueing network of Figure 36.3a. If we are interested in studying various alternatives for the <I>i</I>th device, we could replace the remaining network by a flow-equivalent center (<B>FEC</B>) as shown in Figure 36.3c. The FEC is a load-dependent service center, and its service rate <I>&#181;</I>(<I>j</I>) is a function of the number of jobs <I>j</I> present at this service center. The service rate <I>&#181;</I>(<I>j</I>) can be determined by short circuiting the <I>i</I>th device and solving the &#147;shorted model&#148; with <I>j</I> jobs circulating in it. The throughput <I>X</I>(<I>j</I>) of the shorted model gives the service rate <I>&#181;</I>(<I>j</I>). In the equivalent network each job makes <I>V</I><SUB><SMALL><I>i</I></SMALL></SUB> visits to the <I>i</I>th device for each visit to the FEC. This is the reason for the link connecting the output of the <I>i</I>th device to its input in Figure 36.3c. Obviously, if <I>V</I><SUB><SMALL><I>i</I></SMALL></SUB> = 1, this link is not required. Many books on queueing theory do not explicitly show this link. However, if <I>V</I><SUB><SMALL><I>i</I></SMALL></SUB> &#8800; 1, the diagram will not correctly represent visit ratios, and the response times of individual devices will not be correctly computed.</P>
+<P><A NAME="Fig3"></A><A HREF="javascript:displayWindow('images/36-03.jpg',500,188 )"><IMG SRC="images/36-03t.jpg"></A>
+<BR><A HREF="javascript:displayWindow('images/36-03.jpg',500,188)"><FONT COLOR="#000077"><B>FIGURE 36.3</B></FONT></A>&nbsp;&nbsp; Chandy-Herzog-Woo theorem for queueing networks.</P>
+<P>In general, the portion of the network that can be isolated is not limited to a single queue. It can consist of any number of queues and is called the <B>designated subnetwork</B>. The remaining subnetwork is called the <B>aggregate subnetwork</B>. The <B>shorted model</B> is created by setting the service times of all service centers in the designated subnetwork to zero. The aggregate subnetwork can then be replaced by a single FEC to form an equivalent network. For any given number of jobs in the center, the service rate of the FEC is equal to the throughput of the shorted model with that many jobs circulating in the shorted model.</P>
+<P>The hierarchical decomposition produces exact results for a large class of networks called BCMP networks, discussed earlier in Section 32.2. It is applicable to open as well as closed networks. However, for simplicity, we will limit our examples here to simple closed queueing networks consisting of fixed-capacity service centers, single classes of jobs, and fixed-transition probabilities that are independent of the state of the system.</P>
+<P>Notice that the FEC is a load-dependent service center, and therefore, solution of the equivalent network requires using techniques that can handle such centers. The following theorem ensures that the results obtained for the equivalent network are valid for the original network as well.</P>
+<BLOCKQUOTE><P><B>Chandy-Herzog-Woo Theorem</B>:<I> The queue length distribution for the designated subnetwork in the equivalent network is the same as in the original network.</I></P>
+</BLOCKQUOTE><P>To summarize, the Chandy-Herzog-Woo decomposition method consists of the following steps:
+</P>
+<DL>
+<DD><B>1.</B>&nbsp;&nbsp;Select a particular queue or set of queues to be studied in detail. These queues constitute the designated subnetwork. The remaining queues constitute the aggregate subnetwork.
+<DD><B>2.</B>&nbsp;&nbsp;Create a shorted model by setting the service times of all centers in the designated subnetwork to zero.
+<DD><B>3.</B>&nbsp;&nbsp;Solve the shorted model using MVA, convolution, or any other technique.
+<DD><B>4.</B>&nbsp;&nbsp;Replace the aggregate subnetwork by an FEC. This service center is a load-dependent service center whose service rate, when there are <I>n</I> jobs in it, is equal to the throughput of the shorted model with <I>n</I> jobs circulating in the shorted model.
+<DD><B>5.</B>&nbsp;&nbsp;Solve the equivalent network using techniques for load-dependent service centers. The performance metrics for service centers in the designated subnetwork, as obtained from the equivalent network, apply to the original network as well.
+<DD><B>6.</B>&nbsp;&nbsp;The performance metrics for service centers in the aggregate subnetwork are obtained by using conditional probabilities, as discussed next.
+</DL>
+<P><BR></P>
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="36-01.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="36-03.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<hr width="90%" size="1" noshade>
+<div align="center">
+<font face="Verdana,sans-serif" size="1">Copyright &copy; <a href="/reference/wiley00001.html">John Wiley &amp; Sons, Inc.</a></font>
+</div>
+<!-- all of the reference materials (books) have the footer and subfoot reveresed -->
+<!-- reference_subfoot = footer -->
+<!-- reference_footer = subfoot -->
+
+</BODY>
+</HTML>
+
+<!-- END FOOTER -->
+

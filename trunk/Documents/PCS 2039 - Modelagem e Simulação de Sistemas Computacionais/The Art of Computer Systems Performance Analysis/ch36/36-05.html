@@ -1,0 +1,245 @@
+<HTML>
+<HEAD>
+<META name=vsisbn content="0471503363">
+<META name=vstitle content="Art of Computer Systems Performance Analysis Techniques For Experimental Design Measurements Simulation And Modeling">
+<META name=vsauthor content="Raj Jain">
+<META name=vsimprint content="Wiley Computer Publishing">
+<META name=vspublisher content="John Wiley & Sons, Inc.">
+<META name=vspubdate content="05/01/91">
+<META name=vscategory content="Web and Software Development: Software Engineering: Simulation and Modeling">
+
+
+
+
+
+
+
+<TITLE>The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling:Hierarchical Decomposition of Large Queueing Networks</TITLE>
+
+<!-- HEADER -->
+
+<STYLE type="text/css"> 
+ <!--
+ A:hover  {
+ 	color : Red;
+ }
+ -->
+</STYLE>
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+<!--ISBN=0471503363//-->
+<!--TITLE=The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling//-->
+<!--AUTHOR=Raj Jain//-->
+<!--PUBLISHER=Wiley Computer Publishing//-->
+<!--CHAPTER=36//-->
+<!--PAGES=624-626//-->
+<!--UNASSIGNED1//-->
+<!--UNASSIGNED2//-->
+
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="36-04.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="../bib.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+<P><BR></P>
+<H2 ALIGN="CENTER"><FONT COLOR="#000077"><I>FURTHER READING FOR PART VI</I></FONT></H2>
+<P>There are a number of good books on queueing theory. The classic book in this area is the first volume of Kleinrock (1975). Other good books for single queues are Gross and Harris (1985), Gelenbe and Pujolle (1987), and Cooper (1981).
+</P>
+<P>Lazowska et al. (1984) provides an easy to understand treatment of queueing networks. Lavenberg (1983) provides a thorough treatment of the subject for a mathematically inclined reader. Leung (1987) provides case studies of queueing models of database and I/O subsystems. Agrawal (1985) discusses approximation techniques. Gelenbe and Mitrani (1980) and Kobayashi (1978) also discuss queueing theory and its application to computer systems.</P>
+<P>For a derivation of Equation (31.6) for the cumulative distribution function of the response time, see Gross and Harris (1985).</P>
+<P>A popular approximation to MVA called <I>Linearizer</I> is proposed by Chandy and Neuse (1982). Browne et al. (1975) discuss the application of hierarchical techniques.</P>
+<H4 ALIGN="LEFT"><A NAME="Heading6"></A><FONT COLOR="#000077">SYMBOLS FREQUENTLY USED IN QUEUEING ANALYSIS</FONT></H4>
+<TABLE WIDTH="100%">
+<TR>
+<TH WIDTH="15%" VALIGN="TOP" ALIGN="LEFT">Symbol
+<TH VALIGN="TOP" ALIGN="CENTER">Definition
+<TR>
+<TD COLSPAN="2"><HR>
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT"><I>b</I>
+<TD VALIGN="TOP" ALIGN="LEFT">Busy period duration for a server (a random variable)
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT"><I>B</I>
+<TD VALIGN="TOP" ALIGN="LEFT">Number of buffers (includes both waiting and serving positions)
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT"><I>C<SUB><SMALL>x</SMALL></SUB></I>
+<TD VALIGN="TOP" ALIGN="LEFT">Coefficient of variation of a random variable <I>x</I>
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT"><I>D</I>
+<TD VALIGN="TOP" ALIGN="LEFT">Total service demands on all service centers (except terminals)
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT"><I>D<SUB><SMALL>i</SMALL></SUB></I>
+<TD VALIGN="TOP" ALIGN="LEFT">Total service demand on the <I>i</I>th service center, = <I>V<SUB><SMALL>i</SMALL></SUB>S<SUB><SMALL>i</SMALL></SUB></I>
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT"><I>E</I>[<I>x</I>]
+<TD VALIGN="TOP" ALIGN="LEFT">Mean of the random variable <I>x</I>
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT"><I>f<SUB><SMALL>i</SMALL></SUB></I>(<I>x</I>)
+<TD VALIGN="TOP" ALIGN="LEFT">Some arbitrary function of variable <I>x</I>
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT"><I>f</I>(<I>x</I>)
+<TD VALIGN="TOP" ALIGN="LEFT">Probability density function (pdf) of the random variable <I>x</I>
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT"><I>F</I>(<I>x</I>)
+<TD VALIGN="TOP" ALIGN="LEFT">Cumulative distribution function (CDF) of the random variable <I>x</I>
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT"><I>g</I>(<I>n</I>, <I>m</I>)
+<TD VALIGN="TOP" ALIGN="LEFT">Normalizing constant with <I>n</I> jobs and <I>m</I> service centers
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT"><I>G</I>(<I>N</I>)
+<TD VALIGN="TOP" ALIGN="LEFT">Normalizing constant with <I>N</I> jobs in the system, = <I>g</I> (<I>N</I>, <I>M</I>)
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT"><I>I</I>
+<TD VALIGN="TOP" ALIGN="LEFT">Idle time duration for a server (a random variable)
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT"><I>J</I>
+<TD VALIGN="TOP" ALIGN="LEFT">Sum of time spent by <I>n</I> jobs in the system
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT"><I>K</I>
+<TD VALIGN="TOP" ALIGN="LEFT">Population size
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT"><I>L</I><SUB><SMALL><I>x</I></SMALL></SUB>( )
+<TD VALIGN="TOP" ALIGN="LEFT">Laplace transform of the probability generating function of the continuous random variable <I>x</I>
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT"><I>m</I>
+<TD VALIGN="TOP" ALIGN="LEFT">Number of servers in a service center
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT"><I>m<SUB><SMALL><I>i</I></SMALL></SUB></I>
+<TD VALIGN="TOP" ALIGN="LEFT">Number of servers in the <I>i</I>th service center
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT"><I>M</I>
+<TD VALIGN="TOP" ALIGN="LEFT">Number of service centers in a queueing network
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT"><I>n</I>
+<TD VALIGN="TOP" ALIGN="LEFT">Number of jobs in the system (a random variable)
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT"><B>n</B>
+<TD VALIGN="TOP" ALIGN="LEFT">Vector {<I>n</I><SUB><SMALL>1</SMALL></SUB>, <I>n</I><SUB><SMALL>2</SMALL></SUB>, ..., <I>n</I><SUB><SMALL><I>M</I></SMALL></SUB>} indicating number of jobs at various service centers
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT"><I>n<SUB><SMALL>i</SMALL></SUB></I>
+<TD VALIGN="TOP" ALIGN="LEFT">Number of jobs in the <I>i</I>th service center
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT"><I>n<SUB><SMALL>q</SMALL></SUB></I>
+<TD VALIGN="TOP" ALIGN="LEFT">Number of jobs in the queue (a random variable)
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT"><I>n<SUB><SMALL>s</SMALL></SUB></I>
+<TD VALIGN="TOP" ALIGN="LEFT">Number of jobs receiving service (a random variable)
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT"><I>N</I>
+<TD VALIGN="TOP" ALIGN="LEFT">Number of jobs in a closed queueing network
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT"><I>P<SUB><SMALL>n</SMALL></SUB></I>
+<TD VALIGN="TOP" ALIGN="LEFT">Probability of <I>n</I> jobs in the system
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT"><I>P<SUB><SMALL>ik</SMALL></SUB></I>
+<TD VALIGN="TOP" ALIGN="LEFT">Probability of a job moving to the <I>k</I>th service center after service at the <I>i</I>th service center
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT"><I>P</I>(<I>x</I>)
+<TD VALIGN="TOP" ALIGN="LEFT">Probability of the event <I>x</I>
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT"><I>Q</I><SUB><SMALL><I>i</I></SMALL></SUB>
+<TD VALIGN="TOP" ALIGN="LEFT">Mean number of jobs at the <I>i</I>th service center
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT"><I>r</I>
+<TD VALIGN="TOP" ALIGN="LEFT">Response time or time in the system (a random variable)
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT"><I>R</I>
+<TD VALIGN="TOP" ALIGN="LEFT">Mean response time of a system
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT"><I>R</I><SUB><SMALL><I>i</I></SMALL></SUB>
+<TD VALIGN="TOP" ALIGN="LEFT">Response time of the <I>i</I>th service center
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT"><I>s</I>
+<TD VALIGN="TOP" ALIGN="LEFT">Service time (a random variable)
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT"><I>S</I><SUB><SMALL><I>i</I></SMALL></SUB>
+<TD VALIGN="TOP" ALIGN="LEFT">Mean service time per visit at the <I>i</I>th service center
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT"><I>t</I><SUB><SMALL><I>j</I></SMALL></SUB>
+<TD VALIGN="TOP" ALIGN="LEFT">Time of the <I>j</I>th state change
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT"><I>U</I><SUB><SMALL><I>i</I></SMALL></SUB>
+<TD VALIGN="TOP" ALIGN="LEFT">Utilization of the <I>i</I>th device
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT">Var[<I>x</I>]
+<TD VALIGN="TOP" ALIGN="LEFT">Variance of the random variable <I>x</I>
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT"><I>V</I><SUB><SMALL><I>i</I></SMALL></SUB>
+<TD VALIGN="TOP" ALIGN="LEFT">Number of visits to service center <I>i</I>
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT"><I>w</I>
+<TD VALIGN="TOP" ALIGN="LEFT">Time spent waiting in the queue (a random variable)
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT"><I><IMG SRC="images/36-01i.jpg"></IMGI></I>
+<TD VALIGN="TOP" ALIGN="LEFT">Mean of a random variable <I>x</I> = <I>E</I>[<I>x</I>]
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT"><I>X</I>
+<TD VALIGN="TOP" ALIGN="LEFT">System throughput
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT"><I>X</I><SUB><SMALL><I>i</I></SMALL></SUB>
+<TD VALIGN="TOP" ALIGN="LEFT">Throughput of the <I>i</I>th service center
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT"><I>Z</I>
+<TD VALIGN="TOP" ALIGN="LEFT">Average think time
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT"><I>&#946;</I>
+<TD VALIGN="TOP" ALIGN="LEFT">Duration of busy interval for a server (a random variable)
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT"><I>&#955;</I>
+<TD VALIGN="TOP" ALIGN="LEFT">Arrival rate, = 1/<I>E</I>[<I>&#964;</I>]
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT"><I>&#955;<SUB><SMALL>j</SMALL></SUB></I>
+<TD VALIGN="TOP" ALIGN="LEFT">Arrival rate when there are <I>j</I> jobs in the service center
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT"><I><I>&#181;</I></I>
+<TD VALIGN="TOP" ALIGN="LEFT">Service rate, = 1/<I>E</I>[<I>s</I>]
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT"><I><I>&#181;</I><SUB><SMALL>j</SMALL></SUB></I>
+<TD VALIGN="TOP" ALIGN="LEFT">Service rate when there are <I>j</I> jobs in the service center
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT"><I>&#961;</I>
+<TD VALIGN="TOP" ALIGN="LEFT">Traffic intensity
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT"><I>&#961;<SUB><SMALL>i</SMALL></SUB></I>
+<TD VALIGN="TOP" ALIGN="LEFT">Traffic intensity at the <I>i</I>th service center
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT"><I><IMG SRC="images/36-02i.jpg"></IMGI></I>
+<TD VALIGN="TOP" ALIGN="LEFT">Standard deviation of the random variable <I>x</I>
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT"><I>&#947;</I>
+<TD VALIGN="TOP" ALIGN="LEFT">Interarrival time (a random variable)
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT"><I>&#947;<SUB><SMALL>j</SMALL></SUB></I>
+<TD VALIGN="TOP" ALIGN="LEFT">Time between the (<I>j</I> &#150; 1)th and <I>j</I>th arrival
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT"><I><IMG SRC="images/36-03i.jpg"></IMGI></I>
+<TD VALIGN="TOP" ALIGN="LEFT">Solution of the equation <IMG SRC="images/36-04i.jpg"></IMGI> = <I>L</I><SUB><SMALL><I>&#964;</I></SMALL></SUB>(<I>&#181;</I> &#150; <IMG SRC="images/36-05i.jpg"></IMGI><I>&#181;</I>) for G/M/1 queues or probability of queueing for M/M/m queues, = [(<I>M</I><SUB><SMALL><I>p</I></SMALL></SUB>)<SUP><SMALL><I>m</I></SMALL></SUP>/{<I>m</I>!(1 &#150; <I>p</I>)}]<I>p</I><SUB><SMALL><I>0</I></SMALL></SUB>
+<P><BR></P>
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="36-04.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="../bib.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<hr width="90%" size="1" noshade>
+<div align="center">
+<font face="Verdana,sans-serif" size="1">Copyright &copy; <a href="/reference/wiley00001.html">John Wiley &amp; Sons, Inc.</a></font>
+</div>
+<!-- all of the reference materials (books) have the footer and subfoot reveresed -->
+<!-- reference_subfoot = footer -->
+<!-- reference_footer = subfoot -->
+
+</BODY>
+</HTML>
+
+<!-- END FOOTER -->
+

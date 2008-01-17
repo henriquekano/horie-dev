@@ -1,0 +1,171 @@
+<HTML>
+<HEAD>
+<META name=vsisbn content="0471503363">
+<META name=vstitle content="Art of Computer Systems Performance Analysis Techniques For Experimental Design Measurements Simulation And Modeling">
+<META name=vsauthor content="Raj Jain">
+<META name=vsimprint content="Wiley Computer Publishing">
+<META name=vspublisher content="John Wiley & Sons, Inc.">
+<META name=vspubdate content="05/01/91">
+<META name=vscategory content="Web and Software Development: Software Engineering: Simulation and Modeling">
+
+
+
+
+
+
+
+<TITLE>The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling:Mean-Value Analysis and Related Techniques</TITLE>
+
+<!-- HEADER -->
+
+<STYLE type="text/css"> 
+ <!--
+ A:hover  {
+ 	color : Red;
+ }
+ -->
+</STYLE>
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+<!--ISBN=0471503363//-->
+<!--TITLE=The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling//-->
+<!--AUTHOR=Raj Jain//-->
+<!--PUBLISHER=Wiley Computer Publishing//-->
+<!--CHAPTER=34//-->
+<!--PAGES=575-578//-->
+<!--UNASSIGNED1//-->
+<!--UNASSIGNED2//-->
+
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="34-02.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="34-04.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+<P><BR></P>
+<H3><A NAME="Heading3"></A><FONT COLOR="#000077">34.2 MEAN-VALUE ANALYSIS</FONT></H3>
+<P><B>Mean-Value Analysis (MVA)</B> allows solving closed queueing networks in a manner similar to that used for open queueing networks in Section 34.1. As the name implies, it gives the mean performance. The variance computation is not possible using this technique. Mean-value analysis applies to networks with a variety of service disciplines and service time distributions. However, we will initially limit our discussion here to fixed-capacity service centers. Delay centers are considered later in this section. Load-dependent service centers are considered in Section 36.1.</P>
+<P>Given a closed queueing network with <I>N</I> jobs, Reiser and Lavenberg (1980) showed that the response time of the ith device is given by</P>
+<TABLE WIDTH="100%"><TD VALIGN="TOP" ALIGN="LEFT" WIDTH="25%">
+<TD VALIGN="TOP" ALIGN="LEFT" WIDTH="65%"><I>R</I><SUB><I><SMALL>i</SMALL></I></SUB>(<I>N</I>) = <I>S</I><SUB><I><SMALL>i</SMALL></I></SUB>[1 &#43; <I>Q</I><SUB><I><SMALL>i</SMALL></I></SUB>(<I>N</I> &#150; 1)]
+<TD VALIGN="TOP" ALIGN="LEFT" WIDTH="10%">(34.3)
+</TABLE>
+<P>Here, <I>Q</I><SUB><I><SMALL>i</SMALL></I></SUB>(<I>N</I> &#150; 1) is the mean queue length at the ith device with <I>N</I> &#150; 1 jobs in the network. Notice the similarity between this equation and Equation (34.1) for open queueing networks. As before, one way to explain this equation is to consider what happens when we add a tagged <I>N</I>th job to the network with <I>N</I> &#150; 1 jobs. On arrival at the <I>i</I>th service center, the tagged job sees <I>Q</I><SUB><I><SMALL>i</SMALL></I></SUB> (<I>N</I> &#150; 1) jobs ahead (including the one in service) and expects to wait <I>Q</I><SUB><I><SMALL>i</SMALL></I></SUB>(<I>N</I> &#150; 1)<I>S</I><SUB><I><SMALL>i</SMALL></I></SUB> seconds before receiving service. Including the service time for itself, the job should expect a total response time of <I>S</I><SUB><I><SMALL>i</SMALL></I></SUB>[1 &#43; <I>Q</I><SUB><I><SMALL>i</SMALL></I></SUB> (<I>N</I> &#150; 1)].</P>
+<P>It should be pointed out that Equation (34.3) is not an operational law. It assumes that the service is memoryless, an assumption that is not operationally testable.</P>
+<P>Given the performance for <I>N</I> &#150; 1 users, Equation (34.3), along with the operation laws discussed earlier in Chapter 33, is sufficient to allow us to compute the performance for <I>N</I> users. Since the performance with no users (<I>N</I> = 0) can be easily computed, performance for any number of users can be computed iteratively, as we show next.</P>
+<P>Given the response times at individual devices, the system response time using the general response time law is</P>
+<P><P ALIGN="CENTER"><IMG SRC="images/34-04d.jpg"></P>
+</P>
+<P>The system throughput using the interactive response time law is</P>
+<TABLE WIDTH="100%">
+<TD VALIGN="TOP" ALIGN="RIGHT" WIDTH="55%"><IMG SRC="images/34-06i.jpg"><TD VALIGN="TOP" ALIGN="RIGHT" WIDTH="35%">(34.4)
+</TABLE>
+<P>The device throughputs measured in terms of jobs per second are
+</P>
+<TABLE WIDTH="100%"><TD VALIGN="TOP" ALIGN="LEFT" WIDTH="25%">
+<TD VALIGN="TOP" ALIGN="LEFT" WIDTH="65%"><I>X</I><SUB><I><SMALL>i</SMALL></I></SUB>(<I>N</I>) = <I>X</I>(<I>N</I>)<I>V</I><SUB><I><SMALL>i</SMALL></I></SUB>
+<TD VALIGN="TOP" ALIGN="LEFT" WIDTH="10%">(34.5)
+</TABLE>
+<P>The device queue lengths with <I>N</I> jobs in the network using Little&#146;s law are</P>
+<TABLE WIDTH="100%"><TD VALIGN="TOP" ALIGN="LEFT" WIDTH="25%">
+<TD VALIGN="TOP" ALIGN="LEFT" WIDTH="65%"><I>Q</I><SUB><I><SMALL>i</SMALL></I></SUB>(<I>N</I>) = <I>X</I><SUB><I><SMALL>i</SMALL></I></SUB>(<I>N</I>)<I>R</I><SUB><I><SMALL>i</SMALL></I></SUB>(<I>N</I>) = <I>X</I>(<I>N</I>)<I>V</I><SUB><I><SMALL>i</SMALL></I></SUB><I>R</I><SUB><I><SMALL>i</SMALL></I></SUB>(<I>N</I>)
+<TD VALIGN="TOP" ALIGN="LEFT" WIDTH="10%">(34.6)
+</TABLE>
+<P>The equations developed so far assumed all devices to be fixed-capacity queueing centers. If a device is a delay center (infinite servers), there is no waiting before service, and therefore, the response time is equal to the service time regardless of the queue length. As discussed earlier in Section 33.5, the queue length in this case denotes the number of jobs receiving service. Thus, the response time equation for delay centers is simply
+</P>
+<TABLE WIDTH="100%"><TD VALIGN="TOP" ALIGN="LEFT" WIDTH="25%">
+<TD VALIGN="TOP" ALIGN="LEFT" WIDTH="65%"><I>R</I><SUB><I><SMALL>i</SMALL></I></SUB>(<I>N</I>) = <I>S</I><SUB><I><SMALL>i</SMALL></I></SUB>
+<TD VALIGN="TOP" ALIGN="LEFT" WIDTH="10%">(34.7)
+</TABLE>
+
+<TABLE BORDER="2" BORDERCOLOR="#0000" ALIGN="CENTER">
+<TR><TD>
+<DL>
+<DD><B>Box 34.2 MVA Algorithm</B>
+</DL>
+<DL>
+<DD>Inputs:
+<DD><I>N</I> = number of users
+<DD><I>Z</I> = think time
+<DD><I>M</I> = number of devices (not including terminals)
+<DD><I>S</I><SUB><I><SMALL>i</SMALL></I></SUB> = service time per visit to the <I>i</I>th device
+<DD><I>V</I><SUB><I><SMALL>i</SMALL></I></SUB> = number of visits to the <I>i</I>th device
+</DL>
+<DL>
+<DD>Outputs:
+<DD><I>X</I> = system throughput
+<DD><I>Q</I><SUB><I><SMALL>i</SMALL></I></SUB> = average number of jobs at the <I>i</I>th device
+<DD><I>R</I><SUB><I><SMALL>i</SMALL></I></SUB> = response time of the <I>i</I>th device
+<DD><I>R</I> = system response time
+<DD><I>U</I><SUB><I><SMALL>i</SMALL></I></SUB> = utilization of the <I>i</I>th device
+</DL>
+<DL>
+<DD>Initialization: FOR <I>i</I> = 1 TO <I>M</I> DO <I>Q</I><SUB><I><SMALL>i</SMALL></I></SUB> = 0
+</DL>
+<DL>
+<DD>Iterations:
+<DD>FOR <I>n</I> = 1 TO <I>N</I> DO
+<DD>BEGIN
+<TABLE WIDTH="20%">
+<TD VALIGN="TOP" ALIGN="LEFT" WIDTH="5%">
+<TD VALIGN="TOP" ALIGN="LEFT" WIDTH="15%"><IMG SRC="images/34-07i.jpg"></TABLE>
+<DD>END
+</DL>
+<DL>
+<DD>Device throughputs: <I>X</I><SUB><I><SMALL>i</SMALL></I></SUB> = <I>XV</I><SUB><I><SMALL>i</SMALL></I></SUB>
+<DD>Device utilizations: <I>U</I><SUB><I><SMALL>i</SMALL></I></SUB> = <I>XS</I><SUB><I><SMALL>i</SMALL></I></SUB><I>V</I><SUB><I><SMALL>i</SMALL></I></SUB>
+</DL>
+</TABLE>
+
+<P>Equations (34.5) and (34.6) for device throughputs and queue lengths apply to delay centers as well.
+</P>
+<P>Equations (34.3) to (34.7) define one iteration of MWA. The procedure is initialized for <I>N</I> = 0 users as follows:</P>
+<P ALIGN="CENTER"><I>Q</I><SUB><I><SMALL>i</SMALL></I></SUB>(0) = 0</P>
+<P>The complete procedure is described in Box 34.2.</P>
+<DL>
+<DD><B>Example 34.2</B> Consider the queueing network model of Figure 32.8. Each user request makes ten I/O requests to disk A and five I/O requests to disk B. The service times per visit to disk A and disk B are 300 and 200 milliseconds, respectively. Each request takes 2 seconds of CPU time, and the user think time is 4 seconds. Let us analyze this system using MVA.
+</DL>
+<P>The system parameters are
+</P>
+<P ALIGN="CENTER"><I>S</I><SUB><I><SMALL>A</SMALL></I></SUB> = 0.3, <I>V</I><SUB><I><SMALL>A</SMALL></I></SUB> = 10&#8658; <I>D</I><SUB><I><SMALL>A</SMALL></I></SUB> = 3</P>
+<P ALIGN="CENTER"><I>S</I><SUB><I><SMALL>B</SMALL></I></SUB> = 0.2, <I>V</I><SUB><I><SMALL>B</SMALL></I></SUB> = 5 &#8658 <I>D</I><SUB><I><SMALL>B</SMALL></I></SUB> = 1</P>
+<P ALIGN="CENTER"><I>D</I><SUB><SMALL>CPU</SMALL></SUB> = 2, <I>V</I><SUB><SMALL>CPU</SMALL></SUB> = <I>V</I><SUB><I><SMALL>A</SMALL></I></SUB> &#43; <I>V</I><SUB><I><SMALL>B</SMALL></I></SUB> &#43; 1 = 16 &#8658; <I>S</I><SUB><SMALL>CPU</SMALL></SUB> = 0.125</P>
+<P ALIGN="CENTER"><I>Z</I> = 4, <I>N</I> = 20</P>
+<P><I>Initialization</I>:</P>
+<P ALIGN="CENTER">Number of users: <I>N</I> = 0</P>
+<P ALIGN="CENTER">Device queue lengths: <I>Q</I><SUB><SMALL>CPU</SMALL></SUB> = 0, <I>Q</I><SUB><I><SMALL>A</SMALL></I></SUB> = 0, <I>Q</I><SUB><I><SMALL>B</SMALL></I></SUB> = 0</P>
+<P><I>Iteration 1</I></P>
+<P>Number of users: <I>N</I> = 1</P>
+<P>Device response times:</P>
+<P ALIGN="CENTER"><I>R</I><SUB><SMALL>CPU</SMALL></SUB> = <I>S</I><SUB><SMALL>CPU</SMALL></SUB>(1 &#43; <I>Q</I><SUB><SMALL>CPU</SMALL></SUB>) = 0.125(1 &#43; 0) = 0.125</P>
+<P ALIGN="CENTER"><I>R</I><SUB><I><SMALL>A</SMALL></I></SUB> = <I>S</I><SUB><I><SMALL>A</SMALL></I></SUB>(1 &#43; <I>Q</I><SUB><I><SMALL>A</SMALL></I></SUB>) = 0.3(1 &#43; 0) = 0.3</P>
+<P ALIGN="CENTER"><I>R</I><SUB><I><SMALL>B</SMALL></I></SUB> = <I>S</I><SUB><I><SMALL>B</SMALL></I></SUB>(1 &#43; <I>Q</I><SUB><I><SMALL>B</SMALL></I></SUB>) = 0.2(1 &#43; 0) = 0.2</P>
+<P>System response time:</P>
+<P ALIGN="CENTER"><I>R</I> = <I>R</I><SUB><SMALL>CPU</SMALL></SUB><I>V</I><SUB><SMALL>CPU</SMALL></SUB> &#43; <I>R</I><SUB><I><SMALL>A</SMALL></I></SUB><I>V</I><SUB><I><SMALL>B</SMALL></I></SUB> &#43; <I>R</I><SUB><I><SMALL>A</SMALL></I></SUB><I>V</I><SUB><I><SMALL>B</SMALL></I></SUB> = 0.125 &#215; 16 &#43; 0.3 &#215; 10 &#43; 0.2 &#215; 5 = 6</P><P><BR></P>
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="34-02.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="34-04.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<hr width="90%" size="1" noshade>
+<div align="center">
+<font face="Verdana,sans-serif" size="1">Copyright &copy; <a href="/reference/wiley00001.html">John Wiley &amp; Sons, Inc.</a></font>
+</div>
+<!-- all of the reference materials (books) have the footer and subfoot reveresed -->
+<!-- reference_subfoot = footer -->
+<!-- reference_footer = subfoot -->
+
+</BODY>
+</HTML>
+
+<!-- END FOOTER -->
+
