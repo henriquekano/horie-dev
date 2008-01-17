@@ -1,0 +1,105 @@
+<HTML>
+<HEAD>
+<META name=vsisbn content="0471503363">
+<META name=vstitle content="Art of Computer Systems Performance Analysis Techniques For Experimental Design Measurements Simulation And Modeling">
+<META name=vsauthor content="Raj Jain">
+<META name=vsimprint content="Wiley Computer Publishing">
+<META name=vspublisher content="John Wiley & Sons, Inc.">
+<META name=vspubdate content="05/01/91">
+<META name=vscategory content="Web and Software Development: Software Engineering: Simulation and Modeling">
+
+
+
+
+
+
+
+<TITLE>The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling:Common Mistakes and How to Avoid Them</TITLE>
+
+<!-- HEADER -->
+
+<STYLE type="text/css"> 
+ <!--
+ A:hover  {
+ 	color : Red;
+ }
+ -->
+</STYLE>
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+<!--ISBN=0471503363//-->
+<!--TITLE=The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling//-->
+<!--AUTHOR=Raj Jain//-->
+<!--PUBLISHER=Wiley Computer Publishing//-->
+<!--CHAPTER=02//-->
+<!--PAGES=024-026//-->
+<!--UNASSIGNED1//-->
+<!--UNASSIGNED2//-->
+
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="02-04.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="02-06.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+<P><BR></P>
+<DL>
+<DD><B>6.</B>&nbsp;&nbsp;<I>Select Evaluation Technique</I>: The three broad techniques for performance evaluation are analytical modeling, simulation, and measuring a real system. The selection of the right technique depends upon the time and resources available to solve the problem and the desired level of accuracy. The selection of evaluation techniques is discussed in Section 3.1.
+<DD><B>7.</B>&nbsp;&nbsp;<I>Select Workload</I>: The workload consists of a list of service requests to the system. For example, the workload for comparing several database systems may consist of a set of queries. Depending upon the evaluation technique chosen, the workload may be expressed in different forms. For analytical modeling, the workload is usually expressed as a probability of various requests. For simulation, one could use a trace of requests measured on a real system. For measurement, the workload may consist of user scripts to be executed on the systems. In all cases, it is essential that the workload be representative of the system usage in real life. To produce representative workloads, one needs to measure and characterize the workload on existing systems. These and other issues related to workloads are discussed in Part II.
+<DD><B>8.</B>&nbsp;&nbsp;<I>Design Experiments</I>: Once you have a list of factors and their levels, you need to decide on a sequence of experiments that offer maximum information with minimal effort. In practice, it is useful to conduct an experiment in two phases. In the first phase, the number of factors may be large but the number of levels is small. The goal is to determine the relative effect of various factors. In most cases, this can be done with <I>fractional factorial experimental designs</I>, discussed in Part IV. In the second phase, the number of factors is reduced and the number of levels of those factors that have significant impact is increased.
+<DD><B>9.</B>&nbsp;&nbsp;<I>Analyze and Interpret Data</I>: It is important to recognize that the outcomes of measurements and simulations are random quantities in that the outcome would be different each time the experiment is repeated. In comparing two alternatives, it is necessary to take into account the variability of the results. Simply comparing the means can lead to inaccurate conclusions. The statistical techniques to compare two alternatives are described in Chapter 13.
+<BR>Interpreting the results of an analysis is a key part of the analyst&#146;s art. It must be understood that the analysis only produces results and not conclusions. The results provide the basis on which the analysts or decision makers can draw conclusions. When a number of analysts are given the same set of results, the conclusion drawn by each analyst may be different, as seen in Section 1.2.
+<DD><B>10.</B>&nbsp;&nbsp;<I>Present Results</I>: The final step of all performance projects is to communicate the results to other members of the decision-making team. It is important that the results be presented in a manner that is easily understood. This usually requires presenting the results in graphic form and without statistical jargon. The graphs should be appropriately scaled. The issue of correct graph plotting is discussed further in Chapter 10.
+<BR>Often at this point in the project the knowledge gained by the study may require the analyst to go back and reconsider some of the decisions made in the previous steps. For example, the analyst may want to redefine the system boundaries or include other factors and performance metrics that were not considered before. The complete project, therefore, consists of several cycles through the steps rather than a single sequential pass.
+</DL>
+<P>The steps for a performance evaluation study are summarized in Box 2.2 and illustrated in Case Study 2.1.
+</P>
+<DL>
+<DD><B>Case Study 2.1</B> Consider the problem of comparing remote pipes with remote procedure calls. In a procedure call, the calling program is blocked, control is passed to the called procedure along with a few parameters, and when the procedure is complete, the results as well as the control return to the calling program. <B>A remote procedure call</B> is an extension of this concept to a distributed computer system. A program on one computer system calls a procedure object on another system. The calling program waits until the procedure is complete and the result is returned. Remote pipes are also procedure like objects, but when called, the caller is not blocked. The execution of the pipe occurs concurrently with the continued execution of the caller. The results, if any, are later returned asynchronously.
+</DL>
+
+<TABLE BORDER="2" BORDERCOLOR="#0000" ALIGN="CENTER">
+<TR><TD>
+<P><B>Box 2.2 Steps for a Performance Evaluation Study</B></P>
+<DL>
+<DD><B>1.</B>&nbsp;&nbsp;State the goals of the study and define the system boundaries.
+<DD><B>2.</B>&nbsp;&nbsp;List system services and possible outcomes.
+<DD><B>3.</B>&nbsp;&nbsp;Select performance metrics.
+<DD><B>4.</B>&nbsp;&nbsp;List system and workload parameters.
+<DD><B>5.</B>&nbsp;&nbsp;Select factors and their values.
+<DD><B>6.</B>&nbsp;&nbsp;Select evaluation techniques.
+<DD><B>7.</B>&nbsp;&nbsp;Select the workload.
+<DD><B>8.</B>&nbsp;&nbsp;Design the experiments.
+<DD><B>9.</B>&nbsp;&nbsp;Analyze and interpret the data.
+<DD><B>10.</B>&nbsp;&nbsp;Present the results. Start over, if necessary.
+</DL>
+</TABLE>
+
+<P><BR></P>
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="02-04.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="02-06.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<hr width="90%" size="1" noshade>
+<div align="center">
+<font face="Verdana,sans-serif" size="1">Copyright &copy; <a href="/reference/wiley00001.html">John Wiley &amp; Sons, Inc.</a></font>
+</div>
+<!-- all of the reference materials (books) have the footer and subfoot reveresed -->
+<!-- reference_subfoot = footer -->
+<!-- reference_footer = subfoot -->
+
+</BODY>
+</HTML>
+
+<!-- END FOOTER -->
+

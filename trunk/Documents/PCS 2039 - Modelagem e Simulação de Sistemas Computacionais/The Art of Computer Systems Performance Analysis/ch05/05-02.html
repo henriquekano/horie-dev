@@ -1,0 +1,146 @@
+<HTML>
+<HEAD>
+<META name=vsisbn content="0471503363">
+<META name=vstitle content="Art of Computer Systems Performance Analysis Techniques For Experimental Design Measurements Simulation And Modeling">
+<META name=vsauthor content="Raj Jain">
+<META name=vsimprint content="Wiley Computer Publishing">
+<META name=vspublisher content="John Wiley & Sons, Inc.">
+<META name=vspubdate content="05/01/91">
+<META name=vscategory content="Web and Software Development: Software Engineering: Simulation and Modeling">
+
+
+
+
+
+
+
+<TITLE>The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling:The Art of Workload Selection</TITLE>
+
+<!-- HEADER -->
+
+<STYLE type="text/css"> 
+ <!--
+ A:hover  {
+ 	color : Red;
+ }
+ -->
+</STYLE>
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+<!--ISBN=0471503363//-->
+<!--TITLE=The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling//-->
+<!--AUTHOR=Raj Jain//-->
+<!--PUBLISHER=Wiley Computer Publishing//-->
+<!--CHAPTER=05//-->
+<!--PAGES=063-067//-->
+<!--UNASSIGNED1//-->
+<!--UNASSIGNED2//-->
+
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="05-01.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="05-03.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+<P><BR></P>
+<P>If two turn-key transaction processing systems are being compared, the application interface is the SUT level and the requests at this level, namely, the transactions, would form the basis of workload. The workload could be described by specifying the frequency of various types of transactions or the most frequent transaction. The debit-credit workload described in Section 4.6.7 is an example of the workload to be used for such a study.
+</P>
+<P>It should be obvious that the idea of a service interface level can be applied to other types of computer systems. The following example shows its application to computer networks.</P>
+<DL>
+<DD><B>Example 5.1</B> Consider the problem of selecting or designing the work-load to compare two networks. In the literature, the term <I>network</I> is used loosely to mean anything from a cable between two computers to networking applications, such as mail, that allow communications between several computers. One way to represent the hierarchy of levels in this case is to use the seven layers identified by the ISO/OSI reference model as shown in Figure 5.3. These layers and the corresponding workloads are given next. Readers not familiar with networking terminology should see a networking textbook such as Tanenbaum (1988).
+</DL>
+<P><A NAME="Fig3"></A><A HREF="javascript:displayWindow('images/05-03.jpg',500,1010 )"><IMG SRC="images/05-03t.jpg"></A>
+<BR><A HREF="javascript:displayWindow('images/05-03.jpg',500,1010)"><FONT COLOR="#000077"><B>FIGURE 5.3</B></FONT></A>&nbsp;&nbsp;Workloads corresponding to the seven layers of the ISO/OSI reference model for computer networks.</P>
+<DL>
+<DD><B>1.</B>&nbsp;&nbsp;<I>Physical Layer:</I> This layer deals with the transmission of individual bits over the physical medium, which may be a twisted-pair wire, a cable, or a fiber-optic link. The key service provided by this layer is the transmission of a bit. In some networks, the physical layer deals with a group of bits called symbols. Thus, the workload to compare two links should match the frequency of various symbols or bit patterns observed on real networks.
+<DD><B>2.</B>&nbsp;&nbsp;<I>Datalink Layer:</I> This layer deals with the transmission of frames over a single link. The workload to compare two datalink protocols would require specifying the characteristics of frames transmitted, such as their lengths and their arrival rates. On links that connect multiple stations, for example, on local-area networks, one would also want to specify the source-destination matrix.
+<DD><B>3.</B>&nbsp;&nbsp;<I>Network Layer:</I> This layer routes packets from a given source node to a given destination over multiple links. The workload in this case would require specifying the source-destination matrix, the distance between source and destination, and the characteristics of packets transmitted.
+<DD><B>4.</B>&nbsp;&nbsp;<I>Transport Layer:</I> This layer deals with the end-to-end aspects of communication between the source and the destination nodes. The services provided include segmentation and reassembly of large messages. The workload would consist of specifying the frequency, sizes, and other characteristics of various messages.
+<DD><B>5.</B>&nbsp;&nbsp;<I>Session Layer:</I> The complete dialog between the user processes on the two end systems is called a session. The session layer provides services related to the initiation, maintenance, and disconnection of the sessions. The workload for the session layer would thus include the frequency and duration of various types of sessions.
+<DD><B>6.</B>&nbsp;&nbsp;<I>Presentation Layer:</I> This layer provides data compression and security. The workload for this layer would consist of specifying the frequency of various types of security and data compression requests.
+<DD><B>7.</B>&nbsp;&nbsp;<I>Application Layer:</I> This layer consists of user applications such as mail, file transfer, and virtual terminal. The workload at this layer would consist of specifying the frequency of various types of applications and their associated characteristics.
+<BR>Thus, the choice of workload depends upon the layer at which the networks are being compared. While a typical mail session may be the right workload to compare two mail systems, it may not be appropriate to compare two fiber-optic links.
+</DL>
+<P>The following example illustrates the application of the services concepts to the analysis of an off-line backup storage system using magnetic tape drives.
+</P>
+<DL>
+<DD><B>Example 5.2</B> A magnetic tape backup system consists of several tape data systems, each containing several tape drives. The drives have separate read and write subsystems. Each subsystem makes use of magnetic heads. Thus, starting from a high level and moving down to lower levels, the services, factors, metrics, and workloads are as follows:
+</DL>
+<DL>
+<DD><B>1.</B>&nbsp;&nbsp;<I>Backup System:</I>
+<DL>
+<DD><B>(a)</B>&nbsp;&nbsp;Services: Backup files, backup changed files, restore files, list backed-up files.
+<DD><B>(b)</B>&nbsp;&nbsp;Factors: File system size, batch or background process, incremental or full backups.
+<DD><B>(c)</B>&nbsp;&nbsp;Metrics: Backup time, restore time.
+<DD><B>(d)</B>&nbsp;&nbsp;Workload: A computer system with files to be backed up. Vary frequency of backups.
+</DL>
+<DD><B>2.</B>&nbsp;&nbsp;<I>Tape Data System:</I>
+<DL>
+<DD><B>(a)</B>&nbsp;&nbsp;Services: Read/write to the tape, read tape label, autoload tapes.
+<DD><B>(b)</B>&nbsp;&nbsp;Factors: Type of tape drive.
+<DD><B>(c)</B>&nbsp;&nbsp;Metrics: Speed, reliability, time between failures.
+<DD><B>(d)</B>&nbsp;&nbsp;Workload: A synthetic program generating representative tape I/O requests.
+</DL>
+<DD><B>3.</B>&nbsp;&nbsp;<I>Tape Drives:</I>
+<DL>
+<DD><B>(a)</B>&nbsp;&nbsp;Services: Read record, write record, rewind, find record, move to end of tape, move to beginning of tape.
+<DD><B>(b)</B>&nbsp;&nbsp;Factors: Cartridge or reel tapes, drive size.
+<DD><B>(c)</B>&nbsp;&nbsp;Metrics: Time for each type of service, for example, time to read record and to write record, speed (requests per unit time), noise, power dissipation.
+<DD><B>(d)</B>&nbsp;&nbsp;Workload: A synthetic program exerciser generating various types of requests in a representative manner.
+</DL>
+<DD><B>4.</B>&nbsp;&nbsp;<I>Read/Write Subsystem:</I>
+<DL>
+<DD><B>(a)</B>&nbsp;&nbsp;Services: Read data, write data (as digital signals).
+<DD><B>(b)</B>&nbsp;&nbsp;Factors: Data-encoding technique, implementation technology (CMOS, TTL, and so forth).
+<DD><B>(c)</B>&nbsp;&nbsp;Metrics: Coding density, I/O bandwidth (bits per second).
+<DD><B>(d)</B>&nbsp;&nbsp;Workload: Read/write data streams with varying patterns of bits.
+</DL>
+<DD><B>5.</B>&nbsp;&nbsp;<I>Read/Write Heads:</I>
+<DL>
+<DD><B>(a)</B>&nbsp;&nbsp;Services: Read signal, write signal (electrical signals).
+<DD><B>(b)</B>&nbsp;&nbsp;Factors: Composition, interhead spacing, gap sizing, number of heads in parallel.
+<DD><B>(c)</B>&nbsp;&nbsp;Metrics: Magnetic field strength, hysteresis.
+<DD><B>(d)</B>&nbsp;&nbsp;Workload: Read/write currents of various amplitudes, tapes moving at various speeds.
+</DL>
+</DL>
+<H3><A NAME="Heading3"></A><FONT COLOR="#000077">5.2 LEVEL OF DETAIL</FONT></H3>
+<P>After the service interface of the SUT has been identified and a list of services has been made, the next step in the workload selection is to choose the level of detail in recording (and thus reproducing) the requests for these services. A workload description may be as long as a time-stamped record of all requests or it can be as short as the single most commonly used request. A list of possibilities is as follows:
+</P>
+<DL>
+<DD><B>1.</B>&nbsp;&nbsp;Most frequent request
+<DD><B>2.</B>&nbsp;&nbsp;Frequency of request types
+<DD><B>3.</B>&nbsp;&nbsp;Time-stamped sequence of requests
+<DD><B>4.</B>&nbsp;&nbsp;Average resource demand
+<DD><B>5.</B>&nbsp;&nbsp;Distribution of resource demands
+</DL>
+<P>The least detailed alternative is to select the most frequently requested service and use it as the workload. While this may not provide enough information about the system, this is commonly used as the initial workload. The addition instruction to compare early ALUs, various kernels to compare processors, and the debit-credit benchmark to compare transaction processing systems are examples of this approach. It is particularly valid if one type of service is requested much more often than others or is a major consumer of resources in the system.
+</P>
+<P>The second alternative is to list various services, their characteristics, and frequency. The instruction mixes are examples of this approach. If the performance of a service depends upon the context, that is, on the services required in the past, the set of services that are expected to be context free are more appropriate than the individual services. History-sensitive mechanisms, such as caching in computer systems, often make this grouping necessary.</P>
+<P>The third alternative is to get a time-stamped record (called a <B>trace</B>) of requests on a real system and use it as a workload. The problem with this alternative is that it may be too detailed. It is certainly inconvenient for analytical modeling. Also, for simulation it may require exact reproduction of component behavior to maintain the timing relationships. The advantages and disadvantages of trace-driven simulations are further discussed in Section 24.5.</P><P><BR></P>
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="05-01.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="05-03.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<hr width="90%" size="1" noshade>
+<div align="center">
+<font face="Verdana,sans-serif" size="1">Copyright &copy; <a href="/reference/wiley00001.html">John Wiley &amp; Sons, Inc.</a></font>
+</div>
+<!-- all of the reference materials (books) have the footer and subfoot reveresed -->
+<!-- reference_subfoot = footer -->
+<!-- reference_footer = subfoot -->
+
+</BODY>
+</HTML>
+
+<!-- END FOOTER -->
+

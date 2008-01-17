@@ -1,0 +1,96 @@
+<HTML>
+<HEAD>
+<META name=vsisbn content="0471503363">
+<META name=vstitle content="Art of Computer Systems Performance Analysis Techniques For Experimental Design Measurements Simulation And Modeling">
+<META name=vsauthor content="Raj Jain">
+<META name=vsimprint content="Wiley Computer Publishing">
+<META name=vspublisher content="John Wiley & Sons, Inc.">
+<META name=vspubdate content="05/01/91">
+<META name=vscategory content="Web and Software Development: Software Engineering: Simulation and Modeling">
+
+
+
+
+
+
+
+<TITLE>The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling:Common Mistakes and How to Avoid Them</TITLE>
+
+<!-- HEADER -->
+
+<STYLE type="text/css"> 
+ <!--
+ A:hover  {
+ 	color : Red;
+ }
+ -->
+</STYLE>
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+<!--ISBN=0471503363//-->
+<!--TITLE=The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling//-->
+<!--AUTHOR=Raj Jain//-->
+<!--PUBLISHER=Wiley Computer Publishing//-->
+<!--CHAPTER=02//-->
+<!--PAGES=014-017//-->
+<!--UNASSIGNED1//-->
+<!--UNASSIGNED2//-->
+
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="../ch01/01-04.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="02-02.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+<P><BR></P>
+<H2><A NAME="Heading1"></A><FONT COLOR="#000077">CHAPTER 2<BR>COMMON MISTAKES AND HOW TO AVOID THEM
+</FONT></H2>
+<BLOCKQUOTE>
+<P ALIGN="RIGHT"><I>Wise men learn by other men&#146;s mistakes, fools by their own</I>.</P>
+<P ALIGN="RIGHT">&#151;H. G. Wells</P>
+</BLOCKQUOTE><P>In order to motivate the use of proper methodology for performance evaluation, this chapter begins with a list of mistakes observed frequently in performance evaluation projects. This list then leads to the formulation of a systematic approach to performance evaluation. Various steps in correctly conducting a performance evaluation study and the order in which the steps should be carried out are presented.
+</P>
+<H3><A NAME="Heading2"></A><FONT COLOR="#000077">2.1 COMMON MISTAKES IN PERFORMANCE EVALUATION</FONT></H3>
+<P>Unlike the games discussed in Section 1.2, most of the mistakes listed here are not intentional. Rather, they happen due to simple oversights, misconceptions, and lack of knowledge about performance evaluation techniques.
+</P>
+<DL>
+<DD><B>1.</B>&nbsp;&nbsp;<I>No Goals</I>: Goals are an important part of all endeavors. Any endeavor without goals is bound to fail. Performance evaluation projects are no exception. The need for a goal may sound obvious, but many performance efforts are started without any clear goals. A performance analyst, for example, is routinely hired along with the design team. The analyst may then start modeling or simulating the design. When asked about the goals, the analyst&#146;s answer typically is that the model will help answer a design questions that may arise. A common claim is that the model will be flexible enough to be easily modified to solve different problems. Experienced analysts know that there is no such thing as a general-purpose model. Each model must be developed with a particular goal in mind. The metrics, workloads, and methodology all depend upon the goal. The part of the system design that needs to be studied in the model varies from problem to problem. Therefore, before writing the first line of a simulation code or the first equation of an analytical model or before setting up a measurement experiment, it is important for the analyst to understand the system and identify the problem to be solved. This will help identify the correct metrics, workloads, and methodology.
+<BR>Setting goals is not a trivial exercise. Since most performance problems are vague when first presented, understanding the problem sufficiently to write a set of goals is difficult. For example, a problem that was initially stated as one of finding a timeout algorithm for retransmissions on a network was later defined as a congestion control problem of finding out how the load on the network should be adjusted under packet loss. Once the problem is clear and the goals have been written down, finding the solution is often easier.
+<DD><B>2.</B>&nbsp;&nbsp;<I>Biased Goals</I>: Another common mistake is implicit or explicit bias in stating the goals. If, for example, the goal is &#147;to show that OUR system is better than THEIRS,&#148; the problem becomes that of finding the metrics and workloads such that OUR system turns out better rather than that of finding the right metrics and workloads for comparing the two systems. One rule of professional etiquette for performance analysts is to be unbiased. <I>The performance analyst&#146;s role is like that of a jury</I>. Do not have any preconceived biases and base all conclusions on the results of the analysis rather than on pure beliefs.
+<DD><B>3.</B>&nbsp;&nbsp;<I>Unsystematic Approach</I>: Often analysts adopt an unsystematic approach whereby they select system parameters, factors, metrics, and workloads arbitrarily. This leads to inaccurate conclusions. The systematic approach to solving a performance problem is to identify a complete set of goals, system parameters, factors, metrics, and workloads. This is discussed in detail in Section 2.2.
+<DD><B>4.</B>&nbsp;&nbsp;<I>Analysis without Understanding the Problem</I>: Inexperienced analysts feel that nothing really has been achieved until a model has been constructed and some numerical results have been obtained. With experience, they learn that a large share of the analysis effort goes in to defining a problem. This share often takes up to 40% of the total effort. This supports the old saying: <I>A problem well stated is half solved</I>. Of the remaining 60%, a large share goes into designing alternatives, interpretation of the results, and presentation of conclusions. Development of the model itself is a small part of the problem-solving process. Just as cars and trains are a means of getting somewhere and not an end in themselves, models are a means of reaching conclusions and not the final result. Analysts who are trained in modeling aspects of performance evaluation but not in problem definition or result presentation often find their models being ignored by the decision makers who are looking for guidance and not a model.
+<DD><B>5.</B>&nbsp;&nbsp;<I>Incorrect Performance Metrics</I>: A metric, as explained in Section 1.1, refers to the criterion used to quantify the performance of the system. Examples of commonly used performance metrics are throughput and response time. The choice of correct performance metrics depends upon the services provided by the system or subsystem being modeled. For example, the performance of Central Processing Units (CPUs) is compared on the basis of their throughput, which is often measured in terms of millions of instructions per second (<B>MIPS</B>). However, comparing the MIPS of two different CPU architectures, such as Reduced Instruction Set Computers (RISCs) and Complex Instruction Set Computers (CISCs), is meaningless since the instructions on the two computers are unequal. By manipulating the metrics, as shown in Chapter 11, it is possible to change the conclusions of a performance study. The considerations involved in selecting the right performance metrics are discussed in Section 3.2.
+<BR>A common mistake in selecting metrics is that analysts often choose those that can be easily computed or measured rather than the ones that are relevant. Metrics that are difficult to compute are ignored.
+<DD><B>6.</B>&nbsp;&nbsp;<I>Unrepresentative Workload</I>: The workload used to compare two systems should be representative of the actual usage of the systems in the field. For example, if the packets in networks are generally a mixture of two sizes&#151;short and long&#151;the workload to compare two networks should consist of short and long packet sizes.
+<BR>The choice of the workload has a significant impact on the results of a performance study. The wrong workload will lead to inaccurate conclusions. Workload selection is discussed in detail in Chapter 5. Benchmarking games that people play to show the superiority of their systems are discussed in Section 9.4.
+<DD><B>7.</B>&nbsp;&nbsp;<I>Wrong Evaluation Technique</I>: There are three evaluation techniques: measurement, simulation, and analytical modeling. Analysts often have a preference for one evaluation technique that they use for every performance evaluation problem. For example, those proficient in queueing theory will tend to change every performance problem to a queueing problem even if the system is too complex and is easily available for measurement. Those proficient in programming will tend to solve every problem by simulation. This marriage to a single technique leads to a model that they can best solve rather than to a model that can best solve the problem. The problem with these transformations is that they may introduce phenomena into the model that were not present in the original system or they may leave out some important phenomena that were in the original system.
+<BR>An analyst should have a basic knowledge of all three techniques. There are a number of factors that should be considered in selecting the right technique. This topic is discussed further in Section 3.1.
+</DL>
+<P><BR></P>
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="../ch01/01-04.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="02-02.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<hr width="90%" size="1" noshade>
+<div align="center">
+<font face="Verdana,sans-serif" size="1">Copyright &copy; <a href="/reference/wiley00001.html">John Wiley &amp; Sons, Inc.</a></font>
+</div>
+<!-- all of the reference materials (books) have the footer and subfoot reveresed -->
+<!-- reference_subfoot = footer -->
+<!-- reference_footer = subfoot -->
+
+</BODY>
+</HTML>
+
+<!-- END FOOTER -->
+

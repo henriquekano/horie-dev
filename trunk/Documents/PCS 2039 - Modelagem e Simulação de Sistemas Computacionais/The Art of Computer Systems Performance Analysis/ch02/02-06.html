@@ -1,0 +1,136 @@
+<HTML>
+<HEAD>
+<META name=vsisbn content="0471503363">
+<META name=vstitle content="Art of Computer Systems Performance Analysis Techniques For Experimental Design Measurements Simulation And Modeling">
+<META name=vsauthor content="Raj Jain">
+<META name=vsimprint content="Wiley Computer Publishing">
+<META name=vspublisher content="John Wiley & Sons, Inc.">
+<META name=vspubdate content="05/01/91">
+<META name=vscategory content="Web and Software Development: Software Engineering: Simulation and Modeling">
+
+
+
+
+
+
+
+<TITLE>The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling:Common Mistakes and How to Avoid Them</TITLE>
+
+<!-- HEADER -->
+
+<STYLE type="text/css"> 
+ <!--
+ A:hover  {
+ 	color : Red;
+ }
+ -->
+</STYLE>
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+<!--ISBN=0471503363//-->
+<!--TITLE=The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling//-->
+<!--AUTHOR=Raj Jain//-->
+<!--PUBLISHER=Wiley Computer Publishing//-->
+<!--CHAPTER=02//-->
+<!--PAGES=026-029//-->
+<!--UNASSIGNED1//-->
+<!--UNASSIGNED2//-->
+
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="02-05.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="../ch03/03-01.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+<P><BR></P>
+<P>The following project plan was written before starting the study.
+</P>
+<DL>
+<DD><B>1.</B>&nbsp;&nbsp;<I>System Definition</I>: The goal of the case study is to compare the performance of applications using remote pipes to those of similar applications using remote procedure calls. The key component under study is the so-called channel. A <B>channel</B> can be either a procedure or a pipe. The system consists of two computers connected via a network as shown in Figure 2.1. The requests are sent via the channel from the client computer to the server computer. Only the subsets of the client and server computers that offer channel services is considered to be part of the system. The study will be conducted so that the effect of components outside the system is minimized.
+<P><A NAME="Fig1"></A><A HREF="javascript:displayWindow('images/02-01.jpg',500,166 )"><IMG SRC="images/02-01t.jpg"></A>
+<BR><A HREF="javascript:displayWindow('images/02-01.jpg',500,166)"><FONT COLOR="#000077"><B>FIGURE 2.1</B></FONT></A>&nbsp;&nbsp;System definition for the study of remote procedure calls versus remote pipes.</P>
+<DD><B>2.</B>&nbsp;&nbsp;<I>Services</I>: The services offered by the system are the two types of channel calls&#151;remote procedure call and remote pipe. The resources used by the channel calls depend upon the number of parameters passed and the action required on those parameters. In this case study, data transfer is chosen as the application and the calls will be classified simply as small or large depending upon the amount of data to be transferred to the remote machine. In other words, the system offers only two services: small data transfer or large data transfer.
+<DD><B>3.</B>&nbsp;&nbsp;<I>Metrics</I>: Due to resource limitations, the errors and failures will not be studied. Thus, the study will be limited to correct operation only. For each service, the rate at which the service can be performed, the time taken for the service, and the resources consumed will be compared. The resources are the local computer (client), the remote computer (server), and the network link. This leads to the following performance metrics:
+<DL>
+<DD><B>(a)</B>&nbsp;&nbsp;Elapsed time per call
+<DD><B>(b)</B>&nbsp;&nbsp;Maximum call rate per unit of time, or equivalently, the time required to complete a block of <I>n</I> successive calls
+<DD><B>(c)</B>&nbsp;&nbsp;Local CPU time per call
+<DD><B>(d)</B>&nbsp;&nbsp;Remote CPU time per call
+<DD><B>(e)</B>&nbsp;&nbsp;Number of bytes sent on the link per call
+</DL>
+<DD><B>4.</B>&nbsp;&nbsp;<I>Parameters</I>: The system parameters that affect the performance of a given application and data size are the following:
+<DL>
+<DD><B>(a)</B>&nbsp;&nbsp;Speed of the local CPU
+<DD><B>(b)</B>&nbsp;&nbsp;Speed of the remote CPU
+<DD><B>(c)</B>&nbsp;&nbsp;Speed of the network
+<DD><B>(d)</B>&nbsp;&nbsp;Operating system overhead for interfacing with the channels
+<DD><B>(e)</B>&nbsp;&nbsp;Operating system overhead for interfacing with the networks
+<DD><B>(f)</B>&nbsp;&nbsp;Reliability of the network affecting the number of retransmissions required
+<BR>The workload parameters that affect the performance are the following:
+<DD><B>(a)</B>&nbsp;&nbsp;Time between successive calls
+<DD><B>(b)</B>&nbsp;&nbsp;Number and sizes of the call parameters
+<DD><B>(c)</B>&nbsp;&nbsp;Number and sizes of the results
+<DD><B>(d)</B>&nbsp;&nbsp;Type of channel
+<DD><B>(e)</B>&nbsp;&nbsp;Other loads on the local and remote CPUs
+<DD><B>(f)</B>&nbsp;&nbsp;Other loads on the network
+</DL>
+<DD><B>5.</B>&nbsp;&nbsp;<I>Factors</I>: The key factors chosen for this study are the following:
+<DL>
+<DD><B>(a)</B>&nbsp;&nbsp;Type of channel. Two types&#151;remote pipes and remote procedure calls&#151;will be compared.
+<DD><B>(b)</B>&nbsp;&nbsp;Speed of the network. Two locations of the remote hosts will be used&#151;short distance (in the campus) and long distance (across the country).
+<DD><B>(c)</B>&nbsp;&nbsp;Sizes of the call parameters to be transferred. Two levels will be used&#151;small and large.
+<DD><B>(d)</B>&nbsp;&nbsp;Number <I>n</I> of consecutive calls. Eleven different values of <I>n</I>&#151;1, 2, 4, 8, 16, 32, ..., 512, 1024&#151;will be used.
+<BR>The factors have been selected based on resource availability and the interest of the sponsors. All other parameters will be fixed. Thus, the results will be valid only for the type of CPUs and operating systems used. The retransmissions due to network errors will be ignored (not included in the measurements). Experiments will be conducted when there is very little other load on the hosts and the network.
+</DL>
+<DD><B>6.</B>&nbsp;&nbsp;<I>Evaluation Technique</I>: Since prototypes of both types of channels have already been implemented, measurements will be used for evaluation. Analytical modeling will be used to justify the consistency of measured values for different parameters.
+<DD><B>7.</B>&nbsp;&nbsp;<I>Workload</I>: The workload will consist of a synthetic program generating the specified types of channel requests. This program will also monitor the resources consumed and log the measured results. Null channel requests with no actual work but with monitoring and logging activated will be used to determine the resources consumed in monitoring and logging.
+<DD><B>8.</B>&nbsp;&nbsp;<I>Experimental Design</I>: A full factorial experimental design with 2<SUP>3</SUP> &#215; 11 = 88 experiments will be used for the initial study. The factorial experimental designs are explained in Chapter 16.
+<DD><B>9.</B>&nbsp;&nbsp;<I>Data Analysis</I>: Analysis of Variance (explained in Section 20.5) will be used to quantify the effects of the first three factors and regression (explained in Chapter 14) will be used to quantify the effects of the number <I>n</I> of successive calls.
+<DD><B>10.</B>&nbsp;&nbsp;<I>Data Presentation</I>: The final results will be plotted as a function of the block size <I>n</I>.
+</DL>
+<P>This case study was completed successfully and reported by Glasser (1987).
+</P>
+<H3><A NAME="Heading4"></A><FONT COLOR="#000077">EXERCISES</FONT></H3>
+<DL>
+<DD><B>2.1</B>&nbsp;&nbsp;From published literature, select an article or a report that presents results of a performance evaluation study. Make a list of good and bad points of the study. What would you do different if you were asked to repeat the study.
+<DD><B>2.2</B>&nbsp;&nbsp;Choose a system for performance study. Briefly describe the system and list
+<DL>
+<DD><B>a.</B>&nbsp;&nbsp;Services
+<DD><B>b.</B>&nbsp;&nbsp;Performance metrics
+<DD><B>c.</B>&nbsp;&nbsp;System parameters
+<DD><B>d.</B>&nbsp;&nbsp;Workload parameters
+<DD><B>e.</B>&nbsp;&nbsp;Factors and their ranges
+<DD><B>f.</B>&nbsp;&nbsp;Evaluation technique
+<DD><B>g.</B>&nbsp;&nbsp;Workload
+</DL>
+<BR>Justify your choices.
+<BR><I>Suggestion</I>: Each student should select a different system such as a network, database, processor, and so on, and then present the solution to the class.
+</DL>
+<P><BR></P>
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="02-05.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="../ch03/03-01.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<hr width="90%" size="1" noshade>
+<div align="center">
+<font face="Verdana,sans-serif" size="1">Copyright &copy; <a href="/reference/wiley00001.html">John Wiley &amp; Sons, Inc.</a></font>
+</div>
+<!-- all of the reference materials (books) have the footer and subfoot reveresed -->
+<!-- reference_subfoot = footer -->
+<!-- reference_footer = subfoot -->
+
+</BODY>
+</HTML>
+
+<!-- END FOOTER -->
+

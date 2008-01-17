@@ -1,0 +1,112 @@
+<HTML>
+<HEAD>
+<META name=vsisbn content="0471503363">
+<META name=vstitle content="Art of Computer Systems Performance Analysis Techniques For Experimental Design Measurements Simulation And Modeling">
+<META name=vsauthor content="Raj Jain">
+<META name=vsimprint content="Wiley Computer Publishing">
+<META name=vspublisher content="John Wiley & Sons, Inc.">
+<META name=vspubdate content="05/01/91">
+<META name=vscategory content="Web and Software Development: Software Engineering: Simulation and Modeling">
+
+
+
+
+
+
+
+<TITLE>The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling:Selection of Techniques and Metrics</TITLE>
+
+<!-- HEADER -->
+
+<STYLE type="text/css"> 
+ <!--
+ A:hover  {
+ 	color : Red;
+ }
+ -->
+</STYLE>
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+<!--ISBN=0471503363//-->
+<!--TITLE=The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling//-->
+<!--AUTHOR=Raj Jain//-->
+<!--PUBLISHER=Wiley Computer Publishing//-->
+<!--CHAPTER=03//-->
+<!--PAGES=035-038//-->
+<!--UNASSIGNED1//-->
+<!--UNASSIGNED2//-->
+
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="03-02.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="03-04.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+<P><BR></P>
+<P>If two metrics give essentially the same information, it is less confusing to study only one. This is not always obvious, however. For example, in computer networks, the average waiting time in a queue is equal to the quotient of the average queue length and the arrival rate. Studying the average queue lengths in addition to average waiting time may not provide any additional insights.
+</P>
+<P>Finally, the set of metrics included in the study should be complete. All possible outcomes should be reflected in the set of performance metrics. For example, in a study comparing different protocols on a computer network, one protocol was chosen as the best until it was found that the best protocol led to the highest number of premature circuit disconnections. The <I>probability of disconnection</I> was then added to the set of performance metrics.</P>
+<DL>
+<DD><B>Case Study 3.1</B> Consider the problem of comparing two different congestion control algorithms for computer networks. A computer network consists of a number of <B>end systems</B> interconnected via a number of <B>intermediate systems</B>. The end systems send packets to other end systems on the network. The intermediate systems forward the packets along the right path. The problem of congestion occurs when the number of packets waiting at an intermediate system exceeds the system&#146;s buffering capacity and some of the packets have to be dropped.
+<DD>The system in this case consists of the network, and the only service under consideration is that of packet forwarding. When a network user sends a block of packets to another end station called <B>destination</B>, there are four possible outcomes:
+</DL>
+<DL>
+<DD><B>1.</B>&nbsp;&nbsp;Some packets are delivered in order to the correct destination.
+<DD><B>2.</B>&nbsp;&nbsp;Some packets are delivered out of order to the destination.
+<DD><B>3.</B>&nbsp;&nbsp;Some packets are delivered more than once to the destination (duplicate packets).
+<DD><B>4.</B>&nbsp;&nbsp;Some packets are dropped on the way (lost packets).
+<BR>For packets delivered in order, straightforward application of the time-rate-resource metrics produces the following list:
+<DD><B>1.</B>&nbsp;&nbsp;Response time: the delay inside the network for individual packets.
+<DD><B>2.</B>&nbsp;&nbsp;Throughput: the number of packets per unit of time.
+<DD><B>3.</B>&nbsp;&nbsp;Processor time per packet on the source end system.
+<DD><B>4.</B>&nbsp;&nbsp;Processor time per packet on the destination end systems.
+<DD><B>5.</B>&nbsp;&nbsp;Processor time per packet on the intermediate systems.
+</DL>
+<P>The response time determines the time that a packet has to be kept at the source end station using up its memory resources. Lower response time is considered better. The throughput is the performance as seen by the user. Larger throughput is considered better.
+</P>
+<P>The variability of the response time is also important since a highly variant response results in unnecessary retransmissions. Thus, the variance of the response time became the sixth metric.</P>
+<P>Out-of-order packets are undesirable since they cannot generally be delivered to the user immediately. In many systems, the out-of-order packets are discarded at the destination end systems. In others, they are stored in system buffers awaiting arrival of intervening packets. In either case, out-of-order arrivals cause additional overhead. Thus, the probability of out-of-order arrivals was the seventh metric.</P>
+<P>Duplicate packets consume the network resources without any use. The probability of duplicate packets was therefore the eighth metric.</P>
+<P>Lost packets are undesirable for obvious reasons. The probability of lost packets is the ninth metric. Excessive losses result in excessive retransmissions and could cause some user connections to be broken prematurely; thus the probability of disconnect was added as the tenth metric.</P>
+<P>The network is a multiuser system. It is necessary that all users be treated fairly. Therefore, fairness was added as the eleventh metric. It is defined as a function of variability of throughput across users. For any given set of user throughputs (<I>x</I><SUB><SMALL>1</SMALL></SUB>, <I>x</I><SUB><SMALL>2</SMALL></SUB>,..., <I>x</I><SUB><SMALL><I>n</I></SMALL></SUB>), the following function can be used to assign a fairness index to the set:</P>
+<P><P ALIGN="CENTER"><IMG SRC="images/03-01d.jpg"></P>
+</P>
+<P>For all nonnegative values of <I>x</I><SUB><SMALL><I>i</I></SMALL></SUB>&#146;s, the fairness index always lies between 0 and 1. If all users receive equal throughput, the fairness index is 1. If only <I>k</I> of the <I>n</I> users receive equal throughput and the remaining <I>n - k</I> users receive zero throughput, the fairness index is <I>k/n</I>. For other distributions also, the metric gives intuitive fairness values.</P>
+<P>After a few experiments, it was clear that throughput and delay were really redundant metrics. All schemes that resulted in higher throughput also resulted in higher delay. Therefore, the two metrics were removed from the list and instead a combined metric called <B>power</B>, which is defined as the ratio of throughput to response time, was used. A higher power meant either a higher throughput or a lower delay; in either case it was considered better than a lower power.</P>
+<P>The variance in response time was also dropped since it was redundant with the probability of duplication and the probability of disconnection. A higher variance resulted in a higher probability of duplication and a higher probability of premature disconnection.</P>
+<P>Thus, in this study a set of nine metrics were used to compare different congestion control algorithms.</P>
+<H3><A NAME="Heading4"></A><FONT COLOR="#000077">3.3 COMMONLY USED PERFORMANCE METRICS</FONT></H3>
+<P>This section defines and explains some of the commonly used performance metrics. In each case, the definition proposed is only one of many possibilities. Some definitions will need to be changed to suit certain applications.
+</P>
+<P><B>Response time</B> is defined as the interval between a user&#146;s request and the system response, as shown in Figure 3.2a. This definition, however, is simplistic since the requests as well as the responses are not instantaneous. The users spend time typing the request and the system takes time outputting the response, as shown in Figure 3.2b. There are two possible definitions of the response time in this case. It can be defined as either the interval between the end of a request submission and the beginning of the corresponding response from the system or as the interval between the end of a request submission and the end of the corresponding response from the system. Both definitions are acceptable as long as they are clearly specified. The second definition is preferable if the time between the beginning and the end of the response is long. Following this definition, the response time for interactive users in a timesharing system would be the interval between striking the last return (or enter) key and the receipt of the <I>last</I> character of the system&#146;s response.</P>
+<P><A NAME="Fig2"></A><A HREF="javascript:displayWindow('images/03-02.jpg',500,480 )"><IMG SRC="images/03-02t.jpg"></A>
+<BR><A HREF="javascript:displayWindow('images/03-02.jpg',500,480)"><FONT COLOR="#000077"><B>FIGURE 3.2</B></FONT></A>&nbsp;&nbsp;Response time definition.</P>
+<P>For a batch stream, responsiveness is measured by <B>turnaround time</B>, which is the time between the submission of a batch job and the completion of its output. Notice that the time to read the input is included in the turnaround time.</P>
+<P>The time between submission of a request and the beginning of its execution by the system is called the <B>reaction time</B>. To measure the reaction time, one has to able to monitor the actions inside a system since the beginning of the execution may not correspond to any externally visible event. For example, in timesharing systems, the interval between a user&#146;s last key stroke and the user&#146;s process receiving the first CPU quantum would be called reaction time.</P><P><BR></P>
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="03-02.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="03-04.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<hr width="90%" size="1" noshade>
+<div align="center">
+<font face="Verdana,sans-serif" size="1">Copyright &copy; <a href="/reference/wiley00001.html">John Wiley &amp; Sons, Inc.</a></font>
+</div>
+<!-- all of the reference materials (books) have the footer and subfoot reveresed -->
+<!-- reference_subfoot = footer -->
+<!-- reference_footer = subfoot -->
+
+</BODY>
+</HTML>
+
+<!-- END FOOTER -->
+

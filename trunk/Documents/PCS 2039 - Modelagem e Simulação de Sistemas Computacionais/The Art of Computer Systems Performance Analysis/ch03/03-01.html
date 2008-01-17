@@ -1,0 +1,146 @@
+<HTML>
+<HEAD>
+<META name=vsisbn content="0471503363">
+<META name=vstitle content="Art of Computer Systems Performance Analysis Techniques For Experimental Design Measurements Simulation And Modeling">
+<META name=vsauthor content="Raj Jain">
+<META name=vsimprint content="Wiley Computer Publishing">
+<META name=vspublisher content="John Wiley & Sons, Inc.">
+<META name=vspubdate content="05/01/91">
+<META name=vscategory content="Web and Software Development: Software Engineering: Simulation and Modeling">
+
+
+
+
+
+
+
+<TITLE>The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling:Selection of Techniques and Metrics</TITLE>
+
+<!-- HEADER -->
+
+<STYLE type="text/css"> 
+ <!--
+ A:hover  {
+ 	color : Red;
+ }
+ -->
+</STYLE>
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+<!--ISBN=0471503363//-->
+<!--TITLE=The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling//-->
+<!--AUTHOR=Raj Jain//-->
+<!--PUBLISHER=Wiley Computer Publishing//-->
+<!--CHAPTER=03//-->
+<!--PAGES=030-032//-->
+<!--UNASSIGNED1//-->
+<!--UNASSIGNED2//-->
+
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="../ch02/02-06.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="03-02.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+<P><BR></P>
+<H2><A NAME="Heading1"></A><FONT COLOR="#000077">CHAPTER 3<BR>SELECTION OF TECHNIQUES AND METRICS
+</FONT></H2>
+<BLOCKQUOTE>
+<P><B>response time</B> <I>n</I>. An unbounded, random variable <I>T</I><SUB><SMALL><I>r</I></SMALL></SUB> associated with a given TIMESHARING system and representing the putative time which elapses between <I>T</I><SUB><SMALL><I>s</I></SMALL></SUB>, the time of sending a message, and <I>T</I><SUB><SMALL><I>e</I></SMALL></SUB>, the time when the resulting error diagnostic is received.</P>
+<P ALIGN="RIGHT">&#151;S. Kelly-Bootle<BR><I>The Devil&#146;s DP Dictionary</I></P>
+</BLOCKQUOTE><P>Selecting an evaluation technique and selecting a metric are two key steps in all performance evaluation projects. There are many considerations that are involved in correct selection. These considerations are presented in the first two sections of this chapter. In addition, performance metrics that are commonly used are defined in Section 3.3. Finally, an approach to the problem of specifying the performance requirements is presented in Section 3.5.
+</P>
+<H3><A NAME="Heading2"></A><FONT COLOR="#000077">3.1 SELECTING AN EVALUATION TECHNIQUE</FONT></H3>
+<P>The three techniques for performance evaluation are analytical modeling, simulation, and measurement. There are a number of considerations that help decide the technique to be used. These considerations are listed in Table 3.1. The list is ordered from most to least important.
+</P>
+<P>The key consideration in deciding the evaluation technique is the life-cycle stage in which the system is. Measurements are possible only if something similar to the proposed system already exists, as when designing an improved version of a product. If it is a new concept, analytical modeling and simulation are the only techniques from which to choose. Analytical modeling and simulation can be used for situations where measurement is not possible, but in general it would be more convincing to others if the analytical modeling or simulation is based on previous measurement.</P>
+<TABLE WIDTH="100%"><TR>
+<TH CAPTION ALIGN="LEFT" COLSPAN="4">TABLE 3.1 Criteria for Selecting an Evaluation Technique
+<TR>
+<TD COLSPAN="4"><HR>
+<TR>
+<TH VALIGN="BOTTOM" WIDTH ="25%" ALIGN="LEFT">Criterion
+<TH VALIGN="BOTTOM" WIDTH ="25%" ALIGN="LEFT">Analytical<BR>Modeling
+<TH VALIGN="BOTTOM" WIDTH ="25%" ALIGN="LEFT">Simulation
+<TH VALIGN="BOTTOM" WIDTH ="25%" ALIGN="LEFT">Measurement
+<TR>
+<TD COLSPAN="4"><HR>
+<TR>
+<TD VALIGN="TOP" WIDTH="25%" ALIGN="LEFT">1. Stage
+<TD VALIGN="TOP" WIDTH="25%" ALIGN="LEFT">Any
+<TD VALIGN="TOP" WIDTH="25%" ALIGN="LEFT">Any
+<TD VALIGN="TOP" WIDTH="25%" ALIGN="LEFT">Postprototype
+<TR>
+<TD VALIGN="TOP" WIDTH="25%" ALIGN="LEFT">2. Time required
+<TD VALIGN="TOP" WIDTH="25%" ALIGN="LEFT">Small
+<TD VALIGN="TOP" WIDTH="25%" ALIGN="LEFT">Medium
+<TD VALIGN="TOP" WIDTH="25%" ALIGN="LEFT">Varies
+<TR>
+<TD VALIGN="TOP" WIDTH="25%" ALIGN="LEFT">3. Tools
+<TD VALIGN="TOP" WIDTH="25%" ALIGN="LEFT">Analysts
+<TD VALIGN="TOP" WIDTH="25%" ALIGN="LEFT">Computer languages
+<TD VALIGN="TOP" WIDTH="25%" ALIGN="LEFT">Instrumentation
+<TR>
+<TD VALIGN="TOP" WIDTH="25%" ALIGN="LEFT">4. Accuracy<SUP><SMALL><B>a</B></SMALL></SUP><TD VALIGN="TOP" WIDTH="25%" ALIGN="LEFT">Low
+<TD VALIGN="TOP" WIDTH="25%" ALIGN="LEFT">Moderate
+<TD VALIGN="TOP" WIDTH="25%" ALIGN="LEFT">Varies
+<TR>
+<TD VALIGN="TOP" WIDTH="25%" ALIGN="LEFT">5. Trade-off evaluation
+<TD VALIGN="TOP" WIDTH="25%" ALIGN="LEFT">Easy
+<TD VALIGN="TOP" WIDTH="25%" ALIGN="LEFT">Moderate
+<TD VALIGN="TOP" WIDTH="25%" ALIGN="LEFT">Difficult
+<TR>
+<TD VALIGN="TOP" WIDTH="25%" ALIGN="LEFT">6. Cost
+<TD VALIGN="TOP" WIDTH="25%" ALIGN="LEFT">Small
+<TD VALIGN="TOP" WIDTH="25%" ALIGN="LEFT">Medium
+<TD VALIGN="TOP" WIDTH="25%" ALIGN="LEFT">High
+<TR>
+<TD VALIGN="TOP" WIDTH="25%" ALIGN="LEFT">7. Saleability
+<TD VALIGN="TOP" WIDTH="25%" ALIGN="LEFT">Low
+<TD VALIGN="TOP" WIDTH="25%" ALIGN="LEFT">Medium
+<TD VALIGN="TOP" WIDTH="25%" ALIGN="LEFT">High
+<TR>
+<TD COLSPAN="4"><HR>
+<TR>
+</TABLE>
+
+<BLOCKQUOTE>
+<HR>
+<SUP><SMALL><B>a</B></SMALL></SUP><FONT SIZE="-1">In all cases, result may be misleading or wrong.
+</FONT>
+<HR>
+</BLOCKQUOTE>
+
+<P>The next consideration is the time available for evaluation. In most situations, results are required <I>yesterday</I>. If that is really the case, then analytical modeling is probably the only choice. Simulations take a long time. Measurements generally take longer than analytical modeling but shorter than simulations. Murphy&#146;s law strikes measurements more often than other techniques. If anything can go wrong, it will. As a result, the time required for measurements is the most variable among the three techniques.</P>
+<P>The next consideration is the availability of tools. The tools include modeling skills, simulation languages, and measurement instruments. Many performance analysts are skilled in modeling. They would not touch a real system at any cost. Others are not as proficient in queueing theory and prefer to measure or simulate. Lack of knowledge of the simulation languages and techniques keeps many analysts away from simulations.</P>
+<P>Level of accuracy desired is another important consideration. In general, analytical modeling requires so many simplifications and assumptions that if the results turn out to be accurate, even the analysts are surprised. Simulations can incorporate more details and require less assumptions than analytical modeling and, thus, more often are closer to reality. Measurements, although they sound like the real thing, may not give accurate results simply because many of the environmental parameters, such as system configuration, type of workload, and time of the measurement, may be unique to the experiment. Also, the parameters may not represent the range of variables found in the real world. Thus, the accuracy of results can vary from very high to none when using the measurements technique.</P>
+<P>It must be pointed out that level of accuracy and correctness of conclusions are not identical. A result that is correct up to the tenth decimal place may be misunderstood or misinterpreted; thus wrong conclusions can be drawn.</P>
+<P>The goal of every performance study is either to compare different alternatives or to find the optimal parameter value. Analytical models generally provide the best insight into the effects of various parameters and their interactions. With simulations, it may be possible to search the space of parameter values for the optimal combination, but often it is not clear what the trade-off is among different parameters. Measurement is the least desirable technique in this respect. It is not easy to tell if the improved performance is a result of some random change in environment or due to the particular parameter setting.</P>
+<P>Cost allocated for the project is also important. Measurement requires real equipment, instruments, and time. It is the most costly of the three techniques. Cost, along with the ease of being able to change configurations, is often the reason for developing simulations for expensive systems. Analytical modeling requires only paper and pencils (in addition to the analyst&#146;s time). Analytical modeling is therefore the cheapest alternative.</P><P><BR></P>
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="../ch02/02-06.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="03-02.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<hr width="90%" size="1" noshade>
+<div align="center">
+<font face="Verdana,sans-serif" size="1">Copyright &copy; <a href="/reference/wiley00001.html">John Wiley &amp; Sons, Inc.</a></font>
+</div>
+<!-- all of the reference materials (books) have the footer and subfoot reveresed -->
+<!-- reference_subfoot = footer -->
+<!-- reference_footer = subfoot -->
+
+</BODY>
+</HTML>
+
+<!-- END FOOTER -->
+

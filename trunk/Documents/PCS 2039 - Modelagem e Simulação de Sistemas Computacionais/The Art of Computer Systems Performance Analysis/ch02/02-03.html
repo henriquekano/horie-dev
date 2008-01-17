@@ -1,0 +1,86 @@
+<HTML>
+<HEAD>
+<META name=vsisbn content="0471503363">
+<META name=vstitle content="Art of Computer Systems Performance Analysis Techniques For Experimental Design Measurements Simulation And Modeling">
+<META name=vsauthor content="Raj Jain">
+<META name=vsimprint content="Wiley Computer Publishing">
+<META name=vspublisher content="John Wiley & Sons, Inc.">
+<META name=vspubdate content="05/01/91">
+<META name=vscategory content="Web and Software Development: Software Engineering: Simulation and Modeling">
+
+
+
+
+
+
+
+<TITLE>The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling:Common Mistakes and How to Avoid Them</TITLE>
+
+<!-- HEADER -->
+
+<STYLE type="text/css"> 
+ <!--
+ A:hover  {
+ 	color : Red;
+ }
+ -->
+</STYLE>
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+<!--ISBN=0471503363//-->
+<!--TITLE=The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling//-->
+<!--AUTHOR=Raj Jain//-->
+<!--PUBLISHER=Wiley Computer Publishing//-->
+<!--CHAPTER=02//-->
+<!--PAGES=019-021//-->
+<!--UNASSIGNED1//-->
+<!--UNASSIGNED2//-->
+
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="02-02.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="02-04.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+<P><BR></P>
+<DL>
+<DD><B>15.</B>&nbsp;&nbsp;<I>Ignoring Errors in Input</I>: Often the parameters of interest cannot be measured. Instead, another variable that can be measured is used to estimate the parameter. For example, in one computer network device, the packets were stored in a linked list of buffers. Each buffer was 512 octets long. Given the number of buffers required to store packets, it was impossible to accurately predict the number of packets or the number of octets in the packets. Such situations introduce additional uncertainties in the input data. The analyst needs to adjust the level of confidence on the model output obtained from such data. Also, it may not be worthwhile to accurately model the packet sizes when the input can be off by as much as 512 octets. Another point illustrated by this example is the fact that input errors are not always equally distributed about the mean. In this case, the buffer space is always more than the actual number of octets transmitted on or received from the network. In other words, the input is biased.
+<DD><B>16.</B>&nbsp;&nbsp;<I>Improper Treatment of Outliers</I>: Values that are too high or too low compared to a majority of values in a set are called <B>outliers</B>. Outliers in the input or model output present a problem. If an outlier is not caused by a real system phenomenon, it should be ignored. Including it would produce an invalid model. On the other hand, if the outlier is a possible occurrence in a real system, it should be appropriately included in the model. Ignoring it would produce an invalid model. Deciding which outliers should be ignored and which should be included is part of the art of performance evaluation and requires careful understanding of the system being modeled.
+<DD><B>17.</B>&nbsp;&nbsp;<I>Assuming No Change in the Future</I>: It is often assumed that the future will be the same as the past. A model based on the workload and performance observed in the past is used to predict performance in the future. The future workload and system behavior is assumed to be the same as that already measured. The analyst and the decision makers should discuss this assumption and limit the amount of time into the future that predictions are made.
+<DD><B>18.</B>&nbsp;&nbsp;<I>Ignoring Variability</I>: It is common to analyze only the mean performance since determining variability is often difficult, if not impossible. If the variability is high, the mean alone may be misleading to the decision makers. For example, decisions based on the daily averages of computer demands may not be useful if the load demand has large hourly peaks, which adversely impact user performance.
+<DD><B>19.</B>&nbsp;&nbsp;<I>Too Complex Analysis</I>: Given two analyses leading to the same conclusion, one that is simpler and easier to explain is obviously preferable. Performance analysts should convey final conclusions in as simple a manner as possible. Some analysts start with complex models that cannot be solved or a measurement or simulation project with very ambitious goals that are never achieved. It is better to start with simple models or experiments, get some results or insights, and then introduce the complications.
+<BR>There is a significant difference in the types of models published in the literature and those used in the real world. The models published in the literature and, therefore, taught in schools are generally too complex. This is because trivial models, even when very illuminating, are not generally accepted for publication. For some reason, the ability to develop and solve a complex model is valued more highly in academic circles than the ability to draw conclusions from a simple model. However, in the industrial world, the decision makers are rarely interested in the modeling technique or its innovativeness. Their chief concern is the guidance that the model provides along with the time and cost to develop the model. The decision deadlines often lead to choosing simple models. Thus, a majority of day-to-day performance problems in the real world are solved by simple models. Complex models are rarely, if ever, used. Even if the time required to develop the model was not restricted, complex models are not easily understood by the decision makers, and therefore, the model results may be misbelieved. This causes frustrations for new graduates who are very well trained in complex modeling techniques but find few opportunities to use them in the real world.
+<DD><B>20.</B>&nbsp;&nbsp;<I>Improper Presentation of Results</I>: The eventual aim of every performance study is to help in decision making. An analysis that does not produce any useful results is a failure, as is the analysis with results that cannot be understood by the decision makers. The decision makers could be the designers of a system, the purchasers of a system, or the sponsors of a project. Conveying (or selling) the results of the analysis to decision makers is the responsibility of the analyst. This requires the prudent use of words, pictures, and graphs to explain the results and the analysis. <I>The right metric to measure the performance of an analyst is not the number of analyses performed but the number of analyses that helped the decision makers</I>.
+<DD><B>21.</B>&nbsp;&nbsp;<I>Ignoring Social Aspects</I>: Successful presentation of the analysis results requires two types of skills: social and substantive. Writing and speaking are social skills while modeling and data analysis are substantive skills. Most analysts have good substantive skills, but only those who have good social skills are successful in selling their results to the decision makers. Acceptance of the analysis results requires developing a trust between the decision makers and the analyst and presentation of the results to the decision makers in a manner understandable to them. If decision makers do not believe or understand the analysis, the analyst fails to make an impact on the final decision. Social skills are particularly important in presenting results that are counter to the decision makers&#146; beliefs and values or that require a substantial change in the design.
+<BR>Beginning analysts often fail to understand that social skills are often more important than substantive skills. High-quality analyses may be rejected simply because the analyst has not put enough effort and time into presenting the results. The decision makers are under time pressures and would like to get to the final results as soon as possible. They generally are not interested in the innovativeness of the approach or the approach itself. On the other hand, the analyst, having spent a considerable amount of time on the analysis, may be more interested in telling the decision makers about the innovativeness of the modeling approach than the final results. This disparity in viewpoint may lead to a report that is too long and fails to make an impact. The problem is compounded by the fact that the analyst also has to present the results to his/her peers who are analysts themselves and would like to know more about the approach than the final results. One solution, therefore, is to prepare two separate presentations (or reports) for the two audiences. The presentation to the decision makers should have minimal analysis jargon and emphasize the final results, while the presentation to other analysts should include all the details of the analysis techniques. Combining these two presentations into one could make it meaningless for both audiences.
+<BR>Inexperienced analysts assume that the decision makers are like themselves and share the same beliefs, values, language, and jargon. This is often not true. The decision makers may be good at evaluating the results of the analysis but may not have a good understanding of the analysis itself. In their positions as decision makers, they have to weigh several factors that the analyst may not consider important, such as the political impact of the decision, the delay in the project schedule, or the availability of personnel to implement a particular decision. The analyst who makes an effort to understand the decision makers&#146; concerns and incorporates these as much as possible into the presentation will have a better chance of &#147;selling&#148; the analysis than one who sees things only from his/her own point of view.
+<DD><B>22.</B>&nbsp;&nbsp;<I>Omitting Assumptions and Limitations</I>: Assumptions and limitations of the analysis are often omitted from the final report. This may lead the user to apply the analysis to another context where the assumptions will not be valid. Sometimes analysts list the assumptions at the beginning of the report but then forget the limitations at the end and make conclusions about environments to which the analysis does not apply.
+</DL>
+<P><BR></P>
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="02-02.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="02-04.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<hr width="90%" size="1" noshade>
+<div align="center">
+<font face="Verdana,sans-serif" size="1">Copyright &copy; <a href="/reference/wiley00001.html">John Wiley &amp; Sons, Inc.</a></font>
+</div>
+<!-- all of the reference materials (books) have the footer and subfoot reveresed -->
+<!-- reference_subfoot = footer -->
+<!-- reference_footer = subfoot -->
+
+</BODY>
+</HTML>
+
+<!-- END FOOTER -->
+

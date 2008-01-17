@@ -1,0 +1,85 @@
+<HTML>
+<HEAD>
+<META name=vsisbn content="0471503363">
+<META name=vstitle content="Art of Computer Systems Performance Analysis Techniques For Experimental Design Measurements Simulation And Modeling">
+<META name=vsauthor content="Raj Jain">
+<META name=vsimprint content="Wiley Computer Publishing">
+<META name=vspublisher content="John Wiley & Sons, Inc.">
+<META name=vspubdate content="05/01/91">
+<META name=vscategory content="Web and Software Development: Software Engineering: Simulation and Modeling">
+
+
+
+
+
+
+
+<TITLE>The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling:Common Mistakes and How to Avoid Them</TITLE>
+
+<!-- HEADER -->
+
+<STYLE type="text/css"> 
+ <!--
+ A:hover  {
+ 	color : Red;
+ }
+ -->
+</STYLE>
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+<!--ISBN=0471503363//-->
+<!--TITLE=The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling//-->
+<!--AUTHOR=Raj Jain//-->
+<!--PUBLISHER=Wiley Computer Publishing//-->
+<!--CHAPTER=02//-->
+<!--PAGES=017-018//-->
+<!--UNASSIGNED1//-->
+<!--UNASSIGNED2//-->
+
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="02-01.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="02-03.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+<P><BR></P>
+<DL>
+<DD><B>8.</B>&nbsp;&nbsp;<I>Overlooking Important Parameters</I>: It is a good idea to make a complete list of system and workload characteristics that affect the performance of the system. These characteristics are called parameters. For example, system parameters may include quantum size (for CPU allocation) or working set size (for memory allocation). Workload parameters may include the number of users, request arrival patterns, priority, and so on. The analyst can choose a set of values for each of these parameters; the final outcome of the study depends heavily upon those choices. Overlooking one or more important parameters may render the results useless.
+<DD><B>9.</B>&nbsp;&nbsp;<I>Ignoring Significant Factors</I>: Parameters that are varied in the study are called <B>factors</B>. For example, among the workload parameters listed above only the number of users may be chosen as a factor; other parameters may be fixed at their typical values. Not all parameters have an equal effect on the performance. It is important to identify those parameters, which, if varied, will make a significant impact on the performance. Unless there is reason to believe otherwise, these parameters should be used as factors in the performance study. For example, if packet arrival rate rather than packet size affects the response time of a network gateway, it would be better to use several different arrival rates in studying its performance.
+<BR>Factors that are under the control of the end user (or decision maker) and can be easily changed by the end user should be given preference over those that cannot be changed. Do not waste time comparing alternatives that the end user cannot adopt either because they involve actions that are unacceptable to the decision makers or because they are beyond their sphere of influence.
+<BR>It is important to understand the randomness of various system and workload parameters that affect the performance. Some of these parameters are better understood than others. For example, an analyst may know the distribution for page references in a computer system but have no idea of the distribution of disk references. In such a case, a common mistake would be to use the page reference distribution as a factor but ignore disk reference distribution even though the disk may be the bottleneck and may have more influence on performance than the page references. The choice of factors should be based on their relevance and not on the analyst&#146;s knowledge of the factors. Every attempt should be made to get realistic values of all relevant parameters and their distributions. For unknown parameters, a sensitivity analysis, which shows the effect of changing those parameters from their assumed values, should be done to quantify the impact of the uncertainty.
+<DD><B>10.</B>&nbsp;&nbsp;<I>Inappropriate Experimental Design</I>: Experimental design relates to the number of measurement or simulation experiments to be conducted and the parameter values used in each experiment. Proper selection of these values can lead to more information from the same number of experiments. Improper selection can result in a waste of the analyst&#146;s time and resources.
+<BR>In naive experimental design, each factor is changed one by one. As discussed in Chapter 16, this &#147;simple design&#148; may lead to wrong conclusions if the parameters interact such that the effect of one parameter depends upon the values of other parameters. Better alternatives are the use of the <I>full factorial experimental designs</I> and <I>fractional factorial designs</I> explained in Part IV.
+<DD><B>11.</B>&nbsp;&nbsp;<I>Inappropriate Level of Detail</I>: The level of detail used in modeling a system has a significant impact on the problem formulation. Avoid formulations that are either too narrow or too broad. For comparing alternatives that are slight variations of a common approach, a detailed model that incorporates the variations may be more useful than a high-level model. On the other hand, for comparing alternatives that are very different, simple high-level models may allow several alternatives to be analyzed rapidly and inexpensively. A common mistake is to take the detailed approach when a high-level model will do and vice versa. It is clear that the goals of a study have a significant impact on what is modeled and how it is analyzed.
+<DD><B>12.</B>&nbsp;&nbsp;<I>No Analysis</I>: One of the common problems with measurement projects is that they are often run by performance analysts who are good in measurement techniques but lack data analysis expertise. They collect enormous amounts of data but do not know how to analyze or interpret it. The result is a set of magnetic tapes (or disks) full of data without any summary. At best, the analyst may produce a thick report full of raw data and graphs without any explanation of how one can use the results. Therefore, it is better to have a team of performance analysts with measurement as well as analysis background.
+<DD><B>13.</B>&nbsp;&nbsp;<I>Erroneous Analysis</I>: There are a number of mistakes analysts commonly make in measurement, simulation, and analytical modeling, for example, taking the average of ratios and too short simulations. Lists of such mistakes are presented throughout this book during discussions on individual techniques.
+<DD><B>14.</B>&nbsp;&nbsp;<I>No Sensitivity Analysis</I>: Often analysts put too much emphasis on the results of their analysis, presenting it as fact rather than evidence. The fact that the results may be sensitive to the workload and system parameters is often overlooked. Without a sensitivity analysis, one cannot be sure if the conclusions would change if the analysis was done in a slightly different setting. Also, without a sensitivity analysis, it is difficult to access the relative importance of various parameters.
+</DL>
+<P><BR></P>
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="02-01.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="02-03.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<hr width="90%" size="1" noshade>
+<div align="center">
+<font face="Verdana,sans-serif" size="1">Copyright &copy; <a href="/reference/wiley00001.html">John Wiley &amp; Sons, Inc.</a></font>
+</div>
+<!-- all of the reference materials (books) have the footer and subfoot reveresed -->
+<!-- reference_subfoot = footer -->
+<!-- reference_footer = subfoot -->
+
+</BODY>
+</HTML>
+
+<!-- END FOOTER -->
+
