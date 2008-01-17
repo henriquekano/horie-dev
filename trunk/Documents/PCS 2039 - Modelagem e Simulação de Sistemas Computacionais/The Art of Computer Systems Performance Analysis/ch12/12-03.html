@@ -1,0 +1,203 @@
+<HTML>
+<HEAD>
+<META name=vsisbn content="0471503363">
+<META name=vstitle content="Art of Computer Systems Performance Analysis Techniques For Experimental Design Measurements Simulation And Modeling">
+<META name=vsauthor content="Raj Jain">
+<META name=vsimprint content="Wiley Computer Publishing">
+<META name=vspublisher content="John Wiley & Sons, Inc.">
+<META name=vspubdate content="05/01/91">
+<META name=vscategory content="Web and Software Development: Software Engineering: Simulation and Modeling">
+
+
+
+
+
+
+
+<TITLE>The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling:Summarizing Measured Data</TITLE>
+
+<!-- HEADER -->
+
+<STYLE type="text/css"> 
+ <!--
+ A:hover  {
+ 	color : Red;
+ }
+ -->
+</STYLE>
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+<!--ISBN=0471503363//-->
+<!--TITLE=The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling//-->
+<!--AUTHOR=Raj Jain//-->
+<!--PUBLISHER=Wiley Computer Publishing//-->
+<!--CHAPTER=12//-->
+<!--PAGES=186-188//-->
+<!--UNASSIGNED1//-->
+<!--UNASSIGNED2//-->
+
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="12-02.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="12-04.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+<P><BR></P>
+<H3><A NAME="Heading5"></A><FONT COLOR="#000077">12.4 COMMON MISUSES OF MEANS</FONT></H3>
+<P>The following is a list of some of the mistakes that are often committed by novices:
+</P>
+<DL>
+<DD><B>&#149;</B>&nbsp;&nbsp;<I>Using Mean of Significantly Different Values</I>: When the mean is the correct index of central tendency for a variable, it does not automatically imply that a mean of any set of that variable will be useful. Usefulness depends upon the number of values and the variance, not only on the type of the variable. For example, it is not very useful to say that the mean CPU time per query is 505 milliseconds when the two measurements come out to be 10 and 1000 milliseconds. An analysis based on 505 milliseconds would lead nowhere close to the two possibilities. In this particular example, the mean is the correct index but is useless.
+<DD><B>&#149;</B>&nbsp;&nbsp;<I>Using Mean without Regard to the Skewness of Distribution</I>: Another example of misuse of means is shown in Table 12.1, where response times for two different systems have been tabulated. Both have mean response times of 10. In the first case, it is useful to know the mean because the variance is low and 10 is the typical value. In the second case, the typical value is 5; hence, using 10 for the mean does not give any useful result. The variability is too large in this case.
+<DD><B>&#149;</B>&nbsp;&nbsp;<I>Multiplying Means To Get the Mean of a Product</I>: The mean of a product of two random variables is equal to the product of means if the two random variables are independent. If <I>x</I> and <I>y</I> are correlated,
+</DL>
+<P ALIGN="CENTER"><I>E</I>(<I>xy</I>) &#8800; <I>E</I>(<I>x</I>)<I>E</I>(<I>y</I>)</P>
+<DL>
+<DD><B>Example 12.1</B> On a timesharing system, the total number of users and the number of subprocesses for each user are monitored. The average number of users is 23. The average number of subprocesses per user is 2. What is the average number of subprocesses?
+</DL>
+<CENTER>
+<TABLE WIDTH="60%">
+<TH CAPTION COLSPAN="3" VALIGN="TOP" ALIGN="LEFT">TABLE 12.1 System Response Times for 5 Days
+<TR>
+<TD COLSPAN="3"><HR>
+<TR>
+<TH VALIGN="TIOP" ALIGN="CENTER" WIDTH="20%">
+<TH VALIGN="TIOP" ALIGN="CENTER" WIDTH="20%">System A
+<TH VALIGN="TIOP" ALIGN="CENTER" WIDTH="20%">System B
+<TR>
+<TD COLSPAN="3"><HR>
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER">
+<TD VALIGN="TOP" ALIGN="CENTER">10
+<TD VALIGN="TOP" ALIGN="CENTER">5
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER">
+<TD VALIGN="TOP" ALIGN="CENTER">9
+<TD VALIGN="TOP" ALIGN="CENTER">5
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER">
+<TD VALIGN="TOP" ALIGN="CENTER">11
+<TD VALIGN="TOP" ALIGN="CENTER">5
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER">
+<TD VALIGN="TOP" ALIGN="CENTER">10
+<TD VALIGN="TOP" ALIGN="CENTER">4
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER">
+<TD VALIGN="TOP" ALIGN="CENTER">10
+<TD VALIGN="TOP" ALIGN="CENTER">31
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER"><BR>
+<TD VALIGN="TOP" ALIGN="CENTER">
+<TD VALIGN="TOP" ALIGN="CENTER">
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER">Sum
+<TD VALIGN="TOP" ALIGN="CENTER">50
+<TD VALIGN="TOP" ALIGN="CENTER">50
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER">Mean
+<TD VALIGN="TOP" ALIGN="CENTER">10
+<TD VALIGN="TOP" ALIGN="CENTER">10
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER">Typical
+<TD VALIGN="TOP" ALIGN="CENTER">10
+<TD VALIGN="TOP" ALIGN="CENTER">5
+<TR>
+<TD COLSPAN="3"><HR>
+</TABLE>
+</CENTER>
+<P>Is it 46? No! The number of subprocesses a user spawns depends upon how much load there is on the system. On an overloaded system (large number of users), users try to keep the number of subprocesses low, and on an underloaded system, users try to keep the number of subprocesses high. The two variables are correlated, and therefore, the mean of the product cannot be obtained by multiplying the means. The total number of subprocesses on the system should be continuously monitored and then averaged.
+</P>
+<DL>
+<DD><B>&#149;</B>&nbsp;&nbsp;<I>Taking a Mean of a Ratio with Different Bases</I>: This has already been discussed in Chapter 11 on ratio games and is discussed further in Section 12.7.
+</DL>
+<H3><A NAME="Heading6"></A><FONT COLOR="#000077">12.5 GEOMETRIC MEAN</FONT></H3>
+<P>The geometric mean of <I>n</I> values <I>x</I><SUB><SMALL>1</SMALL></SUB>, <I>x</I><SUB><SMALL>2</SMALL></SUB>, . . ., <I>x</I><SUB><SMALL>n</SMALL></SUB> is obtained by multiplying the values together and taking the <I>n</I>th root of the product:</P>
+<P ALIGN="CENTER"><IMG SRC="images/12-13d.jpg"></P>
+<P>The mean discussed in other sections is what should be termed the arithmetic mean. The arithmetic mean is used if the sum of the observations is a quantity that is of interest. Similarly, the geometric mean is used if the product of the observations is a quantity of interest.
+</P>
+<DL>
+<DD><B>Example 12.2</B> The performance improvements in the latest version of seven layers of a new networking protocol was measured separately for each layer. The observations are listed in Table 12.2. What is the average improvement per layer? The improvements in the seven layers work in a &#147;multiplicative&#148; manner, that is, doubling the performance of layer 1 and layer 2 shows up as four times the improvement in performance.
+</DL>
+<CENTER>
+<TABLE WIDTH="50%">
+<TH CAPTION COLSPAN="2" VALIGN="TOP" ALIGN="LEFT">TABLE 12.2 Improvement in Each Layer of Network Protocol
+<TR>
+<TD COLSPAN="2"><HR>
+<TR>
+<TH VALIGN="TOP" ALIGN="CENTER" WIDTH="25%">Protocol<BR>Layer
+<TH VALIGN="TOP" ALIGN="CENTER" WIDTH="25%">Performance<BR>Improvement (%)
+<TR>
+<TD COLSPAN="2"><HR>
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER">7
+<TD VALIGN="TOP" ALIGN="CENTER">18
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER">6
+<TD VALIGN="TOP" ALIGN="CENTER">13
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER">5
+<TD VALIGN="TOP" ALIGN="CENTER">11
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER">4
+<TD VALIGN="TOP" ALIGN="CENTER">8
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER">3
+<TD VALIGN="TOP" ALIGN="CENTER">10
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER">2
+<TD VALIGN="TOP" ALIGN="CENTER">28
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER">1
+<TD VALIGN="TOP" ALIGN="CENTER">5
+<TR>
+<TD COLSPAN="2"><HR>
+</TABLE>
+</CENTER>
+<DL>
+<DD>Average improvement per layer
+<DL>
+<DD>= {(1.18)(1.13)(1.11)(1.08)(1.10)(1.28)(1.05)}<SUP><SMALL>1/7</SMALL></SUP> -1
+<DD>= 0.13
+</DL>
+<DD>Thus, the average improvement per layer is 13%.
+</DL>
+<P>Other examples of metrics that work in a multiplicative manner are as follows:
+</P>
+<DL>
+<DD><B>&#149;</B>&nbsp;&nbsp;Cache hit ratios over several levels of caches
+<DD><B>&#149;</B>&nbsp;&nbsp;Cache miss ratios
+<DD><B>&#149;</B>&nbsp;&nbsp;Percentage performance improvement between successive versions
+<DD><B>&#149;</B>&nbsp;&nbsp;Average error rate per hop on a multihop path in a network
+</DL>
+<P>The geometric mean can be considered as a function gm( ), which maps a set of responses {<I>x</I><SUB><SMALL>1</SMALL></SUB>, <I>x</I><SUB><SMALL>2</SMALL></SUB>, . . ., <I>x<SUB><SMALL>n</SMALL></SUB></I>} to a single number <IMG SRC="images/12-04i.jpg">. It has the following multiplicativity property:</P>
+<P ALIGN="CENTER"><IMG SRC="images/12-14d.jpg"></P>
+<P>That is, the geometric mean of a ratio is the ratio of the geometric means of the numerator and denominator. Thus, the choice of the base does not change the conclusion. It is because of this property that sometimes the geometric mean is recommended for ratios. However, if the geometric mean of the numerator or denominator does not have any physical meaning, the geometric mean of their ratio is meaningless as well. Means of ratios are discussed further in Section 12.7.
+</P><P><BR></P>
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="12-02.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="12-04.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<hr width="90%" size="1" noshade>
+<div align="center">
+<font face="Verdana,sans-serif" size="1">Copyright &copy; <a href="/reference/wiley00001.html">John Wiley &amp; Sons, Inc.</a></font>
+</div>
+<!-- all of the reference materials (books) have the footer and subfoot reveresed -->
+<!-- reference_subfoot = footer -->
+<!-- reference_footer = subfoot -->
+
+</BODY>
+</HTML>
+
+<!-- END FOOTER -->
+

@@ -1,0 +1,149 @@
+<HTML>
+<HEAD>
+<META name=vsisbn content="0471503363">
+<META name=vstitle content="Art of Computer Systems Performance Analysis Techniques For Experimental Design Measurements Simulation And Modeling">
+<META name=vsauthor content="Raj Jain">
+<META name=vsimprint content="Wiley Computer Publishing">
+<META name=vspublisher content="John Wiley & Sons, Inc.">
+<META name=vspubdate content="05/01/91">
+<META name=vscategory content="Web and Software Development: Software Engineering: Simulation and Modeling">
+
+
+
+
+
+
+
+<TITLE>The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling:Summarizing Measured Data</TITLE>
+
+<!-- HEADER -->
+
+<STYLE type="text/css"> 
+ <!--
+ A:hover  {
+ 	color : Red;
+ }
+ -->
+</STYLE>
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+<!--ISBN=0471503363//-->
+<!--TITLE=The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling//-->
+<!--AUTHOR=Raj Jain//-->
+<!--PUBLISHER=Wiley Computer Publishing//-->
+<!--CHAPTER=12//-->
+<!--PAGES=177-181//-->
+<!--UNASSIGNED1//-->
+<!--UNASSIGNED2//-->
+
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="../ch11/11-06.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="12-02.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+<P><BR></P>
+<H2 ALIGN="CENTER"><FONT COLOR="#000077"><I>PART III<BR>PROBABILITY THEORY AND STATISTICS
+</I></FONT></H2>
+<P>This part introduces the basic concepts of probability theory and statistics. An understanding of these concepts will help you analyze and interpret data properly. After reading Part III, you will be able to answer questions such as the ones that follow.
+</P>
+<DL>
+<DD><B>1.</B>&nbsp;&nbsp;How should you report the performance as a single number? Is specifying the mean the correct way to summarize a sequence of measurements?
+<DD><B>2.</B>&nbsp;&nbsp;How should you report the variability of measured quantities? What are the alternatives to variance and when are they appropriate?
+<DD><B>3.</B>&nbsp;&nbsp;How should you interpret the variability? How much confidence can you put on data with a large variability?
+<DD><B>4.</B>&nbsp;&nbsp;How many measurements are required to get a desired level of statistical confidence?
+<DD><B>5.</B>&nbsp;&nbsp;How should you summarize the results of several different workloads on a single computer system?
+<DD><B>6.</B>&nbsp;&nbsp;How should you compare two or more computer systems using several different workloads? Is comparing the mean performance sufficient?
+<DD><B>7.</B>&nbsp;&nbsp;What model best describes the relationship between two variables? Also, how good is the model?
+</DL>
+<P>Performance analysts and system designers face such questions frequently. Knowledge of techniques and concepts discussed in this part is required for understanding the simulation and queueing theory concepts discussed later in Parts V and VI of this book.
+</P>
+<H2><A NAME="Heading1"></A><FONT COLOR="#000077">CHAPTER 12<BR>SUMMARIZING MEASURED DATA
+</FONT></H2>
+<BLOCKQUOTE>
+<P><I>The object of statistics is to discover methods of condensing information concerning large groups of allied facts into brief and compendious expressions suitable for discussions.</I></P>
+<P ALIGN="RIGHT">&#151; Francis Galton</P>
+</BLOCKQUOTE><P>Summarizing measured data is one of the most common problems faced by performance analysts. A measurement project may result in several hundred or millions of observations on a given variable. To present the measurements to the decision makers, it is necessary to summarize the data. Several alternative ways of summarizing data and the appropriateness of each alternative are discussed in this chapter.
+</P>
+<H3><A NAME="Heading2"></A><FONT COLOR="#000077">12.1 BASIC PROBABILITY AND STATISTICS CONCEPTS</FONT></H3>
+<P>In this and all following chapters, it is assumed that you have an understanding of basic probability and statistics concepts. In particular, you should be familiar with the following terms:
+</P>
+<DL>
+<DD><B>1.</B>&nbsp;&nbsp;<B>Independent Events:</B> Two events are called independent if the occurrence of one event does not in any way affect the probability of the other event. Thus, knowing that one event has occurred does not in any way change our estimate of the probability of the other event.
+<DD><B>2.</B>&nbsp;&nbsp;<B>Random Variable:</B> A variable is called a random variable if it takes one of a specified set of values with a specified probability.
+<DD><B>3.</B>&nbsp;&nbsp;<B>Cumulative Distribution Function:</B> The Cumulative Distribution Function (<B>CDF</B>) of a random variable maps a given value <I>a</I> to the probability of the variable taking a value less than or equal to <I>a</I>:
+<P ALIGN="CENTER"><I>F<SUB><SMALL>x</SMALL></SUB></I>(<I>a</I>) = <I>P</I>(<I>x</I>&#8804;<I>a</I>)
+<DD><B>4.</B>&nbsp;&nbsp;<B>Probability Density Function:</B> The derivative
+<P ALIGN="CENTER"><IMG SRC="images/12-01d.jpg"></P>
+<BR>of the CDF <I>F</I>(<I>x</I>) is called the probability density function (<B>pdf</B>) of <I>x</I>. Given a pdf <I>f</I>(<I>x</I>), the probability of <I>x</I> being in the interval (<I>x</I><SUB><SMALL>1</SMALL></SUB>, <I>x</I><SUB><SMALL>2</SMALL></SUB>) can also be computed by integration:
+<P ALIGN="CENTER"><IMG SRC="images/12-02d.jpg"></P>
+<DD><B>5.</B>&nbsp;&nbsp;<B>Probability Mass Function:</B> For discrete random variable, the CDF is not continuous and, therefore, not differentiable. In such cases, the probability mass function (<B>pmf</B>) is used in place of pdf. Consider a discrete random variable <I>x</I> that can take <I>n</I> distinct values {<I>x</I><SUB><SMALL>1</SMALL></SUB>, <I>x</I><SUB><SMALL>2</SMALL></SUB>, . . ., <I>x</I><SUB><SMALL>n</SMALL></SUB>} with probabilities {<I>p</I><SUB><SMALL>1</SMALL></SUB>, <I>p</I><SUB><SMALL>2</SMALL></SUB>, . . ., <I>p</I><SUB><SMALL>n</SMALL></SUB>} such that the probability of the <I>i</I>th value <I>x</I><SUB><SMALL><I>i</I></SMALL></SUB> is <I>p</I><SUB><SMALL><I>i</I></SMALL></SUB>. The pmf maps <I>x</I><SMALL><SUB><SMALL><I>i</I></SMALL></SUB></SMALL> to <I>p</I><SMALL><SUB><SMALL><I>i</I></SMALL></SUB></SMALL>:
+<P ALIGN="CENTER"><I>f</I>(<I>x<SUB><SMALL><I>i</I></SMALL></SUB></I>)=<I>p<SUB><SMALL><I>i</I></SMALL></SUB></I>
+<BR>The probability of <I>x</I> being in the interval (<I>x</I><SUB><SMALL>1</SMALL></SUB>, <I>x</I><SUB><SMALL>2</SMALL></SUB>) can also be computed by summation:
+<P ALIGN="CENTER"><IMG SRC="images/12-03d.jpg"></P>
+<DD><B>6.</B>&nbsp;&nbsp;<B>Mean or Expected Value:</B>
+<P ALIGN="CENTER"><IMG SRC="images/12-04d.jpg"></P>
+<BR>Summation is used for discrete and integration for continuous variables, respectively.
+<DD><B>7.</B>&nbsp;&nbsp;<B>Variance:</B> The quantity (<I>x</I> &#150; <I>&#181;</I>)<SUP><SMALL>2</SMALL></SUP> represents the square of distance between <I>x</I> and its mean. The expected value of this quantity is called the variance <I>x</I>:
+<P ALIGN="CENTER"><IMG SRC="images/12-05d.jpg"></P>
+<BR>The variance is traditionally denoted by <I>&sigma;</I><SMALL><SUP>2</SUP></SMALL>. The square root of the variance is called the <B>standard deviation</B> and is denoted by <I>&#963;</I>.
+<DD><B>8.</B>&nbsp;&nbsp;<B>Coefficient of Variation:</B> The ratio of the standard deviation to the mean is called the Coefficient of Variation (<B>C.O.V.</B>):
+<P ALIGN="CENTER"><IMG SRC="images/12-06d.jpg"></P>
+<DD><B>9.</B>&nbsp;&nbsp;<B>Covariance:</B> Given two random variables <I>x</I> and <I>y</I> with means <I>&#181;</I><SUB><SMALL>x</SMALL></SUB> and <I>&#181;</I><SUB><SMALL>y</SMALL></SUB>, their covariance is
+<P ALIGN="CENTER"><IMG SRC="images/12-07d.jpg"></P>
+<BR>For independent variables, the covariance is zero since
+<CENTER>
+<TABLE WIDTH="20%">
+<TD ALIGN="CENTER"><I>E</I>(<I>xy</I>) = <I>E</I>(<I>x</I>)<I>E</I>(<I>y</I>)
+</TABLE>
+</CENTER>
+<BR>Although independence always implies zero covariance, the reverse is not true. It is possible for two variables to be dependent and still have zero covariance.
+<DD><B>10.</B>&nbsp;&nbsp;<B>Correlation Coefficient:</B> The normalized value of covariance is called the correlation coefficient or simply the <B>correlation</B>
+<P ALIGN="CENTER"><IMG SRC="images/12-08d.jpg"></P>
+<BR>The correlation always lies between -1 and &#43;1.
+<DD><B>11.</B>&nbsp;&nbsp;<B>Mean and Variance of Sums:</B> If <I>x</I><SUB><SMALL>1</SMALL></SUB>, <I>x</I><SUB><SMALL>2</SMALL></SUB>, . .., <I>x</I><SUB><SMALL><I>k</I></SMALL></SUB> are <I>k</I> random variables and if <I>a</I><SUB><SMALL>1</SMALL></SUB>, <I>a</I><SUB><SMALL>2</SMALL></SUB>, . . ., <I>a</I><SUB><SMALL><I>k</I></SMALL></SUB> are <I>k</I> arbitrary constants (called weights), then
+<CENTER>
+<TABLE WIDTH="80%">
+<TD ALIGN="CENTER"><I>E</I>(<I>a</I><SUB><SMALL>1</SMALL></SUB><I>x</I><SUB><SMALL>1</SMALL></SUB> &#43; <I>a</I><SUB><SMALL>2</SMALL></SUB><I>x</I><SUB><SMALL>2</SMALL></SUB> &#43; ... &#43; <I>a</I><SUB><SMALL><I>k</I></SMALL></SUB><I>x</I><SUB><SMALL><I>k</I></SMALL></SUB>) = <I>a</I><SUB><SMALL>1</SMALL></SUB><I>E</I>(<I>x</I><SUB><SMALL>1</SMALL></SUB>) &#43; <I>a</I><SUB><SMALL>2</SMALL></SUB><I>E</I>(<I>x</I><SUB><SMALL>2</SMALL></SUB>) &#43; ... &#43; <I>a</I><SUB><SMALL><I>k</I></SMALL></SUB><I>E</I>(<I>x</I><SUB><SMALL><I>k</I></SMALL></SUB>)
+</TABLE>
+</CENTER>
+<BR>For independent variables,
+<CENTER>
+<TABLE WIDTH="80%">
+<TD ALIGN="CENTER">Var(<I>a</I><SUB><SMALL>1</SMALL></SUB><I>x</I><SUB><SMALL>1</SMALL></SUB> &#43; <I>a</I><SUB><SMALL>2</SMALL></SUB><I>x</I><SUB><SMALL>2</SMALL></SUB> &#43; ... &#43; <I>a</I><SUB><SMALL><I>k</I></SMALL></SUB><I>x</I><SUB><SMALL><I>k</I></SMALL></SUB>) = <I>a</I><SUP><SMALL>2</SMALL></SUP><SUB><SMALL>1</SMALL></SUB>Var(<I>x</I><SUB><SMALL>1</SMALL></SUB>) &#43; <I>a</I><SUP><SMALL>2</SMALL></SUP><SUB><SMALL>2</SMALL></SUB>Var(<I>x</I><SUB><SMALL>2</SMALL></SUB>) &#43; ... &#43; <I>a</I><SUP><SMALL>2</SMALL></SUP><SUB><SMALL><I>k</I></SMALL></SUB>Var(<I>x</I><SUB><SMALL><I>k</I></SMALL></SUB>)
+</TABLE>
+</CENTER>
+<DD><B>12.</B>&nbsp;&nbsp;<B>Quantile:</B> The <I>x</I> value at which the CDF takes a value <I>&#945;</I> is called the <I>&alpha;</I>-quantile or 100<I>&#945;</I>-percentile. It is denoted by <I>x</I><SUB><SMALL>&#945;</SMALL></SUB> and is such that the probability of <I>x</I> being less than or equal to <I>x</I><SUB><SMALL>&#945;</SMALL></SUB> is <I>&#945;</I>:
+<P ALIGN="CENTER"><IMG SRC="images/12-09d.jpg"></P>
+<DD><B>13.</B>&nbsp;&nbsp;<B>Median:</B> The 50-percentile (or 0.5-quantile) of a random variable is called its median.
+<DD><B>14.</B>&nbsp;&nbsp;<B>Mode:</B> The most likely value, that is, <I>x</I><SUB><SMALL><I>i</I></SMALL></SUB>, that has the highest probability <I>p</I><SUB><SMALL><I>i</I></SMALL></SUB>, or the <I>x</I> at which pdf is maximum, is called the mode of <I>x</I>.
+<DD><B>15.</B>&nbsp;&nbsp;<B>Normal Distribution:</B> This is the most commonly used distribution in data analysis. The sum of a large number of independent observations from any distribution has a normal distribution. Also known as Gaussian distribution, its pdf is given by <P ALIGN="CENTER"><IMG SRC="images/12-10d.jpg"></P>
+</DL>
+<P><BR></P>
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="../ch11/11-06.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="12-02.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<hr width="90%" size="1" noshade>
+<div align="center">
+<font face="Verdana,sans-serif" size="1">Copyright &copy; <a href="/reference/wiley00001.html">John Wiley &amp; Sons, Inc.</a></font>
+</div>
+<!-- all of the reference materials (books) have the footer and subfoot reveresed -->
+<!-- reference_subfoot = footer -->
+<!-- reference_footer = subfoot -->
+
+</BODY>
+</HTML>
+
+<!-- END FOOTER -->
+

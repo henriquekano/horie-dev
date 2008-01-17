@@ -1,0 +1,158 @@
+<HTML>
+<HEAD>
+<META name=vsisbn content="0471503363">
+<META name=vstitle content="Art of Computer Systems Performance Analysis Techniques For Experimental Design Measurements Simulation And Modeling">
+<META name=vsauthor content="Raj Jain">
+<META name=vsimprint content="Wiley Computer Publishing">
+<META name=vspublisher content="John Wiley & Sons, Inc.">
+<META name=vspubdate content="05/01/91">
+<META name=vscategory content="Web and Software Development: Software Engineering: Simulation and Modeling">
+
+
+
+
+
+
+
+<TITLE>The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling:Summarizing Measured Data</TITLE>
+
+<!-- HEADER -->
+
+<STYLE type="text/css"> 
+ <!--
+ A:hover  {
+ 	color : Red;
+ }
+ -->
+</STYLE>
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+<!--ISBN=0471503363//-->
+<!--TITLE=The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling//-->
+<!--AUTHOR=Raj Jain//-->
+<!--PUBLISHER=Wiley Computer Publishing//-->
+<!--CHAPTER=12//-->
+<!--PAGES=188-191//-->
+<!--UNASSIGNED1//-->
+<!--UNASSIGNED2//-->
+
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="12-03.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="12-05.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+<P><BR></P>
+<H3><A NAME="Heading7"></A><FONT COLOR="#000077">12.6 HARMONIC MEAN</FONT></H3>
+<P>The harmonic mean <IMG SRC="images/12-05i.jpg"> of a sample {<I>x</I><SUB><SMALL>1</SMALL></SUB>, <I>x</I><SUB><SMALL>2</SMALL></SUB>, . . ., <I>x</I><SUB><SMALL>n</SMALL></SUB>} is defined as follows:</P>
+<P ALIGN="CENTER"><IMG SRC="images/12-15d.jpg"></P>
+<P>A harmonic mean should be used whenever an arithmetic mean can be justified for 1/<I>x</I><SUB><SMALL><I>i</I></SMALL></SUB>. For example, suppose repeated measurements are made for the elasped time of a benchmark on a processor. In the <I>i</I>th repetition, the benchmark takes <I>t</I><SUB><SMALL><I>i</I></SMALL></SUB> seconds. Now suppose the benchmark has <I>m</I> million instructions, the MIPS <I>x</I><SUB><SMALL><I>i</I></SMALL></SUB> computed from the <I>i</I>th repetition is</P>
+<P ALIGN="CENTER"><IMG SRC="images/12-16d.jpg"></P>
+<P>In Section 12.3, it was argued that <I>t</I><SUB><SMALL><I>i</I></SMALL></SUB>&#146;s should be summarized using the arithmetic mean since the sum of <I>t</I><SUB><SMALL><I>i</I></SMALL></SUB> has a physical meaning. For the same reasons, <I>x</I><SUB><SMALL><I>i</I></SMALL></SUB>&#146;s should be summarized using the harmonic mean since the sum of 1/<I>x</I><SUB><SMALL><I>i</I></SMALL></SUB>&#146;s has a physical meaning. The average MIPS rate for the processor is</P>
+<P ALIGN="CENTER"><IMG SRC="images/12-17d.jpg"></P>
+<P>Notice, however, if <I>x</I><SUB><SMALL><I>i</I></SMALL></SUB>&#146;s represent the MIPS rate for n different benchmarks so that the ith benchmark has <I>m</I><SUB><SMALL><I>i</I></SMALL></SUB> million instructions, then the harmonic mean of <I>n</I> ratios <I>m</I><SUB><SMALL><I>i</I></SMALL></SUB>/<I>t</I><SUB><SMALL><I>i</I></SMALL></SUB> cannot be used since the sum of the <I>t</I><SUB><SMALL><I>i</I></SMALL></SUB>/<I>m</I><SUB><SMALL><I>i</I></SMALL></SUB> does not have any physical meaning. Instead, as shown later in Section 12.7, the quantity <IMG SRC="images/12-06i.jpg"></IMGI> is a preferred average MIPS rate. This is a weighted harmonic mean of <I>n</I> observations. The weighted harmonic mean is defined as follows:</P>
+<P ALIGN="CENTER"><IMG SRC="images/12-18d.jpg"></P>
+<P>where <I>w</I><SUB><SMALL><I>i</I></SMALL></SUB>&#146;s are weights that add up to 1:</P>
+<P ALIGN="CENTER"><IMG SRC="images/12-19d.jpg"></P>
+<P>The harmonic mean is a special case of the weighted harmonic mean with all weights being equal, that is, <I>w</I><SUB><SMALL><I>i</I></SMALL></SUB> = 1/<I>n</I>.</P>
+<P>In the example of <I>n</I> observations of the MIPS rate, if the weights are chosen proportional to the size of the benchmark, that is,</P>
+<P ALIGN="CENTER"><IMG SRC="images/12-20d.jpg"></P>
+<P>then the weighted harmonic mean would be
+</P>
+<P ALIGN="CENTER"><IMG SRC="images/12-21d.jpg"></P>
+<P>which is reasonable since the numerator represents the total size of all benchmarks and the denominator represents the total time on all benchmarks.
+</P>
+<H3><A NAME="Heading8"></A><FONT COLOR="#000077">12.7 MEAN OF A RATIO</FONT></H3>
+<P>Given a set of <I>n</I> ratios, a common problem is to summarize them in a single number. This problem happens, as was discussed earlier in Section 12.6, when trying to summarize the MIPS rate for a processor from measurements of several different workloads. Considering the additivity of the numerator and denominator separately leads to the following rules for summarizing the ratios:</P>
+<DL>
+<DD><B>1.</B>&nbsp;&nbsp;<I>If we take the sum of numerators and the sum of denominators and both have a physical meaning, the average of the ratio is the ratio of the averages.</I> For example, if <I>x</I><SUB><SMALL><I>i</I></SMALL></SUB> = <I>a</I><SUB><SMALL><I>i</I></SMALL></SUB>/<I>b</I><SUB><SMALL><I>i</I></SMALL></SUB>, the average ratio is given by
+<P ALIGN="CENTER"><IMG SRC="images/12-22d.jpg"></P>
+<BR>A common application of this guideline is in computing mean resource utilization as illustrated by the following example.
+<BR><B>Example 12.3</B> The CPU utilization of a system as measured over five different intervals is tabulated in Table 12.3.
+<BR>The average utilization is not 40% as it may appear. The base (denominators) of the ratios (total times) are not comparable. The mean utilization is obtained by calculating the total CPU busy time and total time and taking the ratio of the two.
+<P ALIGN="CENTER"><IMG SRC="images/12-23d.jpg"></P>
+<BR>Example 12.3 also disproves the myth that ratios should always be summarized by a geometric mean. A geometric mean of utilizations is useless. Two special cases of the preceding rule, which in some cases lead to justification for the arithmetic and harmonic mean, respectively, are as follows:
+<DL>
+<DD><B>(a)</B>&nbsp;&nbsp;<I>If the denominator is a constant, so that the ratio has been taken with respect to a base that is constant across all observations, and the sum of the numerator has a physical meaning, the arithmetic mean of the ratios can be used.</I> That is, if <I>b</I><SUB><SMALL><I>i</I></SMALL></SUB> = <I>b</I> for all <I>i</I>&#146;s, then
+<P ALIGN="CENTER"><IMG SRC="images/12-24d.jpg"></P>
+<BR>As an example of this guideline, consider again the problem of computing mean resource utilization. If <I>n</I> values of utilizations are all measured for the same interval of time, the average utilization can be computed using the straight arithmetic mean of <I>n</I> utilizations.
+<DD><B>(b)</B>&nbsp;&nbsp;<I>If the sum of the denominators has a physical meaning and the numerators are constant, then a harmonic mean of the ratio should be used to summarize them.</I> That is, if <I>a</I><SUB><SMALL><I>i</I></SMALL></SUB> = <I>a</I> for all <I>i</I>&#146;s, then
+<P ALIGN="CENTER"><IMG SRC="images/12-25d.jpg"></P>
+</DL>
+</DL>
+<CENTER>
+<TABLE WIDTH="60%">
+<TH CAPTION COLSPAN="2" VALIGN="TOP" ALIGN="LEFT">TABLE 12.3 CPU Utilization Measured over Five Intervals
+<TR>
+<TD COLSPAN="2"><HR>
+<TR>
+<TH VALIGN="TOP" ALIGN="CENTER" WIDTH="25%">Measurement Duration
+<TH VALIGN="TOP" ALIGN="CENTER" WIDTH="35%">CPU Duration Busy (%)
+<TR>
+<TD COLSPAN="2"><HR>
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER">1
+<TD VALIGN="TOP" ALIGN="CENTER">45
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER">1
+<TD VALIGN="TOP" ALIGN="CENTER">45
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER">1
+<TD VALIGN="TOP" ALIGN="CENTER">45
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER">1
+<TD VALIGN="TOP" ALIGN="CENTER">45
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER">100&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<TD VALIGN="TOP" ALIGN="CENTER">20
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER"><BR>
+<TD VALIGN="TOP" ALIGN="CENTER">
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER">sum&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<TD VALIGN="TOP" ALIGN="CENTER">200%
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER">Mean&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+<TD VALIGN="TOP" ALIGN="CENTER">&#8800; 200/5 or 40%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<TR>
+<TD COLSPAN="2"><HR>
+<TR>
+</TABLE>
+</CENTER>
+<DL>
+<DL>
+<BR>The problem of computing the mean MIPS rate for a processor using <I>n</I> observations of the same benchmark is an example of a case where this guideline can be used.
+</DL>
+<DD><B>2.</B>&nbsp;&nbsp;<I>If the numerator and the denominator are expected to follow a multiplicative property such that a<SUB><SMALL><I>i</I></SMALL></SUB> = cb<SUB><SMALL><I>i</I></SMALL></SUB>, where c is approximately a constant that is being estimated, then c can be estimated by the geometric mean of a<SUB><SMALL><I>i</I></SMALL></SUB>/b<SUB><SMALL><I>i</I></SMALL></SUB>.</I> The following case study illustrates the application of this guideline.
+</DL>
+<DL>
+<DD><B>Case Study 12.1</B> A number of benchmarks were run through a program optimizer. The static size of the program as measured before and after the optimizaion are shown in Table 12.4. Also shown in the table are the ratios of sizes before and after the optimization.
+</DL>
+<P><BR></P>
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="12-03.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="12-05.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<hr width="90%" size="1" noshade>
+<div align="center">
+<font face="Verdana,sans-serif" size="1">Copyright &copy; <a href="/reference/wiley00001.html">John Wiley &amp; Sons, Inc.</a></font>
+</div>
+<!-- all of the reference materials (books) have the footer and subfoot reveresed -->
+<!-- reference_subfoot = footer -->
+<!-- reference_footer = subfoot -->
+
+</BODY>
+</HTML>
+
+<!-- END FOOTER -->
+

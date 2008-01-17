@@ -1,0 +1,220 @@
+<HTML>
+<HEAD>
+<META name=vsisbn content="0471503363">
+<META name=vstitle content="Art of Computer Systems Performance Analysis Techniques For Experimental Design Measurements Simulation And Modeling">
+<META name=vsauthor content="Raj Jain">
+<META name=vsimprint content="Wiley Computer Publishing">
+<META name=vspublisher content="John Wiley & Sons, Inc.">
+<META name=vspubdate content="05/01/91">
+<META name=vscategory content="Web and Software Development: Software Engineering: Simulation and Modeling">
+
+
+
+
+
+
+
+<TITLE>The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling:Summarizing Measured Data</TITLE>
+
+<!-- HEADER -->
+
+<STYLE type="text/css"> 
+ <!--
+ A:hover  {
+ 	color : Red;
+ }
+ -->
+</STYLE>
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+<!--ISBN=0471503363//-->
+<!--TITLE=The Art of Computer Systems Performance Analysis: Techniques for Experimental Design, Measurement, Simulation, and Modeling//-->
+<!--AUTHOR=Raj Jain//-->
+<!--PUBLISHER=Wiley Computer Publishing//-->
+<!--CHAPTER=12//-->
+<!--PAGES=199-202//-->
+<!--UNASSIGNED1//-->
+<!--UNASSIGNED2//-->
+
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="12-07.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="../ch13/13-01.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+<P><BR></P>
+<P>Often it is found in a normal quantile-quantile plot that the data follows a straight line but departs from it at one or both ends. This is an indication of data having shorter or longer tails than the normal distribution. For example, Figure 12.6b shows data that has longer tails at both ends. An S-shaped normal quantile-quantile plot, such as the one shown in Figure 12.6c, indicates that the observations have a distribution that is more peaky and has shorter tails than a normal distribution. If the distribution is asymmetric so that it has a shorter tail on one end and a longer tail on the other, this will show up on the normal quantile-quantile plot as a combination of the two types of departures from normality just discussed. An example of asymmetric plot is shown in Figure 12.6d.
+</P>
+<P><A NAME="Fig6"></A><A HREF="javascript:displayWindow('images/12-06.jpg',461,420 )"><IMG SRC="images/12-06t.jpg"></A>
+<BR><A HREF="javascript:displayWindow('images/12-06.jpg',461,420)"><FONT COLOR="#000077"><B>FIGURE 12.6</B></FONT></A>&nbsp;&nbsp;Interpretation of normal quantile-quantile plots.</P>
+<H3><A NAME="Heading12"></A><FONT COLOR="#000077">EXERCISES</FONT></H3>
+<DL>
+<DD><B>12.1</B>&nbsp;&nbsp;A distributed system has three file servers, which are chosen independently and with equal probabilities whenever a new file is created. The servers are named A, B, and C. Determine the probabilities of the following events:
+<DL>
+<DD><B>a.</B>&nbsp;&nbsp;Server A is selected
+<DD><B>b.</B>&nbsp;&nbsp;Server A or B is selected
+<DD><B>c.</B>&nbsp;&nbsp;Servers A and B are selected
+<DD><B>d.</B>&nbsp;&nbsp;Server A is not selected
+<DD><B>e.</B>&nbsp;&nbsp;Server A is selected twice in a row
+<DD><B>f.</B>&nbsp;&nbsp;Server selection sequence ABCABCABC is observed (in nine successive file creations)
+</DL>
+<DD><B>12.2</B>&nbsp;&nbsp;The traffic arriving at a network gateway is bursty. The burst size <I>x</I> is geometrically distributed with the following pmf.
+<P ALIGN="CENTER"><IMG SRC="images/12-31d.jpg"></P>
+<BR>Compute the mean, variance, standard deviation, and coefficient of variation of the burst size. Plot the pmf and CDF for <I>P</I> = 0.2.
+<DD><B>12.3</B>&nbsp;&nbsp;The number of I/O requests received at a disk during a unit interval follows a Poisson distribution with the following mass function:
+<P ALIGN="CENTER"><IMG SRC="images/12-32d.jpg"></P>
+<BR>Here, &#955; is a parameter. Determine the mean, variance, and coefficient of variation of the number. Plot the pmf and CDF for &#955; = 8.
+<DD><B>12.4</B>&nbsp;&nbsp;Two Poisson streams (see Exercise 12.3) merge at a disk. The pmf for the two streams are as follows:
+<P ALIGN="CENTER"><IMG SRC="images/12-33d.jpg"></P>
+<BR>Determine the following:
+<DL>
+<DD><B>a.</B>&nbsp;&nbsp;Mean of <I>x</I> &#43; <I>y</I>
+<DD><B>b.</B>&nbsp;&nbsp;Variance of <I>x</I> &#43; <I>y</I>
+<DD><B>c.</B>&nbsp;&nbsp;Mean of <I>x</I> - <I>y</I>
+<DD><B>d.</B>&nbsp;&nbsp;Variance of <I>x</I> - <I>y</I>
+<DD><B>e.</B>&nbsp;&nbsp;Mean of 3<I>x</I> - 4<I>y</I>
+<DD><B>f.</B>&nbsp;&nbsp;Coefficent of variation of 3<I>x</I> - 4<I>y</I>
+</DL>
+<DD><B>12.5</B>&nbsp;&nbsp;The response time of a computer system has an Erlang distribution with the following CDF:
+<P ALIGN="CENTER"><IMG SRC="images/12-34d.jpg"></P>
+<BR>Find expressions for the pdf, mean, variance, mode, and coefficient of variation of the response time.
+<DD><B>12.6</B>&nbsp;&nbsp;The CDF of a Pareto variate is given by
+<P ALIGN="CENTER"><IMG SRC="images/12-35d.jpg"></P>
+<BR>Find its pdf, mean, variance, mode, and coefficient of variation.
+<DD><B>12.7</B>&nbsp;&nbsp;The execution times of queries on a database is normally distributed with a mean of 5 seconds and a standard deviation of 1 second. Determine the following:
+<DL>
+<DD><B>a.</B>&nbsp;&nbsp;What is the probability of the execution time being more than 8 seconds?
+<DD><B>b.</B>&nbsp;&nbsp;What is the probability of the execution time being less than 6 seconds?
+<DD><B>c.</B>&nbsp;&nbsp;What percentage of responses will take between 4 and 7 seconds?
+<DD><B>d.</B>&nbsp;&nbsp;What is the 95-percentile execution time?
+</DL>
+<DD><B>12.8</B>&nbsp;&nbsp;What index of central tendency should be used to report
+<DL>
+<DD><B>a.</B>&nbsp;&nbsp;Response time (symmetrical pdf)
+<DD><B>b.</B>&nbsp;&nbsp;Number of packets per day (symmetrical pdf)
+<DD><B>c.</B>&nbsp;&nbsp;Number of packets per second (skewed pdf)
+<DD><B>d.</B>&nbsp;&nbsp;Frequency of keywords in a language
+</DL>
+<DD><B>12.9</B>&nbsp;&nbsp;How would you summarize an average personal computer configuration:
+<DL>
+<DD><B>a.</B>&nbsp;&nbsp;CPU type
+<DD><B>b.</B>&nbsp;&nbsp;Memory size
+<DD><B>c.</B>&nbsp;&nbsp;Disk type
+<DD><B>d.</B>&nbsp;&nbsp;Number of peripherals
+<DD><B>e.</B>&nbsp;&nbsp;Cost
+</DL>
+<DD><B>12.10</B>&nbsp;&nbsp;The CPU times in milliseconds for 11 workloads on a processor are 0.74, 0.43, 0.24, 2.24, 262.08, 8960, 4720, 19740, 7360, 22,440, and 28,560. Which index of central tendency would you choose and why?
+<DD><B>12.11</B>&nbsp;&nbsp;The number of disk I/O&#146;s performed by a number of programs were measured as follows: {23, 33, 14, 15, 42, 28, 33, 45, 23, 34, 39, 21, 36, 23, 34, 36, 25, 9, 11, 19, 35, 24, 31, 29, 16, 23, 34, 24, 38, 15, 13, 35, 28}. Which index of central tendency would you choose and why?
+<DD><B>12.12</B>&nbsp;&nbsp;Choose a performance analysis problem. List all system performance metrics and workload parameters. For each metric/parameter discuss the following:
+<DL>
+<DD><B>a.</B>&nbsp;&nbsp;Which index of central tendency would you use?
+<DD><B>b.</B>&nbsp;&nbsp;Which index of dispersion would you use?
+</DL>
+<BR>Assume appropriate distributions, if necessary, and justify your assumptions. Include at least one example of each of the possible indices: mean, median, mode, geometric mean, range, variance, and percentiles. (This may require you to extend the problem or parameter list.)
+<DD><B>12.13</B>&nbsp;&nbsp;For the data of Exercise 12.10, which index of dispersion would you choose and why?
+<DD><B>12.14</B>&nbsp;&nbsp;For the data of Exercise 12.11, compute all possible indices of dispersion. Which index would you choose and why?
+<DD><B>12.15</B>&nbsp;&nbsp;Plot a normal quantile-quantile plot for the following sample of errors:
+<TABLE WIDTH="80%">
+<TD VALIGN="TOP" ALIGN="LEFT" WIDTH="10%">-0.04444
+<TD VALIGN="TOP" ALIGN="LEFT" WIDTH="10%">-0.04439
+<TD VALIGN="TOP" ALIGN="LEFT" WIDTH="10%">-0.04165
+<TD VALIGN="TOP" ALIGN="LEFT" WIDTH="10%">-0.03268
+<TD VALIGN="TOP" ALIGN="LEFT" WIDTH="10%">-0.03235
+<TD VALIGN="TOP" ALIGN="LEFT" WIDTH="10%">-0.03182
+<TD VALIGN="TOP" ALIGN="LEFT" WIDTH="10%">0.02771
+<TD VALIGN="TOP" ALIGN="LEFT" WIDTH="10%">0.02650
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT" WIDTH="10%">-0.02569
+<TD VALIGN="TOP" ALIGN="LEFT" WIDTH="10%">-0.02358
+<TD VALIGN="TOP" ALIGN="LEFT" WIDTH="10%">0.02330
+<TD VALIGN="TOP" ALIGN="LEFT" WIDTH="10%">0.02305
+<TD VALIGN="TOP" ALIGN="LEFT" WIDTH="10%">0.02213
+<TD VALIGN="TOP" ALIGN="LEFT" WIDTH="10%">0.02128
+<TD VALIGN="TOP" ALIGN="LEFT" WIDTH="10%">0.01793
+<TD VALIGN="TOP" ALIGN="LEFT" WIDTH="10%">0.01668
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT" WIDTH="10%">-0.01565
+<TD VALIGN="TOP" ALIGN="LEFT" WIDTH="10%">-0.01509
+<TD VALIGN="TOP" ALIGN="LEFT" WIDTH="10%">0.01432
+<TD VALIGN="TOP" ALIGN="LEFT" WIDTH="10%">0.00978
+<TD VALIGN="TOP" ALIGN="LEFT" WIDTH="10%">0.00889
+<TD VALIGN="TOP" ALIGN="LEFT" WIDTH="10%">0.00687
+<TD VALIGN="TOP" ALIGN="LEFT" WIDTH="10%">0.00543
+<TD VALIGN="TOP" ALIGN="LEFT" WIDTH="10%">0.00084
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT" WIDTH="10%">-0.00083
+<TD VALIGN="TOP" ALIGN="LEFT" WIDTH="10%">-0.00048
+<TD VALIGN="TOP" ALIGN="LEFT" WIDTH="10%">0.00024
+<TD VALIGN="TOP" ALIGN="LEFT" WIDTH="10%">0.00079
+<TD VALIGN="TOP" ALIGN="LEFT" WIDTH="10%">0.00082
+<TD VALIGN="TOP" ALIGN="LEFT" WIDTH="10%">0.00106
+<TD VALIGN="TOP" ALIGN="LEFT" WIDTH="10%">0.00110
+<TD VALIGN="TOP" ALIGN="LEFT" WIDTH="10%">0.00132
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT" WIDTH="10%">0.00162
+<TD VALIGN="TOP" ALIGN="LEFT" WIDTH="10%">0.00181
+<TD VALIGN="TOP" ALIGN="LEFT" WIDTH="10%">0.00280
+<TD VALIGN="TOP" ALIGN="LEFT" WIDTH="10%">0.00379
+<TD VALIGN="TOP" ALIGN="LEFT" WIDTH="10%">0.00411
+<TD VALIGN="TOP" ALIGN="LEFT" WIDTH="10%">0.00424
+<TD VALIGN="TOP" ALIGN="LEFT" WIDTH="10%">0.00553
+<TD VALIGN="TOP" ALIGN="LEFT" WIDTH="10%">0.00865
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT" WIDTH="10%">0.01026
+<TD VALIGN="TOP" ALIGN="LEFT" WIDTH="10%">0.01085
+<TD VALIGN="TOP" ALIGN="LEFT" WIDTH="10%">0.01440
+<TD VALIGN="TOP" ALIGN="LEFT" WIDTH="10%">0.01562
+<TD VALIGN="TOP" ALIGN="LEFT" WIDTH="10%">0.01975
+<TD VALIGN="TOP" ALIGN="LEFT" WIDTH="10%">0.01996
+<TD VALIGN="TOP" ALIGN="LEFT" WIDTH="10%">0.02016
+<TD VALIGN="TOP" ALIGN="LEFT" WIDTH="10%">0.02078
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT" WIDTH="10%">0.02134
+<TD VALIGN="TOP" ALIGN="LEFT" WIDTH="10%">0.02252
+<TD VALIGN="TOP" ALIGN="LEFT" WIDTH="10%">0.02414
+<TD VALIGN="TOP" ALIGN="LEFT" WIDTH="10%">0.02568
+<TD VALIGN="TOP" ALIGN="LEFT" WIDTH="10%">0.02682
+<TD VALIGN="TOP" ALIGN="LEFT" WIDTH="10%">0.02855
+<TD VALIGN="TOP" ALIGN="LEFT" WIDTH="10%">0.02889
+<TD VALIGN="TOP" ALIGN="LEFT" WIDTH="10%">0.03072
+<TR>
+<TD VALIGN="TOP" ALIGN="LEFT" WIDTH="10%">0.03259
+<TD VALIGN="TOP" ALIGN="LEFT" WIDTH="10%">0.03754
+<TD VALIGN="TOP" ALIGN="LEFT" WIDTH="10%">0.04263
+<TD VALIGN="TOP" ALIGN="LEFT" WIDTH="10%">0.04276
+<TD VALIGN="TOP" ALIGN="LEFT" WIDTH="10%">
+<TD VALIGN="TOP" ALIGN="LEFT" WIDTH="10%">
+<TD VALIGN="TOP" ALIGN="LEFT" WIDTH="10%">
+<TD VALIGN="TOP" ALIGN="LEFT" WIDTH="10%">
+<TR>
+</TABLE>
+<BR>Are the errors normally distributed?
+</DL>
+<P><BR></P>
+<CENTER>
+<TABLE BORDER>
+<TR>
+<TD><A HREF="12-07.html">Previous</A></TD>
+<TD><A HREF="../ewtoc.html">Table of Contents</A></TD>
+<TD><A HREF="../ch13/13-01.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<hr width="90%" size="1" noshade>
+<div align="center">
+<font face="Verdana,sans-serif" size="1">Copyright &copy; <a href="/reference/wiley00001.html">John Wiley &amp; Sons, Inc.</a></font>
+</div>
+<!-- all of the reference materials (books) have the footer and subfoot reveresed -->
+<!-- reference_subfoot = footer -->
+<!-- reference_footer = subfoot -->
+
+</BODY>
+</HTML>
+
+<!-- END FOOTER -->
+
