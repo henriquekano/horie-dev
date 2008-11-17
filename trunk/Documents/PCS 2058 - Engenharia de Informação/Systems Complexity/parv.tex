@@ -1,0 +1,149 @@
+% ******************************************** Cabeçalho *********************************************
+
+\documentclass[brazil,ruledheader]{abnt}
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage[alf]{abntcite}
+\makeatletter
+\makeatother
+\usepackage{amssymb}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage[font=small]{caption}
+\usepackage[scaled]{uarial}
+\renewcommand*\familydefault{\sfdefault}
+
+\begin{document}
+
+\autor{André Kenji Horie\\ Paulo Muggler Moreira\\ Ricardo Henrique Gracini Guiraldelli\\ Virgílio Vettorazzo}
+\titulo{Proposta de Metodologia para Análise da Complexidade de Sistemas Computacionais em um Âmbito Global e Evolutivo}
+\instituicao{Escola Politécnica da Universidade de São Paulo\par
+	Departamento de Engenharia de Computação e Sistemas Digitais}
+\comentario{Monografia para o curso PCS 2058 - Engenharia de Informação.}
+\local{São Paulo}
+\data{2008}
+
+
+% *************************************** Início do Documento ****************************************
+
+\capa
+\folhaderosto
+
+\chapter*{Abstract}
+This work proposes a model for assessing complexity of computer systems in a global and evolutive scope. This will be achieved by defining relevant metrics and the way they relate among themselves, providing a quantifiable measure for complexity. Moreover, the proposed model will be applied to available data, thus creating a valid complexity curve whose tendency will be analysed.
+\\ \\
+Keywords: Computer Systems Complexity
+
+\setcounter{tocdepth}{1}
+\tableofcontents{}
+
+% ************************************ Capítulo 01 - Introdução **************************************
+
+\chapter{Introdução\label{cap:introducao}}
+
+\section{Objetivo}
+Este trabalho tem por objetivo analisar a complexidade em sistemas computacionais em um âmbito global e evolutivo através da definição de uma metodologia, identificando-se métricas relevantes para o cálculo da curva de complexidade. Aplicando-se o modelo proposto, espera-se verificar a tendência da complexidade em função do tempo.
+
+\section{Conceitos Teóricos}
+Para um estudo sobre a complexidade de sistemas computacionais, vê-se a necessidade de se definir o conceito de complexidade, para então reduzir esta definição ao escopo de sistemas computacionais e, assim, poder considerar os aspectos relevantes para a criação do modelo.
+
+	\subsection{Complexidade}
+Warren Weaver, em seu artigo ``\emph{Science and Complexity}'' \cite{weaver48}, introduziu o conceito de complexidade na litetura científica como o grau de dificuldade de se prever as propriedades de um sistema se as propriedades de cada parte for dada. Classifica-se então a complexidade sistêmica em organizada e desorganizada. Os sistemas de complexidade desorganizada caracterizam-se pelo número elevado de variáveis e pelo seu comportamento caótico, embora as propriedades do sistema como um todo possam ser entendidas utilizando-se métodos probabilísticos e estatísticos. A complexidade organizada, por outro lado, refere-se a interações entre as partes constituintes do sistema, sendo o comportamente deste redutíveis às interações, e não às propriedades das partes elementares. A visão proposta por este artigo influenciou fortemente o pensamento contemporâneo acerca da complexidade.\par
+Empiricamente, observa-se que uma proporção alta dos sistemas complexos encontrados na natureza possuem uma estrutura hierárquica. Em teoria, espera-se que qualquer sistema complexo seja hierárquico, tendo como a decomposição uma propriedade de sua dinâmica \cite{simon62}. Esta simplifica tanto o estudo do comportamento como a descrição desses sistemas.\par
+Em \citeyear{lloyd88}, Seth Lloyd afirma que a complexidade de uma propriedade física de um objeto é função processo ou conjunto de processos responsáveis por sua criação \cite{lloyd88}. Em outras palavras, a complexidade é uma propriedade da evolução de um estado, e não do estado em si. Consequentemente, uma medida da complexidade deve classificar sistemas em estados aleatórios como de baixa complexidade, e quantificar a evolução deste sistema para seu estado final.
+
+	\subsection{Organização de Sistemas Computacionais}
+O termo ``arquitetura'' é amplamente utilizado para se referir à estrutura na qual um sistema é organizado. Em Tecnologia da Informação, sistemas computacionais são representados pela arquitetura de hardware, de software, de rede e de informação \cite{gentleman05}. Em relação ao escopo coberto por cada uma delas, observa-se que a arquitetura de hardware é essencialmente local, sendo assim definido para apenas um nó do sistema, enquanto as arquiteturas de rede e de informação requerem necessariamente a interação entre diversos componentes. A arquitetura de software, no entanto, pode tanto indicar a organização do software em apenas um componente como também em diversos componentes distribuídos, quando aplicável. Esta decomposição vê-se necessária para melhor endereçar a complexidade de cada vertente de um sistema computacional.
+
+% ******************************** Capítulo 02 - Definição do Modelo *********************************
+
+\chapter{Definição do Modelo\label{cap:definicao}}
+
+\section{Variáveis Relevantes}
+A seguir serão apresentadas as variáveis relevantes para o modelo de complexidade em termos globais.
+
+	\subsection{Arquitetura de Hardware}
+Valores representativos para o cálculo de complexidade relacionada à arquitetura de hardware incluem métricas normalmente utilizadas para \emph{benchmarks}, como por exemplo o número de instruções por segundo do processador, a capacidade de armazenamento das memórias de acesso aleatório, cache e do disco rígido.\par
+Estes valores são proporcionais?\par
+Contudo, deve-se observar que a arquitetura de hardware possui escopo local, como já mencionado anteriomente. Para transpor este valor para um âmbito global, assume-se uma proporção direta entre o aumento de complexidade e o aumento de custo de produção. Dado o custo total de produção como $C_T(Q)=C_F+C_V=C_F+Q \cdot C_{Mg}$, onde $C_T$ é o custo total, $C_F$ é o custo fixo, $C_V$ é custo variável, $Q$ é a quantidade produzida e $C_{Mg}$ é o custo marginal. Portanto, a complexidade da arquitetura de hardware global é dada por $\mathbb{C}_{HW}=f(Q)\cdot \mathbb{C}_{HW, local}$, com $f(Q)$ sendo o fator de aumento linear da complexidade em função da quantidade produzida.
+
+	\subsection{Arquitetura de Software}
+\cite{kearney86}, \cite{ranga07}.
+
+	\subsection{Arquitetura de Rede}
+.
+
+	\subsection{Arquitetura de Informação}
+.
+
+\section{Modelo Matemático}
+.
+
+% ******************************** Capítulo 03 - Aplicação do Modelo *********************************
+
+\chapter{Aplicação do Modelo\label{cap:aplicacao}}
+
+\section{Dados Históricos}
+
+	\subsection{Arquitetura de Hardware}
+.
+\begin{table}[h]
+	\begin{center}
+		\footnotesize
+		\newcolumntype{A}{>{\centering\arraybackslash} m{0.3\linewidth}}
+		\newcolumntype{B}{>{\centering\arraybackslash} m{0.2\linewidth}}
+		\newcolumntype{C}{>{\centering\arraybackslash} m{0.1\linewidth}}
+		\begin{tabularx}{0.8\textwidth}{A C C B C} \toprule
+			Processador 						& MIPS	& Frequência	& Ano \\ \midrule
+			Intel 8080							& 0,64	& 2 MHz			& 1974 \\ \addlinespace
+			Motorola 68000						& 1,0	& 8 MHz			& 1979 \\ \addlinespace
+			Intel 386DX							& 8,5	& 25 MHz		& 1988 \\ \addlinespace
+			Intel 486DX							& 54	& 66 MHz		& 1992 \\ \addlinespace
+			PowerPC 600s (G2)					& 35	& 33 MHz		& 1994 \\ \addlinespace
+			Intel Pentium Pro					& 541	& 200 MHz		& 1996 \\ \addlinespace
+			ARM 7500FE							& 35,9	& 40 MHz		& 1996 \\ \addlinespace
+			PowerPC G3							& 525	& 233 MHz		& 1997 \\ \addlinespace
+			Zilog eZ80							& 80	& 50 MHz		& 1999 \\ \addlinespace
+			Intel Pentium III					& 1354	& 500 MHz		& 1999 \\ \addlinespace
+			AMD Athlon							& 3561	& 1,2 GHz		& 2000 \\ \addlinespace
+			AMD XP 2400+						& 5935	& 2,0 GHz		& 2002 \\ \addlinespace
+			Pentium 4 Extreme Edition			& 9726	& 3,2 GHz		& 2003 \\ \addlinespace
+			AMD Athlon FX-57					& 12000	& 2,8 GHz		& 2005 \\ \addlinespace
+			AMD Athlon 64 3800+ X2 (Dual Core)	& 14564	& 2,2 GHz		& 2005 \\ \addlinespace
+			AMD Athlon FX-60 (Dual Core)		& 18938	& 2,6 GHz		& 2006 \\ \addlinespace
+			Núcleo 2 X6800 da Intel				& 27079	& 2,93 GHz		& 2006 \\ \bottomrule
+		\end{tabularx}
+	\end{center}
+	\tiny \caption{Evolução dos processadores (em MIPS)}
+	\label{table:processadores}
+\end{table}
+
+	\subsection{Arquitetura de Software}
+.
+
+	\subsection{Arquitetura de Rede}
+.
+
+	\subsection{Arquitetura de Informação}
+.
+
+\section{Curva de Complexidade}
+.
+
+% ************************************ Capítulo 04 - Conclusão ***************************************
+
+\chapter{Conclusão\label{cap:introducao}}
+
+\section{Avaliação do Modelo}
+
+\section{Avaliação da Curva de Complexidade}
+
+% **************************************** Fim do Documento ******************************************
+
+\bibliographystyle{abnt-alf}
+\bibliography{parv}
+
+\end{document} 
