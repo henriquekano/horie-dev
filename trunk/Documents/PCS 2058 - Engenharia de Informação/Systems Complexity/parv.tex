@@ -13,11 +13,7 @@
 \usepackage{multirow}
 \usepackage{tabularx}
 \usepackage[font=small]{caption}
-% \usepackage[scaled]{uarial}
 \renewcommand*\familydefault{\sfdefault}
-
-% TESTE DE COMMIT DO VIRVETAO
-% COMENTEI O UARIAL PQ AINDA NAO TENHO XDDDDDDDDDD (COMO FAZEM OS OTAKUS)
 
 \begin{document}
 
@@ -69,9 +65,22 @@ O termo ``arquitetura'' é amplamente utilizado para se referir à estrutura na qu
 A seguir serão apresentadas as variáveis relevantes para o modelo de complexidade em termos globais.
 
 	\subsection{Arquitetura de Hardware}
-Valores representativos para o cálculo de complexidade relacionada à arquitetura de hardware incluem métricas normalmente utilizadas para \emph{benchmarks}, como por exemplo o número de instruções por segundo do processador, a capacidade de armazenamento das memórias de acesso aleatório, cache e do disco rígido.\par
-Estes valores são proporcionais?\par
-Contudo, deve-se observar que a arquitetura de hardware possui escopo local, como já mencionado anteriomente. Para transpor este valor para um âmbito global, assume-se uma proporção direta entre o aumento de complexidade e o aumento de custo de produção. Dado o custo total de produção como $C_T(Q)=C_F+C_V=C_F+Q \cdot C_{Mg}$, onde $C_T$ é o custo total, $C_F$ é o custo fixo, $C_V$ é custo variável, $Q$ é a quantidade produzida e $C_{Mg}$ é o custo marginal. Portanto, a complexidade da arquitetura de hardware global é dada por $\mathbb{C}_{HW}=f(Q)\cdot \mathbb{C}_{HW, local}$, com $f(Q)$ sendo o fator de aumento linear da complexidade em função da quantidade produzida.
+Existem diversas abordagens para a medição da complexidade da arquitetura de hardware, todas elas baseando-se na complexidade como uma função do processo de construção dos componentes. É possível dizer, a fins de simplificação, que o crescimento de complexidade entre os principais componentes deve ser proporcional. Caso contrário, o gargalo de um computador seria facilmente observável em pouco tempo, o que de fato não ocorre.\par
+Existem diversos valores representativos para o cálculo de complexidade relacionada à arquitetura de hardware. O primeiro deriva da Lei de Moore \cite{moore65}, que afirma que o número de transistores em circuitos integrados aumenta exponencialmente, conforme ilustra a figura \ref{fig:moore_law}. Outros valores incluem métricas normalmente utilizadas para \emph{benchmarks}, como por exemplo o número de instruções por segundo do processador, a capacidade de armazenamento das memórias de acesso aleatório, cache e do disco rígido. De qualquer forma, todos os estes valores devem supostamente respeitar a mesma tendência.\par
+
+\begin{figure}[ht!]
+	\centering
+	\includegraphics[scale=0.75,bb=0 0 580 326]{images/moores_law.jpg}
+	\tiny \caption{Lei de Moore}
+	\label{fig:moore_law}
+\end{figure}
+
+Desta forma, a complexidade de hardware assume a forma exponencial:
+\begin{equation}\label{equ:complexidade_hardware}
+	\mathbb{C}_{HW, local} = \alpha \cdot e^{\beta t} + \gamma
+\end{equation}
+onde $\alpha$, $\beta$ e $\gamma$ são fatores de ajuste.\par
+Vale lembrar também que o escopo da arquitetura de hardware é essencialmente local. Para transpor este valor para um âmbito global, parece coerente assumir que há uma proporção direta entre o quanto a complexidade aumenta com o quanto os custos de produção totais aumentam. Dado o custo total de produção como $C_T(Q)=C_F+C_V=C_F+Q \cdot C_{Mg}$, onde $C_T$ é o custo total, $C_F$ é o custo fixo, $C_V$ é custo variável, $Q$ é a quantidade produzida e $C_{Mg}$ é o custo marginal. Portanto, a complexidade da arquitetura de hardware global é dada por $\mathbb{C}_{HW}=f(Q)\cdot \mathbb{C}_{HW, local}$, sendo $f(Q)$ um fator de aumento da complexidade em função da quantidade produzida. Este deve ser proporcional aos custos totais $C_T$ e portanto, considerando-se um modelo simplificado, é linear.
 
 	\subsection{Arquitetura de Software}
 \cite{kearney86}, \cite{ranga07}.
@@ -95,7 +104,7 @@ Contudo, deve-se observar que a arquitetura de hardware possui escopo local, com
 \section{Dados Históricos}
 
 	\subsection{Arquitetura de Hardware}
-.
+Através dos dados históricos relacionados à arquitetura de hardware, pretende-se verificar:\par
 \begin{table}[h]
 	\begin{center}
 		\footnotesize
@@ -103,29 +112,65 @@ Contudo, deve-se observar que a arquitetura de hardware possui escopo local, com
 		\newcolumntype{B}{>{\centering\arraybackslash} m{0.2\linewidth}}
 		\newcolumntype{C}{>{\centering\arraybackslash} m{0.1\linewidth}}
 		\begin{tabularx}{0.8\textwidth}{A C C B C} \toprule
-			Processador 						& MIPS	& Frequência	& Ano \\ \midrule
-			Intel 8080							& 0,64	& 2 MHz			& 1974 \\ \addlinespace
-			Motorola 68000						& 1,0	& 8 MHz			& 1979 \\ \addlinespace
-			Intel 386DX							& 8,5	& 25 MHz		& 1988 \\ \addlinespace
-			Intel 486DX							& 54	& 66 MHz		& 1992 \\ \addlinespace
-			PowerPC 600s (G2)					& 35	& 33 MHz		& 1994 \\ \addlinespace
-			Intel Pentium Pro					& 541	& 200 MHz		& 1996 \\ \addlinespace
-			ARM 7500FE							& 35,9	& 40 MHz		& 1996 \\ \addlinespace
-			PowerPC G3							& 525	& 233 MHz		& 1997 \\ \addlinespace
-			Zilog eZ80							& 80	& 50 MHz		& 1999 \\ \addlinespace
-			Intel Pentium III					& 1354	& 500 MHz		& 1999 \\ \addlinespace
-			AMD Athlon							& 3561	& 1,2 GHz		& 2000 \\ \addlinespace
-			AMD XP 2400+						& 5935	& 2,0 GHz		& 2002 \\ \addlinespace
-			Pentium 4 Extreme Edition			& 9726	& 3,2 GHz		& 2003 \\ \addlinespace
-			AMD Athlon FX-57					& 12000	& 2,8 GHz		& 2005 \\ \addlinespace
-			AMD Athlon 64 3800+ X2 (Dual Core)	& 14564	& 2,2 GHz		& 2005 \\ \addlinespace
-			AMD Athlon FX-60 (Dual Core)		& 18938	& 2,6 GHz		& 2006 \\ \addlinespace
-			Núcleo 2 X6800 da Intel				& 27079	& 2,93 GHz		& 2006 \\ \bottomrule
+			Processador 						& MIPS	& Frequência (MHz)	& Ano \\ \midrule
+			4004								& 0,06	& 0,1				& 1971 \\ \addlinespace
+			8008								& 0,06	& 0,2				& 1972 \\ \addlinespace
+			8080								& 0,64	& 2,0				& 1974 \\ \addlinespace
+			8086								& 0,33	& 5,0				& 1978 \\ \addlinespace
+			80286								& 0,90	& 6,0				& 1982 \\ \addlinespace
+			386 DX								& 5,0	& 16,0				& 1985 \\ \addlinespace
+			486 DX								& 20,0	& 25,0				& 1989 \\ \addlinespace
+			80486 DX2							& 50,0	& 50,0				& 1992 \\ \addlinespace
+			Pentium								& 60,0	& 60,0				& 1993 \\ \addlinespace
+			Pentium Pro							& 200,0	& 200,0				& 1995 \\ \addlinespace
+			Pentium II							& 300,0	& 300,0				& 1997 \\ \addlinespace
+			Pentium II Xeon						& 400,0	& 400,0				& 1998 \\ \addlinespace
+			Pentium III							& 500,0	& 500,0				& 1999 \\ \addlinespace
+			Pentium III Xeon					& 550,0	& 550,0				& 1999 \\ \addlinespace
+			Mobile Pentium II Xeon				& 400,0	& 400,0				& 1999 \\ \addlinespace
+			Pentium 4							& 1.500	& 1.500				& 2000 \\ \addlinespace
+			Itanium								& 2.500	& 800				& 2001 \\ \addlinespace
+			Pentium 4 Northwood					& 10.000 & 3.200			& 2003 \\ \addlinespace
+			Pentium 4E Prescott					& 11.000 & 3.800			& 2004 \\ \bottomrule
 		\end{tabularx}
 	\end{center}
-	\tiny \caption{Evolução dos processadores (em MIPS)}
+	\tiny \caption{Evolução dos processadores da Intel}
 	\label{table:processadores}
 \end{table}
+
+\begin{itemize}
+	\item Se está de fato correto assumir a proporção entre o crescimento de complexidade dos diversos componentes de hardware;
+	\item Se a tendência de evolução da complexidade segue a Lei de Moore.
+\end{itemize}\par
+A partir de dados obtidos dos próprios processadores da Intel, observa-se o número de milhões de instruções por segundo e o de frequência do clock em função do ano de introdução do processador no mercado na tabela \ref{table:processadores}.\par
+A partir destes dados, as figuras \ref{fig:mips}a e \ref{fig:clock}b são obtidas. Claramente, observa-se nelas a tendência exponencial conforme suposta anteriormente.\par
+\begin{figure}[ht!]
+	\centering
+	\includegraphics[scale=0.6,bb=0 0 542 280]{images/mips.jpg}
+	\tiny \caption{Tendência da evolução do MIPS para processadores Intel}
+	\label{fig:mips}
+\end{figure}
+
+\begin{figure}[ht!]
+	\centering
+	\includegraphics[scale=0.6,bb=0 0 543 280]{images/clock.jpg}
+	\tiny \caption{Tendência da evolução do clock para processadores Intel}
+	\label{fig:clock}
+\end{figure}
+
+Por fim, utilizando-se as capacidades de disco rígido e de memória de acesso aleatório como parâmetro, obtemos a mesma tendência (ver figuras \ref{fig:hard_drive} e \ref{fig:ram}).
+\begin{figure}[ht!]
+	\centering
+	\includegraphics[scale=0.75,bb=0 0 350 256]{images/hard_drive.png}
+	\tiny \caption{Tendência da evolução da capacidade de disco rígido}
+	\label{fig:hard_drive}
+\end{figure}
+\begin{figure}[ht!]
+	\centering
+	\includegraphics[scale=0.4,bb=0 0 600 309]{images/ram.jpg}
+	\tiny \caption{Tendência da evolução da capacidade de memória de acesso aleatório}
+	\label{fig:ram}
+\end{figure}
 
 	\subsection{Arquitetura de Software}
 .
