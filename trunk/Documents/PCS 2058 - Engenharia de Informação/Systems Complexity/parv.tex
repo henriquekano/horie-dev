@@ -83,10 +83,18 @@ onde $\alpha$, $\beta$ e $\gamma$ são fatores de ajuste.\par
 Vale lembrar também que o escopo da arquitetura de hardware é essencialmente local. Para transpor este valor para um âmbito global, parece coerente assumir que há uma proporção direta entre o quanto a complexidade aumenta com o quanto os custos de produção totais aumentam. Dado o custo total de produção como $C_T(Q)=C_F+C_V=C_F+Q \cdot C_{Mg}$, onde $C_T$ é o custo total, $C_F$ é o custo fixo, $C_V$ é custo variável, $Q$ é a quantidade produzida e $C_{Mg}$ é o custo marginal. Portanto, a complexidade da arquitetura de hardware global é dada por $\mathbb{C}_{HW}=f(Q)\cdot \mathbb{C}_{HW, local}$, sendo $f(Q)$ um fator de aumento da complexidade em função da quantidade produzida. Este deve ser proporcional aos custos totais $C_T$ e portanto, considerando-se um modelo simplificado, é linear.
 
 	\subsection{Arquitetura de Software}
-\cite{kearney86}, \cite{ranga07}.
+\cite{kearney86}, \cite{ranga07}, \cite{lehmanramil97}, \cite{vasa03},\cite{butler89}.
+Enquanto os aspectos computacionais de complexidade temporal e espacial de algoritmos têm sido estudados extensivamente, o aspecto humano da complexidade no desenvolvimento de software permanece relativamente imaturo. Este aspecto ainda não é bem compreendido, dificultando a obtenção de estimativas diversas, o que leva frequentemente a aumentos de prazo e/ou orçamento de projetos de software, ou até ao fracasso completo dos mesmos.
+\cite {ranga07} identifica cinco aspectos da complexidade em sistemas computacionais. Em seu artigo, ele propõe meios de medir cada um destes aspectos e explicita como cada um dos aspectos afeta os envolvidos nos processos de software: desenvolvedores, administradores e usuários. Os aspectos de complexidade identificados por \cite {ranga07} são:
+	\listing Complexidade estrutural da tarefa;
+Imprevisibilidade;
+Complexidade de tamanho;
+Complexidade Caótica;
+Complexidade de Algoritmo;
+
  - Complexidade Ciclomática;
  - Número de Linhas de Código;
- - Número do Módulos;
+ - Número de Módulos;
 
 	\subsection{Arquitetura de Rede}
 .
