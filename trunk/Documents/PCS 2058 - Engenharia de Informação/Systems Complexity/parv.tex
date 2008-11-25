@@ -12,6 +12,7 @@
 \usepackage{graphicx}
 \usepackage{multirow}
 \usepackage{tabularx}
+\usepackage{longtable}
 \usepackage[font=small]{caption}
 \renewcommand*\familydefault{\sfdefault}
 
@@ -36,7 +37,7 @@ This work proposes a model for assessing complexity of computer systems in a glo
 \\ \\
 Keywords: Computer Systems Complexity
 
-\setcounter{tocdepth}{1}
+\setcounter{tocdepth}{2}
 \tableofcontents{}
 
 % ************************************ Capítulo 01 - Introdução **************************************
@@ -184,11 +185,8 @@ Estas medidas de complexidade podem ser bastante relevantes para programadores e
 Referências da seção: \cite{kearney86}, \cite{ranga07}, \cite{lehmanramil97}, \cite{vasa03} e \cite{butler89}.\par
 
 	\subsection{Arquitetura de Rede}
-	Quando se fala em arquitetura de rede, é natural que se pense na \textit{Internet}. Isso faz com que seja imprescindível uma análise da complexibilidade não de se usá-la, mas intrínseca à ela, ou seja, o quão complexa tal rede é e quais fatores alimentam tal condi\c{c}ão. Para isso, basta analisar a evolu\c{c}ão --- desde sua cria\c{c}ão --- do número de usuários conectados. No entanto, existem outros atributos de Redes de Computadores que devem ser analisados, como topologia de rede, tipo de conexão (computadores, conexões por dispositivos móveis, etc..) e outros tipos de redes, como \textit{Intranets}, Redes Pessoas (PAN's --- \textit{Personal Area Networks}).
-	\paragraph{}Este estudo tem como foco principal a \textit{Internet} e, para fins de análise de complexidade, a evolu\c{c}ão do número de usuários conectados e do números de \textit{hosts} já viabiliza uma primeira abordagem. 
-
-
-
+Quando se fala em arquitetura de rede, é natural que se pense na Internet. Isso faz com que seja imprescindível uma análise da complexibilidade não de se usá-la, mas intrínseca à ela, ou seja, o quão complexa tal rede é e quais fatores alimentam tal condi\c{c}ão. Para isso, basta analisar a evolu\c{c}ão --- desde sua cria\c{c}ão --- do número de computadores conectados. No entanto, existem outros atributos de Redes de Computadores que devem ser analisados, como topologia de rede, tipo de conexão (computadores, conexões por dispositivos móveis, etc..) e outros tipos de redes, como \textit{Intranets}, Redes Pessoas (PAN's --- \textit{Personal Area Networks}).\par
+Este estudo tem como foco principal a Internet. Cogitou-se utilizar o número de usuários. Contudo, este é limitado pela população, e mesmo que a Internet tenha penetração de 100\%, outras formas de acesso (como dispositivos móveis, por exemplo) podem existir e contribuir para o aumento de complexidade. o que explica a necessidade de outra métrica. O número de \emph{hosts}, embora não seja a métrica desejada, é proporcional ao crescimento da complexidade.
 
 	\subsection{Arquitetura de Informação}
         \input{arq_info.tex}
@@ -269,24 +267,21 @@ Por fim, utilizando-se as capacidades de disco rígido e de memória de acesso ale
 \section{Arquitetura de Software}
 .
 
-	\subsection{Arquitetura de Rede}
-	A análise da evolu\c{c}ão do número de usuários conectados e do número de \textit{hosts} é apresentada nas figuras \ref{fig:user_growth} e \ref{fig:hosts_growth}.
-	O comportamento de ambos gráficos reflete, novamente, um crescimento exponencial --- este parece ser o comportamento padrão para complexidade.
+\section{Arquitetura de Rede}
+Duas variáveis já mencionadas anteriormente serão abordadas: número de usuários e \textit{hosts}. As figuras \ref{fig:user_growth} e \ref{fig:hosts_growth} mostram, respectivamente, a evolução do número de usuários e do número de \emph{hosts} ao longo dos anos desde a criação da Internet. O comportamento de ambos gráficos reflete um crescimento exponencial.\par
 
-% \paragraph{}Duas variáveis são naturalmente eleitas para tal func\c{c}ão: número de usuários e \textit{hosts}. As figuras REF FIG USUSARIOS e REF FIG HOSTS mostram, respectivamente, a evolu\c{c}ão do número de usuários e do número de \textit{hosts} ao longo dos anos desde a cria\c{c}ão da \textit{Internet}.
-
-% \begin{figure}[h!]
-% 	\centering
-% 	\includegraphics[scale=0.75]{images/users.png}
-% 	\tiny \caption{Evoluc\c{c}ão do número de usuários da \textit{Internet}, \cite{iwsWEB}}
-% 	\label{fig:user_growth}
-% \end{figure}
-% \begin{figure}[h!]
-% 	\centering
-% 	\includegraphics[scale=0.75]{images/hosts.jpeg}
-% 	\tiny \caption{Evoluc\c{c}ão do número de \textit{hosts}, \cite{iscWEB}}
-% 	\label{fig:hosts_growth}
-% \end{figure}
+\begin{figure}[ht!]
+	\centering
+	\includegraphics[scale=0.75,bb=0 0 600 797]{images/users.png}
+	\tiny \caption{Evoluc\c{c}ão do número de usuários da Internet, \cite{iwsWEB}}
+	\label{fig:user_growth}
+\end{figure}
+\begin{figure}[ht!]
+	\centering
+	\includegraphics[scale=0.75,bb=0 0 680 407]{images/hosts.jpeg}
+	\tiny \caption{Evoluc\c{c}ão do número de \textit{hosts}, \cite{iscWEB}}
+	\label{fig:hosts_growth}
+\end{figure}\par
 
 \section{Arquitetura de Informação}
 	\input{arq_info_data.tex}
