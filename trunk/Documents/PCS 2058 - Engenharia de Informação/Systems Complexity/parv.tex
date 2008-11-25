@@ -83,8 +83,6 @@ onde $\alpha$, $\beta$ e $\gamma$ são fatores de ajuste.\par
 Vale lembrar também que o escopo da arquitetura de hardware é essencialmente local. Para transpor este valor para um âmbito global, parece coerente assumir que há uma proporção direta entre o quanto a complexidade aumenta com o quanto os custos de produção totais aumentam. Dado o custo total de produção como $C_T(Q)=C_F+C_V=C_F+Q \cdot C_{Mg}$, onde $C_T$ é o custo total, $C_F$ é o custo fixo, $C_V$ é custo variável, $Q$ é a quantidade produzida e $C_{Mg}$ é o custo marginal. Portanto, a complexidade da arquitetura de hardware global é dada por $\mathbb{C}_{HW}=f(Q)\cdot \mathbb{C}_{HW, local}$, sendo $f(Q)$ um fator de aumento da complexidade em função da quantidade produzida. Este deve ser proporcional aos custos totais $C_T$ e portanto, considerando-se um modelo simplificado, é linear.
 
 	\subsection{Arquitetura de Software}
-\cite{kearney86}, \cite{ranga07}, \cite{lehmanramil97}, \cite{vasa03},\cite{butler89}.
-
 Enquanto os aspectos computacionais de complexidade temporal e espacial de algoritmos têm sido estudados extensivamente, o aspecto humano da complexidade no desenvolvimento de software permanece relativamente imaturo. Este aspecto ainda não é bem compreendido, dificultando a obtenção de estimativas diversas, o que leva frequentemente a aumentos de prazo e/ou orçamento de projetos de software, ou até ao fracasso completo dos mesmos.\par
 A complexidade de software pode ou não ser evitável. A complexidade evitável é aquela introduzida por fatores desnecessários ao processo de software porém frequentemente difíceis de se avaliar ou até mesmo detectar. Aspectos como inexperiênca dos desenvolvedores/projetistas, más práticas de projeto e desenvolvimento de software, eventos aleatórios como falhas de hardware, todos contribuem desnecessariamente para o acréscimo de complexidade em um sistema. Este tipo de complexidade pode e deve sempre ser minimizado através de boas práticas de software.\par
 A complexidade inevitável advém da complexidade inerente dos domínios de problemas resolvidos pelas arquiteturas de software, que vêm se tornando cada vez mais intrincados e interdependentes. O estudo deste tipo de complexidade nos permite avaliar as tendências para o crescimento da complexidade das arquiteturas de software.\par
@@ -130,7 +128,7 @@ O grafo da esquerda possui uma complexidade ciclomática de $CC = 9 - 9 + 1 = 1$.
 Para um desenvolvedor, o aumento da complexidade ciclomática significa maior esforço de desenvolvimento, teste e manutenção do software. A complexidade ciclomática é especialmente útil para determinar o número de casos de teste necessários para um determinado programa ou trecho de código.\par
 Para administradores e usuários finais, um aumento na complexidade ciclomática de uma tarefa implica maior complexidade cognitiva na compreensão e execução da mesma. As escolhas possíveis nem sempre estão claras, e as consequências de cada escolha ao longo do processo, podem estar menos claras ainda. Por exemplo, ao instalar um novo aplicativo, um usuário não terá grandes dificuldades se tudo o que tiver a fazer for clicar no botão 'Próximo' até o final da instalação. Por outro lado, o processo de instalação torna-se significativamente mais complexo quando existem diversas escolhas a serem feitas em cada etapa do processo e as consequências destas escolhas não estão claras no momento em que elas são feitas. Além disso, uma sequência linear de ações é facilmente automatizável, enquanto uma tarefa altamente ramificada, que exija interação e tomada de decisão em diversos pontos é mais difícil de ser automatizada. Portanto, o aumento do número de pontos de decisão, medido pela complexidade ciclomática do grafo, contribui para o aumento da complexidade de um sistema de software.\par
 
-\subsubsection{Imprevisibilidade}
+	\subsubsection{Imprevisibilidade}
 A imprevisibilidade fornece uma medida da dificuldade em se prever os efeitos de uma ação em um sistema. Um indicador importante do grau de previsibilidade de um sistema é a quantidade de entropia, ou não-determinismo, presente no mesmo. Quanto maior a entropia do sistema, mais difícil se torna prever o estado assumido por este após a execução de uma ação qualquer.\par
 Uma boa medida para a entropia de um sistema é obtida utilizando-se a distribuição de porbabilidade dos estados possíveis do sistema. Se ao executar uma ação, um sistema passa para um de $k$ diferentes estados, com probabilidades $p1,p2,..pk,$, então a entropia $H$ do sistema é dada por:\par
 $$
@@ -140,10 +138,10 @@ O termo $log_2 \left( \frac{1}{p_i} \right)$ é denominado o \emph {fator surpres
 A imprevisibilidade de um sistema está frequentemente associada às ocndições dinâmicas do mesmo, falhas, e condições de corrida. Se uma ação executada por uma aplicação ou serviço for imprevisível, os testes e manutenção do sistema tornam-se mais difíceis. A automação de processos também pode introduzir aspectos de imprevisibilidade se for mal projetada e/ou implementada.\par
 A imprevisibilidade em um sistema de software é sempre indesejada, e pode ser reduzida de duas maneiras: reduzindo-se o número de estado possíveis do sistema e/ou aumentando a probabilidade dos estados 'desejáveis'.\par
 
-\subsubsection {Complexidade de Tamanho}
+	\subsubsection {Complexidade de Tamanho}
 O tamanho de um sistema também pode ser utilizado como avaliação de sua complexidade. Existem diversas métricas para o tamanho de uma arquitetura de software, geralmente relacionadas ao seu código-fonte e/ou modelo estrutural. Algumas das métricas mais comumente utilizadas são: linhas de código, quantidade de métodos, quantidade de módulos, pontos de função, etc. Este tipo de complexidade é o mais comumente avaliado, dada a maior facilidade em se obter algumas das medidas citadas acima.\par
 
-\subsubsection {Complexidade Caótica}
+	\subsubsection {Complexidade Caótica}
 A complexidade caótica refere-se à propriedade dos sistemas de sofrerem grandes mudanças em seu comportamento geral devido a pequenas alterações em um certo componente do sistema. A complexidade caótica dificulta a compreensão dos sistemas, e resulta de uma falta de modularização do software e do excesso de inter-dependências entre componentes. A complexidade caótica também se aplica aos domínios de problema, que podem requerer estruturas inerentemente compexas para sua modelagem e resoução.\par
 Um exemplo de fator de complexidade caótica em sistemas de software é a instanciação de políticas, por exemplo políticas de controle de acesso. Estas políticas têm frequentemente o potencial de afetar o funcionamento de diversas partes do sistema (ao menos do ponto de vista do usuário), e a verificação de consistência de políticas é difícil de ser realizada em software, ficando geralmente a cargo do administrador. Logo, a introdução de uma política mal formulada no sistema pode causar acidentalmente a negação de acesso de uma determinada funcionalidade ou até mesmo do sistema todo para todos os usuários.\par
 Um fator importante que contribui para a complexidade caótica de um sistema é o grau de acoplamento entre componentes. Os componentes podem ser acoplados de várias formas, e algumas destas são listadas em ordem crescente de complexidade:\par
@@ -168,7 +166,7 @@ O acoplamento é apenas uma das causas de complexidade caótica em um sistema, por
 Cabe aqui uma compração entre complexidade caótica e imprevisibilidade. A complexidade caótica é por definição determinística, enquanto a imprevisibilidade é essencialmente probabilística. Ou seja, dado que se possua  conhecimentos suficientes sobre o funcionamento de um sistema, podemos dizer precisamente qual será o efeito de uma alteração em um componente independente do grau de caos inerente ao sistema. Já a imprevisibilidade advém de fatores que não podem ser previstos deterministicamente, como condições de corrida, falhas aleatórias, e etc.\par
 É interessante notar que o grau de complexidade caótica e sua relação com a imprevisibilidade não são consequência só da estrutura do sistema, mas também do grau de conhecimento disponível sobre as interações do sistema e da escolha do modelo utilizado. A falta de conhecimento sobre as leis de interação de um sistema podem nos levar a crer que o seu comportamento é predominantemente probabilístico, aumentando sua imprevisibilidade. À medida que obtemos conhecimento sobre estas leis, o grau de imprevisibilidade do sistema diminuirá, porém a sua complexidade caótica poderá aumentar drasticamente. Além disso, frequentemente optamos por utilizar um modelo probabilístico mesmo que conheçamos as leis que regem o funcionamento de um sistema, simplesmente porque não é prático obter todos os dados ou programar todas as regras que regem um modelo determinístico.\par
 
-\subsubsection {Complexidade Algorítmica}
+	\subsubsection {Complexidade Algorítmica}
 A definição tradicional de complexidade algorítmica refere-se aos requisitos de tempo e espaço exigidos por algoritmos executados em máquinas de Turing. Um aspecto pouco explorado da complexidade de algoritmos diz respeito à sua complexidade cognitiva, isto é, à dificuldade de compreensão do funcionamento de um algoritmo pelo desenvolvedor. Há frequentemente uma troca entre a performance e a complexidade cognitiva de um algoritmo.\par
 Um conjunto de métricas interessante para a complexidade cognitiva de algoritmos, e que pode ser uma boa estimativa para projetos de software, são as métricas de Halstead \cite{halstead77}. O uso destas métricas estima principalmente o esforço de programação, mas podem ser facilmente estendidas para medir a complexidade cognitiva de um algoritmo. Elas se baseiam em quatro variáveis escalares extarídas diretamente do código-fonte de um programa:\\
 $n_1 =$ número de operadores distintos,\\
@@ -182,6 +180,8 @@ Volume do programa: $V = N * \log_2 n$. Esta métrica avalia a informação contida
 Dificuldade: $D = \frac{n_1}{2} * \frac{N_2}{n_2}$. A dificuldade de um programa também está associada à sua tendência para apresentar defeitos;\par
 Esforço: $E = D * V$. O esforço de implementação ou compreensão de um sistema é proporcional ao volume ou grau de dificuldade deste.\par
 Estas medidas de complexidade podem ser bastante relevantes para programadores e administradores para determinar o esforço de implementação de um determinado programa ou script. É importante notar que para utilizar estas medidas, os conceitos de operador e operando devem estar bem definidos para o sistema em uqestão. Por exemplo, um \emph{loop} pode ser considerado como um único par operador-operando (iteração-lista), ou todas as variáveis envolvidas na iteração (e.g. o índice) podem ser consideradas. Para uma avaliação de esforço de desenvolvimento, esta escolha deve ser baseada principalmente no grau de experiência dos desenvolvedores.\par
+\ \\
+Referências da seção: \cite{kearney86}, \cite{ranga07}, \cite{lehmanramil97}, \cite{vasa03} e \cite{butler89}.\par
 
 	\subsection{Arquitetura de Rede}
 Quando se fala em arquitetura de rede, é natural que se pense na \textit{Internet}. Isso faz com que seja imprescindível uma análise da complexibilidade não de se usá-la, mas intrínseca à ela, ou seja, o quão complexa tal rede é e quais fatores alimentam tal condi\c{c}ão. Para isso, basta analisar a evolu\c{c}ão --- desde sua cria\c{c}ão --- do número de usuários conectados.
@@ -192,16 +192,11 @@ Quando se fala em arquitetura de rede, é natural que se pense na \textit{Interne
 	\subsection{Arquitetura de Informação}
         \input{arq_info.tex}
 
-\section{Modelo Matemático}
-.
-
 % ******************************** Capítulo 03 - Aplicação do Modelo *********************************
 
 \chapter{Aplicação do Modelo\label{cap:aplicacao}}
 
-\section{Dados Históricos}
-
-	\subsection{Arquitetura de Hardware}
+\section{Arquitetura de Hardware}
 Através dos dados históricos relacionados à arquitetura de hardware, pretende-se verificar:\par
 \begin{table}[h]
 	\begin{center}
@@ -270,10 +265,10 @@ Por fim, utilizando-se as capacidades de disco rígido e de memória de acesso ale
 	\label{fig:ram}
 \end{figure}
 
-	\subsection{Arquitetura de Software}
+\section{Arquitetura de Software}
 .
 
-	\subsection{Arquitetura de Rede}
+\section{Arquitetura de Rede}
 % 	\paragraph{}Duas variáveis são naturalmente eleitas para tal func\c{c}ão: número de usuários e \textit{hosts}. As figuras REF FIG USUSARIOS e REF FIG HOSTS mostram, respectivamente, a evolu\c{c}ão do número de usuários e do número de \textit{hosts} ao longo dos anos desde a cria\c{c}ão da \textit{Internet}.
 
 % \begin{figure}[ht!]
@@ -288,19 +283,15 @@ Por fim, utilizando-se as capacidades de disco rígido e de memória de acesso ale
 % 	\tiny \caption{Evoluc\c{c}ão do número de \textit{hosts}, \cite{iscWEB}}
 % 	\label{fig:hosts_growth}
 % \end{figure}
-.
 
-	\subsection{Arquitetura de Informação}
+\section{Arquitetura de Informação}
 	\input{arq_info_data.tex}
-
-\section{Aplicação do Modelo de Complexidade}
-.
 
 % ************************************ Capítulo 04 - Conclusão ***************************************
 
 \chapter{Conclusão\label{cap:introducao}}
-Com os dados obtidos, percebe-se as evoluções das complexidades relativas a cada uma das arquiteturas apresentadas são proporcionais, com tendência exponencial. Isso pode ser explicado pelo auto-ajuste que há entre elas: as novas necessidades observadas em uma delas causa novos requisitos para as outras, e evolução natural de uma delas permite novas oportunidades para as outras. Por exemplo, o aumento da capacidade dos hardwares é motivada por softwares que requerem cada vez mais processamento, e o aumento na complexidade do fluxo de informações implica maior complexidade da rede e dos softwares que proveem soluções. Da mesma forma, um aumento da capacidade de hardware permite que novas aplicações de software sejam criadas.\par
-Contudo, deve-se notar que o período de tempo coberto pelos dados é relativamente curto, podendo não haver amostragem suficiente para que conclusões significativas sejam obtidas. É possível que o crescimento venha eventualmente a se estabilizar, embora essa tendência não seja observável com os dados atuais.
+Com os dados obtidos, percebe-se que as evoluções das complexidades relativas a cada uma das arquiteturas apresentadas são proporcionais, com tendência exponencial. Isso pode ser explicado pelo auto-ajuste que há entre elas: as novas necessidades observadas em uma delas causa novos requisitos para as outras, e a evolução natural de uma delas permite novas oportunidades para as outras. Por exemplo, o aumento da capacidade dos hardwares é motivada por softwares que requerem cada vez mais processamento, e o aumento na complexidade do fluxo de informações implica maior complexidade da rede e dos softwares que proveem soluções. Da mesma forma, um aumento da capacidade de hardware permite que novas aplicações de software sejam criadas.\par
+Contudo, deve-se notar que o período de tempo coberto pelos dados é relativamente curto, podendo não haver amostragem suficiente para que conclusões significativas sejam obtidas. É possível, contanto, que o crescimento venha eventualmente a se estabilizar, embora essa tendência não seja observável com os dados atuais.
 
 % **************************************** Fim do Documento ******************************************
 
