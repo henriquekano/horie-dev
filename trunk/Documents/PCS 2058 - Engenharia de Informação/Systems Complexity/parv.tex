@@ -184,9 +184,10 @@ Estas medidas de complexidade podem ser bastante relevantes para programadores e
 Referências da seção: \cite{kearney86}, \cite{ranga07}, \cite{lehmanramil97}, \cite{vasa03} e \cite{butler89}.\par
 
 	\subsection{Arquitetura de Rede}
-Quando se fala em arquitetura de rede, é natural que se pense na \textit{Internet}. Isso faz com que seja imprescindível uma análise da complexibilidade não de se usá-la, mas intrínseca à ela, ou seja, o quão complexa tal rede é e quais fatores alimentam tal condi\c{c}ão. Para isso, basta analisar a evolu\c{c}ão --- desde sua cria\c{c}ão --- do número de usuários conectados.
-	
-	\paragraph{}Além disso, deve-se analisar o 
+	Quando se fala em arquitetura de rede, é natural que se pense na \textit{Internet}. Isso faz com que seja imprescindível uma análise da complexibilidade não de se usá-la, mas intrínseca à ela, ou seja, o quão complexa tal rede é e quais fatores alimentam tal condi\c{c}ão. Para isso, basta analisar a evolu\c{c}ão --- desde sua cria\c{c}ão --- do número de usuários conectados. No entanto, existem outros atributos de Redes de Computadores que devem ser analisados, como topologia de rede, tipo de conexão (computadores, conexões por dispositivos móveis, etc..) e outros tipos de redes, como \textit{Intranets}, Redes Pessoas (PAN's --- \textit{Personal Area Networks}).
+	\paragraph{}Este estudo tem como foco principal a \textit{Internet} e, para fins de análise de complexidade, a evolu\c{c}ão do número de usuários conectados e do números de \textit{hosts} já viabiliza uma primeira abordagem. 
+
+
 
 
 	\subsection{Arquitetura de Informação}
@@ -268,16 +269,19 @@ Por fim, utilizando-se as capacidades de disco rígido e de memória de acesso ale
 \section{Arquitetura de Software}
 .
 
-\section{Arquitetura de Rede}
-% 	\paragraph{}Duas variáveis são naturalmente eleitas para tal func\c{c}ão: número de usuários e \textit{hosts}. As figuras REF FIG USUSARIOS e REF FIG HOSTS mostram, respectivamente, a evolu\c{c}ão do número de usuários e do número de \textit{hosts} ao longo dos anos desde a cria\c{c}ão da \textit{Internet}.
+	\subsection{Arquitetura de Rede}
+	A análise da evolu\c{c}ão do número de usuários conectados e do número de \textit{hosts} é apresentada nas figuras \ref{fig:user_growth} e \ref{fig:hosts_growth}.
+	O comportamento de ambos gráficos reflete, novamente, um crescimento exponencial --- este parece ser o comportamento padrão para complexidade.
 
-% \begin{figure}[ht!]
+% \paragraph{}Duas variáveis são naturalmente eleitas para tal func\c{c}ão: número de usuários e \textit{hosts}. As figuras REF FIG USUSARIOS e REF FIG HOSTS mostram, respectivamente, a evolu\c{c}ão do número de usuários e do número de \textit{hosts} ao longo dos anos desde a cria\c{c}ão da \textit{Internet}.
+
+% \begin{figure}[h!]
 % 	\centering
-% 	\includegraphics[scale=0.75]{images/user_growth2007.png}
+% 	\includegraphics[scale=0.75]{images/users.png}
 % 	\tiny \caption{Evoluc\c{c}ão do número de usuários da \textit{Internet}, \cite{iwsWEB}}
 % 	\label{fig:user_growth}
 % \end{figure}
-% \begin{figure}[ht!]
+% \begin{figure}[h!]
 % 	\centering
 % 	\includegraphics[scale=0.75]{images/hosts.jpeg}
 % 	\tiny \caption{Evoluc\c{c}ão do número de \textit{hosts}, \cite{iscWEB}}
