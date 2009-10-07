@@ -1,0 +1,42 @@
+#container {
+	padding: 3em;
+	background-color: white;
+	font-size: 1.2em;
+	color: #333;
+	width: 900px;
+}
+
+#result-title {
+	font-size: 2em;
+	padding-bottom: 1em;
+}
+
+#resultbox {
+	width: 900px;
+	padding: 1em;
+	border-top: 1px solid green;
+}
+
+.result {
+	padding-bottom: 1em;
+}
+
+.result-date {
+	padding-right: 1em;
+}
+
+.snippet {
+        padding-top: 1em;
+}
+
+.hilight {
+	color: red;
+}
+
+.info {
+	font-size: 0.7em;
+}
+
+.rightBox {
+	padding:0 0 10px 10px;
+}
