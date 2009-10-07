@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+
+  <Description about="urn:mozilla:install-manifest">
+    <em:id>fwb@xuldev.org</em:id>
+    <em:type>2</em:type>
+    <em:name>History Buck</em:name>
+    <em:version>0.2</em:version>
+    <em:description>History Buck</em:description>
+    <em:creator>FWB Project</em:creator>
+    <em:homepageURL>http://www.xuldev.org/misc/sd.php</em:homepageURL>
+    <em:optionsURL>chrome://fwb/content/prefs.xul</em:optionsURL>
+    <em:localized>
+      <Description>
+        <em:locale>ja</em:locale>
+        <em:name>History Buck</em:name>
+        <em:description>履歴蕎麦を検索！</em:description>
+        <em:creator>hisasann</em:creator>
+      </Description>
+    </em:localized>
+    <em:targetApplication>
+      <Description>
+        <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
+        <em:minVersion>3.0.0</em:minVersion>
+        <em:maxVersion>3.5.*</em:maxVersion>
+      </Description>
+    </em:targetApplication>
+  </Description>
+
+</RDF>
