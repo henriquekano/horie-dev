@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://rsmanager/skin/overlay.css" type="text/css"?>
+<!DOCTYPE overlay SYSTEM "chrome://rsmanager/locale/overlay.dtd">
+<overlay id="rsmanager-overlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+	<script src="overlay.js"/>
+	<script src="ff-overlay.js"/>
+	
+	<menupopup id="menu_ToolsPopup">
+		<menuitem id="rsmanager-toolitem" label="&rsmanager.toolitem;" oncommand="rsmanager.open(event);"/>
+	</menupopup>
+	
+	<statusbar id="status-bar">
+		<statusbarpanel id="rsmanager-statusbar" label="RSManager" tooltiptext="RSManager"/>
+	</statusbar>
+	
+</overlay>
