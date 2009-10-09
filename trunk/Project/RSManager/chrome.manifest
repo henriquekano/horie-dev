@@ -1,0 +1,7 @@
+content   rsmanager                 chrome/content/
+skin      rsmanager   classic/1.0   chrome/skin/
+locale    rsmanager   en-US         chrome/locale/en-US/
+
+
+overlay   chrome://browser/content/browser.xul   chrome://rsmanager/content/ff-overlay.xul
+style chrome://global/content/customizeToolbar.xul chrome://rsmanager/skin/overlay.css
