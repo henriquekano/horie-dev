@@ -15,3 +15,10 @@ function mouseOut(s) {
 function clicked(s) {
 	document.getElementById("content_frame").setAttribute("src", s+".xul");
 }
+
+function init() {
+	Components.utils.import("resource://rsmanager-modules/dbconnection.jsm");
+	//checkDatabase();
+}
+
+window.onload=init
