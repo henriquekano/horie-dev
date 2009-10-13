@@ -1,0 +1,3 @@
+content fwb content/
+resource historybuck-modules modules/
+overlay chrome://browser/content/browser.xul chrome://fwb/content/overlay.xul
