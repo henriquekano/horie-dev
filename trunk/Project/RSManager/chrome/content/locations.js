@@ -146,20 +146,24 @@ function updateEditRegionTextbox() {
 
 function addCity() {
 	maxCityID++;
-	var provinceID = document.getElementById("listbox_provinces").selectedItem.value;
-	var cityName = document.getElementById("texbox_addcity").value;
-	dbConn.executeSimpleSQL("INSERT INTO LocCities VALUES (" + maxCityID + ", " + provinceID + ", \"" + cityName + "\")");
+	var statement = dbConn.createStatement("INSERT INTO LocCities VALUES (?1, ?2, ?3)");
+	statement.bindInt32Parameter(0, maxCityID);
+	statement.bindInt32Parameter(1, document.getElementById("listbox_provinces").selectedItem.value);
+	statement.bindUTF8StringParameter(2, document.getElementById("texbox_addcity").value);
+	statement.execute();
 	populateCities();
 }
 function editCity() {
-	var cityName = document.getElementById("texbox_editcity").value;
-	var cityID = document.getElementById("listbox_cities").selectedItem.value;
-	dbConn.executeSimpleSQL("UPDATE LocCities SET CityName = \"" + cityName + "\" WHERE CityID = " + cityID + ")");
+	var statement = dbConn.createStatement("UPDATE LocCities SET CityName = ?1 WHERE CityID = ?2");
+	statement.bindUTF8StringParameter(0, document.getElementById("texbox_editcity").value);
+	statement.bindInt32Parameter(1, document.getElementById("listbox_cities").selectedItem.value);
+	statement.execute();
 	populateCities();
 }
 function deleteCity() {
-	var cityID = document.getElementById("listbox_cities").selectedItem.value;
-	dbConn.executeSimpleSQL("DELETE FROM LocCities WHERE CityID = " + cityID + ")");
+	var statement = dbConn.createStatement("DELETE FROM LocCities WHERE CityID = ?1");
+	statement.bindInt32Parameter(0, document.getElementById("listbox_cities").selectedItem.value);
+	statement.execute();
 	populateCities();
 }
 function addRegion() {
@@ -172,14 +176,16 @@ function addRegion() {
 	populateRegions();
 }
 function editRegion() {
-	var regionName = document.getElementById("texbox_editregion").value;
-	var regionID = document.getElementById("listbox_regions").selectedItem.value;
-	dbConn.executeSimpleSQL("UPDATE LocRegions SET RegionName = \"" + regionName + "\" WHERE RegionID = " + regionID + ")");
+	var statement = dbConn.createStatement("UPDATE LocRegions SET RegionName = ?1 WHERE RegionID = ?2");
+	statement.bindUTF8StringParameter(0, document.getElementById("texbox_editregion").value);
+	statement.bindInt32Parameter(1, document.getElementById("listbox_regions").selectedItem.value);
+	statement.execute();
 	populateRegions();
 }
 function deleteRegion() {
-	var regionID = document.getElementById("listbox_regions").selectedItem.value;
-	dbConn.executeSimpleSQL("DELETE FROM LocRegions WHERE RegionID = " + regionID + ")");
+	var statement = dbConn.createStatement("DELETE FROM LocRegions WHERE RegionID = ?1");
+	statement.bindInt32Parameter(0, document.getElementById("listbox_regions").selectedItem.value);
+	statement.execute();
 	populateRegions();
 }
 
