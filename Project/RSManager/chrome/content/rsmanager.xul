@@ -1,6 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet href="chrome://rsmanager/skin/rsmanager.css" type="text/css"?>
-<!-- <!DOCTYPE overlay SYSTEM "chrome://rsmanager/locale/rsmanager.dtd"> -->
-<!-- <script src="overlay.js"/> -->
+<?xml-stylesheet href="chrome://rsmanager/skin/menu.css" type="text/css"?>
+<!DOCTYPE window SYSTEM "chrome://rsmanager/locale/rsmanager.dtd">
 
-<label>Yo</label>
+<window id="rsmanager" title="RSManager" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" windowtype="RSManager">
+	<script type="application/x-javascript" src="rsmanager.js"/>
+	
+	<hbox flex="1">
+		<groupbox id="menu_wrapper">
+			<vbox>
+				<hbox class="menu_buttonwrapper"
+					onmouseover="mouseOver('main');" onmouseout="mouseOut('main');" onclick="clicked('main');">
+					<image id="menu_main_img" class="menu_button" />
+					<label id="menu_main_lbl" value="&rsmanager.menu.main;" class="menu_label" />
+				</hbox>
+				<hbox class="menu_buttonwrapper"
+					onmouseover="mouseOver('expenses');" onmouseout="mouseOut('expenses');" onclick="clicked('expenses');">
+					<image id="menu_expenses_img" class="menu_button" />
+					<label id="menu_expenses_lbl" value="&rsmanager.menu.manageexpenses;" class="menu_label" />
+				</hbox>
+				<hbox class="menu_buttonwrapper"
+					onmouseover="mouseOver('locations');" onmouseout="mouseOut('locations');" onclick="clicked('locations');">
+					<image id="menu_locations_img" class="menu_button" />
+					<label id="menu_locations_lbl" value="&rsmanager.menu.managelocations;" class="menu_label" />
+				</hbox>
+				<hbox class="menu_buttonwrapper"
+					onmouseover="mouseOver('options');" onmouseout="mouseOut('options');" onclick="clicked('options');">
+					<image id="menu_options_img" class="menu_button" />
+					<label id="menu_options_lbl" value="&rsmanager.menu.options;" class="menu_label" />
+				</hbox>
+			</vbox>
+		</groupbox>
+		<groupbox id="content_wrapper" flex="1">
+			<iframe id="content_frame" src="main.xul" name="content_frame" flex="1" />
+		</groupbox>
+	</hbox>
+</window>

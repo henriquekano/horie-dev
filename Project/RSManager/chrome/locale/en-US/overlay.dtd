@@ -1,3 +1,1 @@
-<!ENTITY rsmanager.toolitem "RSManager">
-<!ENTITY rsmanagerContext.label "RSManager">
-<!ENTITY rsmanagerContext.accesskey "R">
+<!ENTITY rsmanager.appname "RSManager">

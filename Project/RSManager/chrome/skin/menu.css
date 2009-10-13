@@ -1,0 +1,27 @@
+#menu_wrapper {
+	width: 220px;
+	margin: 10px 5px 10px 10px;
+	padding: 20px;
+}
+#content_wrapper {
+	margin: 10px 10px 10px 5px;
+	padding: 30px 40px 30px 40px;
+}
+#content_frame {
+	
+}
+
+.menu_buttonwrapper {
+	-moz-box-align: center;
+}
+.menu_button {
+	margin: 2px 10px 2px 0px;
+}
+.menu_label {
+	font-family: arial, helvetica, serif;
+	font-size: 10pt;
+	color: #444;
+}
+#menu_main_img, #menu_expenses_img, #menu_locations_img, #menu_options_img {
+	list-style-image: url("chrome://rsmanager/skin/images/button_default.png");
+}

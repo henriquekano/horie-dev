@@ -1,0 +1,8 @@
+#rsmanager-toolitem {
+	list-style-image: url("chrome://rsmanager/skin/images/logo16.png");
+}
+#rsmanager-statusbaricon {
+	list-style-image: url('chrome://rsmanager/skin/images/logo_statusbar.png');
+	height: 22px;
+	width: 22px;
+}
