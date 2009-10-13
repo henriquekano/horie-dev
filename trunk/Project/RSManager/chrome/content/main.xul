@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://rsmanager/skin/content.css" type="text/css"?>
+<!DOCTYPE window SYSTEM "chrome://rsmanager/locale/rsmanager.dtd">
+
+<page id="about" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+	<label class="content_title">&rsmanager.main.title;</label>
+	<label class="content_subtitle">&rsmanager.main.subtitle;</label>
+	<label class="content_body">&rsmanager.main.content;</label>
+</page>

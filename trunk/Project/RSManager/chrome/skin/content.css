@@ -1,0 +1,57 @@
+.content_title {
+	font-family: arial, helvetica, serif;
+	font-size: 14pt;
+	font-weight: bold;
+	margin: 0px 0px 20px 0px;
+	color: #444;
+}
+.content_subtitle {
+	font-family: arial, helvetica, serif;
+	font-size: 9pt;
+	font-style: italic;
+	margin: 0px 0px 20px 0px;
+	color: #444;
+}
+.content_body {
+	font-family: arial, helvetica, serif;
+	font-size: 9pt;
+	color: #444;
+	margin: 0px 0px 10px 0px;
+}
+
+.form {
+	
+}
+.form_item {
+	-moz-box-align: center;
+}
+.form_label {
+	font-family: arial, helvetica, serif;
+	font-size: 9pt;
+	color: #444;
+	margin: 0px 0px 10px 0px;
+	width: 150px;
+}
+.form_menulist {
+	font-family: arial, helvetica, serif;
+	font-size: 8pt;
+	color: #444;
+	max-width: 300px;
+}
+.form_textbox {
+	max-width: 300px;
+	font-family: arial, helvetica, serif;
+	font-size: 8pt;
+	color: #444;
+}
+.form_listbox {
+	max-width: 300px;
+}
+.form_listitem {
+	font-family: arial, helvetica, serif;
+	font-size: 8pt;
+	color: #444;
+}
+.form_minibutton {
+	margin-left: 1px;
+}
