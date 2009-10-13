@@ -22,6 +22,3 @@
 	font-size: 10pt;
 	color: #444;
 }
-#menu_main_img, #menu_expenses_img, #menu_locations_img, #menu_options_img {
-	list-style-image: url("chrome://rsmanager/skin/images/button_default.png");
-}

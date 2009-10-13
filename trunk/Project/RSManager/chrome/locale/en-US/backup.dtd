@@ -1,0 +1,7 @@
+<!ENTITY rsmanager.backup.title "Backup and Restore">
+<!ENTITY rsmanager.backup.subtitle.backup "Backup">
+<!ENTITY rsmanager.backup.body.backup "Please choose a location to save the backup of the database:">
+<!ENTITY rsmanager.backup.button.backup "Choose a folder...">
+<!ENTITY rsmanager.backup.subtitle.restore "Restore">
+<!ENTITY rsmanager.backup.body.restore "Please a choose a file to be used to restore the database:">
+<!ENTITY rsmanager.backup.button.restore "Choose a file...">

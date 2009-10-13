@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://rsmanager/skin/content.css" type="text/css"?>
+<!DOCTYPE window SYSTEM "chrome://rsmanager/locale/install.dtd">
+
+<page id="about" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+	<script type="application/x-javascript" src="install.js"/>
+	<label class="content_title">&rsmanager.install.title;</label>
+	<spacer height="20px" />
+	<label class="content_body">&rsmanager.install.content;</label>
+	<hbox>
+		<button id="install_button" label="&rsmanager.install.button;" class="form_button" oncommand="install();"/>
+		<spacer flex="1" />
+	</hbox>
+</page>

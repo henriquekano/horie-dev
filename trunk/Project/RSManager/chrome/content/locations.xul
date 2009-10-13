@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet href="chrome://rsmanager/skin/content.css" type="text/css"?>
-<!DOCTYPE window SYSTEM "chrome://rsmanager/locale/rsmanager.dtd">
+<!DOCTYPE window SYSTEM "chrome://rsmanager/locale/locations.dtd">
 
 <page id="locations" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 	<script type="application/x-javascript" src="locations.js"/>
@@ -17,33 +17,33 @@
 			<listbox id="listbox_cities" class="form_listbox" onselect="populateRegions(); updateEditCityTextbox();"></listbox>
 			<hbox>
 				<spacer flex="1" />
-				<image src="chrome://rsmanager/skin/images/add.png" tooltiptext="&rsmanager.general.add;" class="form_minibutton"
+				<image src="chrome://rsmanager/skin/images/add.png" tooltiptext="&rsmanager.locations.add;" class="form_minibutton"
 					onclick="hideAllTextboxes(); displayAddCityTextbox(true);" />
-				<image src="chrome://rsmanager/skin/images/edit.png" tooltiptext="&rsmanager.general.edit;" class="form_minibutton"
+				<image src="chrome://rsmanager/skin/images/edit.png" tooltiptext="&rsmanager.locations.edit;" class="form_minibutton"
 					onclick="hideAllTextboxes(); displayEditCityTextbox(true);" />
-				<image src="chrome://rsmanager/skin/images/delete.png" tooltiptext="&rsmanager.general.delete;" class="form_minibutton"
+				<image src="chrome://rsmanager/skin/images/delete.png" tooltiptext="&rsmanager.locations.delete;" class="form_minibutton"
 					onclick="deleteCity();" />
 				<spacer width="5px" />
 			</hbox>
-			<spacer id="spacer_addcity" height="40px" />
-			<label id="label_addcity" class="form_label" value="&rsmanager.locations.addcity;" />
-			<textbox id="texbox_addcity" class="form_textbox" />
-			<hbox id="buttons_addcity">
+			<spacer id="spacer_addcity" height="40px" style="display:none;" />
+			<label id="label_addcity" class="form_label" value="&rsmanager.locations.addcity;" style="display:none;" />
+			<textbox id="texbox_addcity" class="form_textbox" style="display:none;" />
+			<hbox id="buttons_addcity" style="display:none;">
 				<spacer flex="1" />
-				<image src="chrome://rsmanager/skin/images/ok.png" tooltiptext="&rsmanager.general.ok;" class="form_minibutton"
+				<image src="chrome://rsmanager/skin/images/ok.png" tooltiptext="&rsmanager.locations.ok;" class="form_minibutton"
 					onclick="addCity();" />
-				<image src="chrome://rsmanager/skin/images/cancel.png" tooltiptext="&rsmanager.general.cancel;" class="form_minibutton"
+				<image src="chrome://rsmanager/skin/images/cancel.png" tooltiptext="&rsmanager.locations.cancel;" class="form_minibutton"
 					onclick="hideAllTextboxes();" />
 				<spacer width="5px" />
 			</hbox>
-			<spacer id="spacer_editcity" height="40px" />
-			<label id="label_editcity" class="form_label" value="&rsmanager.locations.editcity;" />
-			<textbox id="texbox_editcity" class="form_textbox" />
-			<hbox id="buttons_editcity">
+			<spacer id="spacer_editcity" height="40px" style="display:none;" />
+			<label id="label_editcity" class="form_label" value="&rsmanager.locations.editcity;" style="display:none;" />
+			<textbox id="texbox_editcity" class="form_textbox" style="display:none;" />
+			<hbox id="buttons_editcity" style="display:none;">
 				<spacer flex="1" />
-				<image src="chrome://rsmanager/skin/images/ok.png" tooltiptext="&rsmanager.general.ok;" class="form_minibutton"
+				<image src="chrome://rsmanager/skin/images/ok.png" tooltiptext="&rsmanager.locations.ok;" class="form_minibutton"
 					onclick="editCity();" />
-				<image src="chrome://rsmanager/skin/images/cancel.png" tooltiptext="&rsmanager.general.cancel;" class="form_minibutton"
+				<image src="chrome://rsmanager/skin/images/cancel.png" tooltiptext="&rsmanager.locations.cancel;" class="form_minibutton"
 					onclick="hideAllTextboxes();" />
 				<spacer width="5px" />
 			</hbox>
@@ -54,33 +54,33 @@
 			<listbox id="listbox_regions" class="form_listbox" onselect="updateEditRegionTextbox();"></listbox>
 			<hbox>
 				<spacer flex="1" />
-				<image src="chrome://rsmanager/skin/images/add.png" tooltiptext="&rsmanager.general.add;" class="form_minibutton"
+				<image src="chrome://rsmanager/skin/images/add.png" tooltiptext="&rsmanager.locations.add;" class="form_minibutton"
 					onclick="hideAllTextboxes(); displayAddRegionTextbox(true);" />
-				<image src="chrome://rsmanager/skin/images/edit.png" tooltiptext="&rsmanager.general.edit;" class="form_minibutton"
+				<image src="chrome://rsmanager/skin/images/edit.png" tooltiptext="&rsmanager.locations.edit;" class="form_minibutton"
 					onclick="hideAllTextboxes(); displayEditRegionTextbox(true);" />
-				<image src="chrome://rsmanager/skin/images/delete.png" tooltiptext="&rsmanager.general.delete;" class="form_minibutton"
+				<image src="chrome://rsmanager/skin/images/delete.png" tooltiptext="&rsmanager.locations.delete;" class="form_minibutton"
 					onclick="deleteRegion();" />
 				<spacer width="5px" />
 			</hbox>
-			<spacer id="spacer_addregion" height="40px" />
-			<label id="label_addregion" class="form_label" value="&rsmanager.locations.addregion;" />
-			<textbox id="texbox_addregion" class="form_textbox" />
-			<hbox id="buttons_addregion">
+			<spacer id="spacer_addregion" height="40px" style="display:none;" />
+			<label id="label_addregion" class="form_label" value="&rsmanager.locations.addregion;" style="display:none;" />
+			<textbox id="texbox_addregion" class="form_textbox" style="display:none;" />
+			<hbox id="buttons_addregion" style="display:none;">
 				<spacer flex="1" />
-				<image src="chrome://rsmanager/skin/images/ok.png" tooltiptext="&rsmanager.general.ok;" class="form_minibutton"
+				<image src="chrome://rsmanager/skin/images/ok.png" tooltiptext="&rsmanager.locations.ok;" class="form_minibutton"
 					onclick="addRegion();" />
-				<image src="chrome://rsmanager/skin/images/cancel.png" tooltiptext="&rsmanager.general.cancel;" class="form_minibutton"
+				<image src="chrome://rsmanager/skin/images/cancel.png" tooltiptext="&rsmanager.locations.cancel;" class="form_minibutton"
 					onclick="hideAllTextboxes();" />
 				<spacer width="5px" />
 			</hbox>
-			<spacer id="spacer_editregion" height="40px" />
-			<label id="label_editregion" class="form_label" value="&rsmanager.locations.editregion;" />
-			<textbox id="texbox_editregion" class="form_textbox" />
-			<hbox id="buttons_editregion">
+			<spacer id="spacer_editregion" height="40px" style="display:none;" />
+			<label id="label_editregion" class="form_label" value="&rsmanager.locations.editregion;" style="display:none;" />
+			<textbox id="texbox_editregion" class="form_textbox" style="display:none;" />
+			<hbox id="buttons_editregion" style="display:none;">
 				<spacer flex="1" />
-				<image src="chrome://rsmanager/skin/images/ok.png" tooltiptext="&rsmanager.general.ok;" class="form_minibutton"
+				<image src="chrome://rsmanager/skin/images/ok.png" tooltiptext="&rsmanager.locations.ok;" class="form_minibutton"
 					onclick="editRegion();" />
-				<image src="chrome://rsmanager/skin/images/cancel.png" tooltiptext="&rsmanager.general.cancel;" class="form_minibutton"
+				<image src="chrome://rsmanager/skin/images/cancel.png" tooltiptext="&rsmanager.locations.cancel;" class="form_minibutton"
 					onclick="hideAllTextboxes();" />
 				<spacer width="5px" />
 			</hbox>
