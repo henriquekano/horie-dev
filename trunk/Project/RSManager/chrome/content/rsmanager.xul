@@ -24,6 +24,11 @@
 					<label id="menu_locations_lbl" value="&rsmanager.menu.managelocations;" class="menu_label" />
 				</hbox>
 				<hbox class="menu_buttonwrapper"
+					onmouseover="mouseOver('types');" onmouseout="mouseOut('types');" onclick="clicked('types');">
+					<image id="menu_types_img" class="menu_button" src="chrome://rsmanager/skin/images/button_default.png" />
+					<label id="menu_types_lbl" value="&rsmanager.menu.managetypes;" class="menu_label" />
+				</hbox>
+				<hbox class="menu_buttonwrapper"
 					onmouseover="mouseOver('options');" onmouseout="mouseOut('options');" onclick="clicked('options');">
 					<image id="menu_options_img" class="menu_button" src="chrome://rsmanager/skin/images/button_default.png" />
 					<label id="menu_options_lbl" value="&rsmanager.menu.options;" class="menu_label" />
