@@ -1,0 +1,5 @@
+<!ENTITY rsmanager.options.title "Options">
+<!ENTITY rsmanager.options.language "Choose a language:">
+<!ENTITY rsmanager.options.language.en "English">
+<!ENTITY rsmanager.options.language.pt "Portuguese">
+<!ENTITY rsmanager.options.language.ja "Japanese">

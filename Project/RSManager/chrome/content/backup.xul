@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://rsmanager/skin/content.css" type="text/css"?>
+<!DOCTYPE window SYSTEM "chrome://rsmanager/locale/backup.dtd">
+
+<page id="backup" title="RSManager" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+	<script type="application/x-javascript" src="backup.js"/>
+	
+	<label class="content_title">&rsmanager.backup.title;</label>
+	<vbox>
+		<spacer height="20px" />
+		<label class="content_subtitle">&rsmanager.backup.subtitle.backup;</label>
+		<label class="content_body">&rsmanager.backup.body.backup;</label>
+		<hbox>
+			<button id="install_button" label="&rsmanager.backup.button.backup;" class="form_button" oncommand="backup();"/>
+			<spacer flex="1" />
+		</hbox>
+		<spacer height="80px" />
+		<label class="content_subtitle">&rsmanager.backup.subtitle.restore;</label>
+		<label class="content_body">&rsmanager.backup.body.restore;</label>
+		<hbox>
+			<button id="install_button" label="&rsmanager.backup.button.restore;" class="form_button" oncommand="restore();"/>
+			<spacer flex="1" />
+		</hbox>
+	</vbox>
+</page>

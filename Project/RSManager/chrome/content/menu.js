@@ -18,7 +18,9 @@ function clicked(s) {
 
 function init() {
 	Components.utils.import("resource://rsmanager-modules/dbconnection.jsm");
-	//checkDatabase();
+	if(!checkDatabase()) {
+		document.getElementById("content_frame").setAttribute("src", "install.xul");
+	}
 }
 
 window.onload=init

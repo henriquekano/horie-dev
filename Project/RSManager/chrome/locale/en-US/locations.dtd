@@ -1,0 +1,14 @@
+<!ENTITY rsmanager.locations.title "Locations">
+<!ENTITY rsmanager.locations.provinces "Provinces">
+<!ENTITY rsmanager.locations.cities "Cities">
+<!ENTITY rsmanager.locations.regions "Regions">
+<!ENTITY rsmanager.locations.addcity "Add City:">
+<!ENTITY rsmanager.locations.editcity "Edit City:">
+<!ENTITY rsmanager.locations.addregion "Add Region:">
+<!ENTITY rsmanager.locations.editregion "Edit Region:">
+
+<!ENTITY rsmanager.locations.add "Add">
+<!ENTITY rsmanager.locations.edit "Edit">
+<!ENTITY rsmanager.locations.delete "Delete">
+<!ENTITY rsmanager.locations.ok "OK">
+<!ENTITY rsmanager.locations.cancel "Cancel">

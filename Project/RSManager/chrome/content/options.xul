@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet href="chrome://rsmanager/skin/content.css" type="text/css"?>
-<!DOCTYPE window SYSTEM "chrome://rsmanager/locale/rsmanager.dtd">
+<!DOCTYPE window SYSTEM "chrome://rsmanager/locale/options.dtd">
 
 <page id="options" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
-	<label value="&rsmanager.menu.options;" class="content_title" />
+	<label value="&rsmanager.options.title;" class="content_title" />
 	<vbox class="form" flex="1">
 		<hbox class="form_item">
-			<label value="&rsmanager.menu.option.language;" class="form_label" />
+			<label value="&rsmanager.options.language;" class="form_label" />
 			<menulist class="form_menulist" flex="1">
 				<menupopup>
-					<menuitem label="&rsmanager.menu.option.language.en;" value="en-US"/>
-					<menuitem label="&rsmanager.menu.option.language.pt;" value="pt-BR"/>
-					<menuitem label="&rsmanager.menu.option.language.ja;" value="ja"/>
+					<menuitem label="&rsmanager.options.language.en;" value="en-US"/>
+					<menuitem label="&rsmanager.options.language.pt;" value="pt-BR"/>
+					<menuitem label="&rsmanager.options.language.ja;" value="ja"/>
 				</menupopup>
 			</menulist>
 		</hbox>

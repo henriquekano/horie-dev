@@ -1,3 +1,5 @@
+mozilla   -chrome                   chrome://rsmanager/content/rsmanager.xul
+
 content   rsmanager                 chrome/content/
 resource  rsmanager-modules         modules/
 skin      rsmanager   classic/1.0   chrome/skin/
