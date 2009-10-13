@@ -1,5 +1,6 @@
 <!ENTITY rsmanager.menu.main "Main">
 <!ENTITY rsmanager.menu.manageexpenses "Manage Expenses">
 <!ENTITY rsmanager.menu.managelocations "Manage Locations">
+<!ENTITY rsmanager.menu.managetypes "Manage Categories">
 <!ENTITY rsmanager.menu.options "Options">
 <!ENTITY rsmanager.menu.backup "Backup and Restore">

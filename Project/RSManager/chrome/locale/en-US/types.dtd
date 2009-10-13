@@ -1,0 +1,13 @@
+<!ENTITY rsmanager.types.title "Categories">
+<!ENTITY rsmanager.types.types "Categories">
+<!ENTITY rsmanager.types.subtypes "Sub-Categories">
+<!ENTITY rsmanager.types.addtype "Add Category:">
+<!ENTITY rsmanager.types.edittype "Edit Category:">
+<!ENTITY rsmanager.types.addsubtype "Add Sub-Category:">
+<!ENTITY rsmanager.types.editsubtype "Edit Sub-Category:">
+
+<!ENTITY rsmanager.types.add "Add">
+<!ENTITY rsmanager.types.edit "Edit">
+<!ENTITY rsmanager.types.delete "Delete">
+<!ENTITY rsmanager.types.ok "OK">
+<!ENTITY rsmanager.types.cancel "Cancel">
