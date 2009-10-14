@@ -1,4 +1,5 @@
 <!ENTITY rsmanager.locations.title "Locations">
+<!ENTITY rsmanager.locations.default "Default location:">
 <!ENTITY rsmanager.locations.provinces "Provinces">
 <!ENTITY rsmanager.locations.cities "Cities">
 <!ENTITY rsmanager.locations.regions "Regions">
@@ -12,3 +13,4 @@
 <!ENTITY rsmanager.locations.delete "Delete">
 <!ENTITY rsmanager.locations.ok "OK">
 <!ENTITY rsmanager.locations.cancel "Cancel">
+<!ENTITY rsmanager.locations.set "Set">

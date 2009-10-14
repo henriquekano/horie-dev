@@ -6,6 +6,13 @@
 	<script type="application/x-javascript" src="locations.js"/>
 	
 	<label class="content_title">&rsmanager.locations.title;</label>
+	<label value="&rsmanager.locations.default;" class="form_label" />
+	<hbox>
+		<image src="chrome://rsmanager/skin/images/arrow.png" tooltiptext="&rsmanager.locations.set;" class="form_minibutton"
+			onclick="" />
+		<label id="label_default" value="Tokyo > Setagaya > Seijo" class="form_label" flex="1" />
+	</hbox>
+	<spacer height="20px" />
 	<hbox>
 		<vbox flex="3">
 			<label class="content_body">&rsmanager.locations.provinces;</label>
