@@ -115,7 +115,7 @@ function displayEditCityTextbox(display) {
 	}
 }
 function displayAddRegionTextbox(display) {
-	if(document.getElementById("listbox_cities").selected == null) display = false;
+	if(document.getElementById("listbox_cities").getRowCount() == 0) { display = false; }
 	document.getElementById("spacer_addregion").setAttribute("style", "display: " + (display?"''":"none") + ";");
 	document.getElementById("label_addregion").setAttribute("style", "display: " + (display?"''":"none") + ";");
 	document.getElementById("texbox_addregion").setAttribute("style", "display: " + (display?"''":"none") + ";");
@@ -123,7 +123,7 @@ function displayAddRegionTextbox(display) {
 	document.getElementById("buttons_addregion").setAttribute("style", "display: " + (display?"''":"none") + ";");
 }
 function displayEditRegionTextbox(display) {
-	if(document.getElementById("listbox_cities").selected == null) display = false;
+	if(document.getElementById("listbox_cities")..getRowCount() == 0) { display = false; }
 	var listbox = document.getElementById("listbox_regions");
 	if(listbox.getRowCount() != 0 && listbox.selectedItem != null) {
 		document.getElementById("spacer_editregion").setAttribute("style", "display: " + (display?"''":"none") + ";");

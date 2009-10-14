@@ -7,7 +7,6 @@
 	
 	<label class="content_title">&rsmanager.backup.title;</label>
 	<vbox>
-		<spacer height="20px" />
 		<label class="content_subtitle">&rsmanager.backup.subtitle.backup;</label>
 		<label class="content_body">&rsmanager.backup.body.backup;</label>
 		<hbox>

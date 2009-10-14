@@ -6,7 +6,7 @@ function init() {
 	hideAllTextboxes();
 	Components.utils.import("resource://rsmanager-modules/dbconnection.jsm");
 	dbConn = createConnection();
-	populateProvinces();
+	populateTypes();
 	
 	var typeStatement = dbConn.createStatement("SELECT max(ExpenseTypeID) as MaxExpenseTypeID FROM ExpenseTypes");
 	typeStatement.executeStep();
@@ -95,6 +95,7 @@ function displayEditTypeTextbox(display) {
 	}
 }
 function displayAddSubtypeTextbox(display) {
+	if(document.getElementById("listbox_types").getRowCount() == 0) { display = false; }
 	document.getElementById("spacer_addsubtype").setAttribute("style", "display: " + (display?"''":"none") + ";");
 	document.getElementById("label_addsubtype").setAttribute("style", "display: " + (display?"''":"none") + ";");
 	document.getElementById("texbox_addsubtype").setAttribute("style", "display: " + (display?"''":"none") + ";");
@@ -102,6 +103,7 @@ function displayAddSubtypeTextbox(display) {
 	document.getElementById("buttons_addsubtype").setAttribute("style", "display: " + (display?"''":"none") + ";");
 }
 function displayEditSubtypeTextbox(display) {
+	if(document.getElementById("listbox_types").getRowCount() == 0) { display = false; }
 	var listbox = document.getElementById("listbox_subtypes");
 	if(listbox.getRowCount() != 0 && listbox.selectedItem != null) {
 		document.getElementById("spacer_editsubtype").setAttribute("style", "display: " + (display?"''":"none") + ";");
@@ -128,7 +130,7 @@ function addType() {
 	maxTypeID++;
 	var statement = dbConn.createStatement("INSERT INTO ExpenseTypes VALUES (?1, ?2)");
 	statement.bindInt32Parameter(0, maxTypeID);
-	statement.bindUTF8StringParameter(2, document.getElementById("texbox_addtype").value);
+	statement.bindUTF8StringParameter(1, document.getElementById("texbox_addtype").value);
 	statement.execute();
 	populateTypes();
 }
