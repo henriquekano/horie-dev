@@ -29,11 +29,6 @@
 					<label id="menu_types_lbl" value="&rsmanager.menu.managetypes;" class="menu_label" />
 				</hbox>
 				<hbox class="menu_buttonwrapper"
-					onmouseover="mouseOver('options');" onmouseout="mouseOut('options');" onclick="clicked('options');">
-					<image id="menu_options_img" class="menu_button" src="chrome://rsmanager/skin/images/button_default.png" />
-					<label id="menu_options_lbl" value="&rsmanager.menu.options;" class="menu_label" />
-				</hbox>
-				<hbox class="menu_buttonwrapper"
 					onmouseover="mouseOver('backup');" onmouseout="mouseOut('backup');" onclick="clicked('backup');">
 					<image id="menu_backup_img" class="menu_button" src="chrome://rsmanager/skin/images/button_default.png" />
 					<label id="menu_backup_lbl" value="&rsmanager.menu.backup;" class="menu_label" />

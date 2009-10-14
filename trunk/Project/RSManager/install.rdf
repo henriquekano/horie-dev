@@ -4,6 +4,8 @@
 		<em:id>rsmanager@andrekhorie.wordpress.com</em:id>
 		<em:type>2</em:type>
 		<em:name>RSManager</em:name>
+		<em:description>An extension for managing your Scholarship student finances!</em:description>
+		<em:creator>André Kenji Horie</em:creator>
 		<em:version>1.0</em:version>
 		
 		<em:targetApplication>
@@ -14,8 +16,19 @@
 			</Description>
 		</em:targetApplication>
 		
-		<em:creator>André Kenji Horie</em:creator>
-		<em:contributor></em:contributor>
-		<em:description>An extension for managing the finance of Japanese scholarship students!</em:description>
+		<em:localized>
+			<Description>
+				<em:locale>pt-BR</em:locale>
+				<em:name>RSManager</em:name>
+				<em:description>Uma extensão para gerenciar sua bolsa de estudo!</em:description>
+			</Description>
+		</em:localized>
+		<em:localized>
+			<Description>
+				<em:locale>ja</em:locale>
+				<em:name>留学生奨学金マネージャ</em:name>
+				<em:description>留学生奨学金の会計を！</em:description>
+			</Description>
+		</em:localized>
 	</Description>
 </RDF>
