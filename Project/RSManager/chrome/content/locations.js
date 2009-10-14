@@ -1,12 +1,19 @@
+Components.utils.import("resource://rsmanager-modules/dbconnection.jsm");
+Components.utils.import("resource://rsmanager-modules/preferences.jsm");
+
 var dbConn = null;
 var maxCityID = null;
 var maxRegionID = null;
 
 function init() {
 	hideAllTextboxes();
-	Components.utils.import("resource://rsmanager-modules/dbconnection.jsm");
 	dbConn = createConnection();
 	populateProvinces();
+	
+	var defaultLoc = getDefaultLocation(dbConn);
+	document.getElementById("listbox_provinces").selectedIndex = (defaultLoc==null)?0:;
+	document.getElementById("listbox_cities").selectedIndex = (defaultLoc==null)?0:;
+	document.getElementById("listbox_regions").selectedIndex = (defaultLoc==null)?0:;
 	
 	var cityStatement = dbConn.createStatement("SELECT max(CityID) as MaxCityID FROM LocCities");
 	cityStatement.executeStep();
@@ -26,7 +33,7 @@ function populateProvinces() {
 	while(listbox.getRowCount() != 0) {
 		listbox.removeItemAt(0);
 	}
-	var statement = dbConn.createStatement("SELECT * FROM LocProvinces");
+	var statement = dbConn.createStatement("SELECT * FROM LocProvinces ORDER BY ProvinceName");
 	try {
 		while (statement.executeStep()) {
 			var listitem = document.createElement("listitem");
@@ -46,8 +53,8 @@ function populateCities() {
 		listbox.removeItemAt(0);
 	}
 	var statement = dbConn.createStatement("SELECT * FROM LocCities WHERE ProvinceID = :provinceID ORDER BY CityName");
-	statement.params.provinceID = document.getElementById("listbox_provinces").selectedItem.value;
 	try {
+		statement.params.provinceID = document.getElementById("listbox_provinces").selectedItem.value;
 		while (statement.executeStep()) {
 			var listitem = document.createElement("listitem");
 			listitem.setAttribute("value", statement.row.CityID);
@@ -58,9 +65,9 @@ function populateCities() {
 	} finally {
 		statement.reset();
 	}
-	listbox.selectedIndex = 0;
 	displayAddCityTextbox(false);
 	displayEditCityTextbox(false);
+	listbox.selectedIndex = 0;
 }
 function populateRegions() {
 	var listbox = document.getElementById("listbox_regions");
@@ -68,8 +75,8 @@ function populateRegions() {
 		listbox.removeItemAt(0);
 	}
 	var statement = dbConn.createStatement("SELECT * FROM LocRegions WHERE CityID = :cityID ORDER BY RegionName");
-	statement.params.cityID = document.getElementById("listbox_cities").selectedItem.value;
 	try {
+		statement.params.cityID = document.getElementById("listbox_cities").selectedItem.value;
 		while (statement.executeStep()) {
 			var listitem = document.createElement("listitem");
 			listitem.setAttribute("value", statement.row.RegionID);
@@ -81,10 +88,18 @@ function populateRegions() {
 		statement.reset();
 	}
 	listbox.selectedIndex = 0;
+	loadDefaultLocation();
+	enableDefaultButton();
 	displayAddRegionTextbox(false);
 	displayEditRegionTextbox(false);
+	
 }
 
+function enableDefaultButton() {
+	var empty = document.getElementById("listbox_regions").getRowCount() == 0;
+	var url = "chrome://rsmanager/skin/images/set" + (empty?"_off":"") + ".png";
+	document.getElementById("button_setdefault").setAttribute("style", "list-style-image: url("+url+");");
+}
 function hideAllTextboxes() {
 	displayAddCityTextbox(false);
 	displayAddRegionTextbox(false);
@@ -123,7 +138,7 @@ function displayAddRegionTextbox(display) {
 	document.getElementById("buttons_addregion").setAttribute("style", "display: " + (display?"''":"none") + ";");
 }
 function displayEditRegionTextbox(display) {
-	if(document.getElementById("listbox_cities")..getRowCount() == 0) { display = false; }
+	if(document.getElementById("listbox_cities").getRowCount() == 0) { display = false; }
 	var listbox = document.getElementById("listbox_regions");
 	if(listbox.getRowCount() != 0 && listbox.selectedItem != null) {
 		document.getElementById("spacer_editregion").setAttribute("style", "display: " + (display?"''":"none") + ";");
@@ -189,6 +204,21 @@ function deleteRegion() {
 	statement.bindInt32Parameter(0, document.getElementById("listbox_regions").selectedItem.value);
 	statement.execute();
 	populateRegions();
+}
+
+function saveDefaultLocation() {
+	var defaultRegionId = document.getElementById("listbox_regions").value;
+	setDefaultLocation(defaultRegionId);
+	loadDefaultLocation();
+}
+function loadDefaultLocation() {
+	var defaultLoc = getDefaultLocation(dbConn);
+	if(args==null) {
+		document.getElementById("label_setdefault").setAttribute("value", "(No value defined)");
+	} else {
+		var labelString = args[1] + " > " + args[3] + " > " + args[5];
+		document.getElementById("label_setdefault").setAttribute("value", labelString);
+	}
 }
 
 window.onload=init;
