@@ -26,7 +26,7 @@ function populateTypes() {
 	while(listbox.getRowCount() != 0) {
 		listbox.removeItemAt(0);
 	}
-	var statement = dbConn.createStatement("SELECT * FROM ExpenseTypes");
+	var statement = dbConn.createStatement("SELECT * FROM ExpenseTypes ORDER BY ExpenseTypeName");
 	try {
 		while (statement.executeStep()) {
 			var listitem = document.createElement("listitem");
@@ -70,18 +70,18 @@ function hideAllTextboxes() {
 	displayAddSubtypeTextbox(false);
 	document.getElementById("spacer_edittype").setAttribute("style", "display: none;");
 	document.getElementById("label_edittype").setAttribute("style", "display: none;");
-	document.getElementById("texbox_edittype").setAttribute("style", "display: none;");
+	document.getElementById("textbox_edittype").setAttribute("style", "display: none;");
 	document.getElementById("buttons_edittype").setAttribute("style", "display: none;");
 	document.getElementById("spacer_editsubtype").setAttribute("style", "display: none;");
 	document.getElementById("label_editsubtype").setAttribute("style", "display: none;");
-	document.getElementById("texbox_editsubtype").setAttribute("style", "display: none;");
+	document.getElementById("textbox_editsubtype").setAttribute("style", "display: none;");
 	document.getElementById("buttons_editsubtype").setAttribute("style", "display: none;");
 }
 function displayAddTypeTextbox(display) {
 	document.getElementById("spacer_addtype").setAttribute("style", "display: " + (display?"''":"none") + ";");
 	document.getElementById("label_addtype").setAttribute("style", "display: " + (display?"''":"none") + ";");
-	document.getElementById("texbox_addtype").setAttribute("style", "display: " + (display?"''":"none") + ";");
-	document.getElementById("texbox_addtype").setAttribute("value", "");
+	document.getElementById("textbox_addtype").setAttribute("style", "display: " + (display?"''":"none") + ";");
+	document.getElementById("textbox_addtype").value = "";
 	document.getElementById("buttons_addtype").setAttribute("style", "display: " + (display?"''":"none") + ";");
 }
 function displayEditTypeTextbox(display) {
@@ -89,8 +89,8 @@ function displayEditTypeTextbox(display) {
 	if(listbox.getRowCount() != 0 && listbox.selectedItem != null) {
 		document.getElementById("spacer_edittype").setAttribute("style", "display: " + (display?"''":"none") + ";");
 		document.getElementById("label_edittype").setAttribute("style", "display: " + (display?"''":"none") + ";");
-		document.getElementById("texbox_edittype").setAttribute("style", "display: " + (display?"''":"none") + ";");
-		document.getElementById("texbox_edittype").setAttribute("value", listbox.selectedItem.label);
+		document.getElementById("textbox_edittype").setAttribute("style", "display: " + (display?"''":"none") + ";");
+		document.getElementById("textbox_edittype").setAttribute("value", listbox.selectedItem.label);
 		document.getElementById("buttons_edittype").setAttribute("style", "display: " + (display?"''":"none") + ";");
 	}
 }
@@ -98,8 +98,8 @@ function displayAddSubtypeTextbox(display) {
 	if(document.getElementById("listbox_types").getRowCount() == 0) { display = false; }
 	document.getElementById("spacer_addsubtype").setAttribute("style", "display: " + (display?"''":"none") + ";");
 	document.getElementById("label_addsubtype").setAttribute("style", "display: " + (display?"''":"none") + ";");
-	document.getElementById("texbox_addsubtype").setAttribute("style", "display: " + (display?"''":"none") + ";");
-	document.getElementById("texbox_addsubtype").setAttribute("value", "");
+	document.getElementById("textbox_addsubtype").setAttribute("style", "display: " + (display?"''":"none") + ";");
+	document.getElementById("textbox_addsubtype").value = "";
 	document.getElementById("buttons_addsubtype").setAttribute("style", "display: " + (display?"''":"none") + ";");
 }
 function displayEditSubtypeTextbox(display) {
@@ -108,21 +108,21 @@ function displayEditSubtypeTextbox(display) {
 	if(listbox.getRowCount() != 0 && listbox.selectedItem != null) {
 		document.getElementById("spacer_editsubtype").setAttribute("style", "display: " + (display?"''":"none") + ";");
 		document.getElementById("label_editsubtype").setAttribute("style", "display: " + (display?"''":"none") + ";");
-		document.getElementById("texbox_editsubtype").setAttribute("style", "display: " + (display?"''":"none") + ";");
-		document.getElementById("texbox_editsubtype").setAttribute("value", listbox.selectedItem.label);
+		document.getElementById("textbox_editsubtype").setAttribute("style", "display: " + (display?"''":"none") + ";");
+		document.getElementById("textbox_editsubtype").setAttribute("value", listbox.selectedItem.label);
 		document.getElementById("buttons_editsubtype").setAttribute("style", "display: " + (display?"''":"none") + ";");
 	}
 }
 function updateEditTypeTextbox() {
 	var listbox = document.getElementById("listbox_types");
 	if(listbox.getRowCount() != 0 && listbox.selectedItem != null) {
-		document.getElementById("texbox_edittype").setAttribute("value", listbox.selectedItem.label);
+		document.getElementById("textbox_edittype").setAttribute("value", listbox.selectedItem.label);
 	}
 }
 function updateEditSubtypeTextbox() {
 	var listbox = document.getElementById("listbox_subtypes");
 	if(listbox.getRowCount() != 0 && listbox.selectedItem != null) {
-		document.getElementById("texbox_editsubtypes").setAttribute("value", listbox.selectedItem.label);
+		document.getElementById("textbox_editsubtype").setAttribute("value", listbox.selectedItem.label);
 	}
 }
 
@@ -130,13 +130,13 @@ function addType() {
 	maxTypeID++;
 	var statement = dbConn.createStatement("INSERT INTO ExpenseTypes VALUES (?1, ?2)");
 	statement.bindInt32Parameter(0, maxTypeID);
-	statement.bindUTF8StringParameter(1, document.getElementById("texbox_addtype").value);
+	statement.bindUTF8StringParameter(1, document.getElementById("textbox_addtype").value);
 	statement.execute();
 	populateTypes();
 }
 function editType() {
 	var statement = dbConn.createStatement("UPDATE ExpenseTypes SET ExpenseTypeName = ?1 WHERE ExpenseTypeID = ?2");
-	statement.bindUTF8StringParameter(0, document.getElementById("texbox_edittype").value);
+	statement.bindUTF8StringParameter(0, document.getElementById("textbox_edittype").value);
 	statement.bindInt32Parameter(1, document.getElementById("listbox_types").selectedItem.value);
 	statement.execute();
 	populateTypes();
@@ -152,13 +152,13 @@ function addSubtype() {
 	var statement = dbConn.createStatement("INSERT INTO ExpenseSubTypes VALUES (?1, ?2, ?3)");
 	statement.bindInt32Parameter(0, maxSubtypeID);
 	statement.bindInt32Parameter(1, document.getElementById("listbox_types").selectedItem.value);
-	statement.bindUTF8StringParameter(2, document.getElementById("texbox_addsubtypes").value);
+	statement.bindUTF8StringParameter(2, document.getElementById("textbox_addsubtype").value);
 	statement.execute();
 	populateSubtypes();
 }
 function editSubtype() {
 	var statement = dbConn.createStatement("UPDATE ExpenseSubTypes SET ExpenseSubTypeName = ?1 WHERE ExpenseSubTypeID = ?2");
-	statement.bindUTF8StringParameter(0, document.getElementById("texbox_editsubtypes").value);
+	statement.bindUTF8StringParameter(0, document.getElementById("textbox_editsubtype").value);
 	statement.bindInt32Parameter(1, document.getElementById("listbox_subtypes").selectedItem.value);
 	statement.execute();
 	populateSubtypes();
