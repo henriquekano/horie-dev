@@ -17,6 +17,8 @@ function clicked(s) {
 }
 
 function init() {
+	Components.utils.import("resource://rsmanager-modules/preferences.jsm");
+	checkPreferences();
 	Components.utils.import("resource://rsmanager-modules/dbconnection.jsm");
 	if(!checkDatabase()) {
 		document.getElementById("content_frame").setAttribute("src", "install.xul");

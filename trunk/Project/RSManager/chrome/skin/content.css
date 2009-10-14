@@ -61,3 +61,7 @@
 	color: #444;
 	width: 150px;
 }
+.sform_setdefaultbutton  {
+	list-style-image: url(chrome://rsmanager/skin/images/set_off.png);
+	margin-right: 10px;
+}

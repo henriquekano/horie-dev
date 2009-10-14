@@ -7,6 +7,7 @@
 <!ENTITY rsmanager.locations.editcity "Edit City:">
 <!ENTITY rsmanager.locations.addregion "Add Region:">
 <!ENTITY rsmanager.locations.editregion "Edit Region:">
+<!ENTITY rsmanager.locations.novalue "No value defined">
 
 <!ENTITY rsmanager.locations.add "Add">
 <!ENTITY rsmanager.locations.edit "Edit">
