@@ -9,7 +9,7 @@
 	<hbox>
 		<vbox flex="3">
 			<label class="content_body">&rsmanager.types.types;</label>
-			<listbox id="listbox_types" class="form_listbox" onselect="populateTypes(); updateEditTypeTextbox();"></listbox>
+			<listbox id="listbox_types" class="form_listbox" onselect="populateSubtypes(); updateEditTypeTextbox();"></listbox>
 			<hbox>
 				<spacer flex="1" />
 				<image src="chrome://rsmanager/skin/images/add.png" tooltiptext="&rsmanager.types.add;" class="form_minibutton"
@@ -22,7 +22,7 @@
 			</hbox>
 			<spacer id="spacer_addtype" height="40px" style="display:none;" />
 			<label id="label_addtype" class="form_label" value="&rsmanager.types.addtype;" style="display:none;" />
-			<textbox id="texbox_addtype" class="form_textbox" style="display:none;" />
+			<textbox id="textbox_addtype" class="form_textbox" style="display:none;" />
 			<hbox id="buttons_addtype" style="display:none;">
 				<spacer flex="1" />
 				<image src="chrome://rsmanager/skin/images/ok.png" tooltiptext="&rsmanager.types.ok;" class="form_minibutton"
@@ -33,7 +33,7 @@
 			</hbox>
 			<spacer id="spacer_edittype" height="40px" style="display:none;" />
 			<label id="label_edittype" class="form_label" value="&rsmanager.types.edittype;" style="display:none;" />
-			<textbox id="texbox_edittype" class="form_textbox" style="display:none;" />
+			<textbox id="textbox_edittype" class="form_textbox" style="display:none;" />
 			<hbox id="buttons_edittype" style="display:none;">
 				<spacer flex="1" />
 				<image src="chrome://rsmanager/skin/images/ok.png" tooltiptext="&rsmanager.types.ok;" class="form_minibutton"
@@ -59,7 +59,7 @@
 			</hbox>
 			<spacer id="spacer_addsubtype" height="40px" style="display:none;" />
 			<label id="label_addsubtype" class="form_label" value="&rsmanager.types.addsubtype;" style="display:none;" />
-			<textbox id="texbox_addsubtype" class="form_textbox" style="display:none;" />
+			<textbox id="textbox_addsubtype" class="form_textbox" style="display:none;" />
 			<hbox id="buttons_addsubtype" style="display:none;">
 				<spacer flex="1" />
 				<image src="chrome://rsmanager/skin/images/ok.png" tooltiptext="&rsmanager.types.ok;" class="form_minibutton"
@@ -70,7 +70,7 @@
 			</hbox>
 			<spacer id="spacer_editsubtype" height="40px" style="display:none;" />
 			<label id="label_editsubtype" class="form_label" value="&rsmanager.types.editsubtype;" style="display:none;" />
-			<textbox id="texbox_editsubtype" class="form_textbox" style="display:none;" />
+			<textbox id="textbox_editsubtype" class="form_textbox" style="display:none;" />
 			<hbox id="buttons_editsubtype" style="display:none;">
 				<spacer flex="1" />
 				<image src="chrome://rsmanager/skin/images/ok.png" tooltiptext="&rsmanager.types.ok;" class="form_minibutton"

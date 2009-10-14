@@ -27,7 +27,7 @@
 			</hbox>
 			<spacer id="spacer_addcity" height="40px" style="display:none;" />
 			<label id="label_addcity" class="form_label" value="&rsmanager.locations.addcity;" style="display:none;" />
-			<textbox id="texbox_addcity" class="form_textbox" style="display:none;" />
+			<textbox id="textbox_addcity" class="form_textbox" style="display:none;" />
 			<hbox id="buttons_addcity" style="display:none;">
 				<spacer flex="1" />
 				<image src="chrome://rsmanager/skin/images/ok.png" tooltiptext="&rsmanager.locations.ok;" class="form_minibutton"
@@ -38,7 +38,7 @@
 			</hbox>
 			<spacer id="spacer_editcity" height="40px" style="display:none;" />
 			<label id="label_editcity" class="form_label" value="&rsmanager.locations.editcity;" style="display:none;" />
-			<textbox id="texbox_editcity" class="form_textbox" style="display:none;" />
+			<textbox id="textbox_editcity" class="form_textbox" style="display:none;" />
 			<hbox id="buttons_editcity" style="display:none;">
 				<spacer flex="1" />
 				<image src="chrome://rsmanager/skin/images/ok.png" tooltiptext="&rsmanager.locations.ok;" class="form_minibutton"
@@ -64,7 +64,7 @@
 			</hbox>
 			<spacer id="spacer_addregion" height="40px" style="display:none;" />
 			<label id="label_addregion" class="form_label" value="&rsmanager.locations.addregion;" style="display:none;" />
-			<textbox id="texbox_addregion" class="form_textbox" style="display:none;" />
+			<textbox id="textbox_addregion" class="form_textbox" style="display:none;" />
 			<hbox id="buttons_addregion" style="display:none;">
 				<spacer flex="1" />
 				<image src="chrome://rsmanager/skin/images/ok.png" tooltiptext="&rsmanager.locations.ok;" class="form_minibutton"
@@ -75,7 +75,7 @@
 			</hbox>
 			<spacer id="spacer_editregion" height="40px" style="display:none;" />
 			<label id="label_editregion" class="form_label" value="&rsmanager.locations.editregion;" style="display:none;" />
-			<textbox id="texbox_editregion" class="form_textbox" style="display:none;" />
+			<textbox id="textbox_editregion" class="form_textbox" style="display:none;" />
 			<hbox id="buttons_editregion" style="display:none;">
 				<spacer flex="1" />
 				<image src="chrome://rsmanager/skin/images/ok.png" tooltiptext="&rsmanager.locations.ok;" class="form_minibutton"
