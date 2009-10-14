@@ -1,0 +1,1314 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<analysis><sentence text="Google Inc. ( NASDAQ : GOOG and LSE : GGEA ) is an American public corporation , specializing in Internet search and online advertising . ">
+<token id="w2"><lemma>google</lemma><head>w3</head></token>
+<token id="w3"><lemma>inc.</lemma><head>w13</head></token>
+<token id="w4"><lemma>(</lemma><head>w13</head></token>
+<token id="w5"><lemma>nasdaq</lemma><head>w13</head></token>
+<token id="w6"><lemma>:</lemma><head>w13</head></token>
+<token id="w7"><lemma>goog</lemma><head>w5</head></token>
+<token id="w8"><lemma>and</lemma><head>w7</head></token>
+<token id="w9"><lemma>lse</lemma><head>w7</head></token>
+<token id="w10"><lemma>:</lemma><head>w7</head></token>
+<token id="w11"><lemma>ggea</lemma><head>w9</head></token>
+<token id="w12"><lemma>)</lemma><head>w9</head></token>
+<token id="w13"><lemma>be</lemma><head>w1</head></token>
+<token id="w14"><lemma>an</lemma><head>w17</head></token>
+<token id="w15"><lemma>american</lemma><head>w16</head><relation head=w17>mod</relation></token>
+<token id="w16"><lemma>public</lemma><head>w17</head></token>
+<token id="w17"><lemma>corporation</lemma><head>w13</head><relation head=w3>iof</relation></token>
+<token id="w18"><lemma>,</lemma><head>w13</head></token>
+<token id="w19"><lemma>specialize</lemma><head>w17</head></token>
+<token id="w20"><lemma>in</lemma><head>w19</head></token>
+<token id="w21"><lemma>internet</lemma><head>w22</head></token>
+<token id="w22"><lemma>search</lemma><head>w20</head></token>
+<token id="w23"><lemma>and</lemma><head>w22</head></token>
+<token id="w24"><lemma>online</lemma><head>w25</head></token>
+<token id="w25"><lemma>advertising</lemma><head>w22</head></token>
+<token id="w26"><lemma>.</lemma><head>w22</head></token>
+</sentence>
+<sentence text="The company is based in Mountain View , California , and has 13,748 full-time employees ( as of June 30 , 2007 ) . ">
+<token id="w29"><lemma>the</lemma><head>w30</head></token>
+<token id="w30"><lemma>company</lemma><head>w31</head><relation head=w40>aoj</relation></token>
+<token id="w31"><lemma>be</lemma><head>w32</head></token>
+<token id="w32"><lemma>base</lemma><head>w28</head><relation head=w30,>aoj</relation></token>
+<token id="w33"><lemma>in</lemma><head>w32</head></token>
+<token id="w34"><lemma>mountain</lemma><head>w35</head></token>
+<token id="w35"><lemma>view</lemma><head>w33</head><relation head=w32>plc</relation></token>
+<token id="w36"><lemma>,</lemma><head>w33</head></token>
+<token id="w37"><lemma>california</lemma><head>w35</head></token>
+<token id="w38"><lemma>,</lemma><head>w35</head></token>
+<token id="w39"><lemma>and</lemma><head>w32</head></token>
+<token id="w40"><lemma>have</lemma><head>w32</head></token>
+<token id="w41"><lemma>13,748</lemma><head>w42</head><relation head=w43>qua</relation></token>
+<token id="w42"><lemma>full-time</lemma><head>w43</head><relation head=w43>mod</relation></token>
+<token id="w43"><lemma>employee</lemma><head>w40</head><relation head=w40>obj</relation></token>
+<token id="w44"><lemma>(</lemma><head>w40</head></token>
+<token id="\"><lemma>as</lemma><head>w40</head></token>
+<token id="\"><lemma>w45</lemma><head>w40</head></token>
+<token id="\"><lemma>w46</lemma><head>w40</head></token>
+<token id="\"><lemma>w47</lemma><head>w40</head></token>
+<token id="\"><lemma>w48</lemma><head>w40</head></token>
+<token id="\"><lemma>w49</lemma><head>w40</head></token>
+<token id="\"><lemma>w50</lemma><head>w40</head></token>
+</sentence>
+<sentence text="Google's mission statement is , " to organize the world's information and make it universally accessible and useful . " ">
+<token id="w54"><lemma>google</lemma><head>w55</head><relation head=w61>agt</relation><relation head=w66>agt</relation></token>
+<token id="w55"><lemma>mission</lemma><head>w56</head><relation head=w56>mod</relation></token>
+<token id="w56"><lemma>statement</lemma><head>w57</head><relation head=w61>aoj</relation></token>
+<token id="w57"><lemma>be</lemma><head>w53</head></token>
+<token id="w58"><lemma>,</lemma><head>w53</head></token>
+<token id="w59"><lemma>"</lemma><head>w53</head></token>
+<token id="w60"><lemma>to</lemma><head>w61</head></token>
+<token id="w61"><lemma>organize</lemma><head>w57</head></token>
+<token id="w62"><lemma>the</lemma><head>w64</head></token>
+<token id="w63"><lemma>world</lemma><head>w64</head><relation head=w64>mod</relation></token>
+<token id="w64"><lemma>information</lemma><head>w61</head><relation head=w61>obj</relation></token>
+<token id="w65"><lemma>and</lemma><head>w61</head></token>
+<token id="w66"><lemma>make</lemma><head>w61</head></token>
+<token id="w67"><lemma>it</lemma><head>w66</head><relation head=w66>obj</relation></token>
+<token id="w68"><lemma>universally</lemma><head>w66</head><relation head=w69>man</relation></token>
+<token id="w69"><lemma>accessible</lemma><head>w66</head><relation head=w67>aoj</relation><relation head=w71>and</relation></token>
+<token id="w70"><lemma>and</lemma><head>w69</head></token>
+<token id="w71"><lemma>useful</lemma><head>w69</head></token>
+<token id="w72"><lemma>.</lemma><head>w69</head></token>
+<token id="w73"><lemma>"</lemma><head>w69</head></token>
+</sentence>
+<sentence text="Google's corporate philosophy includes statements such as " Do n't be evil " , and " Work should be challenging and the challenge should be fun " , illustrating a somewhat relaxed corporate culture . ">
+<token id="w76"><lemma>google</lemma><head>w77</head><relation head=w78>pos</relation></token>
+<token id="w77"><lemma>corporate</lemma><head>w78</head><relation head=w78>mod</relation></token>
+<token id="w78"><lemma>philosophy</lemma><head>w79</head><relation head=w79>aoj</relation></token>
+<token id="w79"><lemma>include</lemma><head>w75</head></token>
+<token id="w80"><lemma>statement</lemma><head>w79</head><relation head=w79>obj</relation><relation head=w81>aoj</relation><relation head=w104>agt</relation></token>
+<token id="w81"><lemma>such</lemma><head>w80</head></token>
+<token id="w82"><lemma>as</lemma><head>w81</head></token>
+<token id="w83"><lemma>"</lemma><head>w81</head></token>
+<token id="w84"><lemma>do</lemma><head>w86</head></token>
+<token id="w85"><lemma>not</lemma><head>w84</head></token>
+<token id="w86"><lemma>be</lemma><head>w84</head><relation head=w81>obj</relation><relation head=w94>and</relation></token>
+<token id="w87"><lemma>evil</lemma><head>w86</head></token>
+<token id="w88"><lemma>"</lemma><head>w86</head></token>
+<token id="w89"><lemma>,</lemma><head>w86</head></token>
+<token id="w90"><lemma>and</lemma><head>w86</head></token>
+<token id="w91"><lemma>"</lemma><head>w86</head></token>
+<token id="w92"><lemma>work</lemma><head>w93</head><relation head=w95>aoj</relation></token>
+<token id="w93"><lemma>should</lemma><head>w94</head></token>
+<token id="w94"><lemma>be</lemma><head>w95</head><relation head=w100>and</relation></token>
+<token id="w95"><lemma>challenge</lemma><head>w86</head></token>
+<token id="w96"><lemma>and</lemma><head>w95</head></token>
+<token id="w97"><lemma>the</lemma><head>w98</head></token>
+<token id="w98"><lemma>challenge</lemma><head>w99</head><relation head=w101>aoj</relation></token>
+<token id="w99"><lemma>should</lemma><head>w100</head></token>
+<token id="w100"><lemma>be</lemma><head>w95</head></token>
+<token id="w101"><lemma>fun</lemma><head>w100</head></token>
+<token id="w102"><lemma>"</lemma><head>w100</head></token>
+<token id="w103"><lemma>,</lemma><head>w100</head></token>
+<token id="w104"><lemma>illustrate</lemma><head>w100</head></token>
+<token id="w105"><lemma>a</lemma><head>w109</head></token>
+<token id="w106"><lemma>somewhat</lemma><head>w107</head><relation head=w109>mod</relation><relation head=w109>mod</relation></token>
+<token id="w107"><lemma>relaxed</lemma><head>w108</head><relation head=w109>mod</relation></token>
+<token id="w108"><lemma>corporate</lemma><head>w109</head><relation head=w109>mod</relation></token>
+<token id="w109"><lemma>culture</lemma><head>w104</head><relation head=w104>obj</relation></token>
+<token id="w110"><lemma>.</lemma><head>w104</head></token>
+</sentence>
+<sentence text="Google was co-founded by Larry Page and Sergey Brin while they were students at Stanford University and the company was first incorporated as a privately held company on September 7 , 1998 . ">
+<token id="w113"><lemma>google</lemma><head>w114</head><relation head=w115>obj</relation></token>
+<token id="w114"><lemma>be</lemma><head>w115</head></token>
+<token id="w115"><lemma>co-found</lemma><head>w112</head></token>
+<token id="w116"><lemma>by</lemma><head>w115</head></token>
+<token id="w117"><lemma>larry</lemma><head>w118</head></token>
+<token id="w118"><lemma>page</lemma><head>w116</head><relation head=w115>agt</relation></token>
+<token id="w119"><lemma>and</lemma><head>w118</head></token>
+<token id="w120"><lemma>sergey</lemma><head>w121</head></token>
+<token id="w121"><lemma>brin</lemma><head>w118</head><relation head=w118>and</relation></token>
+<token id="w122"><lemma>while</lemma><head>w124</head></token>
+<token id="w123"><lemma>they</lemma><head>w124</head><relation head=w125>aoj</relation></token>
+<token id="w124"><lemma>be</lemma><head>w115</head><relation head=w118>tim</relation></token>
+<token id="w125"><lemma>student</lemma><head>w124</head></token>
+<token id="w126"><lemma>at</lemma><head>w125</head></token>
+<token id="w127"><lemma>stanford</lemma><head>w128</head></token>
+<token id="w128"><lemma>university</lemma><head>w126</head><relation head=w125>plc</relation></token>
+<token id="w129"><lemma>and</lemma><head>w124</head></token>
+<token id="w130"><lemma>the</lemma><head>w131</head></token>
+<token id="w131"><lemma>company</lemma><head>w132</head><relation head=w134>obj</relation><relation head=w139>aoj</relation></token>
+<token id="w132"><lemma>be</lemma><head>w134</head></token>
+<token id="w133"><lemma>first</lemma><head>w134</head><relation head=w134>tim</relation></token>
+<token id="w134"><lemma>incorporate</lemma><head>w124</head><relation head=w115>and</relation></token>
+<token id="w135"><lemma>as</lemma><head>w134</head></token>
+<token id="w136"><lemma>a</lemma><head>w139</head><relation head=w137>man</relation></token>
+<token id="w137"><lemma>privately</lemma><head>w138</head><relation head=w138>mod</relation></token>
+<token id="w138"><lemma>held</lemma><head>w139</head></token>
+<token id="w139"><lemma>company</lemma><head>w135</head></token>
+<token id="w140"><lemma>on</lemma><head>w134</head></token>
+<token id="w141"><lemma>september</lemma><head>w134</head><relation head=w134>tim</relation></token>
+<token id="w142"><lemma>7</lemma><head>w141</head></token>
+<token id="w143"><lemma>,</lemma><head>w141</head></token>
+<token id="w144"><lemma>1998</lemma><head>w142</head></token>
+<token id="w145"><lemma>.</lemma><head>w142</head></token>
+</sentence>
+<sentence text="Google's initial public offering took place on August 19 , 2004 , raising $1.67 billion , making it worth $23 billion . ">
+<token id="w148"><lemma>google</lemma><head>w149</head><relation head=w151>pos</relation></token>
+<token id="w149"><lemma>initial</lemma><head>w150</head><relation head=w151>mod</relation></token>
+<token id="w150"><lemma>public</lemma><head>w151</head><relation head=w151>mod</relation></token>
+<token id="w151"><lemma>offering</lemma><head>w152</head><relation head=w152>agt</relation><relation head=w160>agt</relation></token>
+<token id="w152"><lemma>take</lemma><head>w147</head></token>
+<token id="w153"><lemma>place</lemma><head>w152</head></token>
+<token id="w154"><lemma>on</lemma><head>w152</head></token>
+<token id="w155"><lemma>august</lemma><head>w152</head><relation head=w152>tim</relation></token>
+<token id="w156"><lemma>19</lemma><head>w155</head></token>
+<token id="w157"><lemma>,</lemma><head>w155</head></token>
+<token id="w158"><lemma>2004</lemma><head>w156</head></token>
+<token id="w159"><lemma>,</lemma><head>w156</head></token>
+<token id="w160"><lemma>raise</lemma><head>w152</head></token>
+<token id="w161"><lemma>$1.67</lemma><head>w160</head></token>
+<token id="w162"><lemma>billion</lemma><head>w161</head><relation head=w160>via</relation></token>
+<token id="w163"><lemma>,</lemma><head>w161</head></token>
+<token id="w164"><lemma>make</lemma><head>w160</head></token>
+<token id="w165"><lemma>it</lemma><head>w164</head><relation head=w164>obj</relation><relation head=w166>aoj</relation></token>
+<token id="w166"><lemma>worth</lemma><head>w164</head></token>
+<token id="w167"><lemma>$23</lemma><head>w166</head></token>
+<token id="w168"><lemma>billion</lemma><head>w167</head><relation head=w166>obj</relation></token>
+<token id="w169"><lemma>.</lemma><head>w167</head></token>
+</sentence>
+<sentence text="Through a series of new product developments , acquisitions and partnerships , the company has expanded its initial search and advertising business into other areas , including web-based email , online mapping , office productivity , and video sharing , among others . ">
+<token id="w172"><lemma>through</lemma><head>w187</head></token>
+<token id="w173"><lemma>a</lemma><head>w174</head></token>
+<token id="w174"><lemma>series</lemma><head>w172</head><relation head=w178>qua</relation></token>
+<token id="w175"><lemma>of</lemma><head>w174</head></token>
+<token id="w176"><lemma>new</lemma><head>w177</head><relation head=w178>mod</relation></token>
+<token id="w177"><lemma>product</lemma><head>w178</head><relation head=w178>mod</relation></token>
+<token id="w178"><lemma>development</lemma><head>w175</head><relation head=w187>man</relation><relation head=w180>and</relation></token>
+<token id="w179"><lemma>,</lemma><head>w175</head></token>
+<token id="w180"><lemma>acquisition</lemma><head>w178</head><relation head=w182>and</relation></token>
+<token id="w181"><lemma>and</lemma><head>w180</head></token>
+<token id="w182"><lemma>partnership</lemma><head>w180</head></token>
+<token id="w183"><lemma>,</lemma><head>w180</head></token>
+<token id="w184"><lemma>the</lemma><head>w185</head></token>
+<token id="w185"><lemma>company</lemma><head>w186</head><relation head=w187>agt</relation></token>
+<token id="w186"><lemma>have</lemma><head>w187</head></token>
+<token id="w187"><lemma>expand</lemma><head>w171</head></token>
+<token id="w188"><lemma>it</lemma><head>w189</head><relation head=w190>mod</relation></token>
+<token id="w189"><lemma>initial</lemma><head>w190</head><relation head=w190>mod</relation></token>
+<token id="w190"><lemma>search</lemma><head>w187</head><relation head=w193>mod</relation><relation head=w192>and</relation></token>
+<token id="w191"><lemma>and</lemma><head>w190</head></token>
+<token id="w192"><lemma>advertising</lemma><head>w190</head><relation head=w193>mod</relation></token>
+<token id="w193"><lemma>business</lemma><head>w190</head><relation head=w187>obj</relation></token>
+<token id="w194"><lemma>into</lemma><head>w187</head></token>
+<token id="w195"><lemma>other</lemma><head>w196</head><relation head=w196>mod</relation></token>
+<token id="w196"><lemma>area</lemma><head>w194</head><relation head=w193>gol</relation><relation head=w198>aoj</relation></token>
+<token id="w197"><lemma>,</lemma><head>w194</head></token>
+<token id="w198"><lemma>include</lemma><head>w187</head></token>
+<token id="w199"><lemma>web-based</lemma><head>w200</head><relation head=w200>mod</relation></token>
+<token id="w200"><lemma>email</lemma><head>w198</head><relation head=w198>obj</relation><relation head=w203>and</relation></token>
+<token id="w201"><lemma>,</lemma><head>w198</head></token>
+<token id="w202"><lemma>online</lemma><head>w203</head><relation head=w203>mod</relation></token>
+<token id="w203"><lemma>mapping</lemma><head>w200</head><relation head=w206>and</relation></token>
+<token id="w204"><lemma>,</lemma><head>w200</head></token>
+<token id="w205"><lemma>office</lemma><head>w206</head><relation head=w206>mod</relation></token>
+<token id="w206"><lemma>productivity</lemma><head>w203</head><relation head=w210>and</relation></token>
+<token id="w207"><lemma>,</lemma><head>w203</head></token>
+<token id="w208"><lemma>and</lemma><head>w187</head></token>
+<token id="w209"><lemma>video</lemma><head>w187</head><relation head=w210>mod</relation></token>
+<token id="w210"><lemma>share</lemma><head>w209</head><relation head=w212>and</relation></token>
+<token id="w211"><lemma>,</lemma><head>w209</head></token>
+<token id="w212"><lemma>among</lemma><head>w210</head></token>
+<token id="w213"><lemma>other</lemma><head>w212</head></token>
+<token id="w214"><lemma>.</lemma><head>w212</head></token>
+</sentence>
+<sentence text="Google began as a jack McKenzie is the best in the world and every one knows it research project in January 1996 by Larry Page and Sergey Brin , two Ph.D. students at Stanford University , California . ">
+<token id="w217"><lemma>google</lemma><head>w218</head><relation head=w218>agt</relation></token>
+<token id="w218"><lemma>begin</lemma><head>w216</head></token>
+<token id="w219"><lemma>as</lemma><head>w218</head></token>
+<token id="w220"><lemma>a</lemma><head>w221</head></token>
+<token id="w221"><lemma>jack</lemma><head>w219</head></token>
+<token id="w222"><lemma>mckenzie</lemma><head>w223</head></token>
+<token id="w223"><lemma>be</lemma><head>w221</head></token>
+<token id="w224"><lemma>the</lemma><head>w225</head></token>
+<token id="w225"><lemma>good</lemma><head>w223</head></token>
+<token id="w226"><lemma>in</lemma><head>w223</head></token>
+<token id="w227"><lemma>the</lemma><head>w228</head></token>
+<token id="w228"><lemma>world</lemma><head>w226</head></token>
+<token id="w229"><lemma>and</lemma><head>w223</head></token>
+<token id="\"><lemma>every</lemma><head>w223</head></token>
+<token id="\"><lemma>w230</lemma><head>w223</head></token>
+<token id="\"><lemma>w231</lemma><head>w223</head></token>
+<token id="\"><lemma>w232</lemma><head>w223</head></token>
+<token id="\"><lemma>w233</lemma><head>w223</head></token>
+<token id="\"><lemma>w234</lemma><head>w223</head></token>
+<token id="\"><lemma>w235</lemma><head>w223</head></token>
+<token id="\"><lemma>w236</lemma><head>w223</head></token>
+<token id="\"><lemma>w237</lemma><head>w223</head></token>
+<token id="\"><lemma>w238</lemma><head>w223</head></token>
+<token id="\"><lemma>w239</lemma><head>w223</head></token>
+<token id="\"><lemma>w240</lemma><head>w223</head></token>
+<token id="\"><lemma>w241</lemma><head>w223</head></token>
+<token id="\"><lemma>w242</lemma><head>w223</head></token>
+<token id="\"><lemma>w243</lemma><head>w223</head></token>
+<token id="\"><lemma>w244</lemma><head>w223</head></token>
+<token id="\"><lemma>w245</lemma><head>w223</head></token>
+<token id="\"><lemma>w246</lemma><head>w223</head></token>
+<token id="\"><lemma>w247</lemma><head>w223</head></token>
+<token id="\"><lemma>w248</lemma><head>w223</head></token>
+<token id="\"><lemma>w249</lemma><head>w223</head></token>
+<token id="\"><lemma>w250</lemma><head>w223</head></token>
+<token id="\"><lemma>w251</lemma><head>w223</head></token>
+<token id="\"><lemma>w252</lemma><head>w223</head></token>
+</sentence>
+<sentence text="They hypothesized that a search engine that analyzed the relationships between websites would produce better results than existing techniques , which ranked results according to the number of times the search term appeared on a page . ">
+<token id="w256"><lemma>they</lemma><head>w257</head><relation head=w257>agt</relation></token>
+<token id="w257"><lemma>hypothesize</lemma><head>w255</head></token>
+<token id="w258"><lemma>that</lemma><head>w269</head></token>
+<token id="w259"><lemma>a</lemma><head>w261</head></token>
+<token id="w260"><lemma>search</lemma><head>w261</head><relation head=w261>mod</relation></token>
+<token id="w261"><lemma>engine</lemma><head>w268</head><relation head=w269>agt</relation><relation head=w263>agt</relation></token>
+<token id="w262"><lemma>that</lemma><head>w263</head></token>
+<token id="w263"><lemma>analyze</lemma><head>w261</head></token>
+<token id="w264"><lemma>the</lemma><head>w265</head></token>
+<token id="w265"><lemma>relationship</lemma><head>w263</head><relation head=w263>obj</relation></token>
+<token id="w266"><lemma>between</lemma><head>w265</head></token>
+<token id="w267"><lemma>website</lemma><head>w266</head><relation head=w265>mod</relation></token>
+<token id="w268"><lemma>would</lemma><head>w269</head></token>
+<token id="w269"><lemma>produce</lemma><head>w257</head><relation head=w257>obj</relation></token>
+<token id="w270"><lemma>good</lemma><head>w271</head><relation head=w271>mod</relation></token>
+<token id="w271"><lemma>result</lemma><head>w269</head><relation head=w269>obj</relation></token>
+<token id="w272"><lemma>than</lemma><head>w271</head></token>
+<token id="w273"><lemma>existing</lemma><head>w274</head><relation head=w274>mod</relation></token>
+<token id="w274"><lemma>technique</lemma><head>w272</head><relation head=w271>bas</relation><relation head=w277>agt</relation></token>
+<token id="w275"><lemma>,</lemma><head>w272</head></token>
+<token id="w276"><lemma>which</lemma><head>w277</head></token>
+<token id="w277"><lemma>rank</lemma><head>w274</head></token>
+<token id="w278"><lemma>result</lemma><head>w277</head></token>
+<token id="\"><lemma>according</lemma><head>w277</head></token>
+<token id="\"><lemma>w279</lemma><head>w277</head></token>
+<token id="\"><lemma>w280</lemma><head>w277</head></token>
+<token id="\"><lemma>w281</lemma><head>w277</head></token>
+<token id="\"><lemma>w282</lemma><head>w277</head></token>
+<token id="\"><lemma>w283</lemma><head>w277</head></token>
+<token id="\"><lemma>w284</lemma><head>w277</head></token>
+<token id="\"><lemma>w285</lemma><head>w277</head></token>
+<token id="\"><lemma>w286</lemma><head>w277</head></token>
+<token id="\"><lemma>w287</lemma><head>w277</head></token>
+<token id="\"><lemma>w288</lemma><head>w277</head></token>
+<token id="\"><lemma>w289</lemma><head>w277</head></token>
+<token id="\"><lemma>w290</lemma><head>w277</head></token>
+</sentence>
+<sentence text="Their search engine was originally nicknamed , " BackRub " because the system checked backlinks to estimate a site's importance . ">
+<token id="w294"><lemma>they</lemma><head>w295</head><relation head=w296>pos</relation></token>
+<token id="w295"><lemma>search</lemma><head>w296</head></token>
+<token id="w296"><lemma>engine</lemma><head>w297</head><relation head=w299>obj</relation></token>
+<token id="w297"><lemma>be</lemma><head>w299</head></token>
+<token id="w298"><lemma>originally</lemma><head>w299</head><relation head=w299>man</relation></token>
+<token id="w299"><lemma>nickname</lemma><head>w293</head></token>
+<token id="w300"><lemma>,</lemma><head>w293</head></token>
+<token id="w301"><lemma>"</lemma><head>w293</head></token>
+<token id="w302"><lemma>backrub</lemma><head>w299</head><relation head=w299>nam</relation></token>
+<token id="w303"><lemma>"</lemma><head>w299</head></token>
+<token id="w304"><lemma>because</lemma><head>w307</head></token>
+<token id="w305"><lemma>the</lemma><head>w306</head></token>
+<token id="w306"><lemma>system</lemma><head>w307</head><relation head=w307>agt</relation></token>
+<token id="w307"><lemma>check</lemma><head>w307</head><relation head=w299>rsn</relation></token>
+<token id="w308"><lemma>backlinks</lemma><head>w307</head><relation head=w307>obj</relation></token>
+<token id="w309"><lemma>to</lemma><head>w310</head></token>
+<token id="w310"><lemma>estimate</lemma><head>w308</head></token>
+<token id="w311"><lemma>a</lemma><head>w313</head></token>
+<token id="w312"><lemma>site</lemma><head>w313</head></token>
+<token id="w313"><lemma>importance</lemma><head>w310</head><relation head=w307>pur</relation></token>
+<token id="w314"><lemma>.</lemma><head>w310</head></token>
+</sentence>
+<sentence text="A small search engine called Rankdex was already exploring a similar strategy . ">
+<token id="w317"><lemma>a</lemma><head>w320</head><relation head=w319>mod</relation></token>
+<token id="w318"><lemma>small</lemma><head>w319</head><relation head=w319>mod</relation></token>
+<token id="w319"><lemma>search</lemma><head>w320</head><relation head=w321>aoj</relation></token>
+<token id="w320"><lemma>engine</lemma><head>w323</head><relation head=w325>agt</relation></token>
+<token id="w321"><lemma>call</lemma><head>w320</head></token>
+<token id="w322"><lemma>rankdex</lemma><head>w321</head><relation head=w321>obj</relation></token>
+<token id="w323"><lemma>be</lemma><head>w325</head></token>
+<token id="w324"><lemma>already</lemma><head>w325</head><relation head=w325>man</relation></token>
+<token id="w325"><lemma>explore</lemma><head>w316</head></token>
+<token id="w326"><lemma>a</lemma><head>w328</head></token>
+<token id="w327"><lemma>similar</lemma><head>w328</head><relation head=w328>mod</relation></token>
+<token id="w328"><lemma>strategy</lemma><head>w325</head><relation head=w325>obj</relation></token>
+<token id="w329"><lemma>.</lemma><head>w325</head></token>
+</sentence>
+<sentence text="Convinced that the pages with the most links to them from other highly relevant web pages must be the most relevant pages associated with the search , Page and Brin tested their thesis as part of their studies , and laid the foundation for their search engine . ">
+<token id="w332"><lemma>convinced</lemma><head>w325</head></token>
+<token id="w333"><lemma>that</lemma><head>w349</head></token>
+<token id="w334"><lemma>the</lemma><head>w335</head></token>
+<token id="w335"><lemma>page</lemma><head>w348</head><relation head=w353>aoj</relation></token>
+<token id="w336"><lemma>with</lemma><head>w335</head></token>
+<token id="w337"><lemma>the</lemma><head>w339</head></token>
+<token id="w338"><lemma>many</lemma><head>w339</head><relation head=w339>mod</relation></token>
+<token id="w339"><lemma>link</lemma><head>w336</head><relation head=w335>mod</relation></token>
+<token id="w340"><lemma>to</lemma><head>w339</head></token>
+<token id="w341"><lemma>they</lemma><head>w340</head><relation head=w339>to</relation></token>
+<token id="w342"><lemma>from</lemma><head>w340</head></token>
+<token id="w343"><lemma>other</lemma><head>w347</head></token>
+<token id="w344"><lemma>highly</lemma><head>w345</head></token>
+<token id="w345"><lemma>relevant</lemma><head>w346</head></token>
+<token id="w346"><lemma>web</lemma><head>w347</head></token>
+<token id="w347"><lemma>page</lemma><head>w342</head><relation head=w341>fmt</relation></token>
+<token id="w348"><lemma>must</lemma><head>w349</head></token>
+<token id="w349"><lemma>be</lemma><head>w349</head><relation head=w332>obj</relation></token>
+<token id="w350"><lemma>the</lemma><head>w353</head></token>
+<token id="w351"><lemma>much</lemma><head>w352</head></token>
+<token id="w352"><lemma>relevant</lemma><head>w353</head></token>
+<token id="w353"><lemma>page</lemma><head>w349</head></token>
+<token id="w354"><lemma>associate</lemma><head>w353</head></token>
+<token id="w355"><lemma>with</lemma><head>w354</head></token>
+<token id="w356"><lemma>the</lemma><head>w357</head></token>
+<token id="w357"><lemma>search</lemma><head>w355</head></token>
+<token id="w358"><lemma>,</lemma><head>w355</head></token>
+<token id="w359"><lemma>page</lemma><head>w354</head><relation head=w332>aoj</relation></token>
+<token id="w360"><lemma>and</lemma><head>w354</head></token>
+<token id="w361"><lemma>brin</lemma><head>w362</head></token>
+<token id="w362"><lemma>test</lemma><head>w354</head></token>
+<token id="w363"><lemma>they</lemma><head>w364</head></token>
+<token id="w364"><lemma>thesis</lemma><head>w362</head></token>
+<token id="w365"><lemma>as</lemma><head>w362</head></token>
+<token id="w366"><lemma>part</lemma><head>w365</head></token>
+<token id="w367"><lemma>of</lemma><head>w366</head></token>
+<token id="w368"><lemma>they</lemma><head>w369</head></token>
+<token id="w369"><lemma>study</lemma><head>w367</head></token>
+<token id="w370"><lemma>,</lemma><head>w367</head></token>
+<token id="w371"><lemma>and</lemma><head>w362</head></token>
+<token id="w372"><lemma>lay</lemma><head>w362</head></token>
+<token id="w373"><lemma>the</lemma><head>w374</head></token>
+<token id="w374"><lemma>foundation</lemma><head>w372</head></token>
+<token id="w375"><lemma>for</lemma><head>w372</head></token>
+<token id="w376"><lemma>they</lemma><head>w377</head></token>
+<token id="w377"><lemma>search</lemma><head>w378</head></token>
+<token id="w378"><lemma>engine</lemma><head>w375</head></token>
+<token id="w379"><lemma>.</lemma><head>w375</head></token>
+</sentence>
+<sentence text="Originally the search engine used the Stanford University website with the domain google.stanford.edu . ">
+<token id="w382"><lemma>originally</lemma><head>w386</head><relation head=w386>tim</relation></token>
+<token id="w383"><lemma>the</lemma><head>w385</head></token>
+<token id="w384"><lemma>search</lemma><head>w385</head><relation head=w385>mod</relation></token>
+<token id="w385"><lemma>engine</lemma><head>w386</head><relation head=w386>agt</relation></token>
+<token id="w386"><lemma>use</lemma><head>w381</head></token>
+<token id="w387"><lemma>the</lemma><head>w390</head></token>
+<token id="w388"><lemma>stanford</lemma><head>w389</head></token>
+<token id="w389"><lemma>university</lemma><head>w390</head><relation head=w390>mod</relation></token>
+<token id="w390"><lemma>website</lemma><head>w386</head><relation head=w386>obj</relation><relation head=w393>aoj</relation></token>
+<token id="w391"><lemma>with</lemma><head>w386</head></token>
+<token id="w392"><lemma>the</lemma><head>w394</head></token>
+<token id="w393"><lemma>domain</lemma><head>w394</head></token>
+<token id="w394"><lemma>google.stanford.edu</lemma><head>w391</head><relation head=w393>nam</relation></token>
+<token id="w395"><lemma>.</lemma><head>w391</head></token>
+</sentence>
+<sentence text="The domain google.com was registered on September 15 , 1997 , and the company was incorporated as Google Inc. on September 7 , 1998 at a friend's garage in Menlo Park , California . ">
+<token id="w398"><lemma>the</lemma><head>w400</head></token>
+<token id="w399"><lemma>domain</lemma><head>w400</head><relation head=w402>obj</relation></token>
+<token id="w400"><lemma>google.com</lemma><head>w401</head><relation head=w399>nam</relation></token>
+<token id="w401"><lemma>be</lemma><head>w402</head></token>
+<token id="w402"><lemma>register</lemma><head>w397</head></token>
+<token id="w403"><lemma>on</lemma><head>w402</head></token>
+<token id="w404"><lemma>september</lemma><head>w402</head><relation head=w402>tim</relation></token>
+<token id="w405"><lemma>15</lemma><head>w404</head></token>
+<token id="w406"><lemma>,</lemma><head>w404</head></token>
+<token id="w407"><lemma>1997</lemma><head>w405</head></token>
+<token id="w408"><lemma>,</lemma><head>w405</head></token>
+<token id="w409"><lemma>and</lemma><head>w402</head></token>
+<token id="w410"><lemma>the</lemma><head>w411</head></token>
+<token id="w411"><lemma>company</lemma><head>w412</head><relation head=w413>obj</relation><relation head=w415>aoj</relation></token>
+<token id="w412"><lemma>be</lemma><head>w413</head></token>
+<token id="w413"><lemma>incorporate</lemma><head>w402</head><relation head=w402>seq</relation></token>
+<token id="w414"><lemma>as</lemma><head>w413</head></token>
+<token id="w415"><lemma>google</lemma><head>w414</head></token>
+<token id="w416"><lemma>inc.</lemma><head>w415</head></token>
+<token id="w417"><lemma>on</lemma><head>w413</head></token>
+<token id="w418"><lemma>september</lemma><head>w413</head><relation head=w413>tim</relation></token>
+<token id="w419"><lemma>7</lemma><head>w418</head></token>
+<token id="w420"><lemma>,</lemma><head>w418</head></token>
+<token id="w421"><lemma>1998</lemma><head>w419</head></token>
+<token id="w422"><lemma>at</lemma><head>w419</head></token>
+<token id="w423"><lemma>a</lemma><head>w425</head></token>
+<token id="w424"><lemma>friend</lemma><head>w425</head><relation head=w425>pos</relation></token>
+<token id="w425"><lemma>garage</lemma><head>w422</head><relation head=w413>plc</relation></token>
+<token id="w426"><lemma>in</lemma><head>w425</head></token>
+<token id="w427"><lemma>menlo</lemma><head>w428</head></token>
+<token id="w428"><lemma>park</lemma><head>w426</head><relation head=w425>plc</relation></token>
+<token id="w429"><lemma>,</lemma><head>w426</head></token>
+<token id="w430"><lemma>california</lemma><head>w428</head><relation head=w428>plc</relation></token>
+<token id="w431"><lemma>.</lemma><head>w428</head></token>
+</sentence>
+<sentence text="The total initial investment raised for the new company eventually amounted to almost $1.1 million , including a $100,000 check by Andy Bechtolsheim , one of the founders of Sun Microsystems . ">
+<token id="w434"><lemma>the</lemma><head>w437</head></token>
+<token id="w435"><lemma>total</lemma><head>w436</head><relation head=w437>mod</relation></token>
+<token id="w436"><lemma>initial</lemma><head>w437</head><relation head=w437>mod</relation></token>
+<token id="w437"><lemma>investment</lemma><head>w444</head><relation head=w444>agt</relation></token>
+<token id="w438"><lemma>raise</lemma><head>w437</head></token>
+<token id="w439"><lemma>for</lemma><head>w438</head></token>
+<token id="w440"><lemma>the</lemma><head>w442</head></token>
+<token id="w441"><lemma>new</lemma><head>w442</head></token>
+<token id="w442"><lemma>company</lemma><head>w439</head><relation head=w438>ben</relation></token>
+<token id="w443"><lemma>eventually</lemma><head>w438</head></token>
+<token id="w444"><lemma>amount</lemma><head>w433</head></token>
+<token id="w445"><lemma>to</lemma><head>w444</head></token>
+<token id="w446"><lemma>almost</lemma><head>w444</head></token>
+<token id="w447"><lemma>$1.1</lemma><head>w445</head><relation head=w444>gol</relation></token>
+<token id="w448"><lemma>million</lemma><head>w447</head></token>
+<token id="w449"><lemma>,</lemma><head>w447</head></token>
+<token id="w450"><lemma>include</lemma><head>w444</head></token>
+<token id="w451"><lemma>a</lemma><head>w453</head></token>
+<token id="w452"><lemma>$100,000</lemma><head>w453</head></token>
+<token id="w453"><lemma>check</lemma><head>w450</head></token>
+<token id="w454"><lemma>by</lemma><head>w450</head></token>
+<token id="w455"><lemma>andy</lemma><head>w456</head></token>
+<token id="w456"><lemma>bechtolsheim</lemma><head>w454</head></token>
+<token id="w457"><lemma>,</lemma><head>w454</head></token>
+<token id="w458"><lemma>one</lemma><head>w456</head></token>
+<token id="w459"><lemma>of</lemma><head>w458</head></token>
+<token id="w460"><lemma>the</lemma><head>w461</head></token>
+<token id="w461"><lemma>founder</lemma><head>w459</head></token>
+<token id="w462"><lemma>of</lemma><head>w461</head></token>
+<token id="w463"><lemma>sun</lemma><head>w464</head></token>
+<token id="w464"><lemma>microsystem</lemma><head>w462</head></token>
+<token id="w465"><lemma>.</lemma><head>w462</head></token>
+</sentence>
+<sentence text="In March 1998 , the company moved into offices in Palo Alto , home to several other noted Silicon Valley technology startups . ">
+<token id="w468"><lemma>in</lemma><head>w462</head></token>
+<token id="w469"><lemma>march</lemma><head>w470</head></token>
+<token id="w470"><lemma>1998</lemma><head>w468</head></token>
+<token id="w471"><lemma>,</lemma><head>w468</head></token>
+<token id="w472"><lemma>the</lemma><head>w473</head></token>
+<token id="w473"><lemma>company</lemma><head>w473</head><relation head=w474>agt</relation></token>
+<token id="w474"><lemma>move</lemma><head>w473</head></token>
+<token id="w475"><lemma>into</lemma><head>w474</head></token>
+<token id="w476"><lemma>office</lemma><head>w475</head><relation head=w474>plt</relation></token>
+<token id="w477"><lemma>in</lemma><head>w474</head></token>
+<token id="w478"><lemma>palo</lemma><head>w479</head><relation head=w476>plc</relation><relation head=w481>aoj</relation></token>
+<token id="w479"><lemma>alto</lemma><head>w477</head></token>
+<token id="w480"><lemma>,</lemma><head>w477</head></token>
+<token id="w481"><lemma>home</lemma><head>w479</head></token>
+<token id="w482"><lemma>to</lemma><head>w481</head></token>
+<token id="w483"><lemma>several</lemma><head>w481</head><relation head=w489>mod</relation></token>
+<token id="w484"><lemma>other</lemma><head>w482</head><relation head=w489>mod</relation></token>
+<token id="w485"><lemma>noted</lemma><head>w486</head><relation head=w489>mod</relation></token>
+<token id="w486"><lemma>silicon</lemma><head>w487</head></token>
+<token id="w487"><lemma>valley</lemma><head>w488</head><relation head=w488>mod</relation></token>
+<token id="w488"><lemma>technology</lemma><head>w489</head><relation head=w489>mod</relation></token>
+<token id="w489"><lemma>startup</lemma><head>w489</head><relation head=w481>pos</relation></token>
+<token id="w490"><lemma>.</lemma><head>w489</head></token>
+</sentence>
+<sentence text="After quickly outgrowing two other sites , the company leased a complex of buildings in Mountain View at 1600 Amphitheatre Parkway from Silicon Graphics ( SGI ) in 2003 . ">
+<token id="w493"><lemma>after</lemma><head>w502</head></token>
+<token id="w494"><lemma>quickly</lemma><head>w502</head><relation head=w495>man</relation></token>
+<token id="w495"><lemma>outgrowing</lemma><head>w493</head><relation head=w502>tim</relation></token>
+<token id="w496"><lemma>two</lemma><head>w497</head><relation head=w498>qua</relation></token>
+<token id="w497"><lemma>other</lemma><head>w498</head><relation head=w498>mod</relation></token>
+<token id="w498"><lemma>site</lemma><head>w498</head><relation head=w495>bas</relation></token>
+<token id="w499"><lemma>,</lemma><head>w498</head></token>
+<token id="w500"><lemma>the</lemma><head>w501</head></token>
+<token id="w501"><lemma>company</lemma><head>w502</head><relation head=w502>agt</relation></token>
+<token id="w502"><lemma>lease</lemma><head>w492</head></token>
+<token id="w503"><lemma>a</lemma><head>w504</head></token>
+<token id="w504"><lemma>complex</lemma><head>w502</head><relation head=w502>obj</relation></token>
+<token id="w505"><lemma>of</lemma><head>w504</head></token>
+<token id="w506"><lemma>building</lemma><head>w505</head></token>
+<token id="w507"><lemma>in</lemma><head>w502</head></token>
+<token id="w508"><lemma>mountain</lemma><head>w509</head></token>
+<token id="w509"><lemma>view</lemma><head>w507</head></token>
+<token id="w510"><lemma>at</lemma><head>w507</head></token>
+<token id="w511"><lemma>1600</lemma><head>w510</head></token>
+<token id="w512"><lemma>amphitheatre</lemma><head>w513</head></token>
+<token id="w513"><lemma>parkway</lemma><head>w513</head></token>
+<token id="w514"><lemma>from</lemma><head>w502</head></token>
+<token id="w515"><lemma>silicon</lemma><head>w516</head></token>
+<token id="w516"><lemma>graphics</lemma><head>w514</head></token>
+<token id="w517"><lemma>(</lemma><head>w514</head></token>
+<token id="w518"><lemma>sgi</lemma><head>w516</head></token>
+<token id="w519"><lemma>)</lemma><head>w516</head></token>
+<token id="w520"><lemma>in</lemma><head>w502</head></token>
+<token id="w521"><lemma>2003</lemma><head>w520</head></token>
+<token id="w522"><lemma>.</lemma><head>w520</head></token>
+</sentence>
+<sentence text="The company has remained at this location ever since , and the complex has since become known as the Googleplex ( a play on the word googolplex , a 1 followed by a googol zeros ) . ">
+<token id="w525"><lemma>the</lemma><head>w526</head></token>
+<token id="w526"><lemma>company</lemma><head>w527</head><relation head=w528>aoj</relation></token>
+<token id="w527"><lemma>have</lemma><head>w528</head></token>
+<token id="w528"><lemma>remain</lemma><head>w524</head><relation head=w540>and</relation></token>
+<token id="w529"><lemma>at</lemma><head>w528</head></token>
+<token id="w530"><lemma>this</lemma><head>w531</head></token>
+<token id="w531"><lemma>location</lemma><head>w529</head><relation head=w528>plc</relation></token>
+<token id="w532"><lemma>ever</lemma><head>w528</head><relation head=w528>tim</relation></token>
+<token id="w533"><lemma>since</lemma><head>w528</head></token>
+<token id="w534"><lemma>,</lemma><head>w528</head></token>
+<token id="w535"><lemma>and</lemma><head>w528</head></token>
+<token id="w536"><lemma>the</lemma><head>w537</head></token>
+<token id="w537"><lemma>complex</lemma><head>w538</head><relation head=w540>aoj</relation></token>
+<token id="w538"><lemma>have</lemma><head>w540</head></token>
+<token id="w539"><lemma>since</lemma><head>w540</head></token>
+<token id="w540"><lemma>become</lemma><head>w528</head></token>
+<token id="w541"><lemma>known</lemma><head>w540</head><relation head=w540>gol</relation></token>
+<token id="w542"><lemma>as</lemma><head>w541</head></token>
+<token id="w543"><lemma>the</lemma><head>w544</head></token>
+<token id="w544"><lemma>googleplex</lemma><head>w542</head><relation head=w541>obj</relation></token>
+<token id="w545"><lemma>(</lemma><head>w542</head></token>
+<token id="w546"><lemma>a</lemma><head>w547</head></token>
+<token id="w547"><lemma>play</lemma><head>w547</head><relation head=w544>equ</relation><relation head=w548>aoj</relation></token>
+<token id="w548"><lemma>on</lemma><head>w540</head></token>
+<token id="w549"><lemma>the</lemma><head>w551</head></token>
+<token id="w550"><lemma>word</lemma><head>w551</head></token>
+<token id="w551"><lemma>googolplex</lemma><head>w548</head><relation head=w548>obj</relation></token>
+<token id="w552"><lemma>,</lemma><head>w548</head></token>
+<token id="w553"><lemma>a</lemma><head>w548</head></token>
+<token id="w554"><lemma>1</lemma><head>w548</head></token>
+<token id="w555"><lemma>follow</lemma><head>w548</head></token>
+<token id="w556"><lemma>by</lemma><head>w555</head></token>
+<token id="w557"><lemma>a</lemma><head>w559</head></token>
+<token id="w558"><lemma>googol</lemma><head>w559</head></token>
+<token id="w559"><lemma>zero</lemma><head>w556</head></token>
+<token id="w560"><lemma>)</lemma><head>w556</head></token>
+<token id="w561"><lemma>.</lemma><head>w556</head></token>
+</sentence>
+<sentence text="In 2006 , Google bought the property from SGI for $319 million . ">
+<token id="w564"><lemma>in</lemma><head>w568</head></token>
+<token id="w565"><lemma>2006</lemma><head>w564</head><relation head=w568>tim</relation></token>
+<token id="w566"><lemma>,</lemma><head>w564</head></token>
+<token id="w567"><lemma>google</lemma><head>w568</head><relation head=w568>agt</relation></token>
+<token id="w568"><lemma>buy</lemma><head>w563</head></token>
+<token id="w569"><lemma>the</lemma><head>w570</head></token>
+<token id="w570"><lemma>property</lemma><head>w568</head><relation head=w568>obj</relation></token>
+<token id="w571"><lemma>from</lemma><head>w568</head></token>
+<token id="w572"><lemma>sgi</lemma><head>w571</head><relation head=w568>src</relation></token>
+<token id="w573"><lemma>for</lemma><head>w568</head></token>
+<token id="w574"><lemma>$319</lemma><head>w573</head><relation head=w568>man</relation></token>
+<token id="w575"><lemma>million</lemma><head>w574</head></token>
+<token id="w576"><lemma>.</lemma><head>w574</head></token>
+</sentence>
+<sentence text="The Google search engine attracted a loyal following among the growing number of Internet users , who liked its simple design . ">
+<token id="w579"><lemma>the</lemma><head>w582</head></token>
+<token id="w580"><lemma>google</lemma><head>w581</head></token>
+<token id="w581"><lemma>search</lemma><head>w582</head></token>
+<token id="w582"><lemma>engine</lemma><head>w583</head><relation head=w583>agt</relation></token>
+<token id="w583"><lemma>attract</lemma><head>w578</head></token>
+<token id="w584"><lemma>a</lemma><head>w586</head></token>
+<token id="w585"><lemma>loyal</lemma><head>w586</head><relation head=w586>mod</relation></token>
+<token id="w586"><lemma>following</lemma><head>w583</head><relation head=w583>obj</relation></token>
+<token id="w587"><lemma>among</lemma><head>w583</head></token>
+<token id="w588"><lemma>the</lemma><head>w590</head></token>
+<token id="w589"><lemma>growing</lemma><head>w590</head><relation head=w590>mod</relation></token>
+<token id="w590"><lemma>number</lemma><head>w587</head><relation head=w593>mod</relation></token>
+<token id="w591"><lemma>of</lemma><head>w590</head></token>
+<token id="w592"><lemma>internet</lemma><head>w593</head><relation head=w593>mod</relation></token>
+<token id="w593"><lemma>user</lemma><head>w591</head><relation head=w586>pof</relation><relation head=w596>agt</relation></token>
+<token id="w594"><lemma>,</lemma><head>w591</head></token>
+<token id="w595"><lemma>who</lemma><head>w596</head></token>
+<token id="w596"><lemma>like</lemma><head>w593</head></token>
+<token id="w597"><lemma>it</lemma><head>w598</head><relation head=w599>pos</relation></token>
+<token id="w598"><lemma>simple</lemma><head>w599</head><relation head=w599>mod</relation></token>
+<token id="w599"><lemma>design</lemma><head>w596</head><relation head=w596>obj</relation></token>
+<token id="w600"><lemma>.</lemma><head>w596</head></token>
+</sentence>
+<sentence text="In 2000 , Google began selling advertisements associated with search keywords . ">
+<token id="w603"><lemma>in</lemma><head>w607</head></token>
+<token id="w604"><lemma>2000</lemma><head>w603</head><relation head=w607>tim</relation></token>
+<token id="w605"><lemma>,</lemma><head>w603</head></token>
+<token id="w606"><lemma>google</lemma><head>w607</head><relation head=w607>agt</relation><relation head=w608>agt</relation></token>
+<token id="w607"><lemma>begin</lemma><head>w602</head></token>
+<token id="w608"><lemma>sell</lemma><head>w607</head><relation head=w607>obj</relation></token>
+<token id="w609"><lemma>advertisement</lemma><head>w608</head><relation head=w608>obj</relation><relation head=w610>aoj</relation></token>
+<token id="w610"><lemma>associate</lemma><head>w608</head></token>
+<token id="w611"><lemma>with</lemma><head>w610</head></token>
+<token id="w612"><lemma>search</lemma><head>w613</head><relation head=w613>mod</relation></token>
+<token id="w613"><lemma>keyword</lemma><head>w611</head><relation head=w610>obj</relation></token>
+<token id="w614"><lemma>.</lemma><head>w611</head></token>
+</sentence>
+<sentence text="The ads were text-based to maintain an uncluttered page design and to maximize page loading speed . ">
+<token id="w617"><lemma>the</lemma><head>w618</head></token>
+<token id="w618"><lemma>ad</lemma><head>w619</head><relation head=w620>aoj</relation></token>
+<token id="w619"><lemma>be</lemma><head>w616</head></token>
+<token id="w620"><lemma>text-based</lemma><head>w619</head></token>
+<token id="w621"><lemma>to</lemma><head>w622</head></token>
+<token id="w622"><lemma>maintain</lemma><head>w620</head></token>
+<token id="w623"><lemma>an</lemma><head>w626</head></token>
+<token id="w624"><lemma>uncluttered</lemma><head>w625</head><relation head=w626>mod</relation></token>
+<token id="w625"><lemma>page</lemma><head>w626</head><relation head=w626>mod</relation></token>
+<token id="w626"><lemma>design</lemma><head>w622</head><relation head=w622>obj</relation></token>
+<token id="w627"><lemma>and</lemma><head>w622</head></token>
+<token id="w628"><lemma>to</lemma><head>w629</head></token>
+<token id="w629"><lemma>maximize</lemma><head>w622</head><relation head=w620>gol</relation></token>
+<token id="w630"><lemma>page</lemma><head>w631</head><relation head=w632>mod</relation></token>
+<token id="w631"><lemma>loading</lemma><head>w632</head><relation head=w632>mod</relation></token>
+<token id="w632"><lemma>speed</lemma><head>w629</head><relation head=w629>obj</relation></token>
+<token id="w633"><lemma>.</lemma><head>w629</head></token>
+</sentence>
+<sentence text="Keywords were sold based on a combination of price bid and clickthroughs , with bidding starting at $ . 05 per click . ">
+<token id="w636"><lemma>keyword</lemma><head>w637</head><relation head=w638>obj</relation></token>
+<token id="w637"><lemma>be</lemma><head>w638</head></token>
+<token id="w638"><lemma>sell</lemma><head>w635</head></token>
+<token id="w639"><lemma>based</lemma><head>w638</head></token>
+<token id="w640"><lemma>on</lemma><head>w638</head></token>
+<token id="w641"><lemma>a</lemma><head>w642</head></token>
+<token id="w642"><lemma>combination</lemma><head>w640</head><relation head=w638>met</relation><relation head=w650>aoj</relation></token>
+<token id="w643"><lemma>of</lemma><head>w642</head></token>
+<token id="w644"><lemma>price</lemma><head>w645</head><relation head=w645>mod</relation></token>
+<token id="w645"><lemma>bid</lemma><head>w643</head><relation head=w642>mod</relation></token>
+<token id="w646"><lemma>and</lemma><head>w645</head></token>
+<token id="w647"><lemma>clickthroughs</lemma><head>w645</head><relation head=w645>and</relation></token>
+<token id="w648"><lemma>,</lemma><head>w645</head></token>
+<token id="w649"><lemma>with</lemma><head>w645</head></token>
+<token id="w650"><lemma>bidding</lemma><head>w649</head><relation head=w651>aoj</relation></token>
+<token id="w651"><lemma>start</lemma><head>w650</head></token>
+<token id="w652"><lemma>at</lemma><head>w651</head></token>
+<token id="w653"><lemma>$</lemma><head>w651</head><relation head=w651>src</relation></token>
+<token id="w654"><lemma>.</lemma><head>w651</head></token>
+<token id="w655"><lemma>05</lemma><head>w651</head></token>
+<token id="w656"><lemma>per</lemma><head>w651</head></token>
+<token id="w657"><lemma>click</lemma><head>w656</head><relation head=w653>per</relation></token>
+<token id="w658"><lemma>.</lemma><head>w656</head></token>
+</sentence>
+<sentence text="This model of selling keyword advertising was pioneered by Goto.com ( later renamed Overture Services , before being acquired by Yahoo ! ">
+<token id="w661"><lemma>this</lemma><head>w662</head></token>
+<token id="w662"><lemma>model</lemma><head>w667</head><relation head=w668>obj</relation><relation head=w664>aoj</relation></token>
+<token id="w663"><lemma>of</lemma><head>w662</head></token>
+<token id="w664"><lemma>sell</lemma><head>w663</head></token>
+<token id="w665"><lemma>keyword</lemma><head>w666</head></token>
+<token id="w666"><lemma>advertising</lemma><head>w664</head><relation head=w664>obj</relation></token>
+<token id="w667"><lemma>be</lemma><head>w668</head></token>
+<token id="w668"><lemma>pioneer</lemma><head>w660</head></token>
+<token id="w669"><lemma>by</lemma><head>w668</head></token>
+<token id="w670"><lemma>goto.com</lemma><head>w669</head><relation head=w668>agt</relation><relation head=w673>obj</relation></token>
+<token id="w671"><lemma>(</lemma><head>w669</head></token>
+<token id="w672"><lemma>late</lemma><head>w669</head></token>
+<token id="w673"><lemma>renamed</lemma><head>w674</head><relation head=w673>obj</relation></token>
+<token id="w674"><lemma>overture</lemma><head>w675</head></token>
+<token id="w675"><lemma>service</lemma><head>w675</head></token>
+<token id="w676"><lemma>,</lemma><head>w675</head></token>
+<token id="w677"><lemma>before</lemma><head>w675</head></token>
+<token id="w678"><lemma>be</lemma><head>w679</head></token>
+<token id="w679"><lemma>acquire</lemma><head>w677</head><relation head=w673>tim</relation></token>
+<token id="w680"><lemma>by</lemma><head>w668</head></token>
+<token id="w681"><lemma>yahoo</lemma><head>w680</head><relation head=w679>agt</relation></token>
+<token id="w682"><lemma>!</lemma><head>w680</head></token>
+</sentence>
+<sentence text="and rebranded as Yahoo ! ">
+<token id="w685"><lemma>and</lemma><head>w680</head></token>
+<token id="w686"><lemma>rebranded</lemma><head>w680</head></token>
+<token id="w687"><lemma>as</lemma><head>w686</head><relation head=w686>obj</relation></token>
+<token id="w688"><lemma>yahoo</lemma><head>w687</head></token>
+<token id="w689"><lemma>!</lemma><head>w687</head></token>
+</sentence>
+<sentence text="Search Marketing ) . ">
+<token id="w692"><lemma>search</lemma><head>w691</head><relation head=w693>mod</relation></token>
+<token id="w693"><lemma>marketing</lemma><head>w692</head></token>
+<token id="w694"><lemma>)</lemma><head>w692</head></token>
+<token id="w695"><lemma>.</lemma><head>w692</head></token>
+</sentence>
+<sentence text="While many of its dot-com rivals failed in the new Internet marketplace , Google quietly rose in stature while generating revenue . ">
+<token id="w698"><lemma>while</lemma><head>w704</head></token>
+<token id="w699"><lemma>many</lemma><head>w704</head></token>
+<token id="w700"><lemma>of</lemma><head>w699</head></token>
+<token id="w701"><lemma>it</lemma><head>w702</head><relation head=w703>pof</relation></token>
+<token id="w702"><lemma>dot-com</lemma><head>w703</head><relation head=w703>mod</relation></token>
+<token id="w703"><lemma>rival</lemma><head>w700</head><relation head=w704>agt</relation><relation head=w699>mod</relation></token>
+<token id="w704"><lemma>fail</lemma><head>w700</head><relation head=w713>tim</relation></token>
+<token id="w705"><lemma>in</lemma><head>w704</head></token>
+<token id="w706"><lemma>the</lemma><head>w709</head></token>
+<token id="w707"><lemma>new</lemma><head>w708</head><relation head=w709>mod</relation></token>
+<token id="w708"><lemma>internet</lemma><head>w709</head><relation head=w709>mod</relation></token>
+<token id="w709"><lemma>marketplace</lemma><head>w705</head><relation head=w703>scn</relation></token>
+<token id="w710"><lemma>,</lemma><head>w705</head></token>
+<token id="w711"><lemma>google</lemma><head>w713</head><relation head=w713>agt</relation></token>
+<token id="w712"><lemma>quietly</lemma><head>w713</head></token>
+<token id="w713"><lemma>rise</lemma><head>w713</head><relation head=w717>coo</relation></token>
+<token id="w714"><lemma>in</lemma><head>w713</head></token>
+<token id="w715"><lemma>stature</lemma><head>w714</head><relation head=w713>obj</relation></token>
+<token id="w716"><lemma>while</lemma><head>w717</head></token>
+<token id="w717"><lemma>generate</lemma><head>w713</head></token>
+<token id="w718"><lemma>revenue</lemma><head>w717</head><relation head=w717>obj</relation></token>
+<token id="w719"><lemma>.</lemma><head>w717</head></token>
+</sentence>
+<sentence text="The name " Google " originated from a misspelling of " googol , " which refers to 10100 ( the number represented by a 1 followed by one-hundred zeros ) . ">
+<token id="w722"><lemma>the</lemma><head>w723</head></token>
+<token id="w723"><lemma>name</lemma><head>w723</head><relation head=w727>agt</relation></token>
+<token id="w724"><lemma>"</lemma><head>w723</head></token>
+<token id="w725"><lemma>google</lemma><head>w723</head><relation head=w723>nam</relation></token>
+<token id="w726"><lemma>"</lemma><head>w723</head></token>
+<token id="w727"><lemma>originate</lemma><head>w737</head></token>
+<token id="w728"><lemma>from</lemma><head>w727</head></token>
+<token id="w729"><lemma>a</lemma><head>w730</head></token>
+<token id="w730"><lemma>misspelling</lemma><head>w728</head><relation head=w733>mod</relation></token>
+<token id="w731"><lemma>of</lemma><head>w730</head></token>
+<token id="w732"><lemma>"</lemma><head>w730</head></token>
+<token id="w733"><lemma>googol</lemma><head>w731</head><relation head=w727>src</relation><relation head=w737>agt</relation></token>
+<token id="w734"><lemma>,</lemma><head>w731</head></token>
+<token id="w735"><lemma>"</lemma><head>w731</head></token>
+<token id="w736"><lemma>which</lemma><head>w737</head></token>
+<token id="w737"><lemma>refer</lemma><head>w721</head></token>
+<token id="w738"><lemma>to</lemma><head>w737</head></token>
+<token id="w739"><lemma>10100</lemma><head>w742</head><relation head=w737>obj</relation><relation head=w742>equ</relation></token>
+<token id="w740"><lemma>(</lemma><head>w742</head></token>
+<token id="w741"><lemma>the</lemma><head>w742</head></token>
+<token id="w742"><lemma>number</lemma><head>w738</head><relation head=w743>obj</relation></token>
+<token id="w743"><lemma>represent</lemma><head>w742</head></token>
+<token id="w744"><lemma>by</lemma><head>w743</head></token>
+<token id="w745"><lemma>a</lemma><head>w746</head><relation head=w746>qua</relation></token>
+<token id="w746"><lemma>1</lemma><head>w744</head><relation head=w743>man</relation><relation head=w747>obj</relation></token>
+<token id="w747"><lemma>follow</lemma><head>w746</head></token>
+<token id="w748"><lemma>by</lemma><head>w747</head></token>
+<token id="w749"><lemma>one-hundred</lemma><head>w750</head><relation head=w750>qua</relation></token>
+<token id="w750"><lemma>zero</lemma><head>w748</head><relation head=w747>aoj</relation></token>
+<token id="w751"><lemma>)</lemma><head>w748</head></token>
+<token id="w752"><lemma>.</lemma><head>w748</head></token>
+</sentence>
+<sentence text="Having found its way increasingly into everyday language , the verb , " google " , was added to the Merriam Webster Collegiate Dictionary and the Oxford English Dictionary in 2006 , meaning , " to use the Google search engine to obtain information on the Internet . " ">
+<token id="w755"><lemma>have</lemma><head>w756</head></token>
+<token id="w756"><lemma>find</lemma><head>w772</head><relation head=w772>rsn</relation></token>
+<token id="w757"><lemma>it</lemma><head>w758</head></token>
+<token id="w758"><lemma>way</lemma><head>w756</head><relation head=w756>obj</relation><relation head=w760>agt</relation></token>
+<token id="w759"><lemma>increasingly</lemma><head>w756</head><relation head=w760>man</relation></token>
+<token id="w760"><lemma>into</lemma><head>w756</head></token>
+<token id="w761"><lemma>everyday</lemma><head>w762</head><relation head=w762>mod</relation></token>
+<token id="w762"><lemma>language</lemma><head>w760</head><relation head=w760>gol</relation></token>
+<token id="w763"><lemma>,</lemma><head>w760</head></token>
+<token id="w764"><lemma>the</lemma><head>w765</head></token>
+<token id="w765"><lemma>verb</lemma><head>w771</head><relation head=w768>equ</relation><relation head=w772>obj</relation></token>
+<token id="w766"><lemma>,</lemma><head>w771</head></token>
+<token id="w767"><lemma>"</lemma><head>w771</head></token>
+<token id="w768"><lemma>google</lemma><head>w771</head></token>
+<token id="w769"><lemma>"</lemma><head>w771</head></token>
+<token id="w770"><lemma>,</lemma><head>w771</head></token>
+<token id="w771"><lemma>be</lemma><head>w771</head></token>
+<token id="w772"><lemma>add</lemma><head>w754</head></token>
+<token id="w773"><lemma>to</lemma><head>w772</head></token>
+<token id="w774"><lemma>the</lemma><head>w778</head></token>
+<token id="w775"><lemma>merriam</lemma><head>w776</head></token>
+<token id="w776"><lemma>webster</lemma><head>w777</head></token>
+<token id="w777"><lemma>collegiate</lemma><head>w778</head><relation head=w778>mod</relation></token>
+<token id="w778"><lemma>dictionary</lemma><head>w773</head><relation head=w772>scn</relation><relation head=w783>and</relation></token>
+<token id="w779"><lemma>and</lemma><head>w778</head></token>
+<token id="w780"><lemma>the</lemma><head>w783</head></token>
+<token id="w781"><lemma>oxford</lemma><head>w782</head></token>
+<token id="w782"><lemma>english</lemma><head>w783</head><relation head=w783>mod</relation></token>
+<token id="w783"><lemma>dictionary</lemma><head>w778</head></token>
+<token id="w784"><lemma>in</lemma><head>w783</head></token>
+<token id="w785"><lemma>2006</lemma><head>w784</head></token>
+<token id="w786"><lemma>,</lemma><head>w784</head></token>
+<token id="w787"><lemma>meaning</lemma><head>w784</head></token>
+<token id="w788"><lemma>,</lemma><head>w784</head></token>
+<token id="w789"><lemma>"</lemma><head>w784</head></token>
+<token id="w790"><lemma>to</lemma><head>w791</head></token>
+<token id="w791"><lemma>use</lemma><head>w791</head></token>
+<token id="w792"><lemma>the</lemma><head>w795</head></token>
+<token id="w793"><lemma>google</lemma><head>w794</head></token>
+<token id="w794"><lemma>search</lemma><head>w795</head></token>
+<token id="w795"><lemma>engine</lemma><head>w791</head></token>
+<token id="w796"><lemma>to</lemma><head>w797</head></token>
+<token id="w797"><lemma>obtain</lemma><head>w795</head></token>
+<token id="w798"><lemma>information</lemma><head>w797</head></token>
+<token id="w799"><lemma>on</lemma><head>w798</head></token>
+<token id="w800"><lemma>the</lemma><head>w801</head></token>
+<token id="w801"><lemma>internet</lemma><head>w799</head></token>
+<token id="w802"><lemma>.</lemma><head>w799</head></token>
+<token id="w803"><lemma>"</lemma><head>w799</head></token>
+</sentence>
+<sentence text="A patent describing part of Google's ranking mechanism ( PageRank ) was granted on September 4 , 2001 . ">
+<token id="w806"><lemma>a</lemma><head>w809</head><relation head=w807>qua</relation></token>
+<token id="w807"><lemma>patent</lemma><head>w808</head><relation head=w818>obj</relation><relation head=w808>aoj</relation></token>
+<token id="w808"><lemma>describing</lemma><head>w809</head></token>
+<token id="w809"><lemma>part</lemma><head>w817</head><relation head=w808>obj</relation></token>
+<token id="w810"><lemma>of</lemma><head>w809</head></token>
+<token id="w811"><lemma>google</lemma><head>w812</head><relation head=w813>pos</relation></token>
+<token id="w812"><lemma>ranking</lemma><head>w813</head><relation head=w813>mod</relation></token>
+<token id="w813"><lemma>mechanism</lemma><head>w810</head><relation head=w809>mod</relation></token>
+<token id="w814"><lemma>(</lemma><head>w810</head></token>
+<token id="w815"><lemma>pagerank</lemma><head>w813</head><relation head=w813>equ</relation></token>
+<token id="w816"><lemma>)</lemma><head>w813</head></token>
+<token id="w817"><lemma>be</lemma><head>w818</head></token>
+<token id="w818"><lemma>grant</lemma><head>w805</head></token>
+<token id="w819"><lemma>on</lemma><head>w818</head></token>
+<token id="w820"><lemma>september</lemma><head>w818</head><relation head=w818>tim</relation></token>
+<token id="w821"><lemma>4</lemma><head>w820</head></token>
+<token id="w822"><lemma>,</lemma><head>w820</head></token>
+<token id="w823"><lemma>2001</lemma><head>w821</head></token>
+<token id="w824"><lemma>.</lemma><head>w821</head></token>
+</sentence>
+<sentence text="The patent was officially assigned to Stanford University and lists Lawrence Page as the inventor . ">
+<token id="w827"><lemma>the</lemma><head>w828</head></token>
+<token id="w828"><lemma>patent</lemma><head>w829</head><relation head=w831>obj</relation></token>
+<token id="w829"><lemma>be</lemma><head>w831</head></token>
+<token id="w830"><lemma>officially</lemma><head>w831</head><relation head=w831>man</relation></token>
+<token id="w831"><lemma>assign</lemma><head>w826</head></token>
+<token id="w832"><lemma>to</lemma><head>w831</head></token>
+<token id="w833"><lemma>stanford</lemma><head>w834</head><relation head=w834>mod</relation></token>
+<token id="w834"><lemma>university</lemma><head>w832</head><relation head=w831>gol</relation></token>
+<token id="w835"><lemma>and</lemma><head>w831</head></token>
+<token id="w836"><lemma>list</lemma><head>w831</head><relation head=w831>and</relation></token>
+<token id="w837"><lemma>lawrence</lemma><head>w838</head></token>
+<token id="w838"><lemma>page</lemma><head>w836</head><relation head=w836>obj</relation><relation head=w841>aoj</relation></token>
+<token id="w839"><lemma>as</lemma><head>w836</head></token>
+<token id="w840"><lemma>the</lemma><head>w841</head></token>
+<token id="w841"><lemma>inventor</lemma><head>w839</head></token>
+<token id="w842"><lemma>.</lemma><head>w839</head></token>
+</sentence>
+<sentence text="The first funding for Google as a company was secured in the form of a USD100,000 contribution from Andy Bechtolsheim , co-founder of Sun Microsystems , given to a corporation which did not yet exist . ">
+<token id="w845"><lemma>the</lemma><head>w847</head></token>
+<token id="w846"><lemma>first</lemma><head>w847</head><relation head=w847>mod</relation></token>
+<token id="w847"><lemma>funding</lemma><head>w853</head><relation head=w854>obj</relation><relation head=w871>obj</relation></token>
+<token id="w848"><lemma>for</lemma><head>w847</head></token>
+<token id="w849"><lemma>google</lemma><head>w848</head><relation head=w847>ben</relation><relation head=w852>aoj</relation></token>
+<token id="w850"><lemma>as</lemma><head>w849</head></token>
+<token id="w851"><lemma>a</lemma><head>w852</head></token>
+<token id="w852"><lemma>company</lemma><head>w850</head></token>
+<token id="w853"><lemma>be</lemma><head>w854</head></token>
+<token id="w854"><lemma>secure</lemma><head>w844</head></token>
+<token id="w855"><lemma>in</lemma><head>w854</head></token>
+<token id="w856"><lemma>the</lemma><head>w857</head></token>
+<token id="w857"><lemma>form</lemma><head>w855</head></token>
+<token id="w858"><lemma>of</lemma><head>w857</head></token>
+<token id="w859"><lemma>a</lemma><head>w861</head></token>
+<token id="w860"><lemma>usd100,000</lemma><head>w861</head><relation head=w861>qua</relation></token>
+<token id="w861"><lemma>contribution</lemma><head>w858</head><relation head=w857>mod</relation></token>
+<token id="w862"><lemma>from</lemma><head>w854</head></token>
+<token id="w863"><lemma>andy</lemma><head>w864</head></token>
+<token id="w864"><lemma>bechtolsheim</lemma><head>w862</head><relation head=w861>src</relation><relation head=w866>aoj</relation></token>
+<token id="w865"><lemma>,</lemma><head>w862</head></token>
+<token id="w866"><lemma>co-founder</lemma><head>w862</head></token>
+<token id="w867"><lemma>of</lemma><head>w866</head></token>
+<token id="w868"><lemma>sun</lemma><head>w869</head></token>
+<token id="w869"><lemma>microsystem</lemma><head>w867</head><relation head=w866>mod</relation></token>
+<token id="w870"><lemma>,</lemma><head>w867</head></token>
+<token id="w871"><lemma>give</lemma><head>w869</head></token>
+<token id="w872"><lemma>to</lemma><head>w871</head></token>
+<token id="w873"><lemma>a</lemma><head>w874</head><relation head=w874>qua</relation></token>
+<token id="w874"><lemma>corporation</lemma><head>w872</head><relation head=w871>gol</relation><relation head=w879>aoj</relation></token>
+<token id="w875"><lemma>which</lemma><head>w876</head></token>
+<token id="w876"><lemma>do</lemma><head>w879</head></token>
+<token id="w877"><lemma>not</lemma><head>w876</head></token>
+<token id="w878"><lemma>yet</lemma><head>w879</head></token>
+<token id="w879"><lemma>exist</lemma><head>w874</head></token>
+<token id="w880"><lemma>.</lemma><head>w874</head></token>
+</sentence>
+<sentence text="Around six months later , a much larger round of funding was announced , with the major investors being rival venture capital firms Kleiner Perkins Caufield & Byers and Sequoia Capital . ">
+<token id="w883"><lemma>around</lemma><head>w884</head></token>
+<token id="w884"><lemma>six</lemma><head>w885</head></token>
+<token id="w885"><lemma>month</lemma><head>w886</head><relation head=w886>mod</relation></token>
+<token id="w886"><lemma>late</lemma><head>w895</head><relation head=w895>tim</relation></token>
+<token id="w887"><lemma>,</lemma><head>w895</head></token>
+<token id="w888"><lemma>a</lemma><head>w891</head></token>
+<token id="w889"><lemma>much</lemma><head>w890</head></token>
+<token id="w890"><lemma>large</lemma><head>w891</head><relation head=w891>mod</relation></token>
+<token id="w891"><lemma>round</lemma><head>w894</head><relation head=w893>mod</relation></token>
+<token id="w892"><lemma>of</lemma><head>w891</head></token>
+<token id="w893"><lemma>funding</lemma><head>w892</head><relation head=w895>obj</relation></token>
+<token id="w894"><lemma>be</lemma><head>w895</head></token>
+<token id="w895"><lemma>announce</lemma><head>w882</head></token>
+<token id="w896"><lemma>,</lemma><head>w882</head></token>
+<token id="w897"><lemma>with</lemma><head>w895</head></token>
+<token id="w898"><lemma>the</lemma><head>w900</head></token>
+<token id="w899"><lemma>major</lemma><head>w900</head></token>
+<token id="w900"><lemma>investor</lemma><head>w897</head></token>
+<token id="w901"><lemma>be</lemma><head>w900</head></token>
+<token id="w902"><lemma>rival</lemma><head>w903</head></token>
+<token id="w903"><lemma>venture</lemma><head>w904</head></token>
+<token id="w904"><lemma>capital</lemma><head>w905</head></token>
+<token id="w905"><lemma>firm</lemma><head>w905</head></token>
+<token id="w906"><lemma>kleiner</lemma><head>w907</head></token>
+<token id="w907"><lemma>perkins</lemma><head>w908</head></token>
+<token id="w908"><lemma>caufield</lemma><head>w908</head></token>
+<token id="w909"><lemma>&</lemma><head>w908</head></token>
+<token id="w910"><lemma>byer</lemma><head>w908</head></token>
+<token id="w911"><lemma>and</lemma><head>w910</head></token>
+<token id="w912"><lemma>sequoia</lemma><head>w913</head></token>
+<token id="w913"><lemma>capital</lemma><head>w910</head></token>
+<token id="w914"><lemma>.</lemma><head>w910</head></token>
+</sentence>
+<sentence text="Google's initial public offering took place on August 19 , 2004 . ">
+<token id="w917"><lemma>google</lemma><head>w918</head><relation head=w920>pos</relation></token>
+<token id="w918"><lemma>initial</lemma><head>w919</head></token>
+<token id="w919"><lemma>public</lemma><head>w920</head><relation head=w920>mod</relation></token>
+<token id="w920"><lemma>offering</lemma><head>w921</head><relation head=w921>agt</relation></token>
+<token id="w921"><lemma>take</lemma><head>w916</head></token>
+<token id="w922"><lemma>place</lemma><head>w921</head></token>
+<token id="w923"><lemma>on</lemma><head>w921</head></token>
+<token id="w924"><lemma>august</lemma><head>w921</head><relation head=w920>tim</relation></token>
+<token id="w925"><lemma>19</lemma><head>w924</head></token>
+<token id="w926"><lemma>,</lemma><head>w924</head></token>
+<token id="w927"><lemma>2004</lemma><head>w925</head></token>
+<token id="w928"><lemma>.</lemma><head>w925</head></token>
+</sentence>
+<sentence text="19,605,052 shares were offered at a price of $85 per share . ">
+<token id="w930"><lemma>19,605,052</lemma><head>w931</head><relation head=w931>qua</relation></token>
+<token id="w931"><lemma>share</lemma><head>w932</head><relation head=w933>obj</relation></token>
+<token id="w932"><lemma>be</lemma><head>w933</head></token>
+<token id="w933"><lemma>offer</lemma><head>w929</head></token>
+<token id="w934"><lemma>at</lemma><head>w933</head></token>
+<token id="w935"><lemma>a</lemma><head>w936</head></token>
+<token id="w936"><lemma>price</lemma><head>w934</head><relation head=w933>man</relation><relation head=w938>aoj</relation></token>
+<token id="w937"><lemma>of</lemma><head>w936</head></token>
+<token id="w938"><lemma>$85</lemma><head>w937</head></token>
+<token id="w939"><lemma>per</lemma><head>w933</head></token>
+<token id="w940"><lemma>share</lemma><head>w939</head><relation head=w938>per</relation></token>
+<token id="w941"><lemma>.</lemma><head>w939</head></token>
+</sentence>
+<sentence text="Of that , 14,142,135 ( another mathematical reference as 1.4142135 ) were floated by Google and 5,462,917 by selling stockholders . ">
+<token id="w944"><lemma>of</lemma><head>w939</head></token>
+<token id="w945"><lemma>that</lemma><head>w944</head><relation head=w947>pof</relation></token>
+<token id="w946"><lemma>,</lemma><head>w944</head></token>
+<token id="w947"><lemma>14,142,135</lemma><head>w944</head><relation head=w956>obj</relation></token>
+<token id="w948"><lemma>(</lemma><head>w944</head></token>
+<token id="w949"><lemma>another</lemma><head>w951</head><relation head=w951>mod</relation></token>
+<token id="w950"><lemma>mathematical</lemma><head>w951</head><relation head=w951>mod</relation></token>
+<token id="w951"><lemma>reference</lemma><head>w951</head><relation head=w947>equ</relation><relation head=w953>aoj</relation></token>
+<token id="w952"><lemma>as</lemma><head>w951</head></token>
+<token id="w953"><lemma>1.4142135</lemma><head>w952</head></token>
+<token id="w954"><lemma>)</lemma><head>w952</head></token>
+<token id="w955"><lemma>be</lemma><head>w956</head></token>
+<token id="w956"><lemma>float</lemma><head>w956</head></token>
+<token id="w957"><lemma>by</lemma><head>w956</head></token>
+<token id="w958"><lemma>google</lemma><head>w957</head><relation head=w956>agt</relation></token>
+<token id="w959"><lemma>and</lemma><head>w947</head></token>
+<token id="w960"><lemma>5,462,917</lemma><head>w947</head><relation head=w956>and</relation></token>
+<token id="w961"><lemma>by</lemma><head>w947</head></token>
+<token id="w962"><lemma>sell</lemma><head>w961</head><relation head=w960>man</relation></token>
+<token id="w963"><lemma>stockholder</lemma><head>w962</head><relation head=w962>obj</relation></token>
+<token id="w964"><lemma>.</lemma><head>w962</head></token>
+</sentence>
+<sentence text="The sale raised $1.67 billion , and gave Google a market capitalization of more than $23 billion . ">
+<token id="w967"><lemma>the</lemma><head>w968</head></token>
+<token id="w968"><lemma>sale</lemma><head>w969</head><relation head=w969>obj</relation></token>
+<token id="w969"><lemma>raise</lemma><head>w966</head><relation head=w974>seq</relation></token>
+<token id="w970"><lemma>$1.67</lemma><head>w969</head></token>
+<token id="w971"><lemma>billion</lemma><head>w970</head><relation head=w969>qua</relation></token>
+<token id="w972"><lemma>,</lemma><head>w970</head></token>
+<token id="w973"><lemma>and</lemma><head>w969</head></token>
+<token id="w974"><lemma>give</lemma><head>w969</head></token>
+<token id="w975"><lemma>google</lemma><head>w974</head><relation head=w974>gol</relation></token>
+<token id="w976"><lemma>a</lemma><head>w978</head></token>
+<token id="w977"><lemma>market</lemma><head>w978</head><relation head=w978>mod</relation></token>
+<token id="w978"><lemma>capitalization</lemma><head>w974</head><relation head=w974>obj</relation></token>
+<token id="w979"><lemma>of</lemma><head>w978</head></token>
+<token id="w980"><lemma>more</lemma><head>w979</head></token>
+<token id="w981"><lemma>than</lemma><head>w980</head></token>
+<token id="w982"><lemma>$23</lemma><head>w981</head><relation head=w978>qua</relation></token>
+<token id="w983"><lemma>billion</lemma><head>w982</head><relation head=w980>bas</relation></token>
+<token id="w984"><lemma>.</lemma><head>w982</head></token>
+</sentence>
+<sentence text="The vast majority of Google's 271 million shares remained under Google's control . ">
+<token id="w987"><lemma>the</lemma><head>w989</head></token>
+<token id="w988"><lemma>vast</lemma><head>w989</head></token>
+<token id="w989"><lemma>majority</lemma><head>w995</head><relation head=w994>mod</relation></token>
+<token id="w990"><lemma>of</lemma><head>w989</head></token>
+<token id="w991"><lemma>google</lemma><head>w992</head><relation head=w994>pos</relation></token>
+<token id="w992"><lemma>271</lemma><head>w993</head></token>
+<token id="w993"><lemma>million</lemma><head>w994</head><relation head=w994>qua</relation></token>
+<token id="w994"><lemma>share</lemma><head>w990</head><relation head=w995>aoj</relation></token>
+<token id="w995"><lemma>remain</lemma><head>w986</head></token>
+<token id="w996"><lemma>under</lemma><head>w995</head></token>
+<token id="w997"><lemma>google</lemma><head>w998</head></token>
+<token id="w998"><lemma>control</lemma><head>w996</head><relation head=w995>gol</relation></token>
+<token id="w999"><lemma>.</lemma><head>w996</head></token>
+</sentence>
+<sentence text="Many of Google's employees became instant paper millionaires . ">
+<token id="w1002"><lemma>many</lemma><head>w1006</head></token>
+<token id="w1003"><lemma>of</lemma><head>w1002</head></token>
+<token id="w1004"><lemma>google</lemma><head>w1005</head><relation head=w1005>pof</relation></token>
+<token id="w1005"><lemma>employee</lemma><head>w1003</head></token>
+<token id="w1006"><lemma>become</lemma><head>w1001</head></token>
+<token id="w1007"><lemma>instant</lemma><head>w1008</head><relation head=w1009>mod</relation></token>
+<token id="w1008"><lemma>paper</lemma><head>w1009</head><relation head=w1009>mod</relation></token>
+<token id="w1009"><lemma>millionaire</lemma><head>w1006</head><relation head=w1006>gol</relation></token>
+<token id="w1010"><lemma>.</lemma><head>w1006</head></token>
+</sentence>
+<sentence text="Yahoo ! , a competitor of Google , also benefited from the IPO because it owned 8.4 million shares of Google as of August 9 , 2004 , ten days before the IPO . ">
+<token id="w1013"><lemma>yahoo</lemma><head>w1012</head><relation head=w1017>aoj</relation><relation head=w1022>agt</relation></token>
+<token id="w1014"><lemma>!</lemma><head>w1012</head></token>
+<token id="w1015"><lemma>,</lemma><head>w1012</head></token>
+<token id="w1016"><lemma>a</lemma><head>w1017</head></token>
+<token id="w1017"><lemma>competitor</lemma><head>w1017</head></token>
+<token id="w1018"><lemma>of</lemma><head>w1017</head></token>
+<token id="w1019"><lemma>google</lemma><head>w1018</head></token>
+<token id="w1020"><lemma>,</lemma><head>w1018</head></token>
+<token id="w1021"><lemma>also</lemma><head>w1022</head></token>
+<token id="w1022"><lemma>benefit</lemma><head>w1022</head></token>
+<token id="w1023"><lemma>from</lemma><head>w1022</head></token>
+<token id="w1024"><lemma>the</lemma><head>w1025</head><relation head=w1022>rsn</relation></token>
+<token id="w1025"><lemma>ipo</lemma><head>w1023</head><relation head=w1022>src</relation></token>
+<token id="w1026"><lemma>because</lemma><head>w1028</head></token>
+<token id="w1027"><lemma>it</lemma><head>w1028</head><relation head=w1028>agt</relation></token>
+<token id="w1028"><lemma>own</lemma><head>w1022</head></token>
+<token id="w1029"><lemma>8.4</lemma><head>w1030</head></token>
+<token id="w1030"><lemma>million</lemma><head>w1031</head><relation head=w1031>qua</relation></token>
+<token id="w1031"><lemma>share</lemma><head>w1028</head><relation head=w1028>obj</relation></token>
+<token id="w1032"><lemma>of</lemma><head>w1031</head></token>
+<token id="w1033"><lemma>google</lemma><head>w1032</head><relation head=w1031>pof</relation></token>
+<token id="\"><lemma>as</lemma><head>w1032</head></token>
+<token id="\"><lemma>w1034</lemma><head>w1032</head></token>
+<token id="\"><lemma>w1035</lemma><head>w1032</head></token>
+<token id="\"><lemma>w1036</lemma><head>w1032</head></token>
+<token id="\"><lemma>w1037</lemma><head>w1032</head></token>
+<token id="\"><lemma>w1038</lemma><head>w1032</head></token>
+<token id="\"><lemma>w1039</lemma><head>w1032</head></token>
+<token id="\"><lemma>w1040</lemma><head>w1032</head></token>
+<token id="\"><lemma>w1041</lemma><head>w1032</head></token>
+<token id="\"><lemma>w1042</lemma><head>w1032</head></token>
+<token id="\"><lemma>w1043</lemma><head>w1032</head></token>
+<token id="\"><lemma>w1044</lemma><head>w1032</head></token>
+</sentence>
+<sentence text="Google's post-IPO stock performance has been very good as well , with shares surging to $500 by 2007 , due to strong sales and earnings in the advertising market , as well as the release of new features like the desktop search function and personalized home page . ">
+<token id="w1048"><lemma>google</lemma><head>w1049</head><relation head=w1051>mod</relation></token>
+<token id="w1049"><lemma>post-ipo</lemma><head>w1050</head><relation head=w1051>mod</relation></token>
+<token id="w1050"><lemma>stock</lemma><head>w1051</head><relation head=w1051>mod</relation></token>
+<token id="w1051"><lemma>performance</lemma><head>w1052</head><relation head=w1055>aoj</relation></token>
+<token id="w1052"><lemma>have</lemma><head>w1053</head></token>
+<token id="w1053"><lemma>be</lemma><head>w1047</head><relation head=w1071>rsn</relation></token>
+<token id="w1054"><lemma>very</lemma><head>w1055</head></token>
+<token id="w1055"><lemma>good</lemma><head>w1053</head></token>
+<token id="w1056"><lemma>as</lemma><head>w1057</head></token>
+<token id="w1057"><lemma>well</lemma><head>w1053</head></token>
+<token id="w1058"><lemma>,</lemma><head>w1053</head></token>
+<token id="w1059"><lemma>with</lemma><head>w1053</head></token>
+<token id="w1060"><lemma>share</lemma><head>w1059</head><relation head=w1061>agt</relation></token>
+<token id="w1061"><lemma>surge</lemma><head>w1060</head><relation head=w1053>coo</relation></token>
+<token id="w1062"><lemma>to</lemma><head>w1061</head></token>
+<token id="w1063"><lemma>$500</lemma><head>w1062</head><relation head=w1061>gol</relation></token>
+<token id="w1064"><lemma>by</lemma><head>w1061</head></token>
+<token id="w1065"><lemma>2007</lemma><head>w1064</head><relation head=w1061>tmt</relation></token>
+<token id="w1066"><lemma>,</lemma><head>w1064</head></token>
+<token id="w1067"><lemma>due</lemma><head>w1065</head></token>
+<token id="w1068"><lemma>to</lemma><head>w1067</head></token>
+<token id="w1069"><lemma>strong</lemma><head>w1070</head></token>
+<token id="w1070"><lemma>sale</lemma><head>w1068</head><relation head=w1071>mod</relation></token>
+<token id="w1071"><lemma>and</lemma><head>w1070</head></token>
+<token id="w1072"><lemma>earning</lemma><head>w1070</head></token>
+<token id="w1073"><lemma>in</lemma><head>w1072</head><relation head=w1071>and</relation></token>
+<token id="w1074"><lemma>the</lemma><head>w1076</head></token>
+<token id="w1075"><lemma>advertising</lemma><head>w1076</head></token>
+<token id="w1076"><lemma>market</lemma><head>w1073</head><relation head=w1077>mod</relation></token>
+<token id="w1077"><lemma>,</lemma><head>w1073</head><relation head=w1071>scn</relation></token>
+<token id="as"><lemma>as</lemma><head>w1073</head></token>
+<token id="the"><lemma>\</lemma><head>w1073</head></token>
+<token id="release"><lemma>\</lemma><head>w1073</head></token>
+<token id="of"><lemma>\</lemma><head>w1073</head></token>
+<token id="new"><lemma>\</lemma><head>w1073</head></token>
+<token id="feature"><lemma>\</lemma><head>w1073</head></token>
+<token id="like"><lemma>\</lemma><head>w1073</head></token>
+<token id="the"><lemma>\</lemma><head>w1073</head></token>
+<token id="desktop"><lemma>\</lemma><head>w1073</head></token>
+<token id="search"><lemma>\</lemma><head>w1073</head></token>
+<token id="function"><lemma>\</lemma><head>w1073</head></token>
+<token id="and"><lemma>\</lemma><head>w1073</head></token>
+<token id="personalize"><lemma>\</lemma><head>w1073</head></token>
+<token id="home"><lemma>\</lemma><head>w1073</head></token>
+<token id="page"><lemma>\</lemma><head>w1073</head></token>
+<token id="."><lemma>\</lemma><head>w1073</head></token>
+</sentence>
+<sentence text="The surge in stock price is fueled primarily by individual investors , as opposed to large institutional investors and mutual funds . ">
+<token id="w1096"><lemma>the</lemma><head>w1097</head></token>
+<token id="w1097"><lemma>surge</lemma><head>w1101</head><relation head=w1102>obj</relation></token>
+<token id="w1098"><lemma>in</lemma><head>w1097</head></token>
+<token id="w1099"><lemma>stock</lemma><head>w1100</head><relation head=w1100>mod</relation></token>
+<token id="w1100"><lemma>price</lemma><head>w1098</head><relation head=w1097>aoj</relation></token>
+<token id="w1101"><lemma>be</lemma><head>w1102</head></token>
+<token id="w1102"><lemma>fuel</lemma><head>w1095</head></token>
+<token id="w1103"><lemma>primarily</lemma><head>w1102</head><relation head=w1102>man</relation></token>
+<token id="w1104"><lemma>by</lemma><head>w1102</head></token>
+<token id="w1105"><lemma>individual</lemma><head>w1106</head></token>
+<token id="w1106"><lemma>investor</lemma><head>w1104</head><relation head=w1102>agt</relation><relation head=w1108>aoj</relation></token>
+<token id="w1107"><lemma>,</lemma><head>w1104</head></token>
+<token id="to"><lemma>as</lemma><head>w1104</head></token>
+<token id="large"><lemma>\</lemma><head>w1104</head></token>
+<token id="institutional"><lemma>\</lemma><head>w1104</head></token>
+<token id="investor"><lemma>\</lemma><head>w1104</head></token>
+<token id="and"><lemma>\</lemma><head>w1104</head></token>
+<token id="mutual"><lemma>\</lemma><head>w1104</head></token>
+<token id="fund"><lemma>\</lemma><head>w1104</head></token>
+<token id="."><lemma>\</lemma><head>w1104</head></token>
+</sentence>
+<sentence text="The company is listed on the NASDAQ stock exchange under the ticker symbol GOOG . ">
+<token id="w1118"><lemma>the</lemma><head>w1119</head><relation head=w1131>aoj</relation><relation head=w1119>aoj</relation></token>
+<token id="w1119"><lemma>company</lemma><head>w1120</head><relation head=w1121>obj</relation></token>
+<token id="w1120"><lemma>be</lemma><head>w1121</head></token>
+<token id="w1121"><lemma>list</lemma><head>w1117</head></token>
+<token id="w1122"><lemma>on</lemma><head>w1121</head></token>
+<token id="w1123"><lemma>the</lemma><head>w1126</head></token>
+<token id="w1124"><lemma>nasdaq</lemma><head>w1125</head></token>
+<token id="w1125"><lemma>stock</lemma><head>w1126</head><relation head=w1126>mod</relation></token>
+<token id="w1126"><lemma>exchange</lemma><head>w1122</head><relation head=w1121>scn</relation></token>
+<token id="w1127"><lemma>under</lemma><head>w1121</head></token>
+<token id="w1128"><lemma>the</lemma><head>w1131</head></token>
+<token id="w1129"><lemma>ticker</lemma><head>w1130</head></token>
+<token id="w1130"><lemma>symbol</lemma><head>w1131</head></token>
+<token id="w1131"><lemma>goog</lemma><head>w1127</head></token>
+<token id="w1132"><lemma>.</lemma><head>w1127</head></token>
+</sentence>
+<sentence text="While the company's primary market is in the web content arena , Google has begun to experiment with other markets , such as radio and print publications . ">
+<token id="w1135"><lemma>while</lemma><head>w1140</head></token>
+<token id="w1136"><lemma>the</lemma><head>w1139</head></token>
+<token id="w1137"><lemma>company</lemma><head>w1138</head></token>
+<token id="w1138"><lemma>primary</lemma><head>w1139</head></token>
+<token id="w1139"><lemma>market</lemma><head>w1140</head><relation head=w1145>aoj</relation></token>
+<token id="w1140"><lemma>be</lemma><head>w1149</head><relation head=w1149>tim</relation></token>
+<token id="w1141"><lemma>in</lemma><head>w1140</head></token>
+<token id="w1142"><lemma>the</lemma><head>w1145</head></token>
+<token id="w1143"><lemma>web</lemma><head>w1144</head></token>
+<token id="w1144"><lemma>content</lemma><head>w1145</head></token>
+<token id="w1145"><lemma>arena</lemma><head>w1141</head></token>
+<token id="w1146"><lemma>,</lemma><head>w1141</head></token>
+<token id="w1147"><lemma>google</lemma><head>w1148</head><relation head=w1149>agt</relation></token>
+<token id="w1148"><lemma>have</lemma><head>w1149</head></token>
+<token id="w1149"><lemma>begin</lemma><head>w1134</head></token>
+<token id="w1150"><lemma>to</lemma><head>w1151</head></token>
+<token id="w1151"><lemma>experiment</lemma><head>w1149</head></token>
+<token id="w1152"><lemma>with</lemma><head>w1151</head></token>
+<token id="w1153"><lemma>other</lemma><head>w1154</head><relation head=w1154>mod</relation></token>
+<token id="w1154"><lemma>market</lemma><head>w1152</head><relation head=w1151>man</relation><relation head=w1156>aoj</relation></token>
+<token id="w1155"><lemma>,</lemma><head>w1152</head></token>
+<token id="w1156"><lemma>such</lemma><head>w1154</head></token>
+<token id="w1157"><lemma>as</lemma><head>w1156</head></token>
+<token id="w1158"><lemma>radio</lemma><head>w1157</head><relation head=w1156>obj</relation><relation head=w1161>and</relation></token>
+<token id="w1159"><lemma>and</lemma><head>w1158</head></token>
+<token id="w1160"><lemma>print</lemma><head>w1161</head><relation head=w1161>mod</relation></token>
+<token id="w1161"><lemma>publication</lemma><head>w1158</head></token>
+<token id="w1162"><lemma>.</lemma><head>w1158</head></token>
+</sentence>
+<sentence text="On January 17 , 2006 , Google announced that it had purchased the radio advertising company dMarc , which provides an automated system that allows companies to advertise on the radio . ">
+<token id="w1165"><lemma>on</lemma><head>w1158</head></token>
+<token id="w1166"><lemma>january</lemma><head>w1158</head><relation head=w1172>tim</relation></token>
+<token id="w1167"><lemma>17</lemma><head>w1166</head></token>
+<token id="w1168"><lemma>,</lemma><head>w1166</head></token>
+<token id="w1169"><lemma>2006</lemma><head>w1167</head></token>
+<token id="w1170"><lemma>,</lemma><head>w1167</head></token>
+<token id="w1171"><lemma>google</lemma><head>w1172</head><relation head=w1172>agt</relation></token>
+<token id="w1172"><lemma>announce</lemma><head>w1172</head></token>
+<token id="w1173"><lemma>that</lemma><head>w1176</head></token>
+<token id="w1174"><lemma>it</lemma><head>w1175</head><relation head=w1176>agt</relation></token>
+<token id="w1175"><lemma>have</lemma><head>w1176</head></token>
+<token id="w1176"><lemma>purchase</lemma><head>w1172</head><relation head=w1172>obj</relation></token>
+<token id="w1177"><lemma>the</lemma><head>w1181</head></token>
+<token id="w1178"><lemma>radio</lemma><head>w1179</head><relation head=w1179>mod</relation></token>
+<token id="w1179"><lemma>advertising</lemma><head>w1180</head><relation head=w1180>mod</relation></token>
+<token id="w1180"><lemma>company</lemma><head>w1181</head><relation head=w1176>obj</relation></token>
+<token id="w1181"><lemma>dmarc</lemma><head>w1176</head><relation head=w1180>nam</relation></token>
+<token id="w1182"><lemma>,</lemma><head>w1176</head></token>
+<token id="w1183"><lemma>which</lemma><head>w1184</head></token>
+<token id="w1184"><lemma>provide</lemma><head>w1181</head></token>
+<token id="w1185"><lemma>an</lemma><head>w1187</head></token>
+<token id="w1186"><lemma>automated</lemma><head>w1187</head><relation head=w1187>mod</relation></token>
+<token id="w1187"><lemma>system</lemma><head>w1184</head><relation head=w1184>obj</relation></token>
+<token id="w1188"><lemma>that</lemma><head>w1189</head></token>
+<token id="w1189"><lemma>allow</lemma><head>w1187</head></token>
+<token id="w1190"><lemma>company</lemma><head>w1192</head><relation head=w1189>obj</relation><relation head=w1192>agt</relation></token>
+<token id="w1191"><lemma>to</lemma><head>w1192</head></token>
+<token id="w1192"><lemma>advertise</lemma><head>w1189</head></token>
+<token id="w1193"><lemma>on</lemma><head>w1192</head></token>
+<token id="w1194"><lemma>the</lemma><head>w1195</head></token>
+<token id="w1195"><lemma>radio</lemma><head>w1193</head><relation head=w1192>met</relation></token>
+<token id="w1196"><lemma>.</lemma><head>w1193</head></token>
+</sentence>
+<sentence text="This will allow Google to combine two niche advertising media ( the Internet and radio ) with Google's ability to laser-focus on the tastes of consumers . ">
+<token id="w1199"><lemma>this</lemma><head>w1200</head><relation head=w1201>agt</relation></token>
+<token id="w1200"><lemma>will</lemma><head>w1201</head></token>
+<token id="w1201"><lemma>allow</lemma><head>w1198</head></token>
+<token id="w1202"><lemma>google</lemma><head>w1204</head><relation head=w1201>obj</relation><relation head=w1204>agt</relation></token>
+<token id="w1203"><lemma>to</lemma><head>w1204</head></token>
+<token id="w1204"><lemma>combine</lemma><head>w1201</head><relation head=w1217>aoj</relation></token>
+<token id="w1205"><lemma>two</lemma><head>w1208</head><relation head=w1208>qua</relation></token>
+<token id="w1206"><lemma>niche</lemma><head>w1207</head><relation head=w1207>mod</relation></token>
+<token id="w1207"><lemma>advertising</lemma><head>w1208</head><relation head=w1208>mod</relation></token>
+<token id="w1208"><lemma>media</lemma><head>w1204</head><relation head=w1204>obj</relation></token>
+<token id="w1209"><lemma>(</lemma><head>w1204</head></token>
+<token id="w1210"><lemma>the</lemma><head>w1211</head></token>
+<token id="w1211"><lemma>internet</lemma><head>w1208</head><relation head=w1208>equ</relation></token>
+<token id="w1212"><lemma>and</lemma><head>w1211</head></token>
+<token id="w1213"><lemma>radio</lemma><head>w1211</head></token>
+<token id="w1214"><lemma>)</lemma><head>w1211</head></token>
+<token id="w1215"><lemma>with</lemma><head>w1211</head></token>
+<token id="w1216"><lemma>google</lemma><head>w1217</head></token>
+<token id="w1217"><lemma>ability</lemma><head>w1215</head></token>
+<token id="w1218"><lemma>to</lemma><head>w1217</head></token>
+<token id="w1219"><lemma>laser-focu</lemma><head>w1218</head><relation head=w1217>to</relation></token>
+<token id="w1220"><lemma>on</lemma><head>w1219</head></token>
+<token id="w1221"><lemma>the</lemma><head>w1222</head></token>
+<token id="w1222"><lemma>taste</lemma><head>w1220</head><relation head=w1219>obj</relation></token>
+<token id="w1223"><lemma>of</lemma><head>w1222</head></token>
+<token id="w1224"><lemma>consumer</lemma><head>w1223</head><relation head=w1222>mod</relation></token>
+<token id="w1225"><lemma>.</lemma><head>w1223</head></token>
+</sentence>
+<sentence text="Google has also begun an experiment in selling advertisements from its advertisers in offline newspapers and magazines , with select advertisements in the Chicago Sun-Times . ">
+<token id="w1228"><lemma>google</lemma><head>w1229</head><relation head=w1231>agt</relation></token>
+<token id="w1229"><lemma>have</lemma><head>w1231</head></token>
+<token id="w1230"><lemma>also</lemma><head>w1231</head></token>
+<token id="w1231"><lemma>begin</lemma><head>w1227</head></token>
+<token id="w1232"><lemma>an</lemma><head>w1233</head><relation head=w1233>qua</relation></token>
+<token id="w1233"><lemma>experiment</lemma><head>w1231</head><relation head=w1231>obj</relation></token>
+<token id="w1234"><lemma>in</lemma><head>w1231</head></token>
+<token id="w1235"><lemma>sell</lemma><head>w1234</head><relation head=w1233>cnt</relation></token>
+<token id="w1236"><lemma>advertisement</lemma><head>w1235</head><relation head=w1235>obj</relation></token>
+<token id="w1237"><lemma>from</lemma><head>w1235</head></token>
+<token id="w1238"><lemma>it</lemma><head>w1239</head></token>
+<token id="w1239"><lemma>advertiser</lemma><head>w1237</head><relation head=w1235>src</relation></token>
+<token id="w1240"><lemma>in</lemma><head>w1235</head></token>
+<token id="w1241"><lemma>offline</lemma><head>w1242</head><relation head=w1242>mod</relation></token>
+<token id="w1242"><lemma>newspaper</lemma><head>w1240</head><relation head=w1239>aoj</relation><relation head=w1244>and</relation></token>
+<token id="w1243"><lemma>and</lemma><head>w1242</head></token>
+<token id="w1244"><lemma>magazine</lemma><head>w1242</head></token>
+<token id="w1245"><lemma>,</lemma><head>w1242</head></token>
+<token id="w1246"><lemma>with</lemma><head>w1242</head></token>
+<token id="w1247"><lemma>select</lemma><head>w1248</head></token>
+<token id="w1248"><lemma>advertisement</lemma><head>w1246</head></token>
+<token id="w1249"><lemma>in</lemma><head>w1248</head></token>
+<token id="w1250"><lemma>the</lemma><head>w1252</head></token>
+<token id="w1251"><lemma>chicago</lemma><head>w1252</head></token>
+<token id="w1252"><lemma>sun-tim*</lemma><head>w1249</head></token>
+<token id="w1253"><lemma>.</lemma><head>w1249</head></token>
+</sentence>
+<sentence text="They have been filling unsold space in the newspaper that would have normally been used for in-house advertisements . ">
+<token id="w1255"><lemma>they</lemma><head>w1256</head><relation head=w1258>aoj</relation></token>
+<token id="w1256"><lemma>have</lemma><head>w1257</head></token>
+<token id="w1257"><lemma>be</lemma><head>w1258</head></token>
+<token id="w1258"><lemma>fill</lemma><head>w1254</head></token>
+<token id="w1259"><lemma>unsold</lemma><head>w1260</head><relation head=w1260>mod</relation></token>
+<token id="w1260"><lemma>space</lemma><head>w1258</head><relation head=w1258>obj</relation></token>
+<token id="w1261"><lemma>in</lemma><head>w1258</head></token>
+<token id="w1262"><lemma>the</lemma><head>w1263</head></token>
+<token id="w1263"><lemma>newspaper</lemma><head>w1261</head><relation head=w1258>scn</relation><relation head=w1269>aoj</relation></token>
+<token id="w1264"><lemma>that</lemma><head>w1265</head></token>
+<token id="w1265"><lemma>would</lemma><head>w1266</head></token>
+<token id="w1266"><lemma>have</lemma><head>w1268</head></token>
+<token id="w1267"><lemma>normally</lemma><head>w1269</head></token>
+<token id="w1268"><lemma>be</lemma><head>w1269</head></token>
+<token id="w1269"><lemma>use</lemma><head>w1263</head></token>
+<token id="w1270"><lemma>for</lemma><head>w1269</head></token>
+<token id="w1271"><lemma>in-house</lemma><head>w1272</head><relation head=w1272>mod</relation></token>
+<token id="w1272"><lemma>advertisement</lemma><head>w1270</head><relation head=w1269>ben</relation></token>
+<token id="w1273"><lemma>.</lemma><head>w1270</head></token>
+</sentence>
+<sentence text="Google was added to the S&P 500 index on March 30 , 2006 . ">
+<token id="w1276"><lemma>google</lemma><head>w1277</head><relation head=w1278>obj</relation></token>
+<token id="w1277"><lemma>be</lemma><head>w1278</head></token>
+<token id="w1278"><lemma>add</lemma><head>w1275</head></token>
+<token id="w1279"><lemma>to</lemma><head>w1278</head></token>
+<token id="w1280"><lemma>the</lemma><head>w1283</head></token>
+<token id="w1281"><lemma>s&p</lemma><head>w1282</head></token>
+<token id="w1282"><lemma>500</lemma><head>w1283</head><relation head=w1283>mod</relation></token>
+<token id="w1283"><lemma>index</lemma><head>w1279</head><relation head=w1278>gol</relation></token>
+<token id="w1284"><lemma>on</lemma><head>w1278</head></token>
+<token id="w1285"><lemma>march</lemma><head>w1286</head><relation head=w1283>tim</relation></token>
+<token id="w1286"><lemma>30</lemma><head>w1284</head></token>
+<token id="w1287"><lemma>,</lemma><head>w1284</head></token>
+<token id="w1288"><lemma>2006</lemma><head>w1286</head></token>
+<token id="w1289"><lemma>.</lemma><head>w1286</head></token>
+</sentence>
+<sentence text="Google replaced Burlington Resources , a major oil producer based in Houston which was acquired by ConocoPhillips . ">
+<token id="w1292"><lemma>google</lemma><head>w1293</head><relation head=w1293>agt</relation></token>
+<token id="w1293"><lemma>replace</lemma><head>w1291</head></token>
+<token id="w1294"><lemma>burlington</lemma><head>w1295</head><relation head=w1295>mod</relation></token>
+<token id="w1295"><lemma>resource</lemma><head>w1293</head><relation head=w1293>obj</relation><relation head=w1300>equ</relation></token>
+<token id="w1296"><lemma>,</lemma><head>w1293</head></token>
+<token id="w1297"><lemma>a</lemma><head>w1300</head></token>
+<token id="w1298"><lemma>major</lemma><head>w1299</head><relation head=w1300>mod</relation></token>
+<token id="w1299"><lemma>oil</lemma><head>w1300</head><relation head=w1300>mod</relation></token>
+<token id="w1300"><lemma>producer</lemma><head>w1295</head></token>
+<token id="w1301"><lemma>base</lemma><head>w1300</head></token>
+<token id="w1302"><lemma>in</lemma><head>w1301</head></token>
+<token id="w1303"><lemma>houston</lemma><head>w1302</head></token>
+<token id="w1304"><lemma>which</lemma><head>w1305</head></token>
+<token id="w1305"><lemma>be</lemma><head>w1306</head></token>
+<token id="w1306"><lemma>acquire</lemma><head>w1303</head></token>
+<token id="w1307"><lemma>by</lemma><head>w1306</head></token>
+<token id="w1308"><lemma>conocophillips</lemma><head>w1307</head></token>
+<token id="w1309"><lemma>.</lemma><head>w1307</head></token>
+</sentence>
+</analysis>
