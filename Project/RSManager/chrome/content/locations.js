@@ -4,16 +4,15 @@ Components.utils.import("resource://rsmanager-modules/preferences.jsm");
 var dbConn = null;
 var maxCityID = null;
 var maxRegionID = null;
+var defaultProvinceID = null;
+var defaultCityID = null;
+var defaultRegionID = null;
 
 function init() {
 	hideAllTextboxes();
 	dbConn = createConnection();
+	loadDefaultLocation();
 	populateProvinces();
-	
-	var defaultLoc = getDefaultLocation(dbConn);
-	document.getElementById("listbox_provinces").selectedIndex = (defaultLoc==null)?0:;
-	document.getElementById("listbox_cities").selectedIndex = (defaultLoc==null)?0:;
-	document.getElementById("listbox_regions").selectedIndex = (defaultLoc==null)?0:;
 	
 	var cityStatement = dbConn.createStatement("SELECT max(CityID) as MaxCityID FROM LocCities");
 	cityStatement.executeStep();
@@ -33,6 +32,7 @@ function populateProvinces() {
 	while(listbox.getRowCount() != 0) {
 		listbox.removeItemAt(0);
 	}
+	var defaultIndex = 0;
 	var statement = dbConn.createStatement("SELECT * FROM LocProvinces ORDER BY ProvinceName");
 	try {
 		while (statement.executeStep()) {
@@ -41,58 +41,65 @@ function populateProvinces() {
 			listitem.setAttribute("label", statement.row.ProvinceName);
 			listitem.setAttribute("class", "form_listitem");
 			listbox.appendChild(listitem);
+			if(defaultProvinceID==statement.row.ProvinceID) defaultIndex = listbox.getRowCount()-1;
 		}
 	} finally {
 		statement.reset();
 	}
-	listbox.selectedIndex = 0;
+	listbox.ensureIndexIsVisible(defaultIndex);
+	listbox.selectedIndex = defaultIndex;
 }
 function populateCities() {
 	var listbox = document.getElementById("listbox_cities");
 	while(listbox.getRowCount() != 0) {
 		listbox.removeItemAt(0);
 	}
-	var statement = dbConn.createStatement("SELECT * FROM LocCities WHERE ProvinceID = :provinceID ORDER BY CityName");
+	var defaultIndex = 0;
+	var statement = dbConn.createStatement("SELECT * FROM LocCities WHERE ProvinceID = ?1ORDER BY CityName");
 	try {
-		statement.params.provinceID = document.getElementById("listbox_provinces").selectedItem.value;
+		statement.bindInt32Parameter(0, document.getElementById("listbox_provinces").selectedItem.value);
 		while (statement.executeStep()) {
 			var listitem = document.createElement("listitem");
 			listitem.setAttribute("value", statement.row.CityID);
 			listitem.setAttribute("label", statement.row.CityName);
 			listitem.setAttribute("class", "form_listitem");
 			listbox.appendChild(listitem);
+			if(defaultCityID==statement.row.CityID) defaultIndex = listbox.getRowCount()-1;
 		}
 	} finally {
 		statement.reset();
 	}
 	displayAddCityTextbox(false);
 	displayEditCityTextbox(false);
-	listbox.selectedIndex = 0;
+	listbox.ensureIndexIsVisible(defaultIndex);
+	listbox.selectedIndex = defaultIndex;
 }
 function populateRegions() {
 	var listbox = document.getElementById("listbox_regions");
 	while(listbox.getRowCount() != 0) {
 		listbox.removeItemAt(0);
 	}
-	var statement = dbConn.createStatement("SELECT * FROM LocRegions WHERE CityID = :cityID ORDER BY RegionName");
+	var defaultIndex = 0;
+	var statement = dbConn.createStatement("SELECT * FROM LocRegions WHERE CityID = ?1 ORDER BY RegionName");
 	try {
-		statement.params.cityID = document.getElementById("listbox_cities").selectedItem.value;
+		statement.bindInt32Parameter(0, document.getElementById("listbox_cities").selectedItem.value);
 		while (statement.executeStep()) {
 			var listitem = document.createElement("listitem");
 			listitem.setAttribute("value", statement.row.RegionID);
 			listitem.setAttribute("label", statement.row.RegionName);
 			listitem.setAttribute("class", "form_listitem");
 			listbox.appendChild(listitem);
+			if(defaultRegionID==statement.row.RegionID) defaultIndex = listbox.getRowCount()-1;
 		}
 	} finally {
 		statement.reset();
 	}
-	listbox.selectedIndex = 0;
+	listbox.ensureIndexIsVisible(defaultIndex);
+	listbox.selectedIndex = defaultIndex;
 	loadDefaultLocation();
 	enableDefaultButton();
 	displayAddRegionTextbox(false);
 	displayEditRegionTextbox(false);
-	
 }
 
 function enableDefaultButton() {
@@ -181,6 +188,10 @@ function deleteCity() {
 	var statement = dbConn.createStatement("DELETE FROM LocCities WHERE CityID = ?1");
 	statement.bindInt32Parameter(0, document.getElementById("listbox_cities").selectedItem.value);
 	statement.execute();
+	var statement = dbConn.createStatement("DELETE FROM LocRegions WHERE CityID = ?1");
+	statement.bindInt32Parameter(0, document.getElementById("listbox_cities").selectedItem.value);
+	statement.execute();
+	loadDefaultLocation();
 	populateCities();
 }
 function addRegion() {
@@ -203,21 +214,29 @@ function deleteRegion() {
 	var statement = dbConn.createStatement("DELETE FROM LocRegions WHERE RegionID = ?1");
 	statement.bindInt32Parameter(0, document.getElementById("listbox_regions").selectedItem.value);
 	statement.execute();
+	loadDefaultLocation();
 	populateRegions();
 }
 
 function saveDefaultLocation() {
-	var defaultRegionId = document.getElementById("listbox_regions").value;
-	setDefaultLocation(defaultRegionId);
-	loadDefaultLocation();
+	if(document.getElementById("listbox_regions").getRowCount() != 0) {
+		var defaultRegionId = document.getElementById("listbox_regions").value;
+		setDefaultLocation(defaultRegionId);
+		loadDefaultLocation();
+	}
 }
 function loadDefaultLocation() {
+	var stringbundle = document.getElementById("stringbundle");
 	var defaultLoc = getDefaultLocation(dbConn);
-	if(args==null) {
-		document.getElementById("label_setdefault").setAttribute("value", "(No value defined)");
+	if(defaultLoc==null) {
+		document.getElementById("label_setdefault").setAttribute("value", stringbundle.getString("locations_NoValueDefined"));
+		defaultProvinceID = defaultCityID = defaultRegionID = null;
 	} else {
-		var labelString = args[1] + " > " + args[3] + " > " + args[5];
+		var labelString = defaultLoc[1] + " > " + defaultLoc[3] + " > " + defaultLoc[5];
 		document.getElementById("label_setdefault").setAttribute("value", labelString);
+		defaultProvinceID = defaultLoc[0];
+		defaultCityID = defaultLoc[2];
+		defaultRegionID = defaultLoc[4];
 	}
 }
 
