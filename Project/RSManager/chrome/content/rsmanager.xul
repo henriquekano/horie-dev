@@ -11,29 +11,34 @@
 				<vbox>
 					<hbox class="menu_buttonwrapper"
 						onmouseover="mouseOver('main');" onmouseout="mouseOut('main');" onclick="clicked('main');">
-						<image id="menu_main_img" class="menu_button" src="chrome://rsmanager/skin/images/main.png" />
+						<image id="menu_main_img" class="menu_button"
+							style="list-style-image: url(chrome://rsmanager/skin/images/main.png);" />
 						<label id="menu_main_lbl" value="&rsmanager.menu.main;" class="menu_label" />
 					</hbox>
 					<spacer height="20px" />
 					<hbox class="menu_buttonwrapper"
 						onmouseover="mouseOver('expenses');" onmouseout="mouseOut('expenses');" onclick="clicked('expenses');">
-						<image id="menu_expenses_img" class="menu_button" src="chrome://rsmanager/skin/images/expenses.png" />
+						<image id="menu_expenses_img" class="menu_button"
+							style="list-style-image: url(chrome://rsmanager/skin/images/expenses.png);" />
 						<label id="menu_expenses_lbl" value="&rsmanager.menu.manageexpenses;" class="menu_label" />
 					</hbox>
 					<hbox class="menu_buttonwrapper"
 						onmouseover="mouseOver('locations');" onmouseout="mouseOut('locations');" onclick="clicked('locations');">
-						<image id="menu_locations_img" class="menu_button" src="chrome://rsmanager/skin/images/locations.png" />
+						<image id="menu_locations_img" class="menu_button"
+							style="list-style-image: url(chrome://rsmanager/skin/images/locations.png);" />
 						<label id="menu_locations_lbl" value="&rsmanager.menu.managelocations;" class="menu_label" />
 					</hbox>
 					<hbox class="menu_buttonwrapper"
 						onmouseover="mouseOver('types');" onmouseout="mouseOut('types');" onclick="clicked('types');">
-						<image id="menu_types_img" class="menu_button" src="chrome://rsmanager/skin/images/types.png" />
+						<image id="menu_types_img" class="menu_button"
+							style="list-style-image: url(chrome://rsmanager/skin/images/types.png);" />
 						<label id="menu_types_lbl" value="&rsmanager.menu.managetypes;" class="menu_label" />
 					</hbox>
 					<spacer height="20px" />
 					<hbox class="menu_buttonwrapper"
 						onmouseover="mouseOver('backup');" onmouseout="mouseOut('backup');" onclick="clicked('backup');">
-						<image id="menu_backup_img" class="menu_button" src="chrome://rsmanager/skin/images/backup.png" />
+						<image id="menu_backup_img" class="menu_button"
+							style="list-style-image: url(chrome://rsmanager/skin/images/backup.png);" />
 						<label id="menu_backup_lbl" value="&rsmanager.menu.backup;" class="menu_label" />
 					</hbox>
 				</vbox>
