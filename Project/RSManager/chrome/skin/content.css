@@ -18,6 +18,26 @@
 	color: #444;
 	margin: 0px 0px 10px 0px;
 }
+.content_body2 {
+	font-family: arial, helvetica, serif;
+	font-size: 9pt;
+	color: #444;
+	margin: 0px;
+}
+.content_gridtitle {
+	font-family: arial, helvetica, serif;
+	font-size: 9pt;
+	color: #444;
+	font-weight: bold;
+	text-align: center;
+	margin: 0px 5px 0px 5px;
+}
+.content_griditem {
+	font-family: arial, helvetica, serif;
+	font-size: 8pt;
+	color: #444;
+	margin: 5px 5px 5px 5px;
+}
 
 .form {
 	
@@ -36,10 +56,10 @@
 	font-family: arial, helvetica, serif;
 	font-size: 8pt;
 	color: #444;
-	max-width: 300px;
+	width: 100px;
 }
 .form_textbox {
-	max-width: 300px;
+	max-width: 315px;
 	font-family: arial, helvetica, serif;
 	font-size: 8pt;
 	color: #444;
@@ -61,7 +81,24 @@
 	color: #444;
 	width: 150px;
 }
+.form_datepicker {
+	font-family: arial, helvetica, serif;
+	font-size: 8pt;
+	color: #444;
+}
+.form_groupbox {
+	padding: 10px;
+}
+.form_row {
+	margin: 5px 0px 5px 0px;
+}
 .sform_setdefaultbutton  {
 	list-style-image: url(chrome://rsmanager/skin/images/set_off.png);
 	margin-right: 10px;
+}
+.sform_expensevaluetextbox {
+	max-width: 100px;
+	font-family: arial, helvetica, serif;
+	font-size: 8pt;
+	color: #444;
 }

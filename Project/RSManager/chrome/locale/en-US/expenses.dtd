@@ -1,1 +1,12 @@
 <!ENTITY rsmanager.expenses.title "Expenses">
+<!ENTITY rsmanager.expenses.addExpense "Add expense">
+<!ENTITY rsmanager.expenses.viewExpenses "View expenses">
+
+<!ENTITY rsmanager.expenses.date "Date">
+<!ENTITY rsmanager.expenses.type "Category">
+<!ENTITY rsmanager.expenses.description "Description">
+<!ENTITY rsmanager.expenses.location "Location">
+<!ENTITY rsmanager.expenses.thirdparty "Third Party">
+<!ENTITY rsmanager.expenses.value "Value">
+<!ENTITY rsmanager.expenses.from "From">
+<!ENTITY rsmanager.expenses.to "to">
