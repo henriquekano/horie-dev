@@ -15,4 +15,8 @@
 		<image id="rsmanager-statusbaricon" tooltiptext="&rsmanager.appname;"
 			onclick="rsmanagerOverlay.open(event);"/>
 	</statusbar>
+	
+	<stringbundleset>
+		<stringbundle id="stringbundle" src="chrome://rsmanager/locale/jsbundle.properties"/>
+	</stringbundleset>
 </overlay>

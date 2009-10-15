@@ -1,7 +1,7 @@
 var rsmanagerOverlay = {
 	open: function(e) {
 		var needToOpen = true;
-		var windowType = "RSManager";
+		var windowType = document.getElementById("stringbundle").getString("rsmanager_appName");
 		
 		var wm = Components.classes["@mozilla.org/appshell/window-mediator;1"].getService(Components.interfaces.nsIWindowMediator);
 		var windows = wm.getEnumerator(windowType);

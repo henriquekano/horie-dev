@@ -11,4 +11,7 @@
 		<button id="install_button" label="&rsmanager.install.button;" class="form_button" oncommand="install();"/>
 		<spacer flex="1" />
 	</hbox>
+	<stringbundleset>
+		<stringbundle id="stringbundle" src="chrome://rsmanager/locale/jsbundle.properties"/>
+	</stringbundleset>
 </page>

@@ -96,4 +96,7 @@
 			</hbox>
 		</vbox>
 	</hbox>
+	<stringbundleset>
+		<stringbundle id="stringbundle" src="chrome://rsmanager/locale/jsbundle.properties"/>
+	</stringbundleset>
 </page>

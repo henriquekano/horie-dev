@@ -21,4 +21,7 @@
 			<spacer flex="1" />
 		</hbox>
 	</vbox>
+	<stringbundleset>
+		<stringbundle id="stringbundle" src="chrome://rsmanager/locale/jsbundle.properties"/>
+	</stringbundleset>
 </page>

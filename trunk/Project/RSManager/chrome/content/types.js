@@ -145,6 +145,9 @@ function deleteType() {
 	var statement = dbConn.createStatement("DELETE FROM ExpenseTypes WHERE ExpenseTypeID = ?1");
 	statement.bindInt32Parameter(0, document.getElementById("listbox_types").selectedItem.value);
 	statement.execute();
+	var statement = dbConn.createStatement("DELETE FROM ExpenseSubTypes WHERE ExpenseTypeID = ?1");
+	statement.bindInt32Parameter(0, document.getElementById("listbox_types").selectedItem.value);
+	statement.execute();
 	populateTypes();
 }
 function addSubtype() {
