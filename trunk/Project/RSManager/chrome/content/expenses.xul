@@ -6,4 +6,82 @@
 	<script type="application/x-javascript" src="expenses.js"/>
 	
 	<label class="content_title">&rsmanager.expenses.title;</label>
+	<label class="content_body">&rsmanager.expenses.addExpense;</label>
+	<groupbox class="form_groupbox">
+		<hbox>
+			<datepicker id="datepicker_add" type="grid" class="form_datepicker" />
+			<grid flex="1">
+				<columns>
+					<column width="75px" />
+					<column flex="1" style="margin-left: 10px;" />
+				</columns>
+				<rows>
+					<row class="form_row">
+						<label class="content_body2">&rsmanager.expenses.type;</label>
+						<hbox>
+							<menulist class="form_menulist" crop="end" id="menulist_type"
+								onselect="populateSubTypes();"><menupopup /></menulist>
+							<menulist class="form_menulist" crop="end" id="menulist_subtype"><menupopup /></menulist>
+						</hbox>
+					</row>
+					<row class="form_row">
+						<label class="content_body2">&rsmanager.expenses.description;</label>
+						<textbox class="form_textbox" id="textbox_description" />
+					</row>
+					<row class="form_row">
+						<label class="content_body2">&rsmanager.expenses.location;</label>
+						<hbox>
+							<menulist class="form_menulist" crop="end" id="menulist_province"
+								onselect="populateCities();"><menupopup /></menulist>
+							<menulist class="form_menulist" crop="end" id="menulist_city"
+								onselect="populateRegions();"><menupopup /></menulist>
+							<menulist class="form_menulist" crop="end" id="menulist_region"><menupopup /></menulist>
+						</hbox>
+					</row>
+					<row class="form_row">
+						<label class="content_body2">&rsmanager.expenses.thirdparty;</label>
+						<textbox class="form_textbox" id="textbox_thirdparty" />
+					</row>
+					<row class="form_row">
+						<label class="content_body2">&rsmanager.expenses.value;</label>
+						<textbox class="sform_expensevaluetextbox" id="textbox_value" />
+					</row>
+				</rows>
+			</grid>
+			<vbox>
+				<spacer flex="1" />
+				<image src="chrome://rsmanager/skin/images/add.png" id="add_button" onclick="addExpense();" />
+			</vbox>
+		</hbox>
+	</groupbox>
+	<spacer height="40px" />
+	<hbox>
+		<label class="content_body">&rsmanager.expenses.viewExpenses;</label>
+		<spacer flex="1" />
+		<datepicker id="datepicker_filter" type="popup" class="form_datepicker" />
+	</hbox>
+	<groupbox class="form_groupbox">
+		<grid flex="1">
+			<columns>
+				<column flex="1"/>
+				<column flex="1"/>
+				<column flex="3"/>
+				<column flex="1"/>
+				<column flex="2"/>
+				<column flex="1"/>
+				<column />
+			</columns>
+			<rows id="grid_expenses">
+				<row>
+					<label class="content_gridtitle">&rsmanager.expenses.date;</label>
+					<label class="content_gridtitle">&rsmanager.expenses.type;</label>
+					<label class="content_gridtitle">&rsmanager.expenses.description;</label>
+					<label class="content_gridtitle">&rsmanager.expenses.location;</label>
+					<label class="content_gridtitle">&rsmanager.expenses.thirdparty;</label>
+					<label class="content_gridtitle">&rsmanager.expenses.value;</label>
+					<label />
+				</row>
+			</rows>
+		</grid>
+	</groupbox>
 </page>
