@@ -12,16 +12,16 @@
 			<datepicker id="datepicker_add" type="grid" class="form_datepicker" />
 			<grid flex="1">
 				<columns>
-					<column width="75px" />
+					<column width="75px" style="margin-left: 20px;" />
 					<column flex="1" style="margin-left: 10px;" />
 				</columns>
 				<rows>
 					<row class="form_row">
 						<label class="content_body2">&rsmanager.expenses.type;</label>
 						<hbox>
-							<menulist class="form_menulist" crop="end" id="menulist_type"
-								onselect="populateSubTypes();"><menupopup /></menulist>
-							<menulist class="form_menulist" crop="end" id="menulist_subtype"><menupopup /></menulist>
+							<menulist class="form_menulist" flex="1" crop="end" onselect="populateSubTypes();" id="menulist_type" />
+							<menulist class="form_menulist" flex="1" crop="end" id="menulist_subtype" />
+							<spacer />
 						</hbox>
 					</row>
 					<row class="form_row">
@@ -31,11 +31,9 @@
 					<row class="form_row">
 						<label class="content_body2">&rsmanager.expenses.location;</label>
 						<hbox>
-							<menulist class="form_menulist" crop="end" id="menulist_province"
-								onselect="populateCities();"><menupopup /></menulist>
-							<menulist class="form_menulist" crop="end" id="menulist_city"
-								onselect="populateRegions();"><menupopup /></menulist>
-							<menulist class="form_menulist" crop="end" id="menulist_region"><menupopup /></menulist>
+							<menulist class="form_menulist" flex="1" crop="end" onselect="populateCities();" id="menulist_province" />
+							<menulist class="form_menulist" flex="1" crop="end" onselect="populateRegions();" id="menulist_city" />
+							<menulist class="form_menulist" flex="1" crop="end" id="menulist_region" />
 						</hbox>
 					</row>
 					<row class="form_row">
@@ -44,14 +42,23 @@
 					</row>
 					<row class="form_row">
 						<label class="content_body2">&rsmanager.expenses.value;</label>
-						<textbox class="sform_expensevaluetextbox" id="textbox_value" />
+						<hbox>
+							<textbox flex="1" type="number" class="sform_expensevaluetextbox" id="textbox_value" />
+							<spacer flex="1" />
+							<vbox>
+								<spacer flex="1" />
+								<image src="chrome://rsmanager/skin/images/add.png" id="add_button" class="form_minibutton"
+									onclick="addExpense();" tooltiptext="&rsmanager.expenses.add;" />
+							</vbox>
+							<vbox>
+								<spacer flex="1" />
+								<image src="chrome://rsmanager/skin/images/clear.png" id="clear_button" class="form_minibutton"
+									onclick="clearForm();" tooltiptext="&rsmanager.expenses.clear;" />
+							</vbox>
+						</hbox>
 					</row>
 				</rows>
 			</grid>
-			<vbox>
-				<spacer flex="1" />
-				<image src="chrome://rsmanager/skin/images/add.png" id="add_button" onclick="addExpense();" />
-			</vbox>
 		</hbox>
 	</groupbox>
 	<spacer height="40px" />
@@ -61,27 +68,19 @@
 		<datepicker id="datepicker_filter" type="popup" class="form_datepicker" />
 	</hbox>
 	<groupbox class="form_groupbox">
-		<grid flex="1">
-			<columns>
-				<column flex="1"/>
-				<column flex="1"/>
-				<column flex="3"/>
-				<column flex="1"/>
-				<column flex="2"/>
-				<column flex="1"/>
-				<column />
-			</columns>
-			<rows id="grid_expenses">
-				<row>
-					<label class="content_gridtitle">&rsmanager.expenses.date;</label>
-					<label class="content_gridtitle">&rsmanager.expenses.type;</label>
-					<label class="content_gridtitle">&rsmanager.expenses.description;</label>
-					<label class="content_gridtitle">&rsmanager.expenses.location;</label>
-					<label class="content_gridtitle">&rsmanager.expenses.thirdparty;</label>
-					<label class="content_gridtitle">&rsmanager.expenses.value;</label>
-					<label />
-				</row>
-			</rows>
-		</grid>
+		<tree flex="1" enableColumnDrag="true" editable="false" hidecolumnpicker="true" class="content_tree">
+			<treecols>
+				<treecol flex="2" label="&rsmanager.expenses.type;" />
+				<treecol flex="3" label="&rsmanager.expenses.description;" />
+				<treecol flex="2" label="&rsmanager.expenses.location;" />
+				<treecol flex="2" label="&rsmanager.expenses.thirdparty;" />
+				<treecol flex="1" label="&rsmanager.expenses.value;" />
+				<treecol />
+			</treecols>
+			<treechildren id="tree_children" class="content_treeitem" />
+		</tree>
 	</groupbox>
+	<stringbundleset>
+		<stringbundle id="stringbundle" src="chrome://rsmanager/locale/jsbundle.properties"/>
+	</stringbundleset>
 </page>

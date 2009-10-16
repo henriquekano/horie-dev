@@ -55,7 +55,7 @@ function populateCities() {
 		listbox.removeItemAt(0);
 	}
 	var defaultIndex = 0;
-	var statement = dbConn.createStatement("SELECT * FROM LocCities WHERE ProvinceID = ?1ORDER BY CityName");
+	var statement = dbConn.createStatement("SELECT * FROM LocCities WHERE ProvinceID = ?1 ORDER BY CityName");
 	try {
 		statement.bindInt32Parameter(0, document.getElementById("listbox_provinces").selectedItem.value);
 		while (statement.executeStep()) {
