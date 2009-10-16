@@ -10,3 +10,6 @@
 <!ENTITY rsmanager.expenses.value "Value">
 <!ENTITY rsmanager.expenses.from "From">
 <!ENTITY rsmanager.expenses.to "to">
+
+<!ENTITY rsmanager.expenses.add "Add">
+<!ENTITY rsmanager.expenses.clear "Clear">
