@@ -1,0 +1,63 @@
+About the Presentation
+======================
+  Title: Title of the paper and authors
+  Subtitle:
+    - Department of Creative Informatics
+    - Ishizuka Laboratory
+    - Andre Kenji Horie (M1)
+
+Introduction
+============
+  Motivation:
+    - Definition of the problem:
+        - What is relational similarity? Compare with attribute similarity.
+        - Why is it relevant? Measures how analogous relations are.
+    - Applications:
+        - Keyword-based search: Retrieve documents that are relevant to the words used, not necessarily to the implied relations.
+        - Useful for implicitly stated analogies.
+    - Challenges:
+        - Similarity is dynamic.
+        - Multiple relations between a single pair.
+        - More than one way to express a single relation.
+  Related work:
+    - General problems with previous methods: Heavy load and lack of support for named entities.
+    - Give examples explaining very briefly (only important points), and reference their works!
+
+Proposed Method
+===============
+  Outline: A figure is enough
+  Retrieving contexts: Extract semantic relations that pertain in each word pair
+    - How? Using text snippets retrieved from search engines.
+    - Snippets: Small window of text, method computationally efficient for this matter.
+    - Queries: "A * B", etc. Window has a specified length.
+    - Remove duplicate search results.
+  Extracting lexical patterns:
+    - Proposes a shallow lexical pattern extraction algorithm that requires no language-dependent preprocessing.
+    - Step 1: Given a context S, replace A and B for variable X and Y.
+    - Step 2: Generate all subsequences of the context S.
+    - Step 3: Count frequencies of all generated subsequences for all word pairs.
+  Identification semantic relations:
+    - Distributional hypothesis: Words that occur in the same contexts have similar meanings.
+    - Figure for distribution of lexical patterns in word pairs (figure 2).
+        - Cluster lexical patterns using the similarity of their distributions over word pairs,
+    - Non-sense algebra (read later).
+  Measuring relational similarity:
+    - More non-sense algebra (read later).
+
+Experiments
+===========
+  Outline: Classifying semantic relations between named entities (ENT dataset), and solving SAT word-analogy questions (SAT dataset).
+  Relation classification:
+    - 100 instances (named-entities pairs) of 5 types.
+    - Multi-class classification problem.
+    - Bla bla bla
+  SAT Word-Analogy Questions:
+    - Yadda yadda yadda
+
+Conclusion
+==========
+  What are the contributions of this research?
+    - Propose a shallow, lexical-pattern-based approach to represent various semantic relations.
+    - Present a clustering algorithm to cluster lexical patterns.
+    - Evaluate the proposed method in two tasks.
+  Future work
